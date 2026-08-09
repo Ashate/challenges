@@ -1,33 +1,25 @@
-name: Translate README
+name: Translate Challenge READMEs
 
 on:
   workflow_call:
-    inputs:
-      source_file:
-        description: "要翻译的源文件"
-        type: string
-        default: "README.md"
-      target_file:
-        description: "翻译结果输出文件"
-        type: string
-        default: "README.zh-CN.md"
     secrets:
       DEEPSEEK_API_KEY:
         required: true
     outputs:
       changed:
-        description: "翻译结果是否发生变化"
+        description: "是否有翻译结果发生变化"
         value: ${{ jobs.translate.outputs.changed }}
   workflow_dispatch:
     inputs:
-      source_file:
-        description: "要翻译的源文件"
-        type: string
-        default: "README.md"
-      target_file:
-        description: "翻译结果输出文件"
-        type: string
-        default: "README.zh-CN.md"
+      force_all:
+        description: "忽略变更检测，重新翻译所有题目的 README"
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+    paths:
+      - "**/README.md"
 
 permissions:
   contents: write
@@ -43,48 +35,73 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Check if source file changed
-        id: check
+      - name: Find challenge README files to translate
+        id: find
         run: |
-          SRC="${{ inputs.source_file }}"
+          set -euo pipefail
+
+          # 题目级 README 的路径形如 "<分类>/<题目ID>/README.md"，即固定嵌套 2 层目录。
+          # 这样可以：
+          #   - 排除仓库根目录的 README.md（0 层）
+          #   - 排除分类级说明文档，如 AD/README.md（1 层）
+          #   - 排除题目目录内部第三方依赖/子模块自带的 README，如
+          #     xbow/XBEN-030-24/wordpress/.../README.md（3 层及以上）
+          #   - 排除 .git/.github/.claude 等隐藏目录
+          mapfile -t ALL_READMES < <(
+            find . -mindepth 3 -maxdepth 3 -type f -iname "README.md" \
+              -not -path "./.*/*" \
+              | sed 's|^\./||' | sort
+          )
+
+          FORCE_ALL="${{ inputs.force_all }}"
           BEFORE="${{ github.event.before }}"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
+
+          TARGETS=()
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$FORCE_ALL" = "true" ]; then
+            TARGETS=("${ALL_READMES[@]}")
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TARGETS=("${ALL_READMES[@]}")
           elif [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
-            if git diff --name-only "$BEFORE" "${{ github.sha }}" | grep -qx "$SRC"; then
-              echo "run=true" >> "$GITHUB_OUTPUT"
-            else
-              echo "run=false" >> "$GITHUB_OUTPUT"
-            fi
+            mapfile -t CHANGED < <(git diff --name-only --diff-filter=ACMR "$BEFORE" "${{ github.sha }}")
+            for f in "${ALL_READMES[@]}"; do
+              for c in "${CHANGED[@]}"; do
+                if [ "$f" = "$c" ]; then
+                  TARGETS+=("$f")
+                  break
+                fi
+              done
+            done
           else
-            echo "run=true" >> "$GITHUB_OUTPUT"
+            # 没有可比较的 before commit（如首次运行/浅克隆失败），保守起见全部翻译
+            TARGETS=("${ALL_READMES[@]}")
           fi
 
+          printf '%s\n' "${TARGETS[@]+"${TARGETS[@]}"}" > /tmp/targets.txt
+          COUNT=$(grep -c . /tmp/targets.txt || true)
+          echo "count=${COUNT:-0}" >> "$GITHUB_OUTPUT"
+          echo "Found ${COUNT:-0} challenge README(s) to translate:"
+          cat /tmp/targets.txt
+
       - name: Set up Python
-        if: steps.check.outputs.run == 'true'
+        if: steps.find.outputs.count != '0'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
-        if: steps.check.outputs.run == 'true'
+        if: steps.find.outputs.count != '0'
         run: pip install --quiet requests
 
       - name: Translate to Simplified Chinese
-        if: steps.check.outputs.run == 'true'
+        if: steps.find.outputs.count != '0'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          SOURCE_FILE: ${{ inputs.source_file }}
-          TARGET_FILE: ${{ inputs.target_file }}
         run: |
           python3 - <<'PYEOF'
-          import os, sys, json, textwrap, requests
+          import os, sys, textwrap, requests
 
-          src = os.environ["SOURCE_FILE"]
-          dst = os.environ["TARGET_FILE"]
-
-          with open(src, "r", encoding="utf-8") as f:
-              content = f.read()
+          with open("/tmp/targets.txt", "r", encoding="utf-8") as f:
+              targets = [line.strip() for line in f if line.strip()]
 
           system_prompt = textwrap.dedent("""\
               你是专业的技术文档翻译。请将输入的 Markdown 文档从英文翻译为简体中文，并严格遵守以下规则：
@@ -101,59 +118,99 @@ jobs:
               6. 其余自然语言正文、标题文字、表格说明文字，请翻译为通顺、地道的简体中文技术文档风格。
               """)
 
-          resp = requests.post(
-              "https://api.deepseek.com/chat/completions",
-              headers={
-                  "Authorization": f"Bearer {os.environ['DEEPSEEK_API_KEY']}",
-                  "Content-Type": "application/json",
-              },
-              json={
-                  "model": "deepseek-chat",
-                  "max_tokens": 8192,
-                  "temperature": 0.3,
-                  "messages": [
-                      {"role": "system", "content": system_prompt},
-                      {"role": "user", "content": content},
-                  ],
-              },
-              timeout=120,
-          )
-          resp.raise_for_status()
-          data = resp.json()
-          translated = data["choices"][0]["message"]["content"].strip()
+          def translate(content: str) -> str:
+              resp = requests.post(
+                  "https://api.deepseek.com/chat/completions",
+                  headers={
+                      "Authorization": f"Bearer {os.environ['DEEPSEEK_API_KEY']}",
+                      "Content-Type": "application/json",
+                  },
+                  json={
+                      "model": "deepseek-chat",
+                      "max_tokens": 8192,
+                      "temperature": 0.3,
+                      "messages": [
+                          {"role": "system", "content": system_prompt},
+                          {"role": "user", "content": content},
+                      ],
+                  },
+                  timeout=120,
+              )
+              resp.raise_for_status()
+              data = resp.json()
+              translated = data["choices"][0]["message"]["content"].strip()
 
-          # 兼容模型偶尔用 ```markdown ... ``` 包裹整篇输出的情况
-          if translated.startswith("```"):
-              lines = translated.splitlines()
-              if lines[0].startswith("```"):
-                  lines = lines[1:]
-              if lines and lines[-1].strip() == "```":
-                  lines = lines[:-1]
-              translated = "\n".join(lines).strip()
+              # 兼容模型偶尔用 ```markdown ... ``` 包裹整篇输出的情况
+              if translated.startswith("```"):
+                  lines = translated.splitlines()
+                  if lines[0].startswith("```"):
+                      lines = lines[1:]
+                  if lines and lines[-1].strip() == "```":
+                      lines = lines[:-1]
+                  translated = "\n".join(lines).strip()
 
-          if not translated:
-              print("Translation returned empty content, aborting.", file=sys.stderr)
+              return translated
+
+          failed = []
+          for src in targets:
+              dst = os.path.join(os.path.dirname(src), "README.zh-CN.md")
+              try:
+                  with open(src, "r", encoding="utf-8") as f:
+                      content = f.read()
+
+                  translated = translate(content)
+                  if not translated:
+                      raise ValueError("translation returned empty content")
+
+                  with open(dst, "w", encoding="utf-8") as f:
+                      f.write(translated + "\n")
+
+                  print(f"OK   {src} -> {dst} ({len(translated)} chars)")
+              except Exception as e:
+                  print(f"FAIL {src}: {e}", file=sys.stderr)
+                  failed.append(src)
+
+          if failed:
+              print(f"\n{len(failed)} file(s) failed to translate:", file=sys.stderr)
+              for f in failed:
+                  print(f"  - {f}", file=sys.stderr)
               sys.exit(1)
-
-          with open(dst, "w", encoding="utf-8") as f:
-              f.write(translated + "\n")
-
-          print(f"Wrote translation to {dst} ({len(translated)} chars)")
           PYEOF
 
-      - name: Commit translated file
+      - name: Commit translated files
         id: commit
-        if: steps.check.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          TARGET="${{ inputs.target_file }}"
-          if git diff --quiet -- "$TARGET"; then
-            echo "No changes to $TARGET"
+
+          if [ ! -s /tmp/targets.txt ]; then
+            echo "No target README files, nothing to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          mapfile -t TARGETS < /tmp/targets.txt
+          TO_ADD=()
+          for src in "${TARGETS[@]}"; do
+            dst="$(dirname "$src")/README.zh-CN.md"
+            if [ -f "$dst" ]; then
+              TO_ADD+=("$dst")
+            fi
+          done
+
+          if [ "${#TO_ADD[@]}" -eq 0 ]; then
+            echo "No translated files were produced"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git add "${TO_ADD[@]}"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
-            git add "$TARGET"
-            git commit -m "docs: sync ${TARGET} [skip ci]"
+            COUNT="${#TO_ADD[@]}"
+            git commit -m "docs: sync ${COUNT} challenge README translation(s) [skip ci]"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
