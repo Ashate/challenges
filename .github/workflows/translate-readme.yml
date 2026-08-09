@@ -1,0 +1,255 @@
+name: Translate Challenge READMEs
+
+on:
+  workflow_call:
+    secrets:
+      DEEPSEEK_API_KEY:
+        required: true
+    outputs:
+      changed:
+        description: "是否有翻译结果发生变化"
+        value: ${{ jobs.translate.outputs.changed }}
+  workflow_dispatch:
+    inputs:
+      force_all:
+        description: "忽略变更检测，重新翻译所有题目的 README"
+        type: boolean
+        default: false
+  push:
+    branches:
+      - main
+    paths:
+      - "**/README.md"
+      - "**/README.en.md"
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Find challenge README files to translate
+        id: find
+        run: |
+          set -euo pipefail
+
+          # 题目级 README 的路径形如 "<分类>/<题目ID>/README.md" 或
+          # "<分类>/<题目ID>/README.en.md"，即固定嵌套 2 层目录。
+          # 这样可以：
+          #   - 排除仓库根目录的 README.md（0 层）
+          #   - 排除分类级说明文档，如 AD/README.md（1 层）
+          #   - 排除题目目录内部第三方依赖/子模块自带的 README，如
+          #     xbow/XBEN-030-24/wordpress/.../README.md（3 层及以上）
+          #   - 排除 .git/.github/.claude 等隐藏目录
+          #
+          # 英文原文固定保存为 README.en.md，翻译结果固定保存为 README.md
+          # （即仓库默认展示的是中文版）。为兼容尚未拆分过的旧题目
+          # （目录下只有英文的 README.md、还没有 README.en.md），这类
+          # 文件也会被当作"待迁移的英文原文"一并纳入翻译目标。
+
+          mapfile -t EN_SOURCES < <(
+            find . -mindepth 3 -maxdepth 3 -type f -iname "README.en.md" \
+              -not -path "./.*/*" \
+              | sed 's|^\./||' | sort
+          )
+
+          mapfile -t LEGACY_README < <(
+            find . -mindepth 3 -maxdepth 3 -type f -iname "README.md" \
+              -not -path "./.*/*" \
+              | sed 's|^\./||' | sort
+          )
+
+          ALL_SOURCES=()
+          for f in "${LEGACY_README[@]+"${LEGACY_README[@]}"}"; do
+            dir="$(dirname "$f")"
+            if [ ! -f "$dir/README.en.md" ]; then
+              # 该题目还没有 README.en.md，说明 README.md 目前就是英文原文，
+              # 需要作为迁移目标：翻译后原文会被移动为 README.en.md。
+              ALL_SOURCES+=("$f")
+            fi
+          done
+          ALL_SOURCES+=("${EN_SOURCES[@]+"${EN_SOURCES[@]}"}")
+
+          mapfile -t ALL_READMES < <(printf '%s\n' "${ALL_SOURCES[@]+"${ALL_SOURCES[@]}"}" | sort)
+
+          FORCE_ALL="${{ inputs.force_all }}"
+          BEFORE="${{ github.event.before }}"
+
+          TARGETS=()
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "$FORCE_ALL" = "true" ]; then
+            TARGETS=("${ALL_READMES[@]}")
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TARGETS=("${ALL_READMES[@]}")
+          elif [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+            mapfile -t CHANGED < <(git diff --name-only --diff-filter=ACMR "$BEFORE" "${{ github.sha }}")
+            for f in "${ALL_READMES[@]}"; do
+              for c in "${CHANGED[@]}"; do
+                if [ "$f" = "$c" ]; then
+                  TARGETS+=("$f")
+                  break
+                fi
+              done
+            done
+          else
+            # 没有可比较的 before commit（如首次运行/浅克隆失败），保守起见全部翻译
+            TARGETS=("${ALL_READMES[@]}")
+          fi
+
+          printf '%s\n' "${TARGETS[@]+"${TARGETS[@]}"}" > /tmp/targets.txt
+          COUNT=$(grep -c . /tmp/targets.txt || true)
+          echo "count=${COUNT:-0}" >> "$GITHUB_OUTPUT"
+          echo "Found ${COUNT:-0} challenge README(s) to translate:"
+          cat /tmp/targets.txt
+
+      - name: Set up Python
+        if: steps.find.outputs.count != '0'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        if: steps.find.outputs.count != '0'
+        run: pip install --quiet requests
+
+      - name: Translate to Simplified Chinese
+        if: steps.find.outputs.count != '0'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          python3 - <<'PYEOF'
+          import os, sys, textwrap, requests
+
+          with open("/tmp/targets.txt", "r", encoding="utf-8") as f:
+              targets = [line.strip() for line in f if line.strip()]
+
+          system_prompt = textwrap.dedent("""\
+              你是专业的技术文档翻译。请将输入的 Markdown 文档从英文翻译为简体中文，并严格遵守以下规则：
+
+              1. 只输出翻译后的完整 Markdown 内容，不要添加任何解释、前言，也不要用代码块包裹输出结果。
+              2. 完整保留原文的 Markdown 结构：标题层级、表格、列表、链接、图片、代码块边界等。
+              3. 代码块（三个反引号围栏内的所有内容，包括其中以 # 或 // 等开头的注释）一律保持原文不变，禁止翻译或改写。
+              4. 行内代码（反引号包裹的内容）保持原文不变。
+              5. 以下内容不要翻译，保持英文原文：
+                 - 专有名词/项目名/产品名（如 Benchmark Challenges、WgpSec、xbow、argus、custom、AboutSecurity、context1337、tchkiller、benchmark-platform、benchmark-challenges、PoJun、Claude Code、GitHub、GitHub Actions、Docker、MIT）
+                 - 文件名、目录名、字段名、环境变量名（如 docker-compose.yml、benchmark.json、.env、FLAG）
+                 - 技术缩写术语（如 SSRF、XSS、SQLi、RCE、IDOR、CTF、CI/CD、API、JSON、YAML、PR、URL）
+                 - 链接地址（URL）本身
+              6. 其余自然语言正文、标题文字、表格说明文字，请翻译为通顺、地道的简体中文技术文档风格。
+              """)
+
+          def translate(content: str) -> str:
+              resp = requests.post(
+                  "https://api.deepseek.com/chat/completions",
+                  headers={
+                      "Authorization": f"Bearer {os.environ['DEEPSEEK_API_KEY']}",
+                      "Content-Type": "application/json",
+                  },
+                  json={
+                      "model": "deepseek-chat",
+                      "max_tokens": 8192,
+                      "temperature": 0.3,
+                      "messages": [
+                          {"role": "system", "content": system_prompt},
+                          {"role": "user", "content": content},
+                      ],
+                  },
+                  timeout=120,
+              )
+              resp.raise_for_status()
+              data = resp.json()
+              translated = data["choices"][0]["message"]["content"].strip()
+
+              # 兼容模型偶尔用 ```markdown ... ``` 包裹整篇输出的情况
+              if translated.startswith("```"):
+                  lines = translated.splitlines()
+                  if lines[0].startswith("```"):
+                      lines = lines[1:]
+                  if lines and lines[-1].strip() == "```":
+                      lines = lines[:-1]
+                  translated = "\n".join(lines).strip()
+
+              return translated
+
+          failed = []
+          for src in targets:
+              d = os.path.dirname(src)
+              en_path = os.path.join(d, "README.en.md")
+              zh_path = os.path.join(d, "README.md")
+              try:
+                  with open(src, "r", encoding="utf-8") as f:
+                      content = f.read()
+
+                  translated = translate(content)
+                  if not translated:
+                      raise ValueError("translation returned empty content")
+
+                  # 保证英文原文固定落在 README.en.md 上：
+                  # - 若 src 已经是 README.en.md，则无需移动；
+                  # - 若 src 是尚未迁移的 README.md（旧的英文原文），
+                  #   将其重命名为 README.en.md，保留英文原文备份。
+                  if os.path.abspath(src) != os.path.abspath(en_path):
+                      os.replace(src, en_path)
+
+                  # 翻译结果固定写入 README.md，作为仓库默认展示的版本。
+                  with open(zh_path, "w", encoding="utf-8") as f:
+                      f.write(translated + "\n")
+
+                  print(f"OK   {en_path} -> {zh_path} ({len(translated)} chars)")
+              except Exception as e:
+                  print(f"FAIL {src}: {e}", file=sys.stderr)
+                  failed.append(src)
+
+          if failed:
+              print(f"\n{len(failed)} file(s) failed to translate:", file=sys.stderr)
+              for f in failed:
+                  print(f"  - {f}", file=sys.stderr)
+              sys.exit(1)
+          PYEOF
+
+      - name: Commit translated files
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [ ! -s /tmp/targets.txt ]; then
+            echo "No target README files, nothing to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          mapfile -t TARGETS < /tmp/targets.txt
+          TO_ADD=()
+          for src in "${TARGETS[@]}"; do
+            dir="$(dirname "$src")"
+            en="$dir/README.en.md"
+            zh="$dir/README.md"
+            if [ -f "$en" ] && [ -f "$zh" ]; then
+              TO_ADD+=("$en" "$zh")
+            fi
+          done
+
+          if [ "${#TO_ADD[@]}" -eq 0 ]; then
+            echo "No translated files were produced"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git add "${TO_ADD[@]}"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            COUNT="${#TARGETS[@]}"
+            git commit -m "docs: sync ${COUNT} challenge README translation(s) [skip ci]"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
