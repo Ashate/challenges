@@ -1,0 +1,78 @@
+name: Translate challenge descriptions to Chinese
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/benchmark.json"
+      - "**/benchmark.yaml"
+  # 兼容"从上游合并进来的更新"这种不一定精确命中 paths 过滤的场景，
+  # 每天兜底跑一次，靠脚本自身的幂等判断决定要不要真的翻译
+  schedule:
+    - cron: "0 18 * * *" # 每天 UTC 18:00（北京时间 02:00）
+  workflow_dispatch: {}
+
+# 避免"翻译 commit 又触发一次 push 事件"的死循环
+concurrency:
+  group: translate-descriptions
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install openai pyyaml
+
+      - name: Run translator
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/translate_challenges.py --root .
+
+      - name: Check for changes
+        id: check
+        run: |
+          if [ "$(cat .translate_changed)" = "1" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+          rm -f .translate_changed
+
+      # 方案A（默认）：直接提交到当前分支，全自动，无需人工review
+      - name: Commit and push
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A -- '**/benchmark.json' '**/benchmark.yaml'
+          git commit -m "chore: auto-translate challenge descriptions to zh-CN [skip ci]"
+          git push
+
+      # 方案B（更稳妥，建议至少上线初期启用）：改成开 PR 而不是直接 push，
+      # 翻译质量人工确认后再合并。用法：注释掉上面的 "Commit and push" 步骤，
+      # 取消下面这段的注释即可。
+      # - name: Create Pull Request
+      #   if: steps.check.outputs.changed == 'true'
+      #   uses: peter-evans/create-pull-request@v6
+      #   with:
+      #     commit-message: "chore: auto-translate challenge descriptions to zh-CN"
+      #     branch: auto/translate-descriptions
+      #     title: "🌐 自动翻译题目描述为中文"
+      #     body: "由 translate-descriptions workflow 自动生成，请人工检查翻译准确性后合并。"
+      #     add-paths: |
+      #       **/benchmark.json
+      #       **/benchmark.yaml
