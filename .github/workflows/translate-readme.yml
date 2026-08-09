@@ -78,7 +78,7 @@ jobs:
           TARGET_FILE: ${{ inputs.target_file }}
         run: |
           python3 - <<'PYEOF'
-          import os, sys, json, requests
+          import os, sys, json, textwrap, requests
 
           src = os.environ["SOURCE_FILE"]
           dst = os.environ["TARGET_FILE"]
@@ -86,19 +86,20 @@ jobs:
           with open(src, "r", encoding="utf-8") as f:
               content = f.read()
 
-          system_prompt = """你是专业的技术文档翻译。请将输入的 Markdown 文档从英文翻译为简体中文，并严格遵守以下规则：
+          system_prompt = textwrap.dedent("""\
+              你是专业的技术文档翻译。请将输入的 Markdown 文档从英文翻译为简体中文，并严格遵守以下规则：
 
-1. 只输出翻译后的完整 Markdown 内容，不要添加任何解释、前言，也不要用代码块包裹输出结果。
-2. 完整保留原文的 Markdown 结构：标题层级、表格、列表、链接、图片、代码块边界等。
-3. 代码块（```...``` 围栏内的所有内容，包括其中以 # 或 // 等开头的注释）一律保持原文不变，禁止翻译或改写。
-4. 行内代码（反引号包裹的内容）保持原文不变。
-5. 以下内容不要翻译，保持英文原文：
-   - 专有名词/项目名/产品名（如 Benchmark Challenges、WgpSec、xbow、argus、custom、AboutSecurity、context1337、tchkiller、benchmark-platform、benchmark-challenges、PoJun、Claude Code、GitHub、GitHub Actions、Docker、MIT）
-   - 文件名、目录名、字段名、环境变量名（如 docker-compose.yml、benchmark.json、.env、FLAG）
-   - 技术缩写术语（如 SSRF、XSS、SQLi、RCE、IDOR、CTF、CI/CD、API、JSON、YAML、PR、URL）
-   - 链接地址（URL）本身
-6. 其余自然语言正文、标题文字、表格说明文字，请翻译为通顺、地道的简体中文技术文档风格。
-"""
+              1. 只输出翻译后的完整 Markdown 内容，不要添加任何解释、前言，也不要用代码块包裹输出结果。
+              2. 完整保留原文的 Markdown 结构：标题层级、表格、列表、链接、图片、代码块边界等。
+              3. 代码块（三个反引号围栏内的所有内容，包括其中以 # 或 // 等开头的注释）一律保持原文不变，禁止翻译或改写。
+              4. 行内代码（反引号包裹的内容）保持原文不变。
+              5. 以下内容不要翻译，保持英文原文：
+                 - 专有名词/项目名/产品名（如 Benchmark Challenges、WgpSec、xbow、argus、custom、AboutSecurity、context1337、tchkiller、benchmark-platform、benchmark-challenges、PoJun、Claude Code、GitHub、GitHub Actions、Docker、MIT）
+                 - 文件名、目录名、字段名、环境变量名（如 docker-compose.yml、benchmark.json、.env、FLAG）
+                 - 技术缩写术语（如 SSRF、XSS、SQLi、RCE、IDOR、CTF、CI/CD、API、JSON、YAML、PR、URL）
+                 - 链接地址（URL）本身
+              6. 其余自然语言正文、标题文字、表格说明文字，请翻译为通顺、地道的简体中文技术文档风格。
+              """)
 
           resp = requests.post(
               "https://api.deepseek.com/chat/completions",
