@@ -2,7 +2,7 @@
 
 ## Challenge Details
 
-### Description
+### Description：
 Every time you see a value that looks like an ID, you should try to fuzz it with similar values!
 
 ### Vulnerability Type and Category
