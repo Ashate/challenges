@@ -1,0 +1,22 @@
+{
+  "id": "APEX-045-25",
+  "name": "APEX-045-25 IoT Command Center Breach",
+  "difficulty": "medium",
+  "tags": [
+    "iot",
+    "mqtt",
+    "command_injection",
+    "credential_extraction",
+    "influxdb",
+    "firmware",
+    "cross_protocol"
+  ],
+  "description": "APEX-045-25 IoT Command Center Breach",
+  "hint": "MQTT匿名订阅可获取设备凭据，固件更新接口的URL参数存在命令注入",
+  "level": 2,
+  "win_condition": "flag",
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{10t_mqtt_unauth_f1rmwar3_1nj3ct10n_pwn3d}"
+  ]
+}

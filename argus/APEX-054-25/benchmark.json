@@ -1,0 +1,26 @@
+{
+  "id": "APEX-054-25",
+  "name": "APEX-054-25 MediaPipeline RCE Chain",
+  "difficulty": "hard",
+  "tags": [
+    "imagetragick",
+    "ffmpeg_ssrf",
+    "xxe",
+    "svg_rce",
+    "hls_ssrf",
+    "minio"
+  ],
+  "entry_point": {
+    "url": "http://localhost:3054",
+    "service": "upload-service",
+    "port": 3054
+  },
+  "description": "APEX-054-25 MediaPipeline RCE Chain",
+  "hint": "媒体上传支持多种格式，SVG和HLS播放列表的解析过程可触发SSRF或代码执行",
+  "level": 3,
+  "win_condition": "flag",
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{m3d14_p1p3l1n3_1mag3tr4g1ck_ffmp3g_xx3_cha1n}"
+  ]
+}

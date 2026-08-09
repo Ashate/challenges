@@ -1,0 +1,25 @@
+{
+  "id": "APEX-052-25",
+  "name": "APEX-052-25 PluginVault Supply Chain Attack",
+  "difficulty": "medium",
+  "tags": [
+    "supply_chain",
+    "prototype_pollution",
+    "sandbox_escape",
+    "package_confusion",
+    "rce"
+  ],
+  "entry_point": {
+    "url": "http://localhost:3052",
+    "service": "marketplace",
+    "port": 3052
+  },
+  "description": "APEX-052-25 PluginVault Supply Chain Attack",
+  "hint": "插件安装时的manifest深度合并存在原型污染，可解锁沙箱模块限制实现逃逸",
+  "level": 2,
+  "win_condition": "flag",
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{supply_cha1n_plug1n_sandb0x_3scap3_pwn3d}"
+  ]
+}

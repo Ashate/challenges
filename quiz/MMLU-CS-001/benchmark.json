@@ -1,0 +1,290 @@
+{
+  "id": "MMLU-CS-001",
+  "name": "Computer Security Fundamentals",
+  "description": "Fuzzing, access control, cryptography basics, and network security fundamentals.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "computer-security",
+    "mmlu"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which of the following styles of fuzzer is more likely to explore paths covering every line of code in the following program?",
+      "choices": [
+        "Generational",
+        "Blackbox",
+        "Whitebox",
+        "Mutation-based"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2",
+      "text": "Assume that a TLS connection has been established successfully between a client and a server. Establishing the session included checking the server certificate and executing a DiffieHelmann exchange, but the client did not provide a client certificate. Further, assume that the client and server are honest, that the client and server don’t leak their keys, and that the cryptography is good. Which of the following attacks does TLS protect against?\n1. An attacker replaying bytes that a client sent earlier.\n2. An attacker impersonating the server.",
+      "choices": [
+        "True, True",
+        "False, False",
+        "True, False",
+        "False, True"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "text": "MIT’s Kerberos KDC server has a maximum ticket lifetime of 24 hours (for most user principals). What ensures that an expired Kerberos ticket can no longer be used?",
+      "choices": [
+        "The Kerberos server (KDC) refuses to establish new connections between clients and servers for expired tickets.",
+        "When a client connects to a server, the server sets a 24-hour timer to terminate the connection, which ensures a client cannot remain connected past the ticket’s maximum lifetime.",
+        "When a client connects to a server, the server compares the ticket’s expiration time to the server’s current clock, and refuses to authenticate the user if the ticket expiration time is in the past.",
+        "When a client connects to a server, the server sends a query to the KDC to check if the ticket is still valid with respect to the KDC’s clock, and refuses to authenticate the user if the KDC reports that the ticket is expired."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q4",
+      "text": "In Message Condentiality, the transmitted message must make sense to only intended",
+      "choices": [
+        "Receiver",
+        "Sender",
+        "Modulor",
+        "Translator"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q5",
+      "text": "Which of the following is a remote Trojan?",
+      "choices": [
+        "Troya",
+        "DaCryptic",
+        "BankerA",
+        "Game-Troj"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q6",
+      "text": "______________ is a widespread app’s coding mistake made by developers which could be exploited by an attacker for gaining access or malfunctioning your system.",
+      "choices": [
+        "Memory leakage",
+        "Buffer-overrun",
+        "Less processing power",
+        "Inefficient programming"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q7",
+      "text": "Consider the paper Native Client: A Sandbox for Portable, Untrusted x86 Native Code by Yee et al. Ben Bitdiddle notes that NaCl uses Intel x86 segmentation to ensure that the sandboxed module does not read or write memory outside its own data area, and does not execute instructions outside its own code. Ben thinks that with these restrictions alone, executing the sandboxed module must be safe; that is, he thinks validation is not needed. Ben is wrong. Circle the types of x86 machine instructions that the validator always forbids in sandboxed code. Please ignore trampoline and springboard code.",
+      "choices": [
+        "all instructions that modify segment state",
+        "all loads or stores to addresses that are not 0 mod 32",
+        "all indirect loads or stores (via an address in a register or variable)",
+        "all indirect jumps (via an address in a register or variable)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q8",
+      "text": "____________ is also a part of darknet that is employed for transferring files anonymously.",
+      "choices": [
+        "Freenet",
+        "ARPANET",
+        "Stuxnet",
+        "Internet"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q9",
+      "text": "Why apps developed in languages like C, C++ is prone to Buffer-overflow?",
+      "choices": [
+        "No string boundary checks in predefined functions",
+        "No storage check in the external memory",
+        "No processing power check",
+        "No database check"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q10",
+      "text": "Man in the middle attack can endanger the security of Diffie Hellman method if two parties are not",
+      "choices": [
+        "Joined",
+        "Authenticated",
+        "Submitted",
+        "Shared"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q11",
+      "text": "An integer overflow occurs when",
+      "choices": [
+        "an integer expression's result \"wraps around\"; instead of creating a very large number, a very small (or negative) number ends up getting created",
+        "an integer is used as if it was a pointer",
+        "an integer is used to access a buffer outside of the buffer's bounds",
+        "there is no more space to hold integers in the program"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q12",
+      "text": "Let HH be a Merkle-Damgard hash function is H:X^{\\leq L} \\to TH:X^≤L  →T. Construct a MAC from this HH as follows: \\ \\ S(k,m) = H(k \\| m)  S(k,m)=H(k∥m). This mac is insecure because:",
+      "choices": [
+        "Given H(k \\| m)H(k∥m) anyone can compute H(w \\| k \\| m \\| \\text{PB})H(w∥k∥m∥PB) for any ww",
+        "Given H(k \\| m)H(k∥m) anyone can compute H(k \\| m \\| w)H(k∥m∥w) for any ww",
+        "Given H(k \\| m)H(k∥m) anyone can compute H(k \\| m \\| \\text{PB} \\| w)H(k∥m∥PB∥w) for any ww",
+        "Anyone can compute H( k \\| m )H(k∥m) for any mm"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q13",
+      "text": "Suppose that Alice and Bob sent confidential text messages to one another last month through an encrypted messaging system. Alice and Bob are worried that an adversary might compromise one of their computers today, while they are taking the 6.858 final exam, and would then be able to decrypt those messages. Which of the following security properties can address Alice and Bob’s concern?",
+      "choices": [
+        "Authentication.",
+        "Deniability.",
+        "Forward secrecy",
+        "Backward secrecy."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q14",
+      "text": "The AH Protocol provides source authentication and data integrity, but not",
+      "choices": [
+        "Integrity",
+        "Privacy",
+        "Nonrepudiation",
+        "Both A & C"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q15",
+      "text": "Which of the following is not a security exploit?",
+      "choices": [
+        "Eavesdropping",
+        "Cross-site scripting",
+        "Authentication",
+        "SQL Injection"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q16",
+      "text": "_______________ is the central node of 802.11 wireless operations.",
+      "choices": [
+        "WPA",
+        "Access Point",
+        "WAP",
+        "Access Port"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q17",
+      "text": "In MD-5 the length of the message digest is",
+      "choices": [
+        "160",
+        "128",
+        "64",
+        "54"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q18",
+      "text": "What is Nmap?",
+      "choices": [
+        "It is a scanner which works by injecting packets to a range of addresses, and inferring what hosts and services might be at those addresses, based on the responses",
+        "It is a network fuzz testing tool",
+        "It is a map of the Internet",
+        "It is a suite of tools for scripting attacks: probe, construct, encode, inject, wait for response"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q19",
+      "text": "How do you prevent SQL injection?",
+      "choices": [
+        "Escape queries",
+        "Interrupt requests",
+        "Merge tables",
+        "All of the above"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q20",
+      "text": "What does it mean to \"be stealthy\" during a penetration test?",
+      "choices": [
+        "Performing the tests from an undisclosed location",
+        "Using encryption during tests to make the source of attacks impossible to determine",
+        "Performing penetration testing without the target organization knowing",
+        "Taking care to avoid activities during a penetration test that might attract attention, e.g., by operators or IDS services"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q21",
+      "text": "Which of the following is not a transport layer vulnerability?",
+      "choices": [
+        "Mishandling of undefined, poorly defined variables",
+        "The Vulnerability that allows “fingerprinting” & other enumeration of host information",
+        "Overloading of transport-layer mechanisms",
+        "Unauthorized network access"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q22",
+      "text": "In Brumley and Boneh’s paper on side-channel attacks, why does blinding prevent the timing attack from working?",
+      "choices": [
+        "Blinding prevents the server from using the CRT optimization, which is essential to the timing attack.",
+        "Blinding changes the p and q primes that are used, so an adversary cannot learn the server’s true p and q values.",
+        "Blinding randomizes the ciphertext being decrypted, thus obscuring the correlation between an adversary’s input and the timing differences.",
+        "Blinding adds a random amount of time to the decryption due to the multiplication and division by the blinding random value r, which obscures the timing differences used in the attack."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q23",
+      "text": "The openSSL implementation described in “Remote Timing Attacks are Practical” (by Brumley and Boneh) uses the following performance optimizations: Chinese Remainder (CR), Montgomery Representation (MR), Karatsuba Multiplication (KM), and Repeated squaring and Sliding windows (RS). Which of the following options would close the timing channel attack described in the paper if you turned the listed optimizations off?\n1. RS and KM\n2. RS and MR",
+      "choices": [
+        "True, True",
+        "False, False",
+        "True, False",
+        "False, True"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q24",
+      "text": "Public key encryption is advantageous over Symmetric key Cryptography because of",
+      "choices": [
+        "Speed",
+        "Space",
+        "Key exchange",
+        "Key length"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q25",
+      "text": "The __________ was a huge marketplace of Dark Web specifically famous for selling of illegal drugs & narcotics as well as you can find a wide range of other goods for sale.",
+      "choices": [
+        "Silk Road",
+        "Cotton Road",
+        "Dark Road",
+        "Drug Road"
+      ],
+      "answer": 0
+    }
+  ]
+}

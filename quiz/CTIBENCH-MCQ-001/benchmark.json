@@ -1,0 +1,5515 @@
+{
+  "id": "CTIBENCH-MCQ-001",
+  "name": "CTIBench MCQ Part 1",
+  "description": "Cyber Threat Intelligence MCQ (Part 1/5): MITRE ATT&CK techniques, mitigations, and threat intelligence.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "ctibench",
+    "threat-intelligence",
+    "mitre-attack"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which of the following mitigations involves preventing applications from running that haven't been downloaded from legitimate repositories?",
+      "choices": [
+        "Audit",
+        "Execution Prevention",
+        "Operating System Configuration",
+        "User Account Control"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2",
+      "text": "Which data source is recommended for monitoring commands that may circumvent mechanisms designed to control elevation of privileges?",
+      "choices": [
+        "Command",
+        "File",
+        "Process",
+        "User Account"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q3",
+      "text": "What does mitigation ID M1028 suggest to prevent privilege escalation exploits on a system?",
+      "choices": [
+        "Limiting privileges of cloud accounts",
+        "Preventing unsigned applications from running",
+        "Minimizing applications with setuid or setgid bits set",
+        "Enforcing the highest UAC level"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q4",
+      "text": "Which process creation is an indicator of potential SYSTEM privilege escalation according to the detection section?",
+      "choices": [
+        "C:\\Windows\\System32\\services.exe",
+        "C:\\Windows\\System32\\cmd.exe",
+        "C:\\Windows\\System32\\rundll32.exe",
+        "C:\\Windows\\System32\\notepad.exe"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q5",
+      "text": "In a Linux environment, what is recommended to monitor for detecting privilege escalation via sudo?",
+      "choices": [
+        "Monitor Windows Registry Key Modification",
+        "Monitor OS API Execution",
+        "Monitor file metadata for setuid or setgid bits on files",
+        "Audit process metadata changes"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q6",
+      "text": "What mitigation ID suggests requiring a password every time sudo is executed to manage privileged accounts?",
+      "choices": [
+        "Audit",
+        "Privileged Account Management",
+        "Restrict File and Directory Permissions",
+        "User Account Management"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q7",
+      "text": "An adversary leveraging the technique \"Abuse Elevation Control Mechanism: Setuid and Setgid\" is targeting which systems from the MITRE ATT&CK Enterprise matrix?",
+      "choices": [
+        "Linux",
+        "Windows",
+        "macOS",
+        "Linux and macOS"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q8",
+      "text": "Which of the following commands would an adversary use to find files with the setgid bit set on a UNIX-based system?",
+      "choices": [
+        "find / -perm +4000 2>/dev/null",
+        "find / -perm +2000 2>/dev/null",
+        "ls -l | grep 's'",
+        "grep -R \"setgid\" /"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q9",
+      "text": "Which mitigation strategy from the MITRE ATT&CK framework is recommended to counteract the abuse of setuid and setgid bits?",
+      "choices": [
+        "M1028 - Ensure disk encryption",
+        "M1028 - Operating System Configuration",
+        "M1030 - Network Segmentation",
+        "M1040 - Application Isolation and Sandboxing"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q10",
+      "text": "Which data source should you monitor to detect changes indicating abuse of setuid or setgid bits on files?",
+      "choices": [
+        "DS0022 - Registry",
+        "DS0017 - Command execution",
+        "DS0035 - Network Traffic",
+        "DS0022 - File Metadata and Modification"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q11",
+      "text": "Which mitigation technique, designated as M1026 under MITRE ATT&CK, should be implemented to limit permissions for users and user groups in creating tokens?",
+      "choices": [
+        "Configuring System File Integrity",
+        "Hardening Kernel Module Loading",
+        "Partitioning Network Assets",
+        "Privileged Account Management"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q12",
+      "text": "Considering MITRE ATT&CK (Enterprise), which tool is known for its ability to create tokens from known credentials as part of its procedures?",
+      "choices": [
+        "PowerShell Empire",
+        "Cobalt Strike",
+        "Metasploit Framework",
+        "Rubeus"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q13",
+      "text": "According to MITRE ATT&CK, which tool did the Night Dragon adversaries use for cracking password hashes?",
+      "choices": [
+        "Hydra",
+        "CrackMapExec",
+        "John the Ripper",
+        "Cain & Abel"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q14",
+      "text": "Which specific data source should be monitored to detect failed authentication attempts that could indicate a brute force attack?",
+      "choices": [
+        "Application Log",
+        "User Account Security Log",
+        "System Audit Log",
+        "User Account Authentication"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q15",
+      "text": "What mitigation strategy does MITRE ATT&CK suggest to defend against password cracking by adversaries?",
+      "choices": [
+        "Implementing a strict password expiration policy",
+        "Using password managers",
+        "Enabling multi-factor authentication",
+        "Configuring IP address filtering"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q16",
+      "text": "How does T1110.001 (Brute Force: Password Guessing) typically try to achieve credential access?",
+      "choices": [
+        "By intercepting network traffic to obtain passwords",
+        "By guessing passwords using a repetitive or iterative mechanism",
+        "By exploiting zero-day vulnerabilities",
+        "By social engineering tactics to trick users into revealing passwords"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q17",
+      "text": "APT29 (G0016) used T1110.001 to attack which type of targets?",
+      "choices": [
+        "Internal networking equipment",
+        "Operating system vulnerabilities",
+        "A list of mailboxes",
+        "Web server configuration files"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q18",
+      "text": "Why are LDAP and Kerberos connection attempts less likely to trigger events compared to SMB?",
+      "choices": [
+        "LDAP and Kerberos have default settings that disable logging",
+        "SMB creates specific \"logon failure\" event ID 4625",
+        "LDAP and Kerberos use encryption that prevents logging",
+        "SMB sessions expire more quickly than LDAP and Kerberos sessions"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q19",
+      "text": "Which mitigation can help prevent T1110.001 attacks but might cause a denial of service if too strict?",
+      "choices": [
+        "Multi-factor Authentication",
+        "Update Software",
+        "Account Use Policies",
+        "Password Manager Setup"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q20",
+      "text": "Which service is commonly targeted by T1110.001 via TCP port 1433?",
+      "choices": [
+        "FTP",
+        "Server Message Block (SMB)",
+        "MySQL",
+        "MSSQL"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q21",
+      "text": "Which tool allows brute-forcing across an entire network as part of T1110.001?",
+      "choices": [
+        "Pony",
+        "EMOTET",
+        "CrackMapExec",
+        "HermeticWizard"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q22",
+      "text": "In which scenario might an adversary combine brute forcing activity with External Remote Services?",
+      "choices": [
+        "Initial Access",
+        "Execution",
+        "Persistence",
+        "Collection"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q23",
+      "text": "Which group used a script to attempt RPC authentication during the 2016 Ukraine Electric Power Attack?",
+      "choices": [
+        "APT28",
+        "Sandworm Team",
+        "Dragonfly",
+        "OilRig"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q24",
+      "text": "According to the MITRE ATT&CK framework, which technique ID corresponds to Brute Force?",
+      "choices": [
+        "T1133",
+        "T1059",
+        "T1110",
+        "T1049"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q25",
+      "text": "Which procedure example includes the use of Ncrack to reveal credentials?",
+      "choices": [
+        "APT39",
+        "APT38",
+        "Fox Kitten",
+        "PoshC2"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q26",
+      "text": "What mitigation strategy involves setting account lockout policies after a certain number of failed login attempts?",
+      "choices": [
+        "Multi-factor Authentication",
+        "Account Use Policies",
+        "User Account Management",
+        "Password Policies"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q27",
+      "text": "Considering the MITRE ATT&CK technique T1185 (Browser Session Hijacking), what specific functionality does Agent Tesla leverage to collect user information?",
+      "choices": [
+        "Form-grabbing",
+        "HTML injection",
+        "Session hijacking",
+        "SSL certificate theft"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q28",
+      "text": "Which permission is typically required to execute browser-based pivoting behaviors in the context of T1185?",
+      "choices": [
+        "SeTcbPrivilege",
+        "SeShutdownPrivilege",
+        "SeDebugPrivilege",
+        "SeTakeOwnershipPrivilege"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q29",
+      "text": "What is one method used by adversaries to inherit cookies and authenticated sessions in T1185?",
+      "choices": [
+        "Using DNS poisoning",
+        "Injecting software into the browser",
+        "Changing browser settings",
+        "Launching a SYN flood attack"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q30",
+      "text": "Which mitigation could help restrict exposure to browser pivoting techniques like T1185?",
+      "choices": [
+        "Network Segmentation",
+        "Malware Detection",
+        "User Account Management",
+        "Email Filtering"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q31",
+      "text": "How does Grandoreiro implement browser session hijacking techniques?",
+      "choices": [
+        "Form-grabbing",
+        "Displaying full-screen overlay images",
+        "DNS spoofing",
+        "Launching a SYN flood attack"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q32",
+      "text": "In the context of MITRE ATT&CK technique T1217 (Browser Information Discovery), which of the following threat actors has specifically used type \"\\\\c$\\Users\\\\Favorites\\Links\\Bookmarks bar\\Imported From IE*citrix* for bookmark discovery?",
+      "choices": [
+        "APT38",
+        "Chimera",
+        "Calisto",
+        "DarkWatchman"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q33",
+      "text": "Which MITRE ATT&CK technique number and name corresponds with adversaries retrieving browser history as seen with DarkWatchman, Dtrack, and Lizar?",
+      "choices": [
+        "T1217 - Browser Information Discovery",
+        "T1003 - Credential Dumping",
+        "T1027 - Obfuscated Files or Information",
+        "T1056 - Input Capture"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q34",
+      "text": "Security professionals monitoring for T1217 should focus on which data sources to detect potential browser information discovery activities?",
+      "choices": [
+        "Command, File",
+        "Command, Network Traffic",
+        "File, Process",
+        "Command, Process, File"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q35",
+      "text": "What type of specific data example stored in `%APPDATA%/Google/Chrome` might signal an instance of T1217 - Browser Information Discovery?",
+      "choices": [
+        "Credentials In Files",
+        "Remote Desktop Data",
+        "Browsing History",
+        "Network Configurations"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q36",
+      "text": "In the context of MITRE ATT&CK (Platform: None), how can adversaries use browser extensions to maintain persistence on a victim's system?",
+      "choices": [
+        "By frequently updating the extension via legitimate app stores",
+        "By installing the extension via email phishing attacks",
+        "By creating browser cookies to log user activity",
+        "By modifying the browser's update URL to download updates from an adversary-controlled server"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q37",
+      "text": "Which malicious activity performed by adversaries is linked to the MITRE ATT&CK technique T1176 (Browser Extensions)?",
+      "choices": [
+        "Trojan horse installation",
+        "Botnet reconfiguration",
+        "Long-term RAT installation",
+        "Website defacement"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q38",
+      "text": "Which mitigation technique can help prevent the installation of unauthorized browser extensions as per the MITRE ATT&CK framework?",
+      "choices": [
+        "Setting up a firewall",
+        "Using a browser extension allow or deny list",
+        "Auditing the installed extensions",
+        "Updating antivirus definitions"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q39",
+      "text": "What is a key recommendation for maintaining security related to browser extensions according to MITRE ATT&CK?",
+      "choices": [
+        "Use the latest versions of antivirus software",
+        "Ensure operating systems and browsers are using the most current version",
+        "Regularly back up all browser extension files",
+        "Always use a VPN while browsing"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q40",
+      "text": "According to the MITRE ATT&CK framework, how did macOS 11+ change the installation method for browser extensions compared to earlier versions?",
+      "choices": [
+        "It allowed extensions to be installed directly from the command line",
+        "It required browser extensions to be signed by the developer",
+        "It restricted the use of `.mobileconfig` files and required user interaction",
+        "It allowed only approved extensions from the app store"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q41",
+      "text": "Which mitigation control is detailed in the document to prevent adversarial modifications to StartupItems?",
+      "choices": [
+        "Least Privilege",
+        "Network Segmentation",
+        "Restrict File and Directory Permissions",
+        "Monitor System Calls"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q42",
+      "text": "Which data source is suggested to monitor for unexpected modifications in the /Library/StartupItems folder?",
+      "choices": [
+        "Command",
+        "Process",
+        "Network Traffic",
+        "File"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q43",
+      "text": "Which adversary technique involves modifying startup scripts on Unix-like systems to establish persistence? (ID: T1037.004)",
+      "choices": [
+        "Boot or Logon Initialization Scripts: Launchd",
+        "Boot or Logon Initialization Scripts: Systemd",
+        "Boot or Logon Initialization Scripts: RC Scripts",
+        "Boot or Logon Initialization Scripts: Cron Jobs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q44",
+      "text": "Which group has been known to add an entry to the rc.common file for persistence? (ID: T1037.004)",
+      "choices": [
+        "APT29",
+        "Green Lambert",
+        "iKitten",
+        "Cyclops Blink"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q45",
+      "text": "What mitigation strategy is recommended to prevent unauthorized editing of the rc.common file? (ID: M1022)",
+      "choices": [
+        "Employ system cryptographic signatures",
+        "Restrict the use of administrative tools",
+        "Restrict File and Directory Permissions",
+        "Utilize network segmentation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q46",
+      "text": "Which mitigation is recommended for restricting write access to network logon scripts?",
+      "choices": [
+        "M1021: Restrict Registry Permissions",
+        "M1023: Restrict Library Access",
+        "M1022: Restrict File and Directory Permissions",
+        "M1024: Restrict Process Execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q47",
+      "text": "What type of data source should be monitored to detect modifications in Active Directory related to network logon scripts?",
+      "choices": [
+        "DS0017: Command",
+        "DS0009: Process",
+        "DS0022: File",
+        "DS0026: Active Directory"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q48",
+      "text": "What methodology do adversaries use to establish persistence via Login Hook according to MITRE ATT&CK technique T1037.002?",
+      "choices": [
+        "Adversaries modify the /etc/passwd file to include a malicious entry",
+        "Adversaries add or insert a path to a malicious script in the com.apple.loginwindow.plist file",
+        "Adversaries exploit default passwords on macOS services",
+        "Adversaries install a rogue kernel module upon boot"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q49",
+      "text": "Which of the following is a deprecated method for executing scripts upon user login in macOS 10.11 and later?",
+      "choices": [
+        "Login Daemon",
+        "Startup Script",
+        "Login Hook",
+        "Initialization Service"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q50",
+      "text": "According to MITRE ATT&CK's Detection guidelines for T1037.002, which data source should be monitored to detect changes to the login hook files?",
+      "choices": [
+        "DS0015 | Network Traffic",
+        "DS0026 | Authentication Logs",
+        "DS0017 | Command Execution",
+        "DS0022 | File Creation and Modification"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q51",
+      "text": "Which of the following tools has been known to rely on parent PID spoofing as part of its \"rootkit-like\" functionality?",
+      "choices": [
+        "Empire",
+        "Cobalt Strike",
+        "DarkGate",
+        "KONNI"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q52",
+      "text": "Which threat group is known for hijacking legitimate application-specific startup scripts for persistence using technique T1037 (Boot or Logon Initialization Scripts) on the Enterprise platform?",
+      "choices": [
+        "Rocke",
+        "APT29",
+        "RotaJakiro",
+        "None of the above"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q53",
+      "text": "Which mitigation strategy involves ensuring proper permission settings for registry keys to prevent unauthorized modifications to logon scripts on the Enterprise platform?",
+      "choices": [
+        "Restrict File and Directory Permissions",
+        "Network Segmentation",
+        "Restrict Registry Permissions",
+        "User Training"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q54",
+      "text": "Monitoring which data source can help detect unauthorized modifications to logon scripts in the Active Directory as part of defending against technique T1037 (Boot or Logon Initialization Scripts)?",
+      "choices": [
+        "Process files and modifications",
+        "Command and arguments",
+        "File creation and modification",
+        "Active Directory object modification"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q55",
+      "text": "Which technique ID refers to adversaries creating cloud instances in unused geographic service regions to evade detection in MITRE ATT&CK?",
+      "choices": [
+        "T1533: Data from Local System",
+        "T1562: Impair Defenses",
+        "T1535: Unused/Unsupported Cloud Regions",
+        "T1547: Boot or Logon Autostart Execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q56",
+      "text": "In the context of MITRE ATT&CK, which mitigation strategy is recommended to prevent adversaries from utilizing unused cloud regions for Defense Evasion?",
+      "choices": [
+        "Deactivate unused regions in the cloud provider.",
+        "Enable all advanced detection services across all regions.",
+        "Increase the number of regions under surveillance.",
+        "Limit account access to cloud management systems."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q57",
+      "text": "Which tactic does MITRE ATT&CK technique T1550.001 pertain to?",
+      "choices": [
+        "Initial Access",
+        "Persistence",
+        "Defense Evasion"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q58",
+      "text": "What is the primary purpose of application access tokens as described in T1550.001?",
+      "choices": [
+        "To directly store user credentials",
+        "To make authorized API requests on behalf of a user or service",
+        "To serve as alternative passwords for user accounts",
+        "To encrypt sensitive user data"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q59",
+      "text": "Which OAuth-related action can an adversary perform using a compromised access token in cloud-based email services?",
+      "choices": [
+        "Generate new access tokens",
+        "Encrypt communications",
+        "Perform REST API functions such as email searching and contact enumeration",
+        "Disable two-factor authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q60",
+      "text": "During the SolarWinds Compromise (C0024), what specific method did APT29 use to make changes to the Office 365 environment?",
+      "choices": [
+        "Exploiting zero-day vulnerabilities",
+        "Crafting spear-phishing emails",
+        "Using compromised service principals",
+        "Intercepting network traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q61",
+      "text": "Which mitigation strategy advises the use of token binding to cryptographically secure an application access token?",
+      "choices": [
+        "Application Developer Guidance (M1013)",
+        "Encrypt Sensitive Information (M1041)",
+        "Restrict Web-Based Content (M1021)",
+        "Audit (M1047)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q62",
+      "text": "According to Detection insights for T1550.001, what activity should be monitored to detect misuse of application access tokens?",
+      "choices": [
+        "File transfer logs",
+        "Network traffic patterns",
+        "Web Credential Usage",
+        "User login attempts"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q63",
+      "text": "What is the purpose of the Pass the Hash technique (T1550.002) in cyber threat intelligence?",
+      "choices": [
+        "To encrypt the authentication channel used in communications",
+        "To authenticate as a user without having access to their cleartext password",
+        "To intercept and manipulate network traffic",
+        "To encrypt stored password hashes"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q64",
+      "text": "Which of the following groups has used tools such as Mimikatz for lateral movement via captured password hashes according to MITRE ATT&CK?",
+      "choices": [
+        "APT29",
+        "APT41",
+        "APT33",
+        "APT32"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q65",
+      "text": "How does 'Overpass the Hash' differ from 'Pass the Hash'?",
+      "choices": [
+        "It introduces encryption to communications",
+        "It uses the password hash to create a Kerberos ticket",
+        "It only works on Linux systems",
+        "It requires re-authentication every session"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q66",
+      "text": "What Windows Security event ID may indicate the use of Pass the Hash for lateral movement between workstations?",
+      "choices": [
+        "4662",
+        "4624",
+        "4672",
+        "4769"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q67",
+      "text": "Which mitigation strategy could help prevent the effectiveness of Pass the Hash attacks?",
+      "choices": [
+        "Malware protection",
+        "Intrusion detection",
+        "Privileged Account Management",
+        "Antivirus software"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q68",
+      "text": "Which tool is capable of performing Pass the Hash on x64 versions of compromised machines according to MITRE ATT&CK?",
+      "choices": [
+        "Mimikatz",
+        "CrackMapExec",
+        "BADHATCH",
+        "Cobalt Strike"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q69",
+      "text": "Under which scenario can a Silver Ticket be utilized based on MITRE ATT&CK T1550.003?",
+      "choices": [
+        "It can access all resources in a domain",
+        "It is used to request service tickets for other resources",
+        "It allows access to a specific resource",
+        "It involves the use of NTLM password hash"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q70",
+      "text": "According to MITRE ATT&CK T1550.003, what specific method does Mimikatz use to extract the krbtgt account hash?",
+      "choices": [
+        "EVENT::DCSync",
+        "DCOM::DUMP",
+        "LSADUMP::DCSync",
+        "PTT::EXTRACT"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q71",
+      "text": "Which mitigation measure can reset the KRBTGT account password twice to invalidate existing golden tickets?",
+      "choices": [
+        "M1027: Password Policies",
+        "M1026: Privileged Account Management",
+        "M1018: User Account Management",
+        "M1015: Active Directory Configuration"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q72",
+      "text": "How can APT32 use Pass the Ticket as per MITRE ATT&CK T1550.003?",
+      "choices": [
+        "By creating forged tickets for administrative access",
+        "By breaching SharePoint access",
+        "By capturing TGT via OS Credential Dumping",
+        "By performing overpassing the hash"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q73",
+      "text": "Which event ID can help detect the misuse of an invalidated golden ticket, according to MITRE ATT&CK T1550.003?",
+      "choices": [
+        "Event ID 4657",
+        "Event ID 4769",
+        "Event ID 2017",
+        "Event ID 4776"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q74",
+      "text": "Given the MITRE ATT&CK technique T1550.004, which mitigation strategy can be employed to reduce the risk of session cookie misuse?",
+      "choices": [
+        "Implementing multi-factor authentication (MFA)",
+        "Regularly updating user credentials",
+        "Monitoring application logs for unusual activities",
+        "Configuring browsers to regularly delete persistent cookies"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q75",
+      "text": "During the SolarWinds Compromise, which threat actor is associated with using stolen cookies to bypass multi-factor authentication for cloud resources?",
+      "choices": [
+        "APT28",
+        "APT29",
+        "APT33",
+        "APT41"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q76",
+      "text": "Which of the following groups used spearphishing emails to lure targets into downloading a Cobalt Strike beacon? (MITRE ATT&CK T1204.001: User Execution: Malicious Link)",
+      "choices": [
+        "APT3",
+        "APT32",
+        "APT33",
+        "APT28"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q77",
+      "text": "Which mitigation strategy recommends blocking unknown or unused files in transit by default when a link is being visited? (MITRE ATT&CK T1204.001: User Execution: Malicious Link)",
+      "choices": [
+        "Network Intrusion Prevention",
+        "Restrict Web-Based Content",
+        "User Training",
+        "Email Sandboxing"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q78",
+      "text": "What detection method involves monitoring newly constructed web-based network connections sent to malicious or suspicious destinations? (MITRE ATT&CK T1204.001: User Execution: Malicious Link)",
+      "choices": [
+        "File Creation",
+        "Network Connection Creation",
+        "Network Traffic Content",
+        "Endpoint Detection and Response (EDR)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q79",
+      "text": "Which adversary group has used OneDrive links for users to download files for execution? (MITRE ATT&CK T1204.001: User Execution: Malicious Link)",
+      "choices": [
+        "BlackTech",
+        "Bazar",
+        "Emotet",
+        "Bumblebee"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q80",
+      "text": "What file types are specifically recommended to be blocked in transit as a part of web-based content restriction? (MITRE ATT&CK T1204.001: User Execution: Malicious Link)",
+      "choices": [
+        ".pdf, .doc, .xls",
+        ".scr, .exe, .pif, .cpl",
+        ".lnk, .bat, .cmd",
+        ".zip, .rar"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q81",
+      "text": "Which group employed URLs hosted on Google Docs to host decoys that lead to execution? (MITRE ATT&CK T1204.001: User Execution: Malicious Link)",
+      "choices": [
+        "Bazar",
+        "APT3",
+        "Leviathan",
+        "PLEAD"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q82",
+      "text": "According to MITRE ATT&CK technique T1204.002, which of the following file types have NOT been mentioned as examples of files that adversaries can use to execute malicious code?",
+      "choices": [
+        ".doc",
+        ".iso",
+        ".pdf",
+        ".scr"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q83",
+      "text": "Which cyber threat group used malicious Microsoft Office attachments with macros during the 2015 Ukraine Electric Power Attack?",
+      "choices": [
+        "Sandworm Team",
+        "admin@338",
+        "APT29",
+        "APT19"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q84",
+      "text": "In the context of MITRE ATT&CK T1204.002, which mitigation strategy involves using specific rules on Windows 10 to prevent execution of potentially malicious executables?",
+      "choices": [
+        "Execution Prevention",
+        "Behavior Prevention on Endpoint",
+        "User Training",
+        "Network Segmentation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q85",
+      "text": "Which tool has been spread through users' interaction with malicious .zip and .msi files as per MITRE ATT&CK pattern T1204.002?",
+      "choices": [
+        "Disco",
+        "Mustang Panda",
+        "Dridex",
+        "APT32"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q86",
+      "text": "Which data source can be monitored for detecting file creation events to identify malicious activity under MITRE ATT&CK technique T1204.002?",
+      "choices": [
+        "Network Traffic",
+        "Process",
+        "File",
+        "Registry"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q87",
+      "text": "In the ATT&CK pattern T1204.002, which cyber threat group has utilized malicious Microsoft Word and PDF attachments sent via spearphishing?",
+      "choices": [
+        "APT12",
+        "APT32",
+        "APT41",
+        "APT10"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q88",
+      "text": "Which of the following mitigation strategies involves the use of digital signatures to ensure the integrity and publisher of specific image tags?",
+      "choices": [
+        "Auditing (M1047)",
+        "Code Signing (M1045)",
+        "Network Intrusion Prevention (M1031)",
+        "User Training (M1017)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q89",
+      "text": "What is one of the primary strategies adversaries use in the T1204.003 technique to increase the likelihood of users deploying their malicious images?",
+      "choices": [
+        "Compromising endpoints",
+        "Exploiting zero-day vulnerabilities",
+        "Matching legitimate names or locations",
+        "Delivering through phishing campaigns"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q90",
+      "text": "Which data source would be most effective in detecting the creation of new containers from potentially malicious images?",
+      "choices": [
+        "Application Log (DS0015)",
+        "Command Execution (DS0017)",
+        "Container Creation (DS0032)",
+        "Image Creation (DS0007)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q91",
+      "text": "The cyber threat group TeamTNT is known for relying on which of the following methods to execute their attacks?",
+      "choices": [
+        "Injecting malicious code into firmware",
+        "Using malicious Docker images",
+        "Compromising supply chain software",
+        "Exploiting buffer overflows"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q92",
+      "text": "In the context of MITRE ATT&CK Enterprise, which tool uses the MISC::AddSid module for SID-History Injection?",
+      "choices": [
+        "Empire",
+        "Mimikatz",
+        "Metasploit",
+        "Cobalt Strike"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q93",
+      "text": "Which of the following is a mitigation strategy for SID-History Injection according to the MITRE ATT&CK framework?",
+      "choices": [
+        "Using Group Policy Objects",
+        "Implementing network segmentation",
+        "Cleaning up SID-History attributes after legitimate account migration",
+        "Using antivirus software"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q94",
+      "text": "Which of the following techniques is associated with the ID T1134.005 in the context of MITRE ATT&CK?",
+      "choices": [
+        "Access Token Manipulation: SID-History Injection",
+        "Process Hollowing: Injected Execution",
+        "Manipulation of Writing Permissions: ACL-Busting",
+        "Remote Access: Credential Dumping"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q95",
+      "text": "In the context of T1078.001 Valid Accounts: Default Accounts, which malware leveraged default credentials to connect to IPC$ shares on remote machines?",
+      "choices": [
+        "Stuxnet",
+        "HyperStack",
+        "Mirai",
+        "Magic Hound"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q96",
+      "text": "Based on T1078.001 Valid Accounts: Default Accounts, what is a recommended mitigation strategy to protect against the use of default credentials?",
+      "choices": [
+        "Encrypting data at rest",
+        "Implement Multi-Factor Authentication",
+        "Change default username and password immediately after installation",
+        "Regular system updates and patches"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q97",
+      "text": "Which technique ID corresponds with adversaries abusing domain accounts?",
+      "choices": [
+        "T1078.001",
+        "T1078.002",
+        "T1078.003",
+        "T1078.004"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q98",
+      "text": "Which detection method involves monitoring remote desktop logons and comparing them to known/approved originating systems to detect lateral movement?",
+      "choices": [
+        "Logon Session Creation",
+        "Logon Session Metadata",
+        "User Account Authentication",
+        "Event Log Analysis"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q99",
+      "text": "Which adversary group is known to use legitimate account credentials to move laterally through compromised environments?",
+      "choices": [
+        "APT3",
+        "APT5",
+        "Cobalt Strike",
+        "CreepySnail"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q100",
+      "text": "Which mitigation involves integrating multi-factor authentication (MFA) as part of organizational policy?",
+      "choices": [
+        "User Training",
+        "Privileged Account Management",
+        "Network Segmentation",
+        "Multi-factor Authentication"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q101",
+      "text": "What active event code should be monitored in Windows to track Security Logs for user login behaviors?",
+      "choices": [
+        "Event ID 4624",
+        "Event ID 4634",
+        "Event ID 4627",
+        "Event ID 4663"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q102",
+      "text": "Which adversary group leveraged valid accounts to deploy malware by obtaining highly privileged credentials such as domain administrator?",
+      "choices": [
+        "Cinnamon Tempest",
+        "Indrik Spider",
+        "Magic Hound",
+        "Operation CuckooBees"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q103",
+      "text": "Which of the following threat actors have been known to use local accounts for lateral movement during the SolarWinds Compromise?",
+      "choices": [
+        "APT29",
+        "APT32",
+        "FIN7",
+        "Kimsuky"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q104",
+      "text": "APT32 is known to use which type of account for their operations according to the examples?",
+      "choices": [
+        "Domain Admin Accounts",
+        "Service Accounts",
+        "Local Admin Accounts",
+        "SYSTEM Accounts"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q105",
+      "text": "Which mitigation involves the implementation of LAPS to prevent the reuse of local administrator credentials?",
+      "choices": [
+        "Privileged Account Management",
+        "Password Policies",
+        "Monitor Logon Sessions",
+        "User Account Permissions"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q106",
+      "text": "What data source should be monitored to detect multiple accounts logging into the same machine simultaneously?",
+      "choices": [
+        "Logon Session",
+        "User Account",
+        "Process Monitoring",
+        "Network Traffic"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q107",
+      "text": "Which tool is used by Kimsuky to add a Windows admin account?",
+      "choices": [
+        "Cobalt Strike",
+        "GREASE",
+        "PsExec",
+        "Umbreon"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q108",
+      "text": "Which malware is specifically noted to record the user's webcam in macOS according to the technique ID T1125 - Video Capture?",
+      "choices": [
+        "FruitFly and Proton",
+        "Agent Tesla and Cobian RAT",
+        "DarkComet and Kazuar",
+        "WarzoneRAT and SDBbot"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q109",
+      "text": "Which data source and component combination is suggested for detecting the technique T1125 - Video Capture?",
+      "choices": [
+        "Command Execution and File Creation",
+        "Process and OS API Execution",
+        "OS API Execution and Network Traffic",
+        "Command Execution and OS API Execution"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q110",
+      "text": "Which malware from the provided examples can access a connected webcam and capture pictures?",
+      "choices": [
+        "InvisiMole",
+        "SDBbot",
+        "Derusbi",
+        "Pupy"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q111",
+      "text": "How does the technique T1125 - Video Capture differ from Screen Capture in terms of execution?",
+      "choices": [
+        "It uses system resources for video recording",
+        "It uses specific devices or applications for video recording",
+        "It requires higher privileges",
+        "It captures images periodically instead of videos"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q112",
+      "text": "Which malware utilizes a custom video recording capability to monitor operations in the victim's environment?",
+      "choices": [
+        "FIN7",
+        "QuasarRAT",
+        "jRAT",
+        "T9000"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q113",
+      "text": "Which of the following malware families has been documented to use anti-virtualization checks as part of Virtualization/Sandbox Evasion (T1497)?",
+      "choices": [
+        "Agent Tesla",
+        "S0253 BlackEnergy",
+        "APT34",
+        "Application"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q114",
+      "text": "What is a common method used by adversaries to evade detection in sandbox environments according to T1497?",
+      "choices": [
+        "Overloading sandbox analysis with numerous API calls",
+        "Encrypting the payload using RSA",
+        "Using DNS tunneling for C2 communication",
+        "Exploiting zero-day vulnerabilities"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q115",
+      "text": "Which of the following malware samples is known to perform system checks to determine if the environment is running on VMware, as part of the technique T1497?",
+      "choices": [
+        "Bisonal",
+        "Black Basta",
+        "Carberp",
+        "StoneDrill"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q116",
+      "text": "How can adversaries use sleep timers or loops in the context of Virtualization/Sandbox Evasion (T1497)?",
+      "choices": [
+        "To initiate lateral movement within the network",
+        "To disrupt file integrity monitoring",
+        "To delay execution and avoid temporary sandbox analysis",
+        "To execute ransomware payloads"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q117",
+      "text": "During Operation Spalax, what technique did threat actors use to evade anti-analysis checks?",
+      "choices": [
+        "Encrypting C2 communications",
+        "Just-in-time decryption of strings",
+        "Using WMI for persistence",
+        "Running anti-analysis checks before executing malware"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q118",
+      "text": "Which of the following is a detection source for identifying Virtualization/Sandbox Evasion (T1497) tactics?",
+      "choices": [
+        "Network traffic monitoring",
+        "Command Execution",
+        "Behavioral analysis of email attachments",
+        "USB device history"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q119",
+      "text": "What technique ID corresponds to Virtualization/Sandbox Evasion: System Checks?",
+      "choices": [
+        "T1497.002",
+        "T1497.003",
+        "T1497.001",
+        "T1497.004"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q120",
+      "text": "Which of the following data sources can be monitored to detect commands that may employ virtualization/sandbox evasion techniques?",
+      "choices": [
+        "Command",
+        "Log",
+        "Network traffic",
+        "File Execution"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q121",
+      "text": "What behavior might Astaroth (S0373) use to evade virtualized environments?",
+      "choices": [
+        "Enumerate running processes",
+        "Check CPU core count",
+        "Check Windows product IDs used by sandboxes",
+        "Check MAC address of infected machine"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q122",
+      "text": "Which of these malware samples checks the amount of physical memory to determine if it is being executed in a virtual environment?",
+      "choices": [
+        "EvilBunny (S0396)",
+        "Attack (S0438)",
+        "Okrum (S0439)",
+        "MegaCortex (S0576)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q123",
+      "text": "Which tool did Lazarus Group use during Operation Dream Job for VM/sandbox detection?",
+      "choices": [
+        "Vmware tools",
+        "Analysis libraries",
+        "System checks",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q124",
+      "text": "Which malware is known to use the speed and frequency of mouse movements to determine if a real user is present on the system?",
+      "choices": [
+        "Darkhotel",
+        "FIN7",
+        "Okrum",
+        "Spark"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q125",
+      "text": "In MITRE ATT&CK technique T1497.002, what kind of user activity might adversaries rely on before activating malicious code?",
+      "choices": [
+        "Network traffic analysis",
+        "User login timestamps",
+        "Mouse movements and clicks",
+        "Firewall settings"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q126",
+      "text": "What data source and component can be monitored to detect actions related to API calls meant for virtualization and sandbox evasion?",
+      "choices": [
+        "Process | Network Connection",
+        "Network | DNS Query",
+        "Logs | SIEM",
+        "Data Source | Process | OS API Execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q127",
+      "text": "Which of the following groups uses a loader that executes the payload only after a specific user action to avoid virtualized environments?",
+      "choices": [
+        "Darkhotel",
+        "FIN7",
+        "Okrum",
+        "Spark"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q128",
+      "text": "Which technique is commonly referred to as API hammering?",
+      "choices": [
+        "Avoiding system scheduling functionality",
+        "Looping benign commands",
+        "Emulating time-based properties",
+        "Calling multiple Native API functions"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q129",
+      "text": "Which procedure example uses NtDelayExecution for pausing execution?",
+      "choices": [
+        "Clambling",
+        "BendyBear",
+        "Crimson",
+        "Brute Ratel C4"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q130",
+      "text": "How does EvilBunny identify a sandbox through time-based evasion?",
+      "choices": [
+        "Using sleep intervals from CPUID",
+        "Comparing timestamps before and after sleep",
+        "Checking for virtual environment flags",
+        "Using file I/O loops to delay process execution"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q131",
+      "text": "Which malware example uses the kernel32.dll Sleep function to delay execution for up to 300 seconds?",
+      "choices": [
+        "SVCReady",
+        "Clop",
+        "DarkTortilla",
+        "GuLoader"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q132",
+      "text": "Which of the following employs a 30-minute delay after execution to evade sandbox monitoring tools?",
+      "choices": [
+        "Okrum",
+        "Ursnif",
+        "TrickBot",
+        "HermeticWiper"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q133",
+      "text": "How does Clop avoid sandbox detection?",
+      "choices": [
+        "Using GetTickCount function",
+        "Disabling system clock Scheduled Task/Job",
+        "Calling NtDelayExecution",
+        "Using the sleep command"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q134",
+      "text": "Given the MITRE ATT&CK technique T1600.002 on Defense Evasion, which method is primarily used by adversaries to disable dedicated hardware encryption on network devices?",
+      "choices": [
+        "Network Device CLI",
+        "Modify System Image",
+        "Remote Service Session",
+        "Injection of Malicious Code"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q135",
+      "text": "Which data component should be monitored to detect unexpected deletions of user accounts associated with T1531 (Account Access Removal) under the tactic of Impact?",
+      "choices": [
+        "Active Directory Object Modification",
+        "Process Creation",
+        "File Creation",
+        "User Account Deletion"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q136",
+      "text": "Which procedure example under T1531 involves adversaries deleting administrator accounts prior to encryption?",
+      "choices": [
+        "Aviron (S0373)",
+        "LockerGoga (S0372)",
+        "LAPSUS$ (G1004)",
+        "Akira (G1024)"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q137",
+      "text": "When adversaries use the T1531 technique on Windows platforms, which PowerShell cmdlet might they use?",
+      "choices": [
+        "Get-ADUser",
+        "New-LocalUser",
+        "Set-LocalUser",
+        "Get-ADAccountPassword"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q138",
+      "text": "In the context of MITRE ATT&CK Technique T1600.001 for Enterprise, which of the following activities could an adversary manipulate to facilitate decryption of data?",
+      "choices": [
+        "Increase the length of the encryption key",
+        "Reduce the encryption key size",
+        "Alter the hashing algorithm used in encryption",
+        "Change the network protocol for data transmission"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q139",
+      "text": "Regarding detection for the MITRE ATT&CK Technique T1600.001 (Weaken Encryption: Reduce Key Space) on Enterprise platforms, which method can potentially identify this behavior?",
+      "choices": [
+        "Analyzing user login patterns",
+        "Monitoring file modification events",
+        "Inspecting data packet sizes",
+        "Reviewing firewall logs"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q140",
+      "text": "Adversaries using T1102.001: Web Service: Dead Drop Resolver often utilize popular websites and social media platforms to host C2 information. What is one reason this tactic is effective?",
+      "choices": [
+        "A. It uses unique domain names that evade detection.",
+        "B. Hosts within a network often already communicate with these services, blending in with normal traffic.",
+        "C. It employs outdated SSL/TLS protocols that are rarely monitored.",
+        "D. It exploits common vulnerabilities found in web applications."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q141",
+      "text": "Which threat group is known to use multiple tech community forums to frequently update dead drop resolvers for their KEYPLUG Windows-version backdoor, according to T1102.001?",
+      "choices": [
+        "A. APT41",
+        "B. BRONZE BUTLER",
+        "C. RTM",
+        "D. Patchwork"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q142",
+      "text": "In the context of technique T1102.001: Web Service: Dead Drop Resolver, which mitigation strategy involves using network signatures to identify and block adversary malware?",
+      "choices": [
+        "A. Restrict Web-Based Content",
+        "B. Network Intrusion Prevention",
+        "C. Use Secure Password Vaults",
+        "D. Implement Multi-Factor Authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q143",
+      "text": "Given the detection strategy for T1102.001: Web Service: Dead Drop Resolver, which data source focuses on detecting network traffic that does not follow expected protocol standards and traffic flows?",
+      "choices": [
+        "A. Network Traffic Flow",
+        "B. Host-Based Firewall Logs",
+        "C. DNS Query Logs",
+        "D. Network Traffic Content"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q144",
+      "text": "Which malware is known to use Microsoft's TechNet Web portal for obtaining dead drop resolvers according to T1102.001?",
+      "choices": [
+        "A. BLACKCOFFEE",
+        "B. PlugX",
+        "C. Grandoreiro",
+        "D. MiniDuke"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q145",
+      "text": "Which MITRE ATT&CK tactic does Technique ID T1102.002 belong to?",
+      "choices": [
+        "Exfiltration",
+        "Command and Control",
+        "Collection",
+        "Persistence"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q146",
+      "text": "What is a common method used by adversaries for outbound traffic in Technique ID T1102.002?",
+      "choices": [
+        "Using DNS tunneling",
+        "Sending emails to command servers",
+        "Making HTTP requests to compromised blogs",
+        "Using FTP to upload data"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q147",
+      "text": "In the provided examples, which adversary group uses Google Drive for command and control according to Technique ID T1102.002?",
+      "choices": [
+        "APT12",
+        "APT28",
+        "Carbanak",
+        "HEXANE"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q148",
+      "text": "Which of the following mitigations would be most effective against Technique ID T1102.002?",
+      "choices": [
+        "Implementing Endpoint Detection and Response tools",
+        "Using obfuscation techniques for sensitive data",
+        "Implementing Network Intrusion Prevention",
+        "Regularly updating antivirus definitions"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q149",
+      "text": "Which adversary uses RSS feeds among their C2 communication channels as per the examples listed in Technique ID T1102.002?",
+      "choices": [
+        "BLACKCOFFEE",
+        "BLUELIGHT",
+        "BADNEWS",
+        "Revenge RAT"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q150",
+      "text": "In the context of detection for Technique ID T1102.002, what should be monitored to detect anomalous communications?",
+      "choices": [
+        "File access patterns",
+        "CPU usage spikes",
+        "Newly constructed network connections",
+        "User authentication logs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q151",
+      "text": "Adversaries using the MITRE ATT&CK technique T1102.003 may utilize which of the following methods for C2 communication?",
+      "choices": [
+        "Modifying registry keys to send commands",
+        "Using legitimate external Web services to send commands",
+        "Embedding commands in local log files",
+        "Utilizing proprietary VPN services"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q152",
+      "text": "In the MITRE ATT&CK framework, which technique (ID: T1047) is used by adversaries to abuse Windows Management Instrumentation for command execution?",
+      "choices": [
+        "A) T1021.001 - Remote Services: Remote Desktop Protocol",
+        "B) T1047 - Windows Management Instrumentation",
+        "C) T1053.003 - Scheduled Task/Job: Cron",
+        "D) T1078 - Valid Accounts"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q153",
+      "text": "During the 2016 Ukraine Electric Power Attack, how did adversaries employ WMI (ID: T1047)?",
+      "choices": [
+        "A) To steal financial information",
+        "B) To gather AV products installed",
+        "C) For remote execution and system surveys",
+        "D) To delete shadow copies"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q154",
+      "text": "Which of the following ports does WMI use for Remote WMI over WinRM operations?",
+      "choices": [
+        "A) 80 for HTTP, 443 for HTTPS",
+        "B) 5985 for HTTP, 5986 for HTTPS",
+        "C) 135 for RPC, 445 for SMB",
+        "D) 3306 for MySQL, 5432 for PostgreSQL"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q155",
+      "text": "Which tool, deprecated as of January 2024, can be used to abuse WMI for deleting shadow copies using the command wmic.exe Shadowcopy Delete?",
+      "choices": [
+        "A) PowerShell",
+        "B) wbemtool.exe",
+        "C) wmic.exe",
+        "D) deprecated.exe"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q156",
+      "text": "What mitigation strategy involves using Windows Defender Application Control (WDAC) policy rules to block the execution of wmic.exe on Windows 10 and Windows Server 2016?",
+      "choices": [
+        "A) M1040 - Behavior Prevention on Endpoint",
+        "B) M1038 - Execution Prevention",
+        "C) M1026 - Privileged Account Management",
+        "D) M1018 - User Account Management"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q157",
+      "text": "Which threat group (ID: G0016) used WMI to steal credentials and execute backdoors at a future time?",
+      "choices": [
+        "A) APT32",
+        "B) APT29",
+        "C) APT41",
+        "D) FIN7"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q158",
+      "text": "In the LATACH G framework, which group has been attributed to the use of ransomware from a batch file in a network share?",
+      "choices": [
+        "BRONZE BUTLER",
+        "Cinnamon Tempest",
+        "Ursnif",
+        "Ramsay"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q159",
+      "text": "Which group used a virus that propagates by infecting executables stored on shared drives according to the provided document?",
+      "choices": [
+        "Darkhotel",
+        "Miner-C",
+        "Conti",
+        "H1N1"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q160",
+      "text": "What is the main focus of the mitigation ID M1022 in the provided text?",
+      "choices": [
+        "Exploit protection",
+        "Execution prevention",
+        "Antivirus/antimalware",
+        "Restricting file and directory permissions"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q161",
+      "text": "What data source ID should be monitored for unexpected and abnormal accesses to network shares, according to the provided document?",
+      "choices": [
+        "DS0022 - File",
+        "DS0007 - Process",
+        "DS0033 - Network Share",
+        "DS0044 - Account"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q162",
+      "text": "Which of the following Linux commands can be used by adversaries to gather the current time on a Linux device?",
+      "choices": [
+        "`gettimeofday()`",
+        "`time()`",
+        "`clock_gettime()`",
+        "`timespec_get()`"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q163",
+      "text": "Which of the following tactics does MITRE ATT&CK technique T1124 align with?",
+      "choices": [
+        "Persistence",
+        "Execution",
+        "Discovery",
+        "Collection"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q164",
+      "text": "Which of the following procedures can specifically determine the System UPTIME?",
+      "choices": [
+        "AvosLocker",
+        "Agent Tesla",
+        "BendBear",
+        "BADHATCH"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q165",
+      "text": "Which data source can help detect an adversary performing System Time Discovery on a Windows platform?",
+      "choices": [
+        "Command Line History",
+        "DNS Query",
+        "Process OS API Execution",
+        "Web Traffic Monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q166",
+      "text": "For the technique T1124, which command can adversaries use on a macOS system to gather the current time zone information?",
+      "choices": [
+        "`date`",
+        "`systemsetup -gettimezone`",
+        "`clock`",
+        "`tzutil`"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q167",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which of the following adversarial groups has used a custom MBR wiper named BOOTWRECK to initiate a system reboot?",
+      "choices": [
+        "APT37",
+        "APT38",
+        "Lazarus Group",
+        "HermeticWiper"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q168",
+      "text": "Which MITRE ATT&CK T1529 adversary behavior example involves a delay before rebooting the system?",
+      "choices": [
+        "AcidRain",
+        "KillDisk",
+        "DCSrv",
+        "LockerGoga"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q169",
+      "text": "For which platform does the MITRE ATT&CK technique T1529 apply and why is it challenging to mitigate with preventive controls?",
+      "choices": [
+        "ICS platform; because it depends on system configuration settings",
+        "Mobile platform; because it relies on specific OS features",
+        "None; because it is based on the abuse of system features",
+        "Enterprise platform; because it disrupts system monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q170",
+      "text": "Which technique is identified as T1087 in the MITRE ATT&CK framework?",
+      "choices": [
+        "Initial Access",
+        "Execution",
+        "Account Discovery",
+        "Defense Evasion"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q171",
+      "text": "Which of the following mitigation strategies helps prevent enumerating administrator accounts through UAC elevation?",
+      "choices": [
+        "M1028 - Operating System Configuration",
+        "M1018 - User Account Management",
+        "M1050 - Data Masking",
+        "M1047 - Audit"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q172",
+      "text": "During the SolarWinds Compromise, which tool did APT29 use to get a list of users and their roles from an Exchange server?",
+      "choices": [
+        "PowerShell with Get-LocalUser",
+        "lsass.exe with mimikatz wmiapsrv",
+        "woody.exe",
+        "During the SolarWinds Compromise, APT29 used Get-ManagementRoleAssignment in Exchange."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q173",
+      "text": "Which data source and component should be combined to detect file access operations related to user account listings?",
+      "choices": [
+        "DS0017 - Command Execution",
+        "DS0022 - File Access",
+        "DS0009 - Process Creation",
+        "DS0018 - Network Traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q174",
+      "text": "Under the MITRE ATT&CK framework for Enterprise, which mitigation can help prevent adversaries from creating or interacting with system services using a lower permission level?",
+      "choices": [
+        "M1026 - Behavior Prevention on Endpoint",
+        "M1040 - Privileged Account Management",
+        "M1026 - Privileged Account Management",
+        "M1022 - Restrict File and Directory Permissions"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q175",
+      "text": "Regarding MITRE ATT&CK Technique T1569 (System Services), which detection method involves observing for command line invocations of tools capable of modifying services?",
+      "choices": [
+        "DS0009 - Process Creation",
+        "DS0017 - Command Execution",
+        "DS0019 - Service Creation",
+        "DS0024 - Windows Registry Key Modification"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q176",
+      "text": "According to MITRE ATT&CK, which adversary group has been known to create system services to execute cryptocurrency mining software?",
+      "choices": [
+        "APT41",
+        "TA505",
+        "TeamTNT",
+        "UNC1878"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q177",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which command can be used to discover Windows services?",
+      "choices": [
+        "A. ls -l",
+        "B. sc query",
+        "C. cat /etc/services",
+        "D. get-service"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q178",
+      "text": "Which threat actor is known for using the command net start to discover system services, according to the MITRE ATT&CK pattern for System Service Discovery (T1007)?",
+      "choices": [
+        "A. Turla",
+        "B. admin@338",
+        "C. Kimsuky",
+        "D. Earth Lusca"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q179",
+      "text": "During detection, which of the following API calls should be monitored for System Service Discovery (T1007)?",
+      "choices": [
+        "A. CreateFile",
+        "B. QueryServiceStatusEx",
+        "C. RegQueryValueEx",
+        "D. VirtualAlloc"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q180",
+      "text": "Which data source should be monitored to detect the execution of commands that gather system service information for System Service Discovery (T1007)?",
+      "choices": [
+        "A. Registry",
+        "B. Firewall Logs",
+        "C. Command Execution",
+        "D. DNS Logs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q181",
+      "text": "Which threat actor has specifically attempted to discover services for third-party EDR products according to the MITRE ATT&CK technique T1007?",
+      "choices": [
+        "A. Babuk",
+        "B. Epic",
+        "C. Aquatic Panda",
+        "D. REvil"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q182",
+      "text": "According to MITRE ATT&CK, what might adversaries use System Service Discovery information for in post-exploitation activities (T1007)?",
+      "choices": [
+        "A. To escalate privileges using buffer overflow",
+        "B. To shape follow-on behaviors and decide on further actions",
+        "C. To establish a direct communication channel with C2",
+        "D. To exfiltrate data using DNS tunneling"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q183",
+      "text": "Which of the following mitigations aligns with MITRE ATT&CK ID T1216, System Script Proxy Execution, and involves blocking specific signed scripts that are deemed unnecessary in an environment?",
+      "choices": [
+        "Network Segmentation",
+        "Malware Removal",
+        "Execution Prevention (M1038)",
+        "User Training"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q184",
+      "text": "Which command is used on macOS to enumerate user accounts excluding system accounts?",
+      "choices": [
+        "whoami",
+        "dscl . list /Users | grep -v '_'",
+        "cut -d: -f1 /etc/passwd",
+        "id -un"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q185",
+      "text": "Which utility is commonly used on Linux to identify currently logged in users?",
+      "choices": [
+        "who",
+        "net users",
+        "getent passwd",
+        "cmd.exe /C whoami"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q186",
+      "text": "Which technique does the ID T1033 pertain to in the MITRE ATT&CK framework?",
+      "choices": [
+        "System Information Discovery",
+        "Account Discovery",
+        "System Owner/User Discovery",
+        "Remote System Discovery"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q187",
+      "text": "In the context of T1033 on an Enterprise platform, which command can be executed to determine the identity of the current user on a Windows system?",
+      "choices": [
+        "query user",
+        "show users",
+        "cmd.exe /C whoami",
+        "getent passwd"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q188",
+      "text": "Adversaries can use which environment variable to access the username on a Unix-like system?",
+      "choices": [
+        "%USERNAME%",
+        "$USER",
+        "%USERPROFILE%",
+        "$LOGNAME"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q189",
+      "text": "Which adversary group used the whoami command and WMIEXEC utility to identify usernames on remote machines according to T1033?",
+      "choices": [
+        "Dragonfly",
+        "APT41",
+        "Magic Hound",
+        "Lazarus Group"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q190",
+      "text": "Which of the following mitigations is associated with Behavior Prevention on Endpoint in relation to MITRE ATT&CK technique T1216.001 – System Script Proxy Execution: PubPrn?",
+      "choices": [
+        "Using Application Control to block script execution",
+        "Updating Windows Defender application control policies to block older versions of PubPrn",
+        "Block all scripts via GPO",
+        "Whitelist approved scripts only"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q191",
+      "text": "What is the primary purpose of the PubPrn.vbs script as per MITRE ATT&CK technique T1216.001 – System Script Proxy Execution: PubPrn?",
+      "choices": [
+        "To execute PowerShell scripts remotely",
+        "To publish a printer to Active Directory Domain Services",
+        "To proxy execution of batch files",
+        "To scan for vulnerabilities on network printers"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q192",
+      "text": "Which data sources are recommended for monitoring the use of PubPrn.vbs according to MITRE ATT&CK technique T1216.001 – System Script Proxy Execution: PubPrn?",
+      "choices": [
+        "Command, Network Traffic, DNS logs",
+        "Process Creation, Disk I/O, File Manipulation",
+        "Command Execution, Process Creation, Script Execution",
+        "File Access, UI Interaction, User BehaviorIndicators"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q193",
+      "text": "Which MITRE ATT&CK tactic does the technique T1216.002: System Script Proxy Execution: SyncAppvPublishingServer primarily fall under?",
+      "choices": [
+        "Persistence",
+        "Privilege Escalation",
+        "Defense Evasion",
+        "Lateral Movement"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q194",
+      "text": "Which command-line tool is typically associated with the execution of SyncAppvPublishingServer.vbs, as per the MITRE ATT&CK technique T1216.002?",
+      "choices": [
+        "cscript.exe",
+        "mshta.exe",
+        "wmic.exe",
+        "wscript.exe"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q195",
+      "text": "What is the primary purpose of adversaries using SyncAppvPublishingServer.vbs in the context of MITRE ATT&CK technique T1216.002?",
+      "choices": [
+        "To escalate privileges on a system",
+        "To proxy execution of malicious PowerShell commands",
+        "To exploit vulnerabilities in system scripts",
+        "To exfiltrate sensitive information"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q196",
+      "text": "In the context of MITRE ATT&CK, which procedure example involved using the command \"net use\" as part of network connections discovery?",
+      "choices": [
+        "admin@338",
+        "APT1",
+        "Andariel",
+        "Chimera"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q197",
+      "text": "Which cyber threat actor used the MAPMAKER tool to print active TCP connections on a local system according to T1049?",
+      "choices": [
+        "APT32",
+        "APT38",
+        "APT41",
+        "BackdoorDiplomacy"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q198",
+      "text": "Under MITRE ATT&CK T1049, which group employed a PowerShell script called RDPConnectionParser for network information from RDP connections?",
+      "choices": [
+        "Harvester",
+        "OilRig",
+        "Earth Lusca",
+        "HEXANE"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q199",
+      "text": "What technique ID and name does MITRE ATT&CK assign to \"System Network Connections Discovery\"?",
+      "choices": [
+        "T1057: Process Discovery",
+        "T1082: System Information Discovery",
+        "T1049: System Network Connections Discovery",
+        "T1016: System Network Configuration Discovery"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q200",
+      "text": "Which group used both the \"netstat -ano\" command and the HIGHNOON malware variant for enumerating active RDP sessions?",
+      "choices": [
+        "Chimera",
+        "APT41",
+        "Babuk",
+        "Andariel"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q201",
+      "text": "In the detection process for T1049, which data source is NOT specified for monitoring executed commands and arguments?",
+      "choices": [
+        "Process",
+        "API Call",
+        "Command",
+        "Network Traffic"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q202",
+      "text": "Which command can be used on a Windows system to enumerate Wi-Fi network names through the command line?",
+      "choices": [
+        "netsh wlan show profiles",
+        "netsh wlan show interfaces",
+        "netsh wlan show networks",
+        "netsh wlan show all"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q203",
+      "text": "On macOS, which command requires an admin username/password to retrieve the password of a known Wi-Fi network?",
+      "choices": [
+        "networksetup -getairportnetwork",
+        "wifinding-cli list-networks",
+        "security find-generic-password -wa wifiname",
+        "airportutil --find-passwords"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q204",
+      "text": "What is a common behavior of the Emotet malware related to Wi-Fi networks?",
+      "choices": [
+        "It can collect names of all Wi-Fi networks a device has previously connected to",
+        "It can perform a brute-force attack to spread to new networks",
+        "It can disable Wi-Fi connectivity on the compromised system",
+        "It can create new Wi-Fi profiles on the device"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q205",
+      "text": "Which command would an adversary use on macOS to list local user accounts?",
+      "choices": [
+        "id",
+        "groups",
+        "dscl . list /Users",
+        "net localgroup"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q206",
+      "text": "Which technique was used by Threat Group-3390 to conduct internal discovery of systems?",
+      "choices": [
+        "T1087.001 - Account Discovery: Local Account",
+        "T1003.003 - OS Credential Dumping: Windows SAM",
+        "C0012 - Sensitive Data Discovery: Personal Data",
+        "T1547.001 - Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q207",
+      "text": "Which of the following groups used the command \"net localgroup administrators\" to enumerate administrative users?",
+      "choices": [
+        "APT11",
+        "APT12",
+        "APT41",
+        "APT32"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q208",
+      "text": "What type of monitoring would detect the command “net user” being executed in a sequence on a Windows environment?",
+      "choices": [
+        "Registry Access",
+        "Grid Enumeration",
+        "Command Execution",
+        "Network Flow"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q209",
+      "text": "What mitigation can be used to prevent the enumeration of administrator accounts during UAC elevation?",
+      "choices": [
+        "Restrict Unnecessary Privileges",
+        "Mitigate System Failures",
+        "Operating System Configuration",
+        "Group Policy Enforcement"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q210",
+      "text": "Which detection mechanism would be appropriate for finding unauthorized access to the /etc/passwd file in a Linux environment?",
+      "choices": [
+        "File Hashing",
+        "File Access",
+        "Command Injection",
+        "Kernel Module Analysis"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q211",
+      "text": "Which malware uses GetUserDefaultUILanguage to identify and terminate executions based on system language?",
+      "choices": [
+        "Ke3chang",
+        "Mazeera",
+        "REvil",
+        "Cuba"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q212",
+      "text": "What registry key does Ryuk query to detect system language?",
+      "choices": [
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\Language",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LanguagePack\\Installed",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q213",
+      "text": "Which malware attempts to identify Japanese keyboards via the Windows API call GetKeyboardType?",
+      "choices": [
+        "Clop",
+        "DropBook",
+        "Neoichor",
+        "Misdat"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q214",
+      "text": "How does SynAck handle the situation when a language match is found during its checks?",
+      "choices": [
+        "It changes the system language",
+        "It encrypts the files immediately",
+        "It logs the event and continues",
+        "It sleeps for 300 seconds and then exits"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q215",
+      "text": "Which MITRE ATT&CK Data Source should be monitored to detect system language discovery through API calls?",
+      "choices": [
+        "Command",
+        "Windows Registry",
+        "File monitoring",
+        "OS API Execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q216",
+      "text": "During \"Operation Dream Job,\" which region's languages were excluded by malware?",
+      "choices": [
+        "North American",
+        "Germanic",
+        "Slavic",
+        "Asian"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q217",
+      "text": "Which specific API call can be utilized by adversaries to collect the number of processors on a Windows machine (MITRE ATT&CK T1082)?",
+      "choices": [
+        "GetProcessorNumber",
+        "GetCPUInfo",
+        "GetSystemInfo",
+        "GetProcessorCount"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q218",
+      "text": "What kind of data would adversaries likely gather via authenticated API calls in AWS, GCP, and Azure within an IaaS environment (MITRE ATT&CK T1082)?",
+      "choices": [
+        "Network traffic logs",
+        "Firewall configurations",
+        "Instance and VM information",
+        "User access logs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q219",
+      "text": "Which network device command might adversaries use to obtain system information, particularly version details (MITRE ATT&CK T1082)?",
+      "choices": [
+        "show system",
+        "show devices",
+        "show version",
+        "list version"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q220",
+      "text": "Which detection method could be employed to effectively identify attempts to gather system information via command executions on network devices (MITRE ATT&CK T1082)?",
+      "choices": [
+        "Firewall logs",
+        "Application logs",
+        "AAA logs",
+        "Database logs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q221",
+      "text": "Which tool mentioned in the document can gather detailed system information specifically on Windows systems including OS version and patches (MITRE ATT&CK T1082)?",
+      "choices": [
+        "Systemsetup on macOS",
+        "Windows Management Instrumentation",
+        "Windows Update",
+        "Windows Performance Monitor"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q222",
+      "text": "Which MITRE ATT&CK technique T1552 involves adversaries finding and obtaining insecurely stored credentials?",
+      "choices": [
+        "Unsecured Protocols (T1071)",
+        "Unsecured Credentials (T1552)",
+        "Credential Dumping (T1003)",
+        "Credential Injection (T1056)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q223",
+      "text": "In the examples provided, which malware uses NetPass to recover passwords?",
+      "choices": [
+        "Astaroth (S0373)",
+        "DarkGate (S1111)",
+        "Pacu (S1091)",
+        "Mimikatz (S0002)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q224",
+      "text": "Which mitigation involves actively searching for files containing passwords or credentials to reduce exposure risk?",
+      "choices": [
+        "Active Directory Configuration (M1015)",
+        "Audit (M1047)",
+        "Encrypt Sensitive Information (M1041)",
+        "Update Software (M1051)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q225",
+      "text": "Which data component specifically involves monitoring command execution to detect potential adversary activity related to finding passwords?",
+      "choices": [
+        "Application Log Content",
+        "Command Execution",
+        "File Access",
+        "Process Creation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q226",
+      "text": "What programming method does DarkGate employ to execute NirSoft tools for credential theft?",
+      "choices": [
+        "Process Injection",
+        "Remote Code Execution",
+        "Process Hollowing",
+        "Privilege Escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q227",
+      "text": "Which mitigation strategy is suggested to store keys on separate cryptographic hardware rather than the local system?",
+      "choices": [
+        "Password Policies (M1027)",
+        "Restrict File and Directory Permissions (M1022)",
+        "Encrypt Sensitive Information (M1041)",
+        "User Training (M1017)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q228",
+      "text": "Which MITRE ATT&CK technique involves using trusted third-party relationships to gain initial access to a victim's network?",
+      "choices": [
+        "Trusted Partner Connection (T1200)",
+        "Valid Accounts (T1078)",
+        "Trusted Relationship (T1199)",
+        "Supply Chain Compromise (T1195)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q229",
+      "text": "Which group, as per the procedure examples, has breached managed service providers to deliver malware to their customers?",
+      "choices": [
+        "GOLD SOUTHFIELD (G0115)",
+        "Sandworm Team (G0034)",
+        "APT29 (G0016)",
+        "menuPass (G0045)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q230",
+      "text": "What mitigation technique recommends requiring Multi-factor Authentication (MFA) for delegated administrator accounts to prevent abuse in trusted relationships?",
+      "choices": [
+        "User Account Management (M1018)",
+        "MFA Authentication Control (M1042)",
+        "Multi-factor Authentication (M1032)",
+        "Network Segmentation (M1030)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q231",
+      "text": "To detect adversarial activities involving trusted relationships, what should be monitored in application logs based on MITRE's detection guidance?",
+      "choices": [
+        "Newly constructed logon sessions",
+        "Unexpected actions by delegated administrator accounts",
+        "Anomalous traffic patterns",
+        "Compromised user credentials"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q232",
+      "text": "What data source can help detect unauthorized network traffic patterns from a trusted entity, as per the MITRE ATT&CK detection guidance?",
+      "choices": [
+        "User Session Logs",
+        "Network Traffic",
+        "Endpoint Logs",
+        "Firewall Logs"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q233",
+      "text": "When considering the MITRE ATT&CK technique T1537: Transfer Data to Cloud Account, which mitigation strategy involves preventing and blocking sensitive data from being shared with external entities?",
+      "choices": [
+        "M1057 | Data Loss Prevention",
+        "M1037 | Filter Network Traffic",
+        "M1054 | Software Configuration",
+        "M1018 | User Account Management"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q234",
+      "text": "For monitoring anomalous file transfer activity between accounts within the same cloud provider, which data source is most relevant according to the MITRE ATT&CK technique T1537: Transfer Data to Cloud Account?",
+      "choices": [
+        "DS0015 | Application Log",
+        "DS0010 | Cloud Storage",
+        "DS0029 | Network Traffic",
+        "DS0020 | Snapshot"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q235",
+      "text": "The technique T1537: Transfer Data to Cloud Account can be mitigated by configuring appropriate data sharing restrictions. Which of the following mitigation ID and name pairs corresponds to this strategy?",
+      "choices": [
+        "M1057 | Data Loss Prevention",
+        "M1037 | Filter Network Traffic",
+        "M1054 | Software Configuration",
+        "M1018 | User Account Management"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q236",
+      "text": "According to the MITRE ATT&CK technique T1537: Transfer Data to Cloud Account, what application log event name might you monitor for in Microsoft 365 to detect inappropriate data sharing?",
+      "choices": [
+        "SharingInvitationCreated",
+        "SecureLinkRemoved",
+        "AnonymousAccessDenied",
+        "FileDeletionRequested"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q237",
+      "text": "In the context of MITRE ATT&CK for Enterprise, what is the primary purpose of utilizing 'Trusted Developer Utilities Proxy Execution' (T1127)?",
+      "choices": [
+        "To primarily enhance system performance through developer tools.",
+        "To proxy execution of malicious payloads through trusted developer utilities.",
+        "To facilitate network communication between development tools.",
+        "To ensure compliance with software development standards."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q238",
+      "text": "Which data source is recommended for detecting abnormal uses of developer utilities under MITRE ATT&CK's detection strategy for T1127 on an enterprise platform?",
+      "choices": [
+        "DS0016 | File Monitoring",
+        "DS0008 | Network Traffic",
+        "DS0017 | Command Execution",
+        "DS0020 | User Account Monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q239",
+      "text": "Under the mitigation tactics for MITRE ATT&CK's T1127 technique, which method is not suggested as a proactive countermeasure?",
+      "choices": [
+        "M1042 | Disable or Remove Feature or Program",
+        "M1038 | Execution Prevention",
+        "M1024 | Privilege Management",
+        "M1086 | Network Segmentation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q240",
+      "text": "Given the technique T1205 - Traffic Signaling, in which scenario might an adversary use this technique?",
+      "choices": [
+        "To demonstrate proof of concept for a security patch.",
+        "To open a closed port on a system for command and control.",
+        "To perform data exfiltration from a secure database.",
+        "To modify user credentials for lateral movement."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q241",
+      "text": "Which of the following malware examples triggers on a magic packet in TCP or UDP packets?",
+      "choices": [
+        "BUSHWALK",
+        "Ryuk",
+        "SYNful Knock",
+        "Penquin"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q242",
+      "text": "For the Traffic Signaling technique (T1205), which library can be used to sniff signal packets?",
+      "choices": [
+        "winsock",
+        "libpcap",
+        "nmap",
+        "wireshark"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q243",
+      "text": "When adversaries use Traffic Signaling on embedded devices, which prerequisite condition must be met?",
+      "choices": [
+        "Compromised credentials",
+        "Unpatched system",
+        "Patch System Image",
+        "No prerequisite"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q244",
+      "text": "What method does the malware Chaos use when implementing Traffic Signaling?",
+      "choices": [
+        "Activating administrative privileges",
+        "Triggering reverse shell upon detection of a specific string",
+        "Performing Denial of Service",
+        "Intercepting HTTP requests"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q245",
+      "text": "Which detection method can help identify hidden command and control traffic following Traffic Signaling (T1205)?",
+      "choices": [
+        "Port scanning for open ports",
+        "Monitoring network packet content to detect unusual protocol standards",
+        "Analyzing endpoint security logs",
+        "Checking digital certificates of communications"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q246",
+      "text": "Based on the MITRE ATT&CK technique T1218.015 for Enterprise, which of the following practices is a recommended mitigation to prevent the abuse of Electron applications?",
+      "choices": [
+        "Enforce binary and application integrity with digital signature verification",
+        "Disable or remove access to nodeIntegration",
+        "Ensure application binaries are always executed as administrator",
+        "Constantly monitor network traffic from Electron applications"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q247",
+      "text": "MITRE ATT&CK's technique T1218.015 for Electron applications uses which of the following components to display the web content and execute back-end code, respectively?",
+      "choices": [
+        "WebKit engine and Node.js",
+        "Chromium engine and WebAssembly",
+        "Chromium engine and Node.js",
+        "WebKit engine and JavaScript"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q248",
+      "text": "Adversaries leveraging mmc.exe to execute malicious .msc files most closely pertains to which MITRE ATT&CK technique and tactic?",
+      "choices": [
+        "T1218.011 System Binary Proxy Execution: MSHTA",
+        "T1218.012 System Binary Proxy Execution: Regsvr32",
+        "T1218.001 System Binary Proxy Execution: Control Panel",
+        "T1218.014 System Binary Proxy Execution: MMC"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q249",
+      "text": "Which of the following mitigations is recommended to prevent the misuse of MMC within an environment?",
+      "choices": [
+        "Use application control to define allowed file types for execution",
+        "Regularly update and patch system binaries",
+        "Disable MMC if it is not required for a given system",
+        "Monitor network traffic for unusual DNS queries"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q250",
+      "text": "What data source(s) should be monitored to detect the malicious use of MMC according to MITRE ATT&CK?",
+      "choices": [
+        "Network Traffic and User Account Authentication",
+        "Command Execution and Process Creation",
+        "File Creation and Network Traffic",
+        "Command Execution, File Creation, and Process Creation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q251",
+      "text": "Which of the following describes a potential mitigation for T1218.013 (System Binary Proxy Execution: Mavinject) on an Enterprise platform?",
+      "choices": [
+        "Monitoring network traffic for unusual patterns",
+        "Using application control configured to block mavinject.exe",
+        "Encrypting sensitive data in transit",
+        "Implementing multi-factor authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q252",
+      "text": "How can mavinject.exe be used for defense evasion according to T1218.013?",
+      "choices": [
+        "By encrypting the payload before execution",
+        "By masquerading as a commonly used process",
+        "By injecting malicious DLLs into running processes",
+        "By deleting log files after execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q253",
+      "text": "Which data source and component can be used to detect malicious usage of mavinject.exe related to T1218.013 on an Enterprise platform?",
+      "choices": [
+        "Network Traffic and Network Flow",
+        "Endpoint Detection and Response (EDR) and File Creation",
+        "Command Line Logging and User Authentication Process Monitoring",
+        "Command Execution and Process Creation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q254",
+      "text": "What primary MITRE ATT&CK tactic corresponds to the ID T1087.002?",
+      "choices": [
+        "Discovery",
+        "Execution",
+        "Privilege Escalation",
+        "Lateral Movement"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q255",
+      "text": "Which PowerShell cmdlet mentioned in T1087.002 can be used to enumerate members of Active Directory groups?",
+      "choices": [
+        "Get-NetDomainMember",
+        "Get-ADComputer",
+        "Get-ADUser",
+        "Get-ADGroupMember"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q256",
+      "text": "What command on MacOS can be used for domain account discovery according to T1087.002?",
+      "choices": [
+        "ldapsearch",
+        "lsdmac",
+        "dsmac",
+        "dscacheutil -q group"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q257",
+      "text": "Which adversary group used built-in net commands to enumerate domain administrator users as per the examples provided?",
+      "choices": [
+        "BRONZE BUTLER",
+        "APT41",
+        "menuPass",
+        "Dragonfly"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q258",
+      "text": "Which tool listed in the document can be used to collect information about domain users, including identification of domain admin accounts?",
+      "choices": [
+        "dsquery",
+        "AdFind",
+        "BloodHound",
+        "PowerShell"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q259",
+      "text": "In the document, what mitigation ID involves preventing administrator accounts from being enumerated during elevation?",
+      "choices": [
+        "M1028",
+        "M1031",
+        "M1026",
+        "M1033"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q260",
+      "text": "What is the primary purpose of verclsid.exe according to MITRE ATT&CK Technique T1218.012?",
+      "choices": [
+        "To load and verify shell extensions before they are used by Windows Explorer or the Windows Shell",
+        "To manage and monitor network traffic on Windows systems",
+        "To handle system updates and patches from Microsoft servers",
+        "To ensure the integrity of system libraries during startup"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q261",
+      "text": "Which of the following mitigations is recommended by MITRE ATT&CK for preventing the misuse of verclsid.exe (T1218.012)?",
+      "choices": [
+        "Implementing strict password policies",
+        "Disabling or removing verclsid.exe if it is not necessary",
+        "Encrypting sensitive files and directories",
+        "Deploying multi-factor authentication for all users"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q262",
+      "text": "Which data sources should be monitored to detect the misuse of verclsid.exe as per the MITRE ATT&CK technique T1218.012?",
+      "choices": [
+        "Process monitoring and network traffic analysis",
+        "System memory and disk usage patterns",
+        "File integrity monitoring and email server logs",
+        "Registry changes and user login activities"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q263",
+      "text": "What adversarial technique involves abusing rundll32.exe to proxy execution of malicious code as specified by MITRE ATT&CK Technique ID T1218.011?",
+      "choices": [
+        "Defense Evasion",
+        "Execution",
+        "Persistence",
+        "Privilege Escalation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q264",
+      "text": "Which function can rundll32.exe use to execute Control Panel Item files through an undocumented shell32.dll function? (T1218.011, Enterprise)",
+      "choices": [
+        "Control_RunDLL",
+        "Control_Start",
+        "Control_Launch",
+        "Control_Exec"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q265",
+      "text": "During which notable cyberattack was rundll32.exe used to execute a supplied DLL as described in MITRE ATT&CK T1218.011?",
+      "choices": [
+        "Operation Spalax",
+        "2015 Ukraine Electric Power Attack",
+        "SolarWinds Compromise",
+        "Operation Dream Job"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q266",
+      "text": "Which malware has used rundll32.exe for persistence by modifying a Registry value? (T1218.011, Enterprise)",
+      "choices": [
+        "ADVSTORESHELL",
+        "BLINDINGCAN",
+        "Flame",
+        "Egregor"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q267",
+      "text": "According to MITRE ATT&CK T1218.011, what is a common tactic used by adversaries to obscure malicious code when using rundll32.exe?",
+      "choices": [
+        "Executing via full path",
+        "Exporting functions by ordinal number",
+        "Using DLL from network share",
+        "Masquerading"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q268",
+      "text": "Which data source and data component are most relevant for detecting rundll32.exe abuses, as mentioned in the detection section of MITRE ATT&CK T1218.011?",
+      "choices": [
+        "File - File Metadata",
+        "Module - Module Load",
+        "Process - Process Creation",
+        "Command - Command Execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q269",
+      "text": "What is the technique ID associated with “System Binary Proxy Execution: Regsvr32”?",
+      "choices": [
+        "T1218.001",
+        "T1218.002",
+        "T1218.003",
+        "T1218.010"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q270",
+      "text": "Which group has used Regsvr32.exe to execute a scheduled task that downloaded and injected a backdoor?",
+      "choices": [
+        "APT32",
+        "Blue Mockingbird",
+        "Deep Panda",
+        "Cobalt Group"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q271",
+      "text": "During which campaign did Lazarus Group use regsvr32 to execute malware?",
+      "choices": [
+        "Operation Red October",
+        "Operation Dream Job",
+        "Operation Aurora",
+        "Operation Shady RAT"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q272",
+      "text": "Which detection method can identify the origin and purpose of the DLL being loaded by regsvr32.exe?",
+      "choices": [
+        "Module Load",
+        "Process Creation",
+        "Command Execution",
+        "Network Connection Creation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q273",
+      "text": "Which mitigation technique involves using Microsoft’s EMET (Exploit Protection)?",
+      "choices": [
+        "Application Isolation and Sandboxing",
+        "Exploit Protection",
+        "Restrict File and Directory Permissions",
+        "Privileged Account Management"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q274",
+      "text": "What command-line argument does the Analytic 2 detection method look for in regsvr32.exe process creation events?",
+      "choices": [
+        "register.sct",
+        "dllhost.exe",
+        "scrobj.dll",
+        "werfault.exe"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q275",
+      "text": "Which mitigation strategy mentioned is most specific to preventing misuse of Regsvcs.exe and Regasm.exe in T1218.009 for Defense Evasion?",
+      "choices": [
+        "M1042 | Disable or Remove Feature or Program",
+        "M1036 | Filter Network Traffic",
+        "M1041 | Restrict Entry and Exit Points",
+        "M1039 | Secure Network Architecture"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q276",
+      "text": "Adversaries can potentially abuse which system binary for executing malicious payloads, as mentioned in MITRE ATT&CK's T1218.008?",
+      "choices": [
+        "Msiexec",
+        "Yipconfig",
+        "Nstask",
+        "odbcconf"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q277",
+      "text": "Which cyber threat group has been documented using odbcconf.exe for executing malicious DLL files? (T1218.008)",
+      "choices": [
+        "Bumblebee",
+        "Cobalt Group",
+        "Hades Group",
+        "Wizard Spider"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q278",
+      "text": "What is one mitigation strategy recommended for countering the threat posed by the misuse of odbcconf.exe? (T1218.008)",
+      "choices": [
+        "Disable network shares",
+        "Enable logging for all applications",
+        "Disable or remove Odbcconf.exe application",
+        "Encrypt all communication channels between servers"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q279",
+      "text": "Which procedure uses msiexec.exe to disable security tools on the system? (MITRE ATT&CK: System Binary Proxy Execution: Msiexec - T1218.007)",
+      "choices": [
+        "AppleJeus",
+        "Chaes",
+        "Clop",
+        "DEADEYE"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q280",
+      "text": "Which mitigation strategy aims to prevent elevated execution of Windows Installer packages by disabling the AlwaysInstallElevated policy? (MITRE ATT&CK: System Binary Proxy Execution: Msiexec - T1218.007)",
+      "choices": [
+        "Privileged Account Management",
+        "Restrict Public Wi-Fi Access",
+        "Disable or Remove Feature or Program",
+        "Enable Firewall Rules"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q281",
+      "text": "Which data component would be most helpful in determining the origin and purpose of MSI files or DLLs executed using msiexec.exe? (MITRE ATT&CK: System Binary Proxy Execution: Msiexec - T1218.007)",
+      "choices": [
+        "Module Load",
+        "Command Execution",
+        "Network Connection Creation",
+        "Process Creation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q282",
+      "text": "In what scenario might msiexec.exe execution be elevated to SYSTEM privileges? (MITRE ATT&CK: System Binary Proxy Execution: Msiexec - T1218.007)",
+      "choices": [
+        "When the AlwaysInstallElevated policy is disabled",
+        "When executed by a privileged account",
+        "When the AlwaysInstallElevated policy is enabled",
+        "When using an unsigned MSI package"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q283",
+      "text": "Which malware example uses msiexec.exe to inject itself into a suspended msiexec.exe process to send beacons to its C2 server? (MITRE ATT&CK: System Binary Proxy Execution: Msiexec - T1218.007)",
+      "choices": [
+        "Mispadu",
+        "IcedID",
+        "Molerats",
+        "QakBot"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q284",
+      "text": "Under the MITRE ATT&CK framework, which MITRE ID corresponds to 'System Binary Proxy Execution: Mshta'?",
+      "choices": [
+        "T1129.001",
+        "T1218.005",
+        "T1050.003",
+        "T1047.006"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q285",
+      "text": "Which attack group has been known to use mshta to execute DLLs during their operations?",
+      "choices": [
+        "APT29",
+        "APT32",
+        "C0015",
+        "BabyShark"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q286",
+      "text": "What mitigation technique suggests blocking the execution of mshta.exe if it’s not necessary for the environment?",
+      "choices": [
+        "M1042: Disable or Remove Feature or Program",
+        "M1038: Execution Prevention",
+        "M1018: User Training",
+        "M1050: Software Configurations"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q287",
+      "text": "Why might mshta.exe be considered a threat in terms of Defense Evasion?",
+      "choices": [
+        "It directly modifies the kernel",
+        "It cannot be detected by any known antivirus",
+        "It bypasses browser security settings",
+        "It operates under kernel mode"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q288",
+      "text": "What type of script is used in the example provided to be executed by mshta.exe?",
+      "choices": [
+        "PHP",
+        "Python",
+        "JavaScript",
+        "Perl"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q289",
+      "text": "Which data source ID would you use to monitor the execution and arguments of mshta.exe?",
+      "choices": [
+        "DS0017",
+        "DS0022",
+        "DS0029",
+        "DS0009"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q290",
+      "text": "Which of the following groups has used InstallUtil.exe to disable Windows Defender, according to the provided document?",
+      "choices": [
+        "Chaes",
+        "menuPass",
+        "Mustang Panda",
+        "WhisperGate"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q291",
+      "text": "According to the document, what mitigation technique (ID and Name) is suggested to prevent potential misuse of InstallUtil.exe by blocking its execution if not required for a given system or network?",
+      "choices": [
+        "M1042: Disable or Remove Feature or Program",
+        "M1038: Execution Prevention",
+        "M1052: Disable Command-Line Interface",
+        "M1029: Remote Data Storage"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q292",
+      "text": "For monitoring the use of InstallUtil.exe, which data source and component are specified to detect anomalous activity through examining recent invocations and their arguments?",
+      "choices": [
+        "DS0017: Command, Command Execution",
+        "DS0009: Application, Software Installation",
+        "Logging Activity: DS0016, User Authentication Events",
+        "DS0004: File, File Creation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q293",
+      "text": "Which group used CMSTP.exe to bypass AppLocker and launch a malicious script as specified in MITRE ATT&CK technique T1218.003?",
+      "choices": [
+        "Fancy Bear",
+        "MuddyWater",
+        "Cobalt Group",
+        "Lazarus Group"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q294",
+      "text": "What legitimate use does CMSTP.exe have according to its description in MITRE ATT&CK technique T1218.003?",
+      "choices": [
+        "Installing device drivers",
+        "Installing security updates",
+        "Installing Connection Manager service profiles",
+        "Updating system registry entries"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q295",
+      "text": "What is a recommended mitigation for preventing the misuse of CMSTP.exe as indicated in MITRE ATT&CK technique T1218.003?",
+      "choices": [
+        "Enable User Account Control",
+        "Disable Remote Desktop",
+        "Disable or Remove Feature or Program",
+        "Install Anti-malware software"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q296",
+      "text": "According to MITRE ATT&CK, what Event ID is particularly useful for detecting the abuse of CMSTP.exe through PowerShell script blocks?",
+      "choices": [
+        "Event ID 4624",
+        "Event ID 4688",
+        "Event ID 4104",
+        "Event ID 4771"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q297",
+      "text": "What adversary technique involves abusing control.exe for defense evasion?",
+      "choices": [
+        "T1218.001 - System Binary Proxy Execution: MSHTA",
+        "T1059.003 - Command and Scripting Interpreter: Windows Command Shell",
+        "T1218.003 - System Binary Proxy Execution: WMIC",
+        "T1218.002 - System Binary Proxy Execution: Control Panel"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q298",
+      "text": "How can Control Panel items be executed according to MITRE ATT&CK T1218.002?",
+      "choices": [
+        "Only by double-clicking the file",
+        "Only via command line",
+        "By double-clicking the file, via command line, or by an API call",
+        "Only programmatically via an API call"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q299",
+      "text": "Which mitigation strategy suggested for T1218.002 involves blocking potentially malicious .cpl files?",
+      "choices": [
+        "Execution Prevention (M1038)",
+        "Restrict File and Directory Permissions (M1022)",
+        "Software Restriction Policies (M1040)",
+        "Disable Autoruns (M1030)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q300",
+      "text": "Which of the following is NOT a data source mentioned for detecting T1218.002 activity?",
+      "choices": [
+        "Command (DS0017)",
+        "File (DS0022)",
+        "Network Traffic (DS0015)",
+        "Process (DS0009)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q301",
+      "text": "According to the MITRE ATT&CK framework, which registry keys can be used to inventory Control Panel items?",
+      "choices": [
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Control Panel\\Cpls",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Control Panel\\Cpls",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ControlPanel\\NameSpace",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q302",
+      "text": "Which example from MITRE ATT&CK utilizes Control Panel files (CPL) delivered via email?",
+      "choices": [
+        "InvisiMole (G1003)",
+        "Reaver (S0172)",
+        "Ember Bear (G1003)",
+        "GoldenSpy (S0618)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q303",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which of the following tools can use PowerShell to discover email accounts as per T1087.003 Account Discovery: Email Account?",
+      "choices": [
+        "TrickBot",
+        "MailSniper",
+        "Magic Hound",
+        "Lizar"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q304",
+      "text": "Which technique can be used in Google Workspace to enable Microsoft Outlook users to access the Global Address List (GAL) according to T1087.003 Account Discovery: Email Account?",
+      "choices": [
+        "Google Workspace Sync for Microsoft Outlook (GWSMO)",
+        "Google Workspace Directory",
+        "Get-GlobalAddressList LDAP Query",
+        "Both A and B"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q305",
+      "text": "As per the document, what specific PowerShell cmdlet is mentioned in T1087.003 that can be used to obtain email addresses and accounts from a domain using an authenticated session in on-premises Exchange and Exchange Online?",
+      "choices": [
+        "Get-AddressList",
+        "Get-OfflineAddressBook",
+        "Get-GlobalAddressList",
+        "Get-Mailbox"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q306",
+      "text": "What is the primary tactic behind the use of Compiled HTML File according to MITRE ATT&CK (ID: T1218.001)?",
+      "choices": [
+        "Execution",
+        "Defense Evasion",
+        "Privilege Escalation",
+        "Exfiltration"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q307",
+      "text": "Which adversary group is known to have leveraged Compiled HTML files to download and run an executable?",
+      "choices": [
+        "APT38",
+        "APT41",
+        "Dark Caracal",
+        "Silence"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q308",
+      "text": "One method to detect the use of malicious CHM files is to monitor which of the following data components?",
+      "choices": [
+        "Network Traffic Analysis",
+        "Command Execution",
+        "Registry Access",
+        "Kernel Driver Loading"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q309",
+      "text": "Which mitigation strategy can help prevent the execution of malicious CHM files?",
+      "choices": [
+        "Restrict Administrative Privileges",
+        "Network Segmentation",
+        "Execution Prevention",
+        "Multi-Factor Authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q310",
+      "text": "In the context of MITRE ATT&CK’s Defense Evasion tactic, which MITRE ID corresponds to the technique “System Binary Proxy Execution”?",
+      "choices": [
+        "T1219",
+        "T1218",
+        "T1217",
+        "T1216"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q311",
+      "text": "Which Microsoft-signed binary is mentioned as being used by the Lazarus Group to execute a malicious DLL for persistence?",
+      "choices": [
+        "wuauclt.exe",
+        "cmd.exe",
+        "powershell.exe",
+        "msiexec.exe"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q312",
+      "text": "Which mitigation technique involves using Microsoft's EMET Attack Surface Reduction feature to block methods of using trusted binaries to bypass application control?",
+      "choices": [
+        "M1042",
+        "M1038",
+        "M1050",
+        "M1037"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q313",
+      "text": "One mitigation strategy involves restricting execution of vulnerable binaries to privileged accounts. What is the MITRE ID for this mitigation?",
+      "choices": [
+        "M1026",
+        "M1038",
+        "M1042",
+        "M1037"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q314",
+      "text": "Adversaries using MITRE ATT&CK technique T1195: Supply Chain Compromise on which platform would focus on compromising which of the following?",
+      "choices": [
+        "Development tools",
+        "Operating System configurations",
+        "User credentials",
+        "Browser settings"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q315",
+      "text": "Which of the following mitigations is most directly related to securing the boot process in the context of MITRE ATT&CK technique T1195 on the Enterprise platform?",
+      "choices": [
+        "M1013: Application Developer Guidance",
+        "M1051: Update Software",
+        "M1046: Boot Integrity",
+        "M1016: Vulnerability Scanning"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q316",
+      "text": "For detecting supply chain compromises through MITRE ATT&CK technique T1195, which data source would be critical in verifying the integrity of distributed binaries?",
+      "choices": [
+        "DS0013: Sensor Health",
+        "DS0022: File",
+        "DS0010: Network Traffic",
+        "DS0035: Application Log"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q317",
+      "text": "What specific mitigation strategy does M1033: Limit Software Installation recommend to protect against MITRE ATT&CK T1195: Supply Chain Compromise?",
+      "choices": [
+        "Pulling dependencies from unverified external repositories",
+        "Using the latest version of software dependencies",
+        "Requiring developers to pull from internal verified repositories",
+        "Integrating as many third-party libraries as possible"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q318",
+      "text": "Which MITRE ATT&CK mitigation involves locking software dependencies to specific versions?",
+      "choices": [
+        "Application Developer Guidance (M1013)",
+        "Limit Software Installation (M1033)",
+        "Update Software (M1051)",
+        "Vulnerability Scanning (M1016)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q319",
+      "text": "In T1195.001, what specific technique involves tampering with Xcode projects?",
+      "choices": [
+        "Compromising software libraries in general",
+        "Compromising target_integrator.rb files within CocoaPods",
+        "Enumerating .xcodeproj folders under a directory",
+        "Adversaries installing malicious binaries in internal repositories"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q320",
+      "text": "In the context of MITRE ATT&CK, which group is known for injecting malicious code into legitimate, signed files in production environments? (Platform: Enterprise)",
+      "choices": [
+        "Threat Group-3390",
+        "Dragonfly",
+        "APT41",
+        "FIN7"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q321",
+      "text": "Which ransomware distribution tactic did GOLD SOUTHFIELD use according to MITRE ATT&CK? (Platform: Enterprise)",
+      "choices": [
+        "Compromised browser updates",
+        "Backdooring software installers via a strategic web compromise",
+        "Inserting trojans into installer packages with ICS software",
+        "Embedding malicious code in tax preparation software"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q322",
+      "text": "What is a recommended mitigation strategy for supply chain compromise according to MITRE ATT&CK? (Platform: Enterprise)",
+      "choices": [
+        "Regular software updates",
+        "Disable unused network ports",
+        "Deployment of next-gen firewalls",
+        "Network segmentation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q323",
+      "text": "In the SolarWinds Compromise, which malware was designed to insert SUNBURST into software builds of the SolarWinds Orion product? (Platform: Enterprise)",
+      "choices": [
+        "CCBkdr",
+        "GoldenSpy",
+        "SUNSPOT",
+        "SUNBURST"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q324",
+      "text": "In the context of MITRE ATT&CK's Initial Access tactic, what detection method can be used for identifying potential hardware supply chain compromise (T1195.003)?",
+      "choices": [
+        "Monitoring application logs for unexpected behavior",
+        "Performing physical inspection of hardware",
+        "Analyzing network traffic for unusual patterns",
+        "Using antivirus software to scan for hardware tampering"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q325",
+      "text": "Which mitigation strategy is recommended to secure against the hardware supply chain compromise described in T1195.003?",
+      "choices": [
+        "Enable multifactor authentication for all user accounts",
+        "Implement network segmentation",
+        "Use Trusted Platform Module technology and a secure boot process",
+        "Encrypt all traffic with TLS"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q326",
+      "text": "Adversaries may modify code signing policies in which of the following ways according to MITRE ATT&CK Technique ID T1553.006?",
+      "choices": [
+        "Using command-line or GUI utilities",
+        "Altering kernel memory variables",
+        "Rebooting in debug/recovery mode",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q327",
+      "text": "Which of the following platform-specific commands is used to disable signing policy enforcement on macOS as per MITRE ATT&CK Technique T1553.006?",
+      "choices": [
+        "csrutil disable",
+        "bcdedit.exe -set TESTSIGNING ON",
+        "Set-ExecutionPolicy Unrestricted",
+        "launchctl unload /System/Library/LaunchDaemons/com.apple.foo.plist"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q328",
+      "text": "Based on MITRE ATT&CK Technique T1553.006, what kind of artifacts might be visible to the user if code signing policy is modified?",
+      "choices": [
+        "A watermark indicating Test Mode",
+        "Error messages during application installs",
+        "Blue Screen of Death (BSOD) warnings",
+        "Suspicious command windows visible on bootup"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q329",
+      "text": "Which adversarial group has used malware to turn off the RequireSigned feature on Windows according to MITRE ATT&CK Technique T1553.006?",
+      "choices": [
+        "APT39",
+        "BlackEnergy",
+        "Hikit",
+        "Pandora"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q330",
+      "text": "In the context of MITRE ATT&CK Technique T1553.006, what mitigation strategy involves using Secure Boot to prevent modifications to code signing policies?",
+      "choices": [
+        "M1046 Boot Integrity",
+        "M1026 Privileged Account Management",
+        "M1024 Restrict Registry Permissions",
+        "M1053 Data Backup"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q331",
+      "text": "Which attack technique involves modifying an NTFS Alternate Data Stream to bypass security restrictions, commonly marked with Zone.Identifier?",
+      "choices": [
+        "MITRE ATT&CK T1553.003: Binary Padding",
+        "MITRE ATT&CK T1220: Compiled HTML File",
+        "MITRE ATT&CK T1553.005: Subvert Trust Controls: Mark-of-the-Web Bypass",
+        "MITRE ATT&CK T1071.001: Application Layer Protocol: Web Traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q332",
+      "text": "How does the adversary technique involving G0016 (APT29) evade Mark-of-the-Web controls?",
+      "choices": [
+        "Embedding malicious macros in MS Office files",
+        "Embedding ISO images and VHDX files in HTML",
+        "Using PowerShell scripts disguised as text files",
+        "Modifying the Windows Registry values"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q333",
+      "text": "What mitigation strategy involves blocking or unregistering container file types such as .iso and .vhd at web and email gateways?",
+      "choices": [
+        "MITRE ATT&CK M1038: Execution Prevention",
+        "MITRE ATT&CK M1042: Disable or Remove Feature or Program",
+        "MITRE ATT&CK M1066: User Training",
+        "MITRE ATT&CK M1037: Network Intrusion Prevention"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q334",
+      "text": "Which data sources should be monitored for detecting potential bypasses of the Mark-of-the-Web (MOTW) controls?",
+      "choices": [
+        "File Creation and File Metadata",
+        "Registry Edits and Process Injection",
+        "Network Traffic and System Logs",
+        "Memory Analysis and Application Metadata"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q335",
+      "text": "Which MITRE ATT&CK technique involves installing a root certificate to subvert trust controls? (Enterprise)",
+      "choices": [
+        "T1555.001 Credentials from Web Browsers",
+        "T1553.004 Subvert Trust Controls: Install Root Certificate",
+        "T1136.001 Create Account: Local Account",
+        "T1207 Rogue Domain Controller"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q336",
+      "text": "What is a possible method for detecting root certificate installation on macOS? (Enterprise)",
+      "choices": [
+        "Monitor the creation of new user accounts",
+        "Use sigcheck utility to dump the contents of the certificate store",
+        "Monitor command execution for 'security add-trusted-cert'",
+        "Monitor configuration changes in HTTP Public Key Pinning"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q337",
+      "text": "What specific registry key can be monitored to detect root certificate installation on Windows? (Enterprise)",
+      "choices": [
+        "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters",
+        "HKLM\\SOFTWARE\\Microsoft\\EnterpriseCertificates\\Root\\Certificates",
+        "HKLM\\Security\\Policy\\Secrets",
+        "HKR\\SOFTWARE\\Microsoft\\Security Center"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q338",
+      "text": "Which of the following mitigations help prevent users from installing root certificates into their own certificate stores? (Enterprise)",
+      "choices": [
+        "Registry Protection",
+        "Mandatory Access Control",
+        "Windows Group Policy",
+        "Antimalware Policies"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q339",
+      "text": "What is the most effective method to mitigate Adversary-in-the-Middle attacks involving fraudulent certificates? (Enterprise)",
+      "choices": [
+        "HTTP Public Key Pinning",
+        "Disabling TLS/SSL",
+        "Custom Firewall Rules",
+        "Using VPN"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q340",
+      "text": "What is the primary function of the Subject Interface Packages (SIPs) according to MITRE ATT&CK technique T1553.003?",
+      "choices": [
+        "To monitor and log unauthorized file modifications",
+        "To provide a layer of abstraction between API functions and files when handling signatures",
+        "To restrict user permissions to critical directories",
+        "To enable real-time file encryption for security purposes"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q341",
+      "text": "In the context of subverting trust controls described in MITRE ATT&CK technique T1553.003, what role does the `Dll` and `FuncName` Registry values modification play?",
+      "choices": [
+        "It ensures that only legitimate SIPs are loaded into the system",
+        "It redirects signature validation checks to maliciously-crafted DLLs",
+        "It logs all unauthorized DLL modifications",
+        "It fixes vulnerabilities in SIP components"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q342",
+      "text": "Which mitigation strategy involves enabling application control solutions as specified in MITRE ATT&CK technique T1553.003?",
+      "choices": [
+        "Execution Prevention",
+        "Restrict File and Directory Permissions",
+        "Restrict Registry Permissions",
+        "Code Obfuscation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q343",
+      "text": "What event ID in CryptoAPI v2 (CAPI) logging is mentioned in MITRE ATT&CK technique T1553.003 for monitoring failed trust validation, and what additional indication does it provide?",
+      "choices": [
+        "Event ID 4625 with indications of failed login attempts",
+        "Event ID 41 with unexpected shutdowns",
+        "Event ID 81 with indicators of failed trust validation",
+        "Event ID 1102 with audit log clearance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q344",
+      "text": "In MITRE ATT&CK Enterprise, what command can adversaries use in Azure CLI to discover user accounts within a domain?",
+      "choices": [
+        "az ad role list",
+        "az account list",
+        "az ad user list",
+        "az identity list"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q345",
+      "text": "Which PowerShell cmdlet can adversaries use to obtain account names given a role or permissions group in Office 365?",
+      "choices": [
+        "Get-MsolUser",
+        "Get-MsolAccount",
+        "Get-MsolRoleMember",
+        "Get-MsolPermission"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q346",
+      "text": "What mitigation strategy is recommended to limit permissions to discover cloud accounts according to MITRE ATT&CK technique T1087.004?",
+      "choices": [
+        "Network Segmentation",
+        "Anomaly Detection",
+        "User Account Management",
+        "Encryption"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q347",
+      "text": "In the context of MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing) on which platforms is code signing primarily used?",
+      "choices": [
+        "Linux",
+        "Windows and macOS",
+        "Android and iOS",
+        "None of the above"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q348",
+      "text": "Which of the following threats utilized a stolen certificate from AI Squared to sign their samples according to MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing)?",
+      "choices": [
+        "Janicab",
+        "Bandook",
+        "Molerats",
+        "Helminth"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q349",
+      "text": "According to MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing), what tactic is this technique categorized under?",
+      "choices": [
+        "Lateral Movement",
+        "Initial Access",
+        "Defense Evasion",
+        "Execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q350",
+      "text": "Under MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing), which adversary group used certificates from Electrum Technologies GmbH to sign their payloads?",
+      "choices": [
+        "G0037 (FIN6)",
+        "G0021 (Molerats)",
+        "G1003 (Ember Bear)",
+        "G0092 (TA505)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q351",
+      "text": "Which data source is recommended to detect suspicious activity related to MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing)?",
+      "choices": [
+        "Authentication logs",
+        "Network traffic",
+        "File metadata",
+        "Process monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q352",
+      "text": "Within MITRE ATT&CK Technique T1553.002 (Subvert Trust Controls: Code Signing), what specific malware family used a legally acquired certificate from Sectigo to appear legitimate?",
+      "choices": [
+        "Bazar",
+        "AppleJeus",
+        "QakBot",
+        "SpicyOmelette"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q353",
+      "text": "Which command can be used to remove the quarantine flag to subvert Gatekeeper?",
+      "choices": [
+        "xattr -r com.apple.quarantine",
+        "xattr -d com.apple.quarantine",
+        "rm -d com.apple.quarantine",
+        "chmod -d com.apple.quarantine"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q354",
+      "text": "Which technique has OSX/Shlayer used to bypass Gatekeeper's protection on opening a downloaded file?",
+      "choices": [
+        "Using curl command",
+        "Modified Info.plist file",
+        "Disabled Gatekeeper with spctl command",
+        "Used external libraries"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q355",
+      "text": "What is one scenario in which the quarantine flag is not set, facilitating Gatekeeper bypass?",
+      "choices": [
+        "Files downloaded via App Store",
+        "Files downloaded via curl command",
+        "Application downloaded via email attachments",
+        "Application downloaded via browsers"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q356",
+      "text": "What extended attribute can be manually removed to subvert Gatekeeper checks?",
+      "choices": [
+        "com.apple.launchpermissions",
+        "com.apple.execflag",
+        "com.apple.quarantine",
+        "com.apple.securityflag"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q357",
+      "text": "CoinTicker uses the curl command to download which malicious binary, facilitating Gatekeeper bypass?",
+      "choices": [
+        "MacMa",
+        "CoinTicker",
+        "OSX/Shlayer",
+        "EggShell"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q358",
+      "text": "Which file entry indicates an application does not use the quarantine flag under macOS?",
+      "choices": [
+        "LSFileQuarantineEnabled set to false LSLaunchAtLoginEnabled set to true",
+        "LSFileQuarantineEnabled not set",
+        "automaticQuarantineEnabled unspecified",
+        "WebProxyEnabled unknown"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q359",
+      "text": "What is the primary technique identified by MITRE ATT&CK ID T1553 for Defense Evasion?",
+      "choices": [
+        "Subvert Trust Controls",
+        "Credential Dumping",
+        "Execution Prevention",
+        "Privilege Escalation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q360",
+      "text": "Which mitigation strategy is recommended for preventing applications that haven’t been downloaded through legitimate repositories from running?",
+      "choices": [
+        "Operating System Configuration",
+        "Execution Prevention",
+        "Privileged Account Management",
+        "Software Configuration"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q361",
+      "text": "Which data source is useful for detecting malicious attempts to modify trust settings through command execution?",
+      "choices": [
+        "Command",
+        "File",
+        "Process Creation",
+        "Windows Registry"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q362",
+      "text": "In the context of Subvert Trust Controls, what should be periodically baselined to detect malicious modifications?",
+      "choices": [
+        "Installed software",
+        "File permissions",
+        "Registered SIPs and trust providers",
+        "Process creation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q363",
+      "text": "What mitigation technique details the management of root certificates through Windows Group Policy settings?",
+      "choices": [
+        "Execution Prevention",
+        "Privileged Account Management",
+        "Operating System Configuration",
+        "Restrict Registry Permissions"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q364",
+      "text": "Which detection method involves examining the removal of the com.apple.quarantine flag by a user on macOS?",
+      "choices": [
+        "File Metadata analysis",
+        "Process Creation monitoring",
+        "Windows Registry Key Creation analysis",
+        "File Modification monitoring"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q365",
+      "text": "An attacker using MITRE ATT&CK Technique ID: T1539 is interested in which specific tactic?",
+      "choices": [
+        "Privilege Escalation",
+        "Credential Access",
+        "Initial Access",
+        "Execution"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q366",
+      "text": "What is the primary objective an attacker aims to achieve with MITRE ATT&CK Technique T1539?",
+      "choices": [
+        "Gain administrator-level privileges",
+        "Steal web session cookies",
+        "Inject malware into the system",
+        "Launch a DDoS attack"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q367",
+      "text": "Which identified malware family is capable of stealing session cookies and is labeled S0658?",
+      "choices": [
+        "CookieMiner",
+        "XCSSET",
+        "BLUELIGHT",
+        "QakBot"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q368",
+      "text": "In the context of MITRE ATT&CK, which data source would be most useful to detect the creation of malicious container orchestration jobs? (Enterprise)",
+      "choices": [
+        "File - DS0003",
+        "Scheduled Job - DS0003",
+        "Container - DS0022",
+        "File - DS0032"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q369",
+      "text": "Which mitigation strategy specifically aims to ensure that containers are not running as root by default in the context of MITRE ATT&CK's scheduled task/job (T1053.007)? (Enterprise)",
+      "choices": [
+        "Privileged Account Management - M1026",
+        "User Account Management - M1018",
+        "File Integrity Monitoring - M1056",
+        "Root Privilege Restriction - M1050"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q370",
+      "text": "Regarding the MITRE ATT&CK technique T1053.006 for Enterprise platforms, what are systemd timers primarily used for by adversaries?",
+      "choices": [
+        "To automate user account creation on Linux systems.",
+        "To control network traffic flow systems.",
+        "To perform task scheduling for initial or recurring execution of malicious code.",
+        "To manage log files and rotate them automatically."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q371",
+      "text": "Which mitigation strategy for MITRE ATT&CK technique T1053.006 involves limiting user access to the 'systemctl' or 'systemd-run' utilities?",
+      "choices": [
+        "M1026 - Privileged Account Management",
+        "M1022 - Restrict File and Directory Permissions",
+        "M1018 - User Account Management",
+        "M1030 - Application Isolation and Sandboxing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q372",
+      "text": "In detecting malicious activities involving systemd timers (T1053.006) on the Enterprise platform, which of the following data sources would you monitor for unexpected modifications?",
+      "choices": [
+        "Command Execution",
+        "File Modification",
+        "Scheduled Job Creation",
+        "Process Creation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q373",
+      "text": "In the context of T1053.005 (Scheduled Task/Job: Scheduled Task), which procedure example involves the use of Windows Task Scheduler to launch \"CaddyWiper\"?",
+      "choices": [
+        "Agent Tesla",
+        "2022 Ukraine Electric Power Attack",
+        "Anchor",
+        "AppleJeus"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q374",
+      "text": "Regarding T1053.005, which threat actor utilized Windows Task Scheduler to load a .vbe file multiple times a day?",
+      "choices": [
+        "APT32",
+        "APT37",
+        "APT33",
+        "APT39"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q375",
+      "text": "Under T1053.005, which described method can be used by adversaries to hide scheduled tasks from tools like schtasks /query?",
+      "choices": [
+        "Using obfuscated scripts",
+        "Changing the task name",
+        "Deleting the associated Security Descriptor (SD) registry value",
+        "None of the above"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q376",
+      "text": "In T1053.005, which mitigation supports configuring scheduled tasks to run under the authenticated account instead of SYSTEM?",
+      "choices": [
+        "Privileged Account Management (M1026)",
+        "User Account Management (M1018)",
+        "Operating System Configuration (M1028)",
+        "Audit (M1047)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q377",
+      "text": "Which detection method for T1053.005 focuses on monitoring newly constructed scheduled jobs by enabling specific event logging services?",
+      "choices": [
+        "Command Execution",
+        "File Creation",
+        "Process Creation",
+        "Scheduled Job Creation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q378",
+      "text": "For T1053.005, which data source is used to monitor for the creation of scheduled tasks that do not align with known software or patch cycles?",
+      "choices": [
+        "Network Traffic",
+        "Process",
+        "File",
+        "Windows Registry"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q379",
+      "text": "Which malware is known for using crontab for persistence if it does not have root privileges in Linux environments according to MITRE ATT&CK?",
+      "choices": [
+        "Janicab",
+        "SpeakUp",
+        "Exaramel for Linux",
+        "Kinsing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q380",
+      "text": "What is the primary purpose of adversaries abusing the cron utility as described in MITRE ATT&CK technique T1053.003?",
+      "choices": [
+        "Data Exfiltration",
+        "Command and Control",
+        "Persistence",
+        "Evasion"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q381",
+      "text": "According to MITRE ATT&CK, which mitigation involves reviewing changes to the cron schedule, particularly within the /var/log directory for cron execution logs?",
+      "choices": [
+        "Audit",
+        "Privileged Account Management",
+        "User Account Management",
+        "Execution Prevention"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q382",
+      "text": "MITRE ATT&CK technique T1053.003 involves creating and modifying scheduled tasks or jobs. Which data source can be used to detect command executions related to this technique?",
+      "choices": [
+        "Process",
+        "File",
+        "Command",
+        "Scheduled Job"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q383",
+      "text": "Which threat actor is documented by MITRE ATT&CK to have installed a cron job that downloaded and executed files from the command-and-control (C2) server?",
+      "choices": [
+        "APT38",
+        "Xbash",
+        "Rocke",
+        "Anchor"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q384",
+      "text": "Which group used the sp_addlinkedsrvlogin command during the 2016 Ukraine Electric Power Attack to create a link between a created account and other servers in the network? (MITRE ATT&CK: Enterprise)",
+      "choices": [
+        "Calisto",
+        "HAFNIUM",
+        "Sandworm Team",
+        "Lazarus Group"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q385",
+      "text": "Which procedure example is associated with adding created accounts to local admin groups to maintain elevated access? (MITRE ATT&CK: Enterprise)",
+      "choices": [
+        "APT3",
+        "Kimsuky",
+        "Magic Hound",
+        "Dragonfly"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q386",
+      "text": "What action does Mimikatz support that allows it to manipulate the password hash of an account without knowing the clear text value? (MITRE ATT&CK: Enterprise)",
+      "choices": [
+        "LSADUMP::ChangeNTLM and LSADUMP::SetNTLM",
+        "WhiskeyDelta-Two",
+        "Skeleton Key",
+        "Mimikatz Dump Module"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q387",
+      "text": "Which mitigation suggests configuring access controls and firewalls to limit access to critical systems and domain controllers? (MITRE ATT&CK: Enterprise)",
+      "choices": [
+        "Multi-factor Authentication",
+        "Privileged Account Management",
+        "Operating System Configuration",
+        "Network Segmentation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q388",
+      "text": "Which detection method involves monitoring events for changes to account objects and/or permissions on systems and the domain, such as event IDs 4738, 4728, and 4670? (MITRE ATT&CK: Enterprise)",
+      "choices": [
+        "Group Modification",
+        "Command Execution",
+        "Active Directory Object Modification",
+        "User Account Modification"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q389",
+      "text": "In which scenario might an adversary perform iterative password updates to bypass security policies and preserve compromised credentials? (MITRE ATT&CK: Enterprise)",
+      "choices": [
+        "Account Manipulation",
+        "Credential Dumping",
+        "Account Discovery",
+        "Indicator Removal on Host"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q390",
+      "text": "For MITRE ATT&CK technique T1029, some adversaries use which of the following exfiltration techniques alongside Scheduled Transfer to move data out of the network?",
+      "choices": [
+        "Exfiltration Over Physical Medium (T1052)",
+        "Exfiltration Over Web Service (T1567)",
+        "Exfiltration Over C2 Channel (T1041)",
+        "Exfiltration Over Bluetooth (T1011)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q391",
+      "text": "Which malware example specifically schedules its exfiltration behavior outside local business hours, according to T1029?",
+      "choices": [
+        "Cobal Strike (S0154)",
+        "ComRAT (S0126)",
+        "Flagpro (S0696)",
+        "Dipsind (S0200)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q392",
+      "text": "Regarding MITRE ATT&CK T1029, which technique name corresponds to the ID T1029?",
+      "choices": [
+        "Scheduled Transfer",
+        "Exfiltration Over C2 Channel",
+        "Exfiltration Over Web Service",
+        "Exfiltration Over Alternative Protocol"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q393",
+      "text": "According to the MITRE ATT&CK technique T1029, which mitigation strategy is recommended to prevent scheduled data exfiltration activities?",
+      "choices": [
+        "Application Isolation and Sandboxing",
+        "Endpoint Protection",
+        "Network Intrusion Prevention",
+        "Antivirus/Antimalware"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q394",
+      "text": "Which of the following techniques can be used by adversaries for event triggered execution as per MITRE ATT&CK? (Enterprise)",
+      "choices": [
+        "T1546.014 - Microsoft Office Application Startup",
+        "T1546.013 - Emond",
+        "T1546.015 - Account Access Token Manipulation",
+        "T1546.011 - Application Shimming"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q395",
+      "text": "What legitimate tool can be abused by adversaries to install application shims on Windows?",
+      "choices": [
+        "sdbconfig.exe",
+        "shell32.dll",
+        "imagex.exe",
+        "sdbinst.exe"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q396",
+      "text": "How can application shims potentially be detected according to the MITRE ATT&CK framework? (Enterprise)",
+      "choices": [
+        "Monitor STRACE logs for anomalies",
+        "Monitor executed commands and arguments for sdbinst.exe",
+        "Monitor changes in Group Policy settings",
+        "Monitor network traffic for irregular patterns"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q397",
+      "text": "What would indicate an application shim has been used to maintain persistence as per the given text?",
+      "choices": [
+        "Monitoring HTTP requests for unusual patterns",
+        "Detecting unauthorized changes in system BIOS",
+        "Monitoring registry key modifications in specific AppCompat locations",
+        "Observing unusual CPU temperature spikes"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q398",
+      "text": "Which adversary group has used application shims to maintain persistence as mentioned in the text?",
+      "choices": [
+        "APT41",
+        "DragonFly",
+        "Carbanak Group",
+        "FIN7"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q399",
+      "text": "Which Windows Registry key is commonly modified to load malicious DLLs for AppInit DLLs on 64-bit systems in Enterprise environments?",
+      "choices": [
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion",
+        "None of the above."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q400",
+      "text": "What is the primary detection method to identify modifications of AppInit_DLLs registry values?",
+      "choices": [
+        "Monitor Command Execution",
+        "Monitor DLL loads by processes that load user32.dll",
+        "Monitor Windows Registry Key Modifications",
+        "Monitor OS API Execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q401",
+      "text": "Which malware example is known to set LoadAppInit_DLLs in the Registry key to establish persistence?",
+      "choices": [
+        "Cherry Picker",
+        "T9000",
+        "APT39",
+        "Ramsay"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q402",
+      "text": "Which technique ID corresponds to Event Triggered Execution: AppInit DLLs in the MITRE ATT&CK framework?",
+      "choices": [
+        "T1546.006",
+        "T1546.010",
+        "T1057.003",
+        "T1112.004"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q403",
+      "text": "What mitigation strategy is recommended to prevent adversaries from abusing AppInit DLLs?",
+      "choices": [
+        "Use Software Restriction Policies",
+        "Use Application Control tools like AppLocker",
+        "Upgrade to Windows 8 or later and enable secure boot",
+        "All of the above."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q404",
+      "text": "Which of the following API calls could be indicative of a registry key modification linked to T1546.009 (Event Triggered Execution: AppCert DLLs) on the Enterprise platform?",
+      "choices": [
+        "RegCreateKeyEx",
+        "OpenProcess",
+        "CreateRemoteThread",
+        "RegQueryValueEx"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q405",
+      "text": "Which data source is most appropriate for monitoring DLL loads by processes to detect suspicious activities related to MITRE ATT&CK technique T1546.009 (Event Triggered Execution: AppCert DLLs)?",
+      "choices": [
+        "Command",
+        "Module",
+        "Process",
+        "Windows Registry"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q406",
+      "text": "To mitigate risks associated with the AppCert DLLs within T1546.009, which application control tool could be employed?",
+      "choices": [
+        "AppLocker",
+        "Netcat",
+        "Wireshark",
+        "Malwarebytes"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q407",
+      "text": "Which MITRE ATT&CK technique involves using Netsh Helper DLLs to establish persistence?",
+      "choices": [
+        "T1546.008 - Event Triggered Execution: Netsh Helper DLL",
+        "T1546.007 - Event Triggered Execution: Netsh Helper DLL",
+        "T1546.006 - Re-Open GUID: Netsh Helper DLL",
+        "T1546.005 - Event Triggered Execution: Netsh Helper DLL"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q408",
+      "text": "What is an appropriate detection strategy for monitoring malicious Netsh Helper DLL activities?",
+      "choices": [
+        "Look for unusual network traffic patterns.",
+        "Monitor the HKLM\\SYSTEM\\CurrentControlSet\\Services registry key.",
+        "Monitor DLL/PE file events, specifically creation and loading of DLLs.",
+        "Implement advanced firewall rules to block Netsh Helper DLLs."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q409",
+      "text": "If a security professional needs to identify potentially malicious HKLM\\SOFTWARE\\Microsoft\\Netsh registry key modifications, which data source should they monitor?",
+      "choices": [
+        "Command Execution",
+        "Process Creation",
+        "Network Connections",
+        "Windows Registry"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q410",
+      "text": "In the context of MITRE ATT&CK, which data source is most relevant for detecting Event Triggered Execution via LC_LOAD_DYLIB Addition on enterprise platforms?",
+      "choices": [
+        "DS0022: File Metadata",
+        "DS0017: Command",
+        "DS0009: Process",
+        "DS0011: Module"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q411",
+      "text": "Which mitigation strategy involves allowing applications by known hashes to prevent Event Triggered Execution via LC_LOAD_DYLIB Addition?",
+      "choices": [
+        "M1047: Audit",
+        "M1045: Code Signing",
+        "M1038: Execution Prevention",
+        "M1027: Monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q412",
+      "text": "What action can adversaries take to avoid signature checks after modifying a Mach-O binary to load malicious dylibs?",
+      "choices": [
+        "Remove the LC_LOAD_DYLIB command",
+        "Remove the LC_CODE_SIGNATURE command",
+        "Add a new dynamic library header",
+        "Modify the binary's integrity check mechanism"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q413",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which data source would you monitor to detect the execution of malicious content triggered by an interrupt signal as described in T1546.005 Event Triggered Execution: Trap?",
+      "choices": [
+        "Command Argument Monitoring",
+        "Request Monitoring",
+        "Command Execution Account Monitoring Process Creation",
+        "Command Execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q414",
+      "text": "What is a key difficulty in mitigating the events triggered execution trap technique (T1546.005) as specified in the MITRE ATT&CK framework?",
+      "choices": [
+        "The technique involves complex encryption",
+        "It is based on the abuse of system features",
+        "It requires physical access to the targeted system",
+        "The firewall rules prevent detection"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q415",
+      "text": "What file does an adversary need root permissions to modify to ensure malicious binaries are launched in a GNU/Linux system?",
+      "choices": [
+        "~/.bash_profile",
+        "/etc/profile",
+        "~/.bash_login",
+        "~/.profile"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q416",
+      "text": "Which of the following files is used for configuring a user environment when a bash shell is terminated on a GNU/Linux system?",
+      "choices": [
+        "~/.bash_logout",
+        "/etc/bashrc",
+        "~/.bashrc",
+        "~/.bash_profile"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q417",
+      "text": "For macOS Terminal.app using the default shell as zsh, which file is executed to configure the interactive shell environment?",
+      "choices": [
+        "/etc/zprofile",
+        "~/.zlogin",
+        "/etc/zlogout",
+        "~/.zshrc"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q418",
+      "text": "What mitigation can be employed to limit adversaries from easily creating user-level persistence by modifying shell configuration scripts?",
+      "choices": [
+        "M1022: Restrict File and Directory Permissions",
+        "M1024: Restrict Script Execution",
+        "M1020: Web Content Filtering",
+        "M1018: User Training"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q419",
+      "text": "Which data source should be monitored to detect the creation of new files potentially related to the execution of malicious shell commands?",
+      "choices": [
+        "DS0009: Process",
+        "DS0017: Command",
+        "DS0022: File",
+        "DS0001: User Authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q420",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which of the following best describes the primary risk associated with T1548.004 (Abuse Elevation Control Mechanism: Elevated Execution with Prompt)?",
+      "choices": [
+        "High CPU usage due to increased API calls",
+        "Authenticator compromise from keystroke capture",
+        "User providing root credentials to malicious software",
+        "Data exfiltration via unauthorized network access"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q421",
+      "text": "Which of the following mitigation techniques is recommended to reduce the risk associated with T1548.004 on macOS?",
+      "choices": [
+        "Network segmentation to isolate critical systems",
+        "Disabling unused system services",
+        "Preventing execution of applications not downloaded from the Apple Store",
+        "Regularly updating operating systems and applications"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q422",
+      "text": "How can security professionals detect the misuse of the AuthorizationExecuteWithPrivileges API as described in T1548.004?",
+      "choices": [
+        "Monitoring network traffic for unusual patterns",
+        "Tracking repeated login attempts from unusual locations",
+        "Monitoring for /usr/libexec/security_authtrampoline executions",
+        "Analyzing file system changes in user directories"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q423",
+      "text": "Which data source is primarily used to detect the modification of registry keys to achieve persistence, according to MITRE ATT&CK?",
+      "choices": [
+        "Command",
+        "Windows Registry Process",
+        "File",
+        "Windows Registry"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q424",
+      "text": "What specific registry keys would you monitor on a Windows system to detect an adversary using Boot or Logon Autostart Execution by adding a program to a startup folder?",
+      "choices": [
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders",
+        "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q425",
+      "text": "Which example adversary group added a registry key in HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost to maintain persistence using Cobalt Strike, as per the technique T1547.001?",
+      "choices": [
+        "G0026 - APT18",
+        "G0096 - APT41",
+        "G0064 - APT33",
+        "G0016 - APT29"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q426",
+      "text": "Which command-line interface utility is highlighted for interacting with registry to achieve persistence?",
+      "choices": [
+        "regedit.exe",
+        "reg.exe",
+        "regcmd.exe",
+        "regshell.exe"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q427",
+      "text": "Which example procedure involves the technique of modifying the Startup folder to ensure malware execution at user logon?",
+      "choices": [
+        "S0028 - SHIPSHAPE",
+        "S0070 - HTTPBrowser",
+        "S0260 - InvisiMole",
+        "S0662 - RCSession"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q428",
+      "text": "Which detection technique involves monitoring for the creation of new WMI EventFilter, EventConsumer, and FilterToConsumerBinding events? (MITRE ATT&CK ID: T1546.003, Platform: Enterprise)",
+      "choices": [
+        "Command Execution",
+        "Process Creation",
+        "Service Creation",
+        "WMI Creation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q429",
+      "text": "Which of the following MITRE ATT&CK data sources should be monitored to detect changes made to files that enable event-triggered execution via screensaver configuration?",
+      "choices": [
+        "DS0017: Command",
+        "DS0022: File",
+        "DS0009: Process",
+        "DS0024: Windows Registry"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q430",
+      "text": "In the context of T1546.002, which mitigation involves using Group Policy?",
+      "choices": [
+        "M1038: Execution Prevention",
+        "M1042: Disable or Remove Feature or Program",
+        "M1029: Scheduled Task",
+        "M1040: Behavior Prevention on Endpoint"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q431",
+      "text": "For which procedure example is Gazer known to establish persistence through the system screensaver?",
+      "choices": [
+        "S0456: Nanocore",
+        "S0168: Gazer",
+        "S0330: Lokibot",
+        "S0200: Emotet"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q432",
+      "text": "Which registry key setting allows an adversary to disable password requirements when unlocking a screensaver?",
+      "choices": [
+        "ScreenSaveTimeout",
+        "SCRNSAVE.exe",
+        "ScreenSaverSecure",
+        "ScreenSaveActive"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q433",
+      "text": "Which registry key should you monitor to detect changes in system file associations that could indicate a T1546.001: Event Triggered Execution: Change Default File Association attack?",
+      "choices": [
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\FileExts",
+        "HKEY_CLASSES_ROOT\\[extension]\\shell\\[action]\\command",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+        "HKEY_USERS\\.DEFAULT\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q434",
+      "text": "What specific technique does SILENTTRINITY utilize as part of its UAC bypass process according to T1546.001 for the MITRE ATT&CK Enterprise platform?",
+      "choices": [
+        "Image Hijack of an .msc file extension",
+        "Service File Permissions Weakness",
+        "Change Default File Association with .txt file",
+        "Change of .exe to .bat file association"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q435",
+      "text": "What is a recommended data component for monitoring executed commands that could establish persistence by changing file associations (T1546.001) on the MITRE ATT&CK Enterprise platform?",
+      "choices": [
+        "Process Creation",
+        "Kernel Driver",
+        "Registry Key Modification",
+        "Command Execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q436",
+      "text": "Which group utilizes the Data Protection API (DPAPI) to encrypt payloads tied to specific user accounts on specific machines, according to the MITRE ATT&CK technique T1480.001?",
+      "choices": [
+        "APT41",
+        "Equation",
+        "InvisiMole",
+        "Ninja"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q437",
+      "text": "In the context of MITRE ATT&CK technique T1480.001, what can be derived to generate a decryption key for an encrypted payload?",
+      "choices": [
+        "Hardware Configuration",
+        "Internet Browser Version",
+        "Physical Devices",
+        "Screen Resolution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q438",
+      "text": "Under the MITRE ATT&CK technique T1480.001, which malware can store its final payload in the Registry encrypted with a dynamically generated key based on the drive’s serial number?",
+      "choices": [
+        "ROKRAT",
+        "Winnti for Windows",
+        "InvisiMole",
+        "Ninja"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q439",
+      "text": "Under the MITRE ATT&CK technique T1480.001, which of the following is true about environmental keying during payload delivery?",
+      "choices": [
+        "It involves sending the decryption key over monitored networks",
+        "It requires exact target-specific values for decryption and execution",
+        "It can be mitigated using standard preventative controls",
+        "It is a common Virtualization/Sandbox Evasion technique"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q440",
+      "text": "How does monitoring command execution help detect MITRE ATT&CK technique T1480.001 implementations?",
+      "choices": [
+        "By tracking changes to system configuration settings",
+        "By identifying command and script usage that gathers victim's physical location",
+        "By finding attempts to access hardware peripherals",
+        "By monitoring periodic network connections"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q441",
+      "text": "According to MITRE ATT&CK technique T1480.001, environmental keying is distinct from typical Virtualization/Sandbox Evasion because it:",
+      "choices": [
+        "Checks for sandbox values and continues if none match",
+        "Uses network traffic patterns to evade detection",
+        "Relies on the difficulty of reverse engineering techniques",
+        "Involves target-specific values for decryption and execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q442",
+      "text": "Which tactic does the MITRE ATT&CK technique T1048.003 pertain to?",
+      "choices": [
+        "Execution",
+        "Collection",
+        "Exfiltration",
+        "Persistence"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q443",
+      "text": "Which adversary has routines for exfiltration over SMTP, FTP, and HTTP as per T1048.003 examples?",
+      "choices": [
+        "Agent Tesla",
+        "APT32",
+        "Carbon",
+        "CharmPower"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q444",
+      "text": "Which protocol was utilized by APT32's backdoor to exfiltrate data by encoding it in the subdomain field of packets?",
+      "choices": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "DNS"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q445",
+      "text": "What protocol did the adversary group OilRig use to exfiltrate data separately from its primary C2 channel, according to T1048.003 examples?",
+      "choices": [
+        "HTTP",
+        "FTP",
+        "WebDAV",
+        "DNS"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q446",
+      "text": "Which mitigation technique involves enforcing proxies and using dedicated servers for services such as DNS?",
+      "choices": [
+        "Data Loss Prevention",
+        "Filter Network Traffic",
+        "Network Intrusion Prevention",
+        "Network Segmentation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q447",
+      "text": "What data component should be monitored to detect anomalous files that may be exfiltrated over unencrypted protocols?",
+      "choices": [
+        "Command Execution",
+        "File Access",
+        "Network Connection Creation",
+        "Network Traffic Content"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q448",
+      "text": "In which scenario would adversaries utilize the technique T1048.002 in the context of exfiltration over network protocols?",
+      "choices": [
+        "When they want to masquerade their communication as normal HTTPS traffic",
+        "When they wish to use a protocol unrelated to existing command and control channels",
+        "When they need to establish a direct ICMP protocol communication",
+        "When they want to email the exfiltrated data back to themselves"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q449",
+      "text": "Which mitigation technique would best prevent data exfiltration over encrypted non-C2 protocols in the enterprise environment?",
+      "choices": [
+        "M1057 - Data Loss Prevention",
+        "M1037 - Filter Network Traffic",
+        "M1030 - Network Segmentation",
+        "M1031 - Network Intrusion Prevention System"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q450",
+      "text": "Which of the following MITRE ATT&CK techniques involves exfiltrating data over a symmetrically encrypted non-command-and-control protocol?",
+      "choices": [
+        "T1059.003 - Command and Scripting Interpreter: Windows Command Shell",
+        "T1048.001 - Exfiltration Over Alternative Protocol: Exfiltration Over Symmetric Encrypted Non-C2 Protocol",
+        "T1071.001 - Application Layer Protocol: Web Protocols",
+        "T1020 - Automated Exfiltration"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q451",
+      "text": "Which detection technique involves monitoring for newly constructed network connections sent or received by untrusted hosts?",
+      "choices": [
+        "DS0017 - Command Execution",
+        "DS0022 - File Access",
+        "DS0029 - Network Traffic: Network Connection Creation",
+        "Data Component: Network Traffic Content"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q452",
+      "text": "To mitigate exfiltration over a symmetrically encrypted non-C2 protocol, which mitigation strategy advises using network intrusion prevention systems?",
+      "choices": [
+        "M1037 - Filter Network Traffic",
+        "M1031 - Network Intrusion Prevention",
+        "M1030 - Network Segmentation",
+        "M1026 - Encrypt Sensitive Information"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q453",
+      "text": "In context of MITRE ATT&CK T1048.001, programs utilizing the network that do not normally communicate over the network should be monitored under which detection category?",
+      "choices": [
+        "Command Execution",
+        "File Access",
+        "Network Traffic Flow",
+        "Network Traffic Content"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q454",
+      "text": "Which technique does the MITRE ATT&CK pattern T1041 encompass?",
+      "choices": [
+        "Exfiltration Over Web Service",
+        "Tunneling Protocol",
+        "Exfiltration Over C2 Channel",
+        "Standard Application Layer Protocol"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q455",
+      "text": "Which malware, according to MITRE ATT&CK T1041, uses HTTP POST requests for exfiltration?",
+      "choices": [
+        "BLINDINGCAN",
+        "BADHATCH",
+        "FunnyDream",
+        "SideTwist"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q456",
+      "text": "Which adversary has utilized the Cobalt Strike C2 beacons for data exfiltration?",
+      "choices": [
+        "APT3",
+        "Chimera",
+        "Lazarus Group",
+        "Wizard Spider"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q457",
+      "text": "What is the specific defense suggested in MITRE ATT&CK T1041 to prevent exfiltration over C2 channels by using protocol signatures?",
+      "choices": [
+        "Endpoint Detection and Response (EDR)",
+        "Data Loss Prevention (DLP)",
+        "Network Intrusion Prevention (NIP)",
+        "Antivirus systems"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q458",
+      "text": "Which of these malware samples utilize exfiltration via email C2 channels?",
+      "choices": [
+        "LitePower",
+        "GALLIUM",
+        "LightNeuron",
+        "Stealth Falcon"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q459",
+      "text": "How does BLUELIGHT exfiltrate data according to T1041?",
+      "choices": [
+        "HTTP POST requests",
+        "External C2 server",
+        "Gratuitous ARP responses",
+        "Temporal precision timing attacks"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q460",
+      "text": "Which mitigative measure involves preventing the creation of new network adapters related to MITRE ATT&CK technique T1011.001 (Exfiltration Over Bluetooth)?",
+      "choices": [
+        "Disable or Remove Feature or Program",
+        "Operating System Configuration",
+        "Application Hardening",
+        "Network Segmentation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q461",
+      "text": "According to MITRE ATT&CK T1011.001, what is the function of the Flame malware's BeetleJuice module?",
+      "choices": [
+        "Transmitting encoded information over Bluetooth",
+        "Analyzing network traffic",
+        "Executing unauthorized commands",
+        "Monitoring file access"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q462",
+      "text": "Which malware is associated with creating a hidden folder to copy files from drives to a removable drive?",
+      "choices": [
+        "S0092 (Agent.btz)",
+        "S0409 (Machete)",
+        "G0129 (Mustang Panda)",
+        "S0035 (SPACESHIP)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q463",
+      "text": "What is a recommended mitigation technique to prevent exfiltration of sensitive data to USB devices in MITRE ATT&CK Enterprise framework?",
+      "choices": [
+        "M1042 (Disable or Remove Feature or Program)",
+        "M1034 (Limit Hardware Installation)",
+        "M1057 (Data Loss Prevention)",
+        "DS0009 (Process Creation)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q464",
+      "text": "Which data source should be monitored for detecting newly executed processes when removable media is mounted?",
+      "choices": [
+        "DS0022 (File)",
+        "DS0009 (Process)",
+        "DS0016 (Drive)",
+        "DS0017 (Command)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q465",
+      "text": "In MITRE ATT&CK, which Windows Registry key is manipulated by malware such as BoxCaon to maintain persistence?",
+      "choices": [
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\load",
+        "HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows\\load"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q466",
+      "text": "In the context of MITRE ATT&CK, which SaaS service logs would be most appropriate to review for detecting new webhook configurations? (Platform: Enterprise, ID: T1567.004)",
+      "choices": [
+        "Github logs",
+        "Office 365 logs",
+        "Github and Office 365 logs combined",
+        "None of these"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q467",
+      "text": "Which of the following commands could be indicative of an adversary attempting to create a new webhook configuration in a SaaS service? (Platform: Enterprise, ID: T1567.004)",
+      "choices": [
+        "git fetch",
+        "devops webhook add",
+        "gh webhook forward",
+        "cl runtime config"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q468",
+      "text": "Regarding mitigation strategies for exfiltration via webhooks, which technique is recommended? (Platform: Enterprise, ID: T1567.004)",
+      "choices": [
+        "Use IDS/IPS systems",
+        "Implement Data Loss Prevention",
+        "Use endpoint detection and response tools",
+        "Implement network segmentation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q469",
+      "text": "Which data source is critical for monitoring anomalous traffic patterns that may suggest data exfiltration to a webhook? (Platform: Enterprise, ID: T1567.004)",
+      "choices": [
+        "Application Log",
+        "Command log",
+        "File log",
+        "Network Trafficlog"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q470",
+      "text": "Which detection technique should be used to identify exfiltration attempts to text storage sites?",
+      "choices": [
+        "Monitor DNS requests for text storage sites",
+        "Monitor and analyze file creation events",
+        "Monitor and analyze network traffic content",
+        "Monitor and log all user logins"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q471",
+      "text": "Which MITRE ATT&CK tactic is associated with the technique \"Exfiltration Over Web Service: Exfiltration to Text Storage Sites\"? (ID: T1567.003)",
+      "choices": [
+        "Initial Access",
+        "Defense Evasion",
+        "Credentials Access",
+        "Exfiltration"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q472",
+      "text": "Which technique ID and full name is associated with exfiltrating data to cloud storage services according to MITRE ATT&CK?",
+      "choices": [
+        "T1567.001: Exfiltration Over Alternative Protocol",
+        "T1567.003: Exfiltration Over Web Service: Social Media",
+        "T1568: Dynamic Resolution",
+        "T1567.002: Exfiltration Over Web Service: Exfiltration to Cloud Storage"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q473",
+      "text": "Which of the following procedures is associated with the adversary group \"Earth Lusca\"?",
+      "choices": [
+        "Using the megacmd tool to upload stolen files to MEGA",
+        "Exfiltrating data via Dropbox",
+        "Uploading captured keystroke logs to Aliyun OSS",
+        "Using PCloud for data exfiltration"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q474",
+      "text": "How did Cinnamon Tempest exfiltrate captured data according to the provided text?",
+      "choices": [
+        "Using Rclone with the command rclone.exe copy --max-age 2y \"\\SERVER\\Shares\" Mega:DATA",
+        "Uploading to OneDrive",
+        "Using LUNCHMONEY uploader",
+        "Uploading captured keystroke logs to Alibaba Cloud Object Storage Service, Aliyun OSS"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q475",
+      "text": "What mitigation strategy can be employed to prevent unauthorized use of external cloud storage services?",
+      "choices": [
+        "Web proxies monitor file access",
+        "Restrict Web-Based Content using web proxies",
+        "Command execution monitoring",
+        "Monitor network traffic content"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q476",
+      "text": "What is the primary advantage for adversaries exfiltrating data to a code repository as described in MITRE ATT&CK T1567.001 (Exfiltration Over Web Service: Exfiltration to Code Repository)?",
+      "choices": [
+        "It bypasses firewall rules",
+        "It obscures data exfiltration with end-to-end encryption",
+        "It provides an additional level of protection via HTTPS",
+        "It avoids detection by network traffic monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q477",
+      "text": "According to MITRE ATT&CK T1567.001 (Exfiltration Over Web Service: Exfiltration to Code Repository), which mitigation strategy can be employed to prevent unauthorized use of external services for data exfiltration?",
+      "choices": [
+        "Implement multi-factor authentication",
+        "Isolate code repositories from sensitive data",
+        "Restrict Web-Based Content",
+        "Use network segmentation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q478",
+      "text": "What type of data source is recommended for detecting command execution that may exfiltrate data to a code repository in MITRE ATT&CK T1567.001 (Exfiltration Over Web Service: Exfiltration to Code Repository)?",
+      "choices": [
+        "File Access",
+        "Command Execution",
+        "Network Traffic Content",
+        "Network Traffic Flow"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q479",
+      "text": "Which network traffic examination technique can help detect artifacts of common exploit traffic for T1190 - Exploit Public-Facing Application?",
+      "choices": [
+        "Using simple IP filtering",
+        "Monitoring for suspicious port usage",
+        "Deep packet inspection",
+        "Using DNS traffic analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q480",
+      "text": "Which type of vulnerabilities are commonly exploited in the technique T1190 - Exploit Public-Facing Application by threat actors like APT28 and APT41?",
+      "choices": [
+        "Application misconfigurations",
+        "Virtual machine escapes",
+        "Botnet activities",
+        "Physical security loopholes"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q481",
+      "text": "What is a recommended mitigation strategy for T1190 - Exploit Public-Facing Application to limit the exploited target's access to other system features and processes?",
+      "choices": [
+        "Application whitelisting",
+        "Network Segmentation",
+        "Exploit Protection",
+        "Application Isolation and Sandboxing"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q482",
+      "text": "Which of the following vulnerabilities has been used by the Dragonfly group (G0035) to exploit public-facing applications for initial access?",
+      "choices": [
+        "CVE-2021-31207",
+        "CVE-2020-0688",
+        "CVE-2021-44573",
+        "CVE-2021-44228"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q483",
+      "text": "In the context of T1190 - Exploit Public-Facing Application, what methodology can help in rapidly patching externally exposed applications?",
+      "choices": [
+        "Regularly scan for vulnerabilities",
+        "Utilize fuzzy testing",
+        "Employ continuous integration",
+        "Employ patch management"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q484",
+      "text": "Which threat actor group has been noted to exploit vulnerabilities such as CVE-2020-5902 for initial access on public-facing applications?",
+      "choices": [
+        "Blue Mockingbird",
+        "BackdoorDiplomacy",
+        "APT29",
+        "Circuit333"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q485",
+      "text": "What strategy might mitigate the impact of browser-based exploitation, according to MITRE ATT&CK?",
+      "choices": [
+        "Application Isolation and Sandboxing",
+        "Exploit Protection",
+        "Mock Attack Simulations",
+        "Increased User Training"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q486",
+      "text": "Which of the following threat groups exploited the Microsoft Office vulnerability CVE-2017-11882 in their attacks?",
+      "choices": [
+        "Mustang Panda",
+        "APT32",
+        "APT41",
+        "Higaisa"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q487",
+      "text": "What is a common tactic used by adversaries to bypass user interaction when exploiting web browsers?",
+      "choices": [
+        "Drive-by Compromise",
+        "Phishing",
+        "Watering Hole Attack",
+        "Code Injection"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q488",
+      "text": "Name a mitigation technique recommended to prevent exploitation behavior.",
+      "choices": [
+        "Application Whitelisting",
+        "Exploit Protection",
+        "Network Segmentation",
+        "File Integrity Monitoring"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q489",
+      "text": "Which data sources should be monitored to detect exploitation attempts according to MITRE ATT&CK?",
+      "choices": [
+        "Application Log and Memory",
+        "DNS Requests and Firewall Logs",
+        "Process Creation and Memory",
+        "Application Log and Process Creation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q490",
+      "text": "Within the context of MITRE ATT&CK, which specific technique is associated with T1212?",
+      "choices": [
+        "Exploitation for Client Execution",
+        "Exploitation for Credential Access",
+        "Exploitation of Vulnerabilities in Mobile Apps",
+        "Exploitation for Access to Databases"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q491",
+      "text": "Which mitigation involves using sandboxing to limit the impact of software exploitation?",
+      "choices": [
+        "M1048 - Application Isolation and Sandboxing",
+        "M1051 - Update Software",
+        "M1019 - Threat Intelligence Program",
+        "M1050 - Exploit Protection"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q492",
+      "text": "Which of the following techniques is exemplified by MS14-068 targeting Kerberos?",
+      "choices": [
+        "Replay Attacks",
+        "Pass-the-Hash",
+        "Exploitation for Credential Access",
+        "Exploitation for Privilege Escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q493",
+      "text": "What could be an indication of a software exploitation leading to successful compromise according to the detection measures?",
+      "choices": [
+        "Increase in network traffic",
+        "Unusual user activity",
+        "Abnormal behavior of processes",
+        "High CPU usage"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q494",
+      "text": "Under the MITRE ATT&CK framework, which group has been known to use CVE-2015-4902 to bypass security features for defense evasion?",
+      "choices": [
+        "APT29",
+        "APT1",
+        "APT28",
+        "APT3"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q495",
+      "text": "Which mitigation technique recommends using tools like the Enhanced Mitigation Experience Toolkit (EMET) to reduce the risk of software exploitation?",
+      "choices": [
+        "Application Isolation and Sandboxing",
+        "Exploit Protection",
+        "Update Software",
+        "Threat Intelligence Program"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q496",
+      "text": "What data source and component should be monitored for abnormal behavior indicating possible exploitation for defense evasion, according to MITRE ATT&CK?",
+      "choices": [
+        "Process; Process Memory",
+        "Registry; Registry Key Modification",
+        "Application Log; Application Log Content",
+        "Process; Process Creation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q497",
+      "text": "What advantage do adversaries gain by exploiting vulnerabilities in public cloud infrastructures of SaaS applications?",
+      "choices": [
+        "Encrypting data to prevent access",
+        "Planting malware in user emails",
+        "Bypassing defense boundaries",
+        "Securing privileged user accounts"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q498",
+      "text": "What group has leveraged CVE-2021-36934 for privilege escalation according to MITRE ATT&CK’s technique T1068?",
+      "choices": [
+        "APT32",
+        "APT29",
+        "PLATINUM",
+        "FIN6"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q499",
+      "text": "Which adversary is known to have used Bring Your Own Vulnerable Driver (BYOVD) for privilege escalation?",
+      "choices": [
+        "BITTER",
+        "Turla",
+        "Empire",
+        "MoustachedBouncer"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q500",
+      "text": "Which mitigation strategy involves using security applications such as Windows Defender Exploit Guard (WDEG) to mitigate privilege escalation exploits?",
+      "choices": [
+        "Application Isolation and Sandboxing",
+        "Execution Prevention",
+        "Exploit Protection",
+        "Update Software"
+      ],
+      "answer": 2
+    }
+  ]
+}

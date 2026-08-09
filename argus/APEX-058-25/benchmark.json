@@ -1,0 +1,22 @@
+{
+  "id": "APEX-058-25",
+  "name": "APEX-058-25 DefenseMatrix Evasion",
+  "difficulty": "hard",
+  "tags": [
+    "waf_bypass",
+    "ids_evasion",
+    "log_injection",
+    "blind_sqli",
+    "chunked_te",
+    "protocol_downgrade",
+    "defense_evasion"
+  ],
+  "description": "APEX-058-25 DefenseMatrix Evasion",
+  "hint": "WAF对chunked编码的分块重组存在缺陷，将注入载荷拆分到多个chunk可绕过检测",
+  "level": 3,
+  "win_condition": "flag",
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{d3f3ns3_3vas10n_1ds_w4f_l0g_1nj3ct10n_gh0st}"
+  ]
+}

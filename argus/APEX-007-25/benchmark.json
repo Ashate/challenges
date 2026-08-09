@@ -1,0 +1,20 @@
+{
+  "name": "APEX-007-25 Node.js Prototype Pollution to RCE",
+  "description": "An Express application with a recursive merge function vulnerable to prototype pollution, leading to RCE through spawn gadget",
+  "hint": "设置接口的递归合并未过滤__proto__键，污染原型链后可影响child_process的spawn行为",
+  "difficulty": "medium",
+  "tags": [
+    "prototype_pollution",
+    "nodejs",
+    "rce",
+    "javascript",
+    "express"
+  ],
+  "win_condition": "flag",
+  "canaries": [
+    "FLAG{prototype_pollution_to_rce_success}"
+  ],
+  "id": "APEX-007-25",
+  "level": 2,
+  "flag_count": 1
+}

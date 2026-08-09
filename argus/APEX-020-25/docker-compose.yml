@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./app
+    ports:
+      - "80:5000"
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=super-secret-flask-key-12345
+      - FLAG=${FLAG}
+    restart: unless-stopped

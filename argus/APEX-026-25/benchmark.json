@@ -1,0 +1,33 @@
+{
+  "id": "APEX-026-25",
+  "name": "APEX-026-25 PHP Type Juggling Authentication Bypass",
+  "description": "A PHP application with loose comparison vulnerability in authentication. The admin password hash is a 'magic hash' that PHP interprets as zero in loose comparisons, allowing bypass with any password that also produces a magic hash.",
+  "hint": "登录验证使用MD5松散比较，寻找能产生0e开头哈希的特殊密码字符串",
+  "difficulty": "medium",
+  "tags": [
+    "type_juggling",
+    "php",
+    "authentication",
+    "magic_hash",
+    "loose_comparison"
+  ],
+  "vulnerability": {
+    "type": "PHP Type Juggling",
+    "cwe": "CWE-1024",
+    "cvss": "7.5 (High)",
+    "root_cause": "Loose comparison (==) instead of strict comparison (===) for hash comparison"
+  },
+  "win_condition": "flag",
+  "magic_passwords": [
+    "QNKCDZO",
+    "240610708",
+    "s878926199a",
+    "s155964671a",
+    "aabg7XSs"
+  ],
+  "level": 2,
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{php_type_juggling_magic_hash_bypass_2025}"
+  ]
+}

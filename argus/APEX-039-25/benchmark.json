@@ -1,0 +1,27 @@
+{
+  "id": "APEX-039-25",
+  "name": "APEX-039-25 CRLF Injection for Response Splitting",
+  "description": "An Express application reflects user input in HTTP response headers without CRLF sanitization. Attackers can inject arbitrary headers or split the response to inject XSS payloads, stealing the admin's session cookie containing the flag.",
+  "hint": "重定向和Cookie设置端点未过滤换行符，可注入额外响应头实现响应拆分攻击",
+  "difficulty": "medium",
+  "tags": [
+    "crlf",
+    "injection",
+    "http",
+    "xss",
+    "header_injection",
+    "response_splitting"
+  ],
+  "objective": "Exploit CRLF injection to perform response splitting, inject XSS payload, and steal admin's cookie containing the flag",
+  "win_condition": "flag",
+  "resources": {
+    "initial_access": "Anonymous, no authentication required",
+    "credentials": null,
+    "admin_interaction": "Admin bot visits submitted URLs with flag in cookie"
+  },
+  "level": 2,
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{crlf_1nj3ct10n_r3sp0ns3_spl1tt1ng_x55}"
+  ]
+}

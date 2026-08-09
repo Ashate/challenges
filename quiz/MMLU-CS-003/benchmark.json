@@ -1,0 +1,290 @@
+{
+  "id": "MMLU-CS-003",
+  "name": "System & Software Security",
+  "description": "Buffer overflows, memory safety, OS security, and malware analysis.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "computer-security",
+    "mmlu"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Applications developed by programming languages like ____ and ______ have this common buffer-overflow error.",
+      "choices": [
+        "C, Ruby",
+        "Python, Ruby",
+        "C, C++",
+        "Tcl, C#"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2",
+      "text": "Encryption and decryption provide secrecy, or condentiality, but not",
+      "choices": [
+        "Authentication",
+        "Integrity",
+        "Privacy",
+        "All of the above"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q3",
+      "text": "A/an ___________ is a program that steals your logins & passwords for instant messaging applications.",
+      "choices": [
+        "IM – Trojans",
+        "Backdoor Trojans",
+        "Trojan-Downloader",
+        "Ransom Trojan"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q4",
+      "text": "The sub key length at each round of DES is__________",
+      "choices": [
+        "32",
+        "56",
+        "48",
+        "64"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q5",
+      "text": "Which of the following is true of mutation-based fuzzing?",
+      "choices": [
+        "It generates each different input by modifying a prior input",
+        "It works by making small mutations to the target program to induce faults",
+        "Each input is mutation that follows a given grammar",
+        "It only makes sense for file-based fuzzing, not network-based fuzzing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q6",
+      "text": "What are the types of scanning?",
+      "choices": [
+        "Port, network, and services",
+        "Network, vulnerability, and port ",
+        "Passive, active, and interactive",
+        "Server, client, and network"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q7",
+      "text": "A sender must not be able to deny sending a message that was sent, is known as",
+      "choices": [
+        "Message Nonrepudiation",
+        "Message Integrity",
+        "Message Condentiality",
+        "Message Sending"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q8",
+      "text": "A proxy rewall lters at the",
+      "choices": [
+        "Physical layer",
+        "Application layer",
+        "Data link layer",
+        "Network layer"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q9",
+      "text": "Encapsulating Security Payload (ESP) belongs to which Internet Security Protocol?",
+      "choices": [
+        "Secure Socket Layer Protocol",
+        "Secure IP Protocol",
+        "Secure Http Protocol",
+        "Transport Layer Security Protocol"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q10",
+      "text": "A special tool is necessary for entering the network which is _______________ that helps the anonymous internet users to access into the Tor’s network and use various Tor services.",
+      "choices": [
+        "Opera browser",
+        "Firefox",
+        "Chrome",
+        "Tor browser"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q11",
+      "text": "How does a buffer overflow on the stack facilitate running attacker-injected code?",
+      "choices": [
+        "By overwriting the return address to point to the location of that code",
+        "By writing directly to the instruction pointer register the address of the code",
+        "By writing directly to %eax the address of the code",
+        "By changing the name of the running executable, stored on the stack"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q12",
+      "text": "The digest created by a hash function is normally called a",
+      "choices": [
+        "Modication detection code (MDC)",
+        "Modify authentication connection",
+        "Message authentication control",
+        "Message authentication cipher"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q13",
+      "text": "Let F: K \\times R \\to MF:K×R→M be a secure PRF. For m \\in Mm∈M define E(k,m) = \\big[ r \\gets R,\\ \\text{output } \\big(r,\\ F(k,r) \\oplus m\\big)\\ \\big]E(k,m)=[r←R, output (r, F(k,r)⊕m) ] Is EE symantically secure under CPA?",
+      "choices": [
+        "Yes, whenever F is a secure PRF",
+        "No, there is always a CPA attack on this system",
+        "Yes, but only if R is large enough so r never repeats (w.h.p)",
+        "It depends on what F is used"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q14",
+      "text": "Old operating systems like _______ and NT-based systems have buffer-overflow attack a common vulnerability.",
+      "choices": [
+        "Windows 7",
+        "Chrome",
+        "IOS12",
+        "UNIX"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q15",
+      "text": "What is a replay attack?",
+      "choices": [
+        "When the attacker replies to a message sent to it by the system",
+        "An attack that continuously repeats, probing for a weakness",
+        "An attack that uses the system's own messages and so cannot be defended against",
+        "The attacker resends a captured message, and the site accept its and responds in the attacker's favor"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q16",
+      "text": "Statement 1| A U2F USB dongle prevents malware on the user’s computer from stealing the user’s second factor to authenticate as that user even when the user’s computer is turned off. Statement 2| A server using U2F can reliably determine that the user who is attempting to login is indeed behind the computer that sent the login request.",
+      "choices": [
+        "True, True",
+        "False, False",
+        "True, False",
+        "False, True"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q17",
+      "text": "____________________ is the anticipation of unauthorized access or break to computers or data by means of wireless networks.",
+      "choices": [
+        "Wireless access",
+        "Wireless security",
+        "Wired Security",
+        "Wired device apps"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q18",
+      "text": "Which of the following are benefits of penetration testing?",
+      "choices": [
+        "Results are often reproducible",
+        "Full evidence of security: a clean test means a secure system",
+        "Compositionality of security properties means tested components are secure even if others change",
+        "Makes an adversarial neural network converge more quickly"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q19",
+      "text": "1. _________ framework made cracking of vulnerabilities easy like point and click.",
+      "choices": [
+        ".Net",
+        "Metasploit",
+        "Zeus",
+        "Ettercap"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q20",
+      "text": "You are given a message (m) and its OTP encryption (c). Can you compute the OTP key from m and c ?",
+      "choices": [
+        "No, I cannot compute the key.",
+        "Yes, the key is k = m xor c.",
+        "I can only compute half the bits of the key.",
+        "Yes, the key is k = m xor m."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q21",
+      "text": "The openSSL implementation described in “Remote Timing Attacks are Practical” (by Brumley and Boneh) uses the following performance optimizations: Chinese Remainder (CR), Montgomery Representation (MR), Karatsuba Multiplication (KM), and Repeated squaring and Sliding windows (RS). Which of the following options would close the timing channel attack described in the paper if you turned the listed optimizations off?\n1. CR and MR\n2. CR",
+      "choices": [
+        "True, True",
+        "False, False",
+        "True, False",
+        "False, True"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q22",
+      "text": "When the data must arrive at the receiver exactly as they were sent, its called",
+      "choices": [
+        "Message Condentiality",
+        "Message Integrity",
+        "Message Splashing",
+        "Message Sending"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q23",
+      "text": "What is the difference between a direct leak and a side channel?",
+      "choices": [
+        "A direct leak creates a denial of service by failing to free memory, while a channel frees memory as a side effect",
+        "A direct leak is one that is intentional, rather than by unintentional",
+        "A direct leak comes via the software system's intended interaction mechanism, where as a side channel leak comes from measurements of other system features, like timing, power usage, or space usage",
+        "There is no difference"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q24",
+      "text": "A session symmetric key between two parties is used",
+      "choices": [
+        "Only once",
+        "Twice",
+        "Multiple times",
+        "Conditions dependant"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q25",
+      "text": "What is a nop sled",
+      "choices": [
+        "It is an anonymous version of a mop sled",
+        "It is a sequence of nops preceding injected shellcode, useful when the return address is unknown",
+        "It is a method of removing zero bytes from shellcode",
+        "It is another name for a branch instruction at the end of sequence of nops"
+      ],
+      "answer": 1
+    }
+  ]
+}

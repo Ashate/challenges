@@ -1,0 +1,5513 @@
+{
+  "id": "CTIBENCH-MCQ-003",
+  "name": "CTIBench MCQ Part 3",
+  "description": "Cyber Threat Intelligence MCQ (Part 3/5): MITRE ATT&CK techniques, mitigations, and threat intelligence.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "ctibench",
+    "threat-intelligence",
+    "mitre-attack"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1001",
+      "text": "APT41 is noted for using which method in the context of MITRE ATT&CK's T1071.002?",
+      "choices": [
+        "HTTP Beaconing",
+        "Exploit payloads that initiate download via FTP",
+        "Peer-to-peer communication using IRC",
+        "Communicating over SSH"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1002",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which remote service is NOT mentioned as an example in technique T0886 (Remote Services)?",
+      "choices": [
+        "SMB",
+        "FTP",
+        "SSH",
+        "RDP"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1003",
+      "text": "During the 2015 Ukraine Electric Power Attack, which software did the Sandworm Team use to move the mouse on ICS control devices?",
+      "choices": [
+        "TeamViewer",
+        "IT helpdesk software",
+        "Remote Desktop Connection",
+        "VNC"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1004",
+      "text": "Which mitigation is recommended for preventing unauthorized access to remote services by enforcing strong authentication measures?",
+      "choices": [
+        "Network Segmentation",
+        "Human User Authentication",
+        "Access Management",
+        "Network Allowlists"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1005",
+      "text": "Which malware uses the SMB protocol to encrypt files located on remotely connected file shares?",
+      "choices": [
+        "INCONTROLLER",
+        "REvil",
+        "Stuxnet",
+        "Temp.Veles"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1006",
+      "text": "What specific protocol does INCONTROLLER use to connect remotely to Schneider PLCs?",
+      "choices": [
+        "Modbus",
+        "OPC",
+        "HTTP",
+        "CODESYS"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1007",
+      "text": "Regarding detection methods for remote services, which data source should be monitored for new network connections specifically designed to accept remote connections?",
+      "choices": [
+        "Module",
+        "Command",
+        "Network Traffic",
+        "Logon Session"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1008",
+      "text": "Which technique enables adversaries to transfer tools or files from one system to another for lateral movement in ICS environments as described in MITRE ATT&CK?",
+      "choices": [
+        "Valid Accounts [T1078]",
+        "Remote Services [T1021]",
+        "Lateral Tool Transfer [T0867]",
+        "Drive-by Compromise [T1189]"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1009",
+      "text": "During which event did the Sandworm Team utilize a VBS script to facilitate lateral tool transfer, specifically for ICS-specific payloads?",
+      "choices": [
+        "2015 Ukraine Electric Power Attack",
+        "2016 Ukraine Electric Power Attack",
+        "Triton Safety Instrumented System Attack",
+        "WannaCry"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1010",
+      "text": "Which of the following mitigations can help to detect unusual data transfer over known tools and protocols at the network level?",
+      "choices": [
+        "Network Segmentation",
+        "Antivirus/Antimalware",
+        "Network Intrusion Prevention",
+        "User Training"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1011",
+      "text": "Which technique does INCONTROLLER use to sniff network traffic?",
+      "choices": [
+        "INCONTROLLER can deploy Wireshark to capture traffic",
+        "INCONTROLLER can deploy Tcpdump to sniff network traffic",
+        "INCONTROLLER performs DNS hijacking to capture traffic",
+        "INCONTROLLER uses ARP poisoning to capture traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1012",
+      "text": "What specific attribute does VPNFilter monitor in network traffic?",
+      "choices": [
+        "Only TCP packets from modbus devices",
+        "All UDP packets using encryption",
+        "Basic authentication and ICS traffic",
+        "Only web traffic over HTTPS"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1013",
+      "text": "Which type of system is targeted by malicious DP_RECV blocks as used in Stuxnet?",
+      "choices": [
+        "General-purpose routers",
+        "Frequency converter drives",
+        "Human-Machine Interface (HMI)",
+        "Virtual Private Network (VPN) Server"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1014",
+      "text": "What mitigation technique involves using protocols such as Kerberos for authentication?",
+      "choices": [
+        "Network Segmentation",
+        "Multi-factor Authentication",
+        "Encrypt Network Traffic",
+        "Privileged Account Management"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1015",
+      "text": "Which data source can be monitored to detect actions that aid in network sniffing?",
+      "choices": [
+        "Network Interface Cards",
+        "User Activity Logs",
+        "Command Execution",
+        "Inbound Web Traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1016",
+      "text": "According to MITRE ATT&CK, which mitigation strategy should be used to ensure only authorized users can modify industrial control system parameter values?",
+      "choices": [
+        "M0947 | Audit",
+        "M0800 | Authorization Enforcement",
+        "M0818 | Validate Program Inputs",
+        "M0804 | Human User Authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1017",
+      "text": "Which attack technique involves modifying parameters on EtherCat connected servo drives using the HTTP CGI scripts on Omron PLCs?",
+      "choices": [
+        "S1072 | Industroyer2",
+        "S1045 | INCONTROLLER",
+        "C0020 | Maroochy Water Breach",
+        "S0603 | Stuxnet"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1018",
+      "text": "In the Maroochy Water Breach incident, what was the consequence of the adversary altering configurations in the PDS computers?",
+      "choices": [
+        "Release of control systems code",
+        "Data exfiltration",
+        "Physical damage to devices",
+        "Spillage of 800,000 liters of raw sewage"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1019",
+      "text": "What technique ID and name in MITRE ATT&CK is associated with modifying parameters to produce unexpected values in control systems?",
+      "choices": [
+        "T0863 | Parameter Manipulation",
+        "T0811 | Process Injection",
+        "T0836 | Modify Parameter",
+        "T0842 | Rogue Master Controller"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1020",
+      "text": "Which detection method involves monitoring ICS management protocols for unexpected parameter changes?",
+      "choices": [
+        "Application Log Content",
+        "Asset Inventory",
+        "Device Alarm",
+        "Network Traffic Content"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1021",
+      "text": "In the context of MITRE ATT&CK for ICS, which malware was known to migrate from IT to ICS environments exploiting the SMBv1-targeting MS17-010 vulnerability?",
+      "choices": [
+        "Stuxnet",
+        "WannaCry",
+        "Mirai",
+        "Conficker"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1022",
+      "text": "Which mitigation technique involves making it difficult for adversaries to advance their operation through exploitation of vulnerabilities by using sandboxing?",
+      "choices": [
+        "M0930 | Network Segmentation",
+        "M0948 | Application Isolation and Sandboxing",
+        "M0926 | Privileged Account Management",
+        "M0951 | Update Software"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1023",
+      "text": "Among the listed procedural examples, which malware exploits the MS17-010 vulnerability specifically to spread across industrial networks?",
+      "choices": [
+        "Stuxnet",
+        "Bad Rabbit",
+        "Mirai",
+        "Conficker"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1024",
+      "text": "What is a common goal for post-compromise exploitation of remote services in ICS environments?",
+      "choices": [
+        "Data exfiltration",
+        "Denial of Service (DoS)",
+        "Lateral movement",
+        "Privilege escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1025",
+      "text": "Which of the following is a key practice for minimizing permissions and access for service accounts to limit the impact of exploitation?",
+      "choices": [
+        "M0942 | Disable or Remove Feature or Program",
+        "M0948 | Application Isolation and Sandboxing",
+        "M0951 | Update Software",
+        "M0926 | Privileged Account Management"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1026",
+      "text": "Which of the following adversary groups is known to use drive-by compromise techniques to infiltrate electric utilities, according to the MITRE ATT&CK framework (ID: T0817)?",
+      "choices": [
+        "Dragonfly",
+        "OILRIG",
+        "TEMP.Veles",
+        "ALLANITE"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1027",
+      "text": "What mitigation strategy, as listed in MITRE ATT&CK for drive-by compromise (ID: T0817), involves the usage of modern browsers with advanced security techniques enabled?",
+      "choices": [
+        "Application Isolation and Sandboxing",
+        "Exploit Protection",
+        "Restrict Web-Based Content",
+        "Update Software"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1028",
+      "text": "For detecting indicators of drive-by compromise (MITRE ATT&CK ID: T0817), which of the following data sources would be most appropriate for monitoring newly created network connections?",
+      "choices": [
+        "Application Log",
+        "File",
+        "Network Traffic",
+        "Process"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1029",
+      "text": "Which type of tactical compromise does the drive-by compromise (ID: T0817) primarily embody according to MITRE ATT&CK’s classification?",
+      "choices": [
+        "Initial Access",
+        "Execution",
+        "Lateral Movement",
+        "Collection"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1030",
+      "text": "In the context of the MITRE ATT&CK technique drive-by compromise (ID: T0817), what does DS0009 (Process Creation) detect?",
+      "choices": [
+        "Firewalls inspecting URLs for known-bad domains",
+        "Newly constructed files written to disk",
+        "Suspicious behaviors of browser processes",
+        "Unusual network traffic while browsing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1031",
+      "text": "Which of the following malware examples uses a General Interrogation command to monitor the device’s Information Object Addresses (IOAs) and their IO state values in the context of the MITRE ATT&CK for Enterprise with technique ID T0801, \"Monitor Process State\"?",
+      "choices": [
+        "Industroyer",
+        "Industroyer2",
+        "Stuxnet"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1032",
+      "text": "In the context of monitoring ICS systems for adversary collection using MITRE ATT&CK technique T0801, \"Monitor Process State,\" which detection data source should be utilized for tracking access attempts to operational databases like Historians?",
+      "choices": [
+        "Application Log",
+        "Network Traffic",
+        "Security Information and Event Management (SIEM) System",
+        "Intrusion Detection System (IDS)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1033",
+      "text": "Which targeted asset category would be the most applicable for technique T0801, \"Monitor Process State,\" involving the use of OPC tags or historian data?",
+      "choices": [
+        "Human-Machine Interface (HMI)",
+        "Programmable Logic Controller (PLC)",
+        "Data Historian",
+        "Field I/O"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1034",
+      "text": "Regarding MITRE ATT&CK ID T0889, which of the following techniques could be used by an adversary to modify a program on a controller?",
+      "choices": [
+        "Program append",
+        "Program delete",
+        "Program merge",
+        "Program override"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1035",
+      "text": "Which mitigation technique is recommended for ensuring integrity of control logic or programs on a controller in MITRE ATT&CK?",
+      "choices": [
+        "M0800: Authorization Enforcement",
+        "M0947: Audit",
+        "M0945: Code Signing",
+        "M0804: Human User Authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1036",
+      "text": "Which platform's data source would you monitor to detect changes in controller programs by examining application logs as per MITRE ATT&CK ID T0889?",
+      "choices": [
+        "DS0039: Asset",
+        "DS0015: Application Log",
+        "DS0029: Network Traffic",
+        "DS0040: Operational Databases"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1037",
+      "text": "What is the primary tactic associated with the MITRE ATT&CK technique T0889?",
+      "choices": [
+        "Defense Evasion",
+        "Collection",
+        "Credential Access",
+        "Persistence"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1038",
+      "text": "What is the primary goal of adversaries in Technique T0861 in the MITRE ATT&CK framework?",
+      "choices": [
+        "Collecting point and tag values to exfiltrate data",
+        "Collecting point and tag values to gain comprehensive process understanding",
+        "Injecting malicious code into tag values",
+        "Disabling point and tag identifiers to disrupt processes"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1039",
+      "text": "Which mitigation involves using bump-in-the-wire devices or VPNs to ensure communication authenticity in ICS environments?",
+      "choices": [
+        "M0801 - Access Management",
+        "M0802 - Communication Authenticity",
+        "M0807 - Network Allowlists",
+        "M0813 - Software Process and Device Authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1040",
+      "text": "What type of logs should be monitored according to DS0015 to detect anomalies associated with point or tag data requests?",
+      "choices": [
+        "Network Traffic Logs",
+        "System Event Logs",
+        "Application Logs",
+        "Database Logs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1041",
+      "text": "Which procedure example enumerates OPC tags to understand the functions of control devices in Technique T0861?",
+      "choices": [
+        "INCONTROLLER",
+        "Backdoor.Oldrea",
+        "Shamoon",
+        "BlackEnergy"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1042",
+      "text": "In the context of MITRE ATT&CK, which threat actor can exploit hardcoded credentials to infiltrate Omron PLCs? This question pertains to the ICS platform and is based on Technique ID T0891 (Hardcoded Credentials).",
+      "choices": [
+        "INCONTROLLER",
+        "Stuxnet",
+        "APT29",
+        "Shamoon"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1043",
+      "text": "Which mitigation strategy is recommended to protect against the exploitation of hardcoded credentials in the MITRE ATT&CK framework? This question pertains to the ICS platform and is based on Technique ID T0891 (Hardcoded Credentials).",
+      "choices": [
+        "Network Isolation",
+        "Access Management",
+        "Patch Management",
+        "Endpoint Detection and Response"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1044",
+      "text": "During which notable event did the Sandworm Team use HTTP post requests for C2 communication?",
+      "choices": [
+        "2015 Ukraine Electric Power Attack",
+        "Operation Dream Job",
+        "Operation Wocao",
+        "Night Dragon"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1045",
+      "text": "Which RAT is known to use HTTP for command and control in the context of T1071.001: Application Layer Protocol: Web Protocols?",
+      "choices": [
+        "3PARA RAT",
+        "Merlin",
+        "RustyBear",
+        "AppIron"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1046",
+      "text": "Which family of RATs does NOT use the HTTP protocol for command and control?",
+      "choices": [
+        "Anchor",
+        "LOOKULA",
+        "HyperBro",
+        "Felismus"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1047",
+      "text": "In the context of detection, which data source is leveraged for identifying network traffic anomalies related to T1071.001?",
+      "choices": [
+        "Network Traffic Flow",
+        "File Monitoring",
+        "Process Monitoring",
+        "Windows Registry"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1048",
+      "text": "What is an example of a mitigation strategy to defend against T1071.001?",
+      "choices": [
+        "OS Level Rights Management",
+        "Network Intrusion Prevention",
+        "System Memory Scanning",
+        "Code Signing Verification"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1049",
+      "text": "Which specific driver is primarily used by threat actors to abuse HTTP/S traffic for command communication, according to T1071.001?",
+      "choices": [
+        "Wininet API",
+        "Tracert Utility",
+        "Telemetry Engine",
+        "Netbios Driver"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1050",
+      "text": "Which mitigation strategy prevents adversaries from gaining control of crucial systems by ensuring quick recovery from disruptions in ICS environments related to MITRE ATT&CK T0815 - Denial of View?",
+      "choices": [
+        "Out-of-Band Communications Channel (M0810)",
+        "Data Backup (M0953)",
+        "Redundancy of Service (M0811)",
+        "Remote Access (M0930)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1051",
+      "text": "In the context of MITRE ATT&CK T0815 - Denial of View, which adversary tactic was specifically employed during the Maroochy Water Breach to disrupt oversight?",
+      "choices": [
+        "Blocking serial COM channels",
+        "Corrupting operational processes",
+        "Shutting an investigator out of the network",
+        "Triggering false alarms"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1052",
+      "text": "How does the mitigation technique \"Out-of-Band Communications Channel (M0810)\" help in managing the impact of MITRE ATT&CK T0815 - Denial of View attacks?",
+      "choices": [
+        "It provides offline system inspections",
+        "It implements advanced firewall rules",
+        "It allows monitoring and control independent of compromised networks",
+        "It encrypts all operator communications over the network"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1053",
+      "text": "Which of the following best describes the ID T0868 in the MITRE ATT&CK framework for ICS?",
+      "choices": [
+        "It delineates the protocol for authenticating network traffic between PLCs.",
+        "It defines methods for detecting network intrusion attempts on safety controllers.",
+        "It specifies the technique for detecting the operating mode of PLCs.",
+        "It explains methodologies for securing remote communication with field controllers."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1054",
+      "text": "In which operating mode are program uploads and downloads between the device and an engineering workstation allowed?",
+      "choices": [
+        "Run",
+        "Remote",
+        "Program",
+        "Stop"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1055",
+      "text": "What is the primary purpose of monitoring network traffic content for device-specific operating modes?",
+      "choices": [
+        "To detect unauthorized remote access attempts.",
+        "To identify modifications in the device's key switch states.",
+        "To authenticate communications between devices.",
+        "To map out communication patterns within the network."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1056",
+      "text": "Which mitigation technique is focused on ensuring that field controllers only allow modifications by certain users?",
+      "choices": [
+        "Access Management",
+        "Authorization Enforcement",
+        "Network Segmentation",
+        "Filter Network Traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1057",
+      "text": "The Triton malware references specific program and key states through which file?",
+      "choices": [
+        "TS_keystate.py",
+        "TS_progstate.py",
+        "TsHi.py",
+        "TS_cnames.py"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1058",
+      "text": "Which MITRE ATT&CK technique involves compromising safety system functions to maintain operation during unsafe conditions?",
+      "choices": [
+        "ID: T0867 - System Reboot",
+        "ID: T0880 - Loss of Safety",
+        "ID: T0890 - Process Manipulation",
+        "ID: T0998 - Manipulate I/O Image"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1059",
+      "text": "Which mitigation technique focuses on segmenting Safety Instrumented Systems (SIS) from operational networks to prevent targeting by adversaries?",
+      "choices": [
+        "M0805 – Mechanical Protection Layers",
+        "M0811 – Process Management",
+        "M0810 – Authentication Management",
+        "M0812 – Safety Instrumented Systems"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1060",
+      "text": "Within the context of MITRE ATT&CK for Enterprise, which procedure is specifically identified for extracting the keychain data from an iOS device?",
+      "choices": [
+        "Phantom",
+        "Exodus",
+        "INSOMNIA",
+        "ShadowHammer"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1061",
+      "text": "Which mitigation strategy, listed under MITRE ATT&CK for Mobile, could potentially prevent an adversary from accessing the entire keychain database on a jailbroken iOS device?",
+      "choices": [
+        "Attestation",
+        "Access Token Validation",
+        "Monitor System Logs",
+        "Restrict Admin Privileges"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1062",
+      "text": "According to MITRE ATT&CK technique T1634 for Credentials from Password Store, which of the following data sources is used to detect known privilege escalation exploits within applications?",
+      "choices": [
+        "Host-based Detection",
+        "Sensor Health",
+        "Network Traffic Monitoring",
+        "Application Vetting"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1063",
+      "text": "Which mitigation strategy in MITRE ATT&CK’s technique T1634 recommends using security products to take appropriate action when jailbroken devices are detected?",
+      "choices": [
+        "Attestation",
+        "Security Updates",
+        "Deploy Compromised Device Detection Method",
+        "Application Control"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1064",
+      "text": "Which of the following procedures is most likely to involve modifying the system partition to maintain persistence on an Android device?",
+      "choices": [
+        "BrainTest",
+        "BusyGasper",
+        "Monokle",
+        "ShiftyBug"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1065",
+      "text": "What might be a suitable mitigation technique for detecting unauthorized modifications to the system partition, according to the MITRE ATT&CK framework?",
+      "choices": [
+        "Attestation",
+        "Lock Bootloader",
+        "Security Updates",
+        "System Partition Integrity"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1066",
+      "text": "What data source and component could be utilized to detect applications trying to modify files in protected parts of the operating system in the context of MITRE ATT&CK T1645?",
+      "choices": [
+        "DS0013 - Host Status",
+        "DS0041 - API Calls",
+        "DS0013 - API Calls",
+        "DS0041 - Host Status"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1067",
+      "text": "In the context of MITRE ATT&CK (Enterprise), which vulnerability allows adversaries to add bytes to APK and DEX files without affecting the file’s signature?",
+      "choices": [
+        "Janus",
+        "YiSpecter",
+        "BOULDSPY",
+        "Agent Smith"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1068",
+      "text": "Given the MITRE ATT&CK (Enterprise) T1577 description, which method would NOT be used by adversaries to ensure persistent access through compromised application executables?",
+      "choices": [
+        "Deploying malware through phishing emails",
+        "Injecting malicious code into genuine executables",
+        "Rebuilding applications to include malicious modifications",
+        "Concealing modifications by making them appear as updates"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1069",
+      "text": "According to MITRE ATT&CK (Enterprise) T1577, which mitigation strategy involves using a device OS version that has patched known vulnerabilities?",
+      "choices": [
+        "Security Awareness Training",
+        "Security Police and User Account Management",
+        "Use Recent OS Version",
+        "Secure Configuration of Network Protocols"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1070",
+      "text": "Regarding the MITRE ATT&CK technique T1623.001: Command and Scripting Interpreter: Unix Shell, which of the following statements is true?",
+      "choices": [
+        "Unix shell scripts cannot be used for conditionals and loops.",
+        "Unix shells on Android and iOS devices can control every aspect of a system.",
+        "Adversaries can only access Unix shells through physical access to the device.",
+        "Unix shell commands do not require elevated privileges even for protected system files."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1071",
+      "text": "Which malware family associated with MITRE ATT&CK technique T1623.001 is known for including encoded shell scripts to aid in the rooting process?",
+      "choices": [
+        "BusyGasper",
+        "DoubleAgent",
+        "HenBox",
+        "AbstractEmu"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1072",
+      "text": "Which of the following data sources is most relevant for detecting command-line activities as specified under MITRE ATT&CK technique T1623.001?",
+      "choices": [
+        "Application Vetting",
+        "Command",
+        "Process",
+        "Command Execution"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1073",
+      "text": "Which mitigation strategy is specifically recommended to detect jailbroken or rooted devices as per the MITRE ATT&CK technique T1623.001?",
+      "choices": [
+        "Deploy Compromised Device Detection Method",
+        "Application Vetting",
+        "Command Execution",
+        "Attestation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1074",
+      "text": "Which mitigation strategy can detect jailbroken or rooted devices according to MITRE ATT&CK technique T1623 (Command and Scripting Interpreter)?",
+      "choices": [
+        "Deploying network intrusion detection systems",
+        "Implementing device attestation",
+        "Setting strict firewall policies",
+        "Enforcing application control policies"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1075",
+      "text": "Which procedure example utilizes malicious JavaScript to steal information in the scope of MITRE ATT&CK technique T1623 (Command and Scripting Interpreter)?",
+      "choices": [
+        "Mirai",
+        "Kovter",
+        "TianySpy",
+        "Emotet"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1076",
+      "text": "Which data source and data component combination could detect command-line activities for MITRE ATT&CK technique T1623 (Command and Scripting Interpreter) in Mobile platforms?",
+      "choices": [
+        "Application Logs and Authentication Events",
+        "Process Metadata",
+        "Registry and Network Traffic",
+        "Application Vetting and API Calls"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1077",
+      "text": "In the context of MITRE ATT&CK for the Mobile platform, which API usage can be detected by application vetting services?",
+      "choices": [
+        "Application vetting services cannot detect any API usage",
+        "API calls related to ClipboardManager.OnPrimaryClipChangedListener() API",
+        "API calls related only to network activities",
+        "API calls related to system reboot events"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1078",
+      "text": "Which mobile threat groups are noted for clipboard data collection in MITRE ATT&CK?",
+      "choices": [
+        "BOULDSPY and RCSAndroid",
+        "RCSAndroid and APT28",
+        "GoldSpy and CozyBear",
+        "XcodeGhost and FIN7"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1079",
+      "text": "Which adversary technique pertains to the use of OSI application layer protocols to avoid detection by blending in with existing traffic?",
+      "choices": [
+        "T1070 - Indicator Removal on Host",
+        "T1071 - Application Layer Protocol",
+        "T1072 - Standard Application Layer Protocols",
+        "T1073 - Network Layer Protocols"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1080",
+      "text": "Which adversarial group has notably used IRC for Command and Control (C2) communications, as specified in the procedure examples?",
+      "choices": [
+        "Magic Hound",
+        "Siloscape",
+        "TeamTNT",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1081",
+      "text": "What protocol and port has Lucifer malware used for communication between the cryptojacking bot and the mining server?",
+      "choices": [
+        "SMB on port 445",
+        "Telnet on port 23",
+        "Stratum on port 10001",
+        "SSH on port 22"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1082",
+      "text": "Which of the following is a mitigation technique for T1071 - Application Layer Protocol?",
+      "choices": [
+        "Network Intrusion Prevention (M1031)",
+        "Using HTTPS instead of HTTP",
+        "Perform DNS sinkholing",
+        "Only allowing traffic over known ports and protocols"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1083",
+      "text": "In MITRE ATT&CK for Mobile, which malware can silently accept an incoming phone call?",
+      "choices": [
+        "AndroRAT",
+        "Anubis",
+        "CarbonSteal",
+        "Escobar"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1084",
+      "text": "Which of the following MITRE ATT&CK techniques allows an application to programmatically control phone calls without the user's permission?",
+      "choices": [
+        "Answer Phone Calls (T1616)",
+        "Caller ID Spoofing (T1586)",
+        "Voicemail Hijacking (T1615)",
+        "Man-in-the-Middle (T1614)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1085",
+      "text": "Which malware is capable of making phone calls and displaying a fake call screen?",
+      "choices": [
+        "Monokle",
+        "Anubis",
+        "Fakecalls",
+        "BusyGasper"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1086",
+      "text": "According to MITRE ATT&CK Mobile, which permission is required for an application to redirect a call or abort an outgoing call entirely?",
+      "choices": [
+        "ANSWER_PHONE_CALLS",
+        "CALL_PHONE",
+        "PROCESS_OUTGOING_CALLS",
+        "WRITE_CALL_LOG"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1087",
+      "text": "Which technique involves adversaries using scripts automatically executed at boot or logon initialization to establish persistence? (Enterprise)",
+      "choices": [
+        "T1397 - Bootkit",
+        "T1398 - Boot or Logon Initialization Scripts",
+        "T1399 - Shortcut Modification",
+        "T1400 - Re-opened Applications on Logon"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1088",
+      "text": "What mitigation could help prevent unauthorized modifications to protected operating system files by locking the bootloader?",
+      "choices": [
+        "M1002 - Attestation",
+        "M1003 - Lock Bootloader",
+        "M1001 - Security Updates",
+        "M1004 - System Partition Integrity"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1089",
+      "text": "In MITRE ATT&CK's \"Audio Capture\" technique (T1429), which Android permission allows an application to access the microphone?",
+      "choices": [
+        "RECORD_AUDIO",
+        "CAPTURE_AUDIO_OUTPUT",
+        "VOICE_CALL",
+        "AUDIO_SOURCE"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1090",
+      "text": "On iOS, what must an application include in its Info.plist file to access the microphone for audio capture as per the Audio Capture technique (T1429)?",
+      "choices": [
+        "NSAudioAccess",
+        "NSMicrophoneAccess",
+        "NSMicrophoneUsageDescription",
+        "NSRecordAudioPermission"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1091",
+      "text": "As stated in MITRE ATT&CK's Audio Capture technique (T1429), which Android constant can be passed to MediaRecorder.setAudioOutput to capture both voice call uplink and downlink?",
+      "choices": [
+        "AudioSource.MIC",
+        "MediaRecorder.AudioSource.VOICE_CALL",
+        "AudioManager.VOICE_CALL",
+        "MediaRecorder.Output.DIRECTION"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1092",
+      "text": "Which mitigation technique can help restrict access to the microphone on Android devices, as mentioned in MITRE ATT&CK's Audio Capture technique (T1429)?",
+      "choices": [
+        "Update Firmware",
+        "Use Antivirus Software",
+        "Avoid Third-Party Apps",
+        "Use Recent OS Version"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1093",
+      "text": "According to MITRE ATT&CK’s Audio Capture technique (T1429), which data source would you monitor to detect unauthorized microphone access on iOS devices?",
+      "choices": [
+        "System Logs",
+        "Application Vetting",
+        "User Interface",
+        "Network Traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1094",
+      "text": "Which mobile malware mentioned in MITRE ATT&CK’s Audio Capture technique (T1429) specifically requires microphone permissions to record audio on Android devices?",
+      "choices": [
+        "AndroRAT",
+        "EscapeROUTER",
+        "AbstractEmu",
+        "AudioThief"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1095",
+      "text": "In the context of MITRE ATT&CK (Enterprise), which technique corresponds to the ID T1532?",
+      "choices": [
+        "Archive Logs and Data",
+        "Archive Collected Data",
+        "Encrypt Logs and Data",
+        "Compress and Encrypt Data"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1096",
+      "text": "Which of the following tools has used the zlib library for data compression prior to exfiltration, according to the MITRE ATT&CK framework?",
+      "choices": [
+        "Anubis",
+        "Asacub",
+        "BRATA",
+        "GolfSpy"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1097",
+      "text": "According to MITRE ATT&CK, which procedure involves using a simple XOR operation with a pre-configured key for encrypting data prior to exfiltration?",
+      "choices": [
+        "Desert Scorpion",
+        "FrozenCell",
+        "Triada",
+        "GolfSpy"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1098",
+      "text": "Which of the following mitigations could be used to counter the MITRE ATT&CK technique T1661: Application Versioning within a mobile enterprise environment?",
+      "choices": [
+        "Implement a firewall to block unauthorized outbound connections",
+        "Provision policies for mobile devices to allow-list approved applications",
+        "Regularly update the firmware of mobile devices",
+        "Use VPNs to mask outbound traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1099",
+      "text": "In the context of MITRE ATT&CK technique T1661: Application Versioning, which detection method can identify when an application requests new permissions after an update?",
+      "choices": [
+        "API Call Monitoring",
+        "Network Communication Analysis",
+        "Permissions Requests Monitoring",
+        "File Integrity Monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1100",
+      "text": "Which of the following malware uses Firebase Cloud Messaging (FCM) for Command and Control (C2) communication?",
+      "choices": [
+        "EventBot (S0478)",
+        "DEFENSOR ID (S0479)",
+        "AhRat (S1095)",
+        "Cerberus (S0480)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1101",
+      "text": "Which technique under MITRE ATT&CK Command and Control tactic involves the abuse of native mobile messaging services like Google Cloud Messaging (GCM) and Firebase Cloud Messaging (FCM)?",
+      "choices": [
+        "T1023: Short File Name Discovery",
+        "T1071.001: Application Layer Protocol: Web Protocols",
+        "T1059: Command-Line Interface",
+        "T1566.001: Phishing: Email Phishing"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1102",
+      "text": "Which mitigation approach is suggested for the abuse of standard application protocols according to MITRE ATT&CK?",
+      "choices": [
+        "Detecting malicious proxies",
+        "Preventive controls for system features",
+        "Network-based behavioral analytics",
+        "Focus on detection at other stages of adversarial behavior"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1103",
+      "text": "Which malware uses both HTTP and WebSockets for C2 communication?",
+      "choices": [
+        "AbstractEmu (S1061)",
+        "BRATA (S1094)",
+        "CHEMISTGAMES (S0555)",
+        "Gustuff (S0406)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1104",
+      "text": "Which malware uses Google Cloud Messaging (GCM) for C2 communication?",
+      "choices": [
+        "Rotexy (S0411)",
+        "Skygofree (S0327)",
+        "Trojan-SMS.AndroidOS.Agent.ao (S0307)",
+        "FluBot (S1067)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1105",
+      "text": "What protocol did PROMETHIUM use with StrongPity for C2 communication during C0033?",
+      "choices": [
+        "HTTP",
+        "UDP",
+        "TCP",
+        "HTTPS"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1106",
+      "text": "Which application layer protocol has DoubleAgent utilized for data exfiltration, as mentioned in MITRE ATT&CK T1437 (Mobile)?",
+      "choices": [
+        "HTTP",
+        "FTP",
+        "DNS",
+        "SMTP"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1107",
+      "text": "Based on MITRE ATT&CK T1437 (Mobile), which type of protocol was used by Drinik for Command and Control (C2) instructions?",
+      "choices": [
+        "HTTP",
+        "DNS",
+        "Firebase Cloud Messaging",
+        "SMTP"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1108",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which technique involves adversaries positioning themselves between networked devices to perform follow-on behaviors such as Transmitted Data Manipulation or Endpoint Denial of Service?",
+      "choices": [
+        "T1638 - Scheduled Task/Job",
+        "T1640 - Network Sniffing",
+        "T1638 - Adversary-in-the-Middle",
+        "T1629 - Software Discovery"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1109",
+      "text": "Which of the following procedure examples is known for intercepting device communication by hooking SSLRead and SSLWrite functions in the iTunes process?",
+      "choices": [
+        "S0407 - Pegasus",
+        "S1062 - S.O.V.A.",
+        "S0288 - KeyRaider",
+        "S0407 - Monokle"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1110",
+      "text": "Which mitigation strategy helps make it more difficult for applications to register as VPN providers on mobile devices?",
+      "choices": [
+        "M1009 - Encrypt Network Traffic",
+        "M1006 - Use Recent OS Version",
+        "M1013 - Network Intrusion Prevention",
+        "M1020 - User Training"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1111",
+      "text": "What data source can potentially detect rogue Wi-Fi access points if the adversary attempts to decrypt traffic using an untrusted SSL certificate?",
+      "choices": [
+        "DS0041 - Application Vetting",
+        "DS0042 - User Interface",
+        "DS0039 - Module Load",
+        "DS0029 - Network Traffic"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1112",
+      "text": "In the context of the MITRE ATT&CK Enterprise platform, which adversarial action corresponds to ID T1640?",
+      "choices": [
+        "Account Access Removal",
+        "Account Discovery",
+        "Access Token Manipulation",
+        "Remote Services"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1113",
+      "text": "Consider the following scenario pertaining to MITRE ATT&CK for Enterprise: An adversary is attempting to capture SMS-based one-time authentication codes. Which technique ID and name from MITRE ATT&CK is best suited to describe this method?",
+      "choices": [
+        "T1005 - Data from Local System",
+        "T1517 - Access Notifications",
+        "T1078 - Valid Accounts",
+        "T1047 - Windows Management Instrumentation (WMI)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1114",
+      "text": "Which of the following adversary techniques involves monitoring notifications to intercept and manipulate messages on a mobile device?",
+      "choices": [
+        "T1515 - Clipboard Data",
+        "T1511 - System owner/user discovery",
+        "T1071 - Application Layer Protocol",
+        "T1517 - Access Notifications"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1115",
+      "text": "During a security assessment, you found that an application was granted access to the NotificationListenerService. What detection source and data component should you review to vet applications requesting this privilege?",
+      "choices": [
+        "Application Logs - Audit Logs",
+        "Process Monitoring - Network Traffic",
+        "User Interface - System Settings",
+        "Application Vetting - Permissions Requests"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1116",
+      "text": "Which mitigation strategy involves encouraging developers to prevent sensitive data from appearing in notification text to mitigate the risks associated with adversaries collecting data from notifications?",
+      "choices": [
+        "Application Hardening",
+        "Enterprise Policy",
+        "Application Developer Guidance",
+        "User Guidance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1117",
+      "text": "Which mitigation strategy is recommended to counter adversaries abusing Android’s device administration API as per MITRE ATT&CK (T1626.001) for the Privilege Escalation tactic?",
+      "choices": [
+        "Use an older OS version",
+        "Disable device administration API",
+        "Update to newer OS versions",
+        "Use third-party antivirus software"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1118",
+      "text": "Which data component, according to MITRE ATT&CK (T1626.001), should be monitored to detect abuse of device administrator permissions on Android?",
+      "choices": [
+        "Application Logs",
+        "Permissions Requests",
+        "User Behavior Analysis",
+        "Network Traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1119",
+      "text": "How can adversaries escalate privileges by abusing Android's device administration API as described in MITRE ATT&CK T1626.001?",
+      "choices": [
+        "By injecting malware into system apps",
+        "By requesting device administrator permissions",
+        "By exploiting vulnerabilities in the kernel",
+        "By performing a man-in-the-middle attack"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1120",
+      "text": "Which data source is used to monitor permissions requests at the user interface level according to MITRE ATT&CK's technique for \"Abuse Elevation Control Mechanism\" (T1626)?",
+      "choices": [
+        "Application Vetting",
+        "Network Traffic",
+        "DNS Logs",
+        "User Interface"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1121",
+      "text": "Which mitigation technique is recommended to prevent applications from flagging as potentially malicious due to requiring administrator permission, according to MITRE ATT&CK's technique for \"Abuse Elevation Control Mechanism\" (T1626)?",
+      "choices": [
+        "Implement Multi-Factor Authentication",
+        "Network Segmentation",
+        "Application Developer Guidance",
+        "Regular Patching"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1122",
+      "text": "In the context of MITRE ATT&CK, which technique involves adversaries exploiting remote services for lateral movement within an enterprise network?",
+      "choices": [
+        "Exploitation of Application Layer Protocols (T1432)",
+        "Exploitation of Remote Services (T1428)",
+        "Remote Service Session Hijacking (T1563)",
+        "Connection Proxy (T1090)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1123",
+      "text": "Which detection method pertains to identifying applications that perform Discovery or utilize existing connectivity to remotely access hosts within an internal enterprise network?",
+      "choices": [
+        "Application Logging (DS0001)",
+        "User Account Monitoring (DS0002)",
+        "Application Vetting (DS0041)",
+        "Host Network Communication (DS0013)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1124",
+      "text": "Per the MITRE ATT&CK description for T1428, what mitigation can limit internal enterprise resource access via VPN to only approved applications?",
+      "choices": [
+        "Network Segmentation (M1030)",
+        "User Training (M1016)",
+        "Enterprise Policy (M1012)",
+        "Privileged Account Management (M1026)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1125",
+      "text": "Which mitigation strategy is associated with identifying compromised devices in the context of MITRE ATT&CK Privilege Escalation (T1404) on mobile platforms?",
+      "choices": [
+        "Deploy Anti-Malware Solutions",
+        "Deploy Compromised Device Detection Method",
+        "Use Multi-Factor Authentication",
+        "Implement Network Segmentation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1126",
+      "text": "Which adversarial tool from the MITRE ATT&CK framework has been noted to use the TowelRoot exploit for privilege escalation on mobile devices?",
+      "choices": [
+        "BrainTest",
+        "DoubleAgent",
+        "INSOMNIA",
+        "AbstractEmu"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1127",
+      "text": "Which mobile threat actor utilizes the DirtyCow exploit to elevate privileges according to MITRE ATT&CK T1404?",
+      "choices": [
+        "FinFisher",
+        "Exodus",
+        "Gooligan",
+        "Agent Smith"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1128",
+      "text": "What type of data source is identified as useful for detecting privilege escalation attempts via API calls in the MITRE ATT&CK framework?",
+      "choices": [
+        "Network Traffic Analysis",
+        "Process Monitoring",
+        "Application Vetting",
+        "Endpoint Detection and Response"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1129",
+      "text": "Which mobile exploit can be used to achieve initial access without any user interaction, as described in MITRE ATT&CK Technique T1664 (Exploitation for Initial Access)?",
+      "choices": [
+        "FORCEDENTRY",
+        "BlueBorne",
+        "StageFright",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1130",
+      "text": "What mitigation technique ID M1001 emphasizes to reduce the risk of MITRE ATT&CK Technique T1664 (Exploitation for Initial Access) on mobile devices?",
+      "choices": [
+        "App deletion",
+        "App Reputation",
+        "Security Updates",
+        "Cloud Storage"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1131",
+      "text": "In the context of MITRE ATT&CK, which of the following techniques is described by Technique ID T1658 for the Execution tactic?",
+      "choices": [
+        "Exploitation for Client Execution",
+        "Exploitation for Server Execution",
+        "Command and Scripting Interpreter",
+        "Spearphishing Link"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1132",
+      "text": "Which specific example is mentioned in the text for compromising an iPhone running iOS 16.6 without any user interaction?",
+      "choices": [
+        "Pegasus for iOS",
+        "Flubot for iOS",
+        "Emissary for iOS",
+        "Triada for iOS"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1133",
+      "text": "What mitigation strategy is recommended for handling iMessages from unknown senders according to the document?",
+      "choices": [
+        "Enable two-factor authentication",
+        "Implement network segmentation",
+        "Ensure security updates",
+        "Provide user guidance"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1134",
+      "text": "Regarding the MITRE ATT&CK technique T1646 (Exfiltration Over C2 Channel) on the Enterprise platform, which malware was noted for exfiltrating cached data from infected devices?",
+      "choices": [
+        "AhRat",
+        "BOULDSPY",
+        "Drinik",
+        "FlyTrap"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1135",
+      "text": "Which of the following malware instances can exfiltrate data via both SMTP and HTTP, according to the descriptions provided for MITRE ATT&CK technique T1646 (Exfiltration Over C2 Channel)?",
+      "choices": [
+        "GoldenEagle",
+        "GolfSpy",
+        "Triada",
+        "XLoader for iOS"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1136",
+      "text": "For the MITRE ATT&CK technique T1646 (Exfiltration Over C2 Channel) in the Enterprise context, which malware uses HTTP PUT requests for data exfiltration?",
+      "choices": [
+        "Pallas",
+        "eSurv",
+        "Chameleon",
+        "FluBot"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1137",
+      "text": "In the context of MITRE ATT&CK T1639 (Exfiltration Over Alternative Protocol) for Exfiltration, which of the following protocols is not typically used for alternate data exfiltration?",
+      "choices": [
+        "FTP",
+        "SMTP",
+        "DHCP",
+        "HTTP/S"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1138",
+      "text": "An adversary utilizing MITRE ATT&CK T1639 technique on an Enterprise platform chooses to exfiltrate data using email. Which of the following malware has been known to use this method?",
+      "choices": [
+        "S1056 | TianySpy",
+        "T9000 | PlugX",
+        "S0494 | Zebrocy",
+        "WastedLocker"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1139",
+      "text": "In the context of MITRE ATT&CK for Enterprise, what permissions are required on an Android device to implement Geofencing if an application targets Android 10 or higher?",
+      "choices": [
+        "ACCESS_FINE_LOCATION only",
+        "ACCESS_BACKGROUND_LOCATION only",
+        "ACCESS_FINE_LOCATION and ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_COARSE_LOCATION and ACCESS_BACKGROUND_LOCATION"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1140",
+      "text": "Which mitigation strategy is recommended to address the risks associated with Execution Guardrails: Geofencing?",
+      "choices": [
+        "Implement Multi-Factor Authentication",
+        "Use Recent OS Version",
+        "Deploy Network Segmentation",
+        "Utilize Virtual Private Networks (VPN)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1141",
+      "text": "Within the MITRE ATT&CK framework, which data source and component can help detect the unnecessary or potentially abused location permissions requests by applications?",
+      "choices": [
+        "Network Traffic: SSL/TLS Inspection",
+        "User Interface: System Notifications",
+        "Application Vetting: Permissions Requests",
+        "File Monitoring: File Access"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1142",
+      "text": "How does the adversary technique Execution Guardrails: Geofencing contribute to defense evasion?",
+      "choices": [
+        "Limits malware behavior based on device battery level",
+        "Changes malware behavior based on the user's social media activity",
+        "Restricts malware capabilities based on geographical location",
+        "Detects the presence of a debugger and ceases execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1143",
+      "text": "1. In order for adversaries to successfully poison an ARP cache, which tactic is usually necessary?",
+      "choices": [
+        "Wait for an ARP request and respond first",
+        "Send a malicious DNS request directly to the router",
+        "Inject a rogue DHCP server into the network",
+        "Create a fake access point"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1144",
+      "text": "2. Which ARP-related behavior makes it easier for adversaries to execute ARP cache poisoning?",
+      "choices": [
+        "ARP uses a stateful protocol",
+        "ARP requires strict authentication",
+        "ARP operates without broadcast capabilities",
+        "ARP is both stateless and doesn't require authentication"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1145",
+      "text": "3. How can disabling updates on gratuitous ARP replies mitigate ARP cache poisoning attacks?",
+      "choices": [
+        "It stores only static ARP entries",
+        "It ignores unsolicited ARP responses",
+        "It blocks all incoming ARP packets",
+        "It triggers an alarm on every ARP update"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1146",
+      "text": "4. Which group has implemented ARP cache poisoning using custom tools, according to the provided text?",
+      "choices": [
+        "A. Fancy Bear",
+        "B. Cleaver",
+        "C. LuminousMoth",
+        "D. APT28"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1147",
+      "text": "5. To detect indicators of ARP cache poisoning, what network activity should be monitored?",
+      "choices": [
+        "Multiple IP addresses mapping to a single MAC address",
+        "High volume of SSH connections from a single source",
+        "Unusual HTTP user agents",
+        "Excessive DNS queries from a single IP address"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1148",
+      "text": "1. In the context of MITRE ATT&CK for Defense Evasion (ID: T1627), which of the following scenarios best exemplifies the use of Execution Guardrails?",
+      "choices": [
+        "An adversary deploying malware that checks if the system has active internet before executing.",
+        "An adversary deploying malware that checks if the system's IP address is within a specific range before executing.",
+        "An adversary deploying malware that fails to run if a debugging tool is detected.",
+        "An adversary deploying malware that only runs if the user is logged in as an administrator."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1149",
+      "text": "2. Which mitigation strategy is most effective against Execution Guardrails according to MITRE ATT&CK (ID: T1627), and aligns with recent device location access constraints?",
+      "choices": [
+        "Using system checks to detect sandbox environments.",
+        "User guidance to scrutinize application permissions.",
+        "Using a recent OS version with enhanced location access control.",
+        "Implementing network segmentation to isolate sensitive systems."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1150",
+      "text": "1. In MITRE ATT&CK Technique ID T1624.001 (Event Triggered Execution: Broadcast Receivers) for which versions of Android broadcast intent registration behavior was fundamentally changed?",
+      "choices": [
+        "Android 5",
+        "Android 6",
+        "Android 8",
+        "Android 10"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1151",
+      "text": "2. According to Technique ID T1624.001, what can malicious applications use broadcast intents for on Android devices?",
+      "choices": [
+        "To trigger actions upon receiving certain system or user events",
+        "To bypass the operating system entirely",
+        "To encrypt the device storage",
+        "To disable authentication mechanisms"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1152",
+      "text": "3. Which example, according to Technique ID T1624.001, uses the BOOT_COMPLETED event to automatically start after device boot?",
+      "choices": [
+        "Android/AdDisplay.Ashas",
+        "AhRat",
+        "EventBot",
+        "Tiktok Pro"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1153",
+      "text": "4. How does FlexiSpy establish persistence based on MITRE ATT&CK Technique ID T1624.001 (Event Triggered Execution: Broadcast Receivers)?",
+      "choices": [
+        "By using root access to establish reboot hooks to re-install applications",
+        "By receiving CONNECTIVITY_CHANGE intents",
+        "By listening for the BATTERY_LOW event",
+        "By subscribing to incoming call broadcasts"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1154",
+      "text": "5. What mitigation does MITRE ATT&CK propose for limiting the impact of Event Triggered Execution: Broadcast Receivers technique on Android devices?",
+      "choices": [
+        "Disable all broadcast intents",
+        "Update to Android 8 or later versions",
+        "Encrypt device communications",
+        "Monitor all application installs carefully"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1155",
+      "text": "In the context of MITRE ATT&CK's \"Event Triggered Execution\" (ID: T1624) on mobile platforms, which of the following adversary techniques involves maliciously modifying background services to restart after the parent activity stops?",
+      "choices": [
+        "SMSSpy",
+        "BOULDSPY",
+        "Revenant",
+        "Exobot"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1156",
+      "text": "Which of the following mitigations involves updating the operating system to limit the implicit intents that an application can register for, mitigating adverse impacts of \"Event Triggered Execution\" (ID: T1624)?",
+      "choices": [
+        "Restrict Background Services",
+        "Enable Device Encryption",
+        "Use Recent OS Version",
+        "Limited Application Privileges"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1157",
+      "text": "With respect to MITRE ATT&CK's Enterprise platform for Endpoint Denial of Service (DoS) and based on the behavior of the Exobot malware, what is a key capability this malware possesses?",
+      "choices": [
+        "Exobot can change the device's IMEI number.",
+        "Exobot can lock the device with a password and permanently disable the screen.",
+        "Exobot can delete all files on the device.",
+        "Exobot can remotely control the device camera."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1158",
+      "text": "Which of the following mitigations would be most effective against the Endpoint Denial of Service (DoS), associated with MITRE ATT&CK’s ID T1642, for Android devices running versions prior to 7?",
+      "choices": [
+        "Employ comprehensive network monitoring.",
+        "Update to a later version of the Android OS (7 or higher).",
+        "Utilize third-party antivirus software.",
+        "Enforce a strict password policy."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1159",
+      "text": "Which technique in the MITRE ATT&CK framework is associated with adversaries using SSL Pinning to protect C2 traffic?",
+      "choices": [
+        "TA0005: Defense Evasion",
+        "T1568.003: Dynamic Resolution: Fast Flux",
+        "T1105: Ingress Tool Transfer",
+        "T1521.003: Encrypted Channel: SSL Pinning"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1160",
+      "text": "For which data source should you set up detection mechanisms to identify SSL Pinning behaviors in applications as per MITRE ATT&CK guidelines?",
+      "choices": [
+        "DS0017: Operating System Logs",
+        "DS0030: Packet Capture",
+        "DS0040: Process Monitoring",
+        "DS0041: Application Vetting"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1161",
+      "text": "What is a potential mitigation listed in MITRE ATT&CK to counter the misuse of SSL Pinning for malicious C2 traffic?",
+      "choices": [
+        "Implementing Web Content Filtering",
+        "Setting Enterprise Policies",
+        "Employee Security Training",
+        "Using Virtual Private Networks (VPN)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1162",
+      "text": "Which procedure example uses public key encryption to encrypt the symmetric encryption key for C2 messages?",
+      "choices": [
+        "CarbonSteal",
+        "CHEMISTGAMES",
+        "eSurv",
+        "SharkBot"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1163",
+      "text": "What is the primary challenge in effectively mitigating Technique T1521.002 (Encrypted Channel: Asymmetric Cryptography)?",
+      "choices": [
+        "Detecting encrypted traffic",
+        "Preventing asymmetric and symmetric encryption",
+        "Abusing system features is difficult to mitigate",
+        "TLS validation issues"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1164",
+      "text": "Which MITRE ATT&CK technique is utilized by FluBot to encrypt C2 message bodies?",
+      "choices": [
+        "T1506.002",
+        "T1110.004",
+        "T1521.002",
+        "T1496.003"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1165",
+      "text": "What encryption algorithm is used by PROMETHIUM during C0033 for C2 communication?",
+      "choices": [
+        "AES",
+        "Blowfish",
+        "RC4",
+        "Curve25519"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1166",
+      "text": "Which action can EventBot perform to conceal C2 payload data?",
+      "choices": [
+        "Encrypt JSON HTTP payloads with AES",
+        "Use RC4 and Curve25519 for base64-encoded payload data",
+        "Encrypt C2 communications using AES in CBC mode",
+        "Use Blowfish for C2 communication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1167",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which technique is employed by adversaries to procedurally generate domain names for command and control communication?",
+      "choices": [
+        "T1090.001 - Proxy: Internal Proxy",
+        "T1071.001 - Application Layer Protocol: Web Protocols",
+        "T1637.001 - Dynamic Resolution: Domain Generation Algorithms",
+        "T1105 - Ingress Tool Transfer"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1168",
+      "text": "Which of the following is a detection method for identifying potential use of Domain Generation Algorithms according to MITRE ATT&CK?",
+      "choices": [
+        "Monitoring DNS queries for unusual spikes in traffic specific to certain domains",
+        "Analyzing the frequency of network communication to assess pseudo-random domain generation",
+        "Blocking access to newly registered domains",
+        "Using heuristic-based URL filtering"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1169",
+      "text": "Which detection method is advisable to identify the use of Dynamic Resolution (T1637) by adversaries?",
+      "choices": [
+        "Monitoring social media activity for threats",
+        "Analyzing network communication for pseudo-randomly generated domain names",
+        "Assessing physical access logs of the facility",
+        "Tracking employee email usage"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1170",
+      "text": "What is a common challenge in mitigating Dynamic Resolution (T1637) used in Command and Control tactics?",
+      "choices": [
+        "Availability of updated antivirus definitions",
+        "Use of strong passwords and MFA",
+        "Difficulty in preventing abuse of system features with preventive controls",
+        "Implementation of robust firewalls"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1171",
+      "text": "Which utility can be used to poison name services within local networks to gather hashes and credentials?",
+      "choices": [
+        "NBNSpoof",
+        "Mimikatz",
+        "Nmap",
+        "Wireshark"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1172",
+      "text": "What is the port number used by LLMNR for name resolution?",
+      "choices": [
+        "UDP 137",
+        "TCP 445",
+        "UDP 5355",
+        "TCP 139"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1173",
+      "text": "Which of the following tools can conduct name service poisoning for credential theft and relay attacks?",
+      "choices": [
+        "Empire",
+        "Impacket",
+        "Mimikatz",
+        "Wireshark"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1174",
+      "text": "What tactic is associated with MITRE ATT&CK technique T1557.001?",
+      "choices": [
+        "Collection",
+        "Execution",
+        "Defense Evasion",
+        "Persistence"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1175",
+      "text": "Which mitigation strategy involves isolating infrastructure components that do not require broad network access?",
+      "choices": [
+        "Network Intrusion Prevention",
+        "Disable or Remove Feature or Program",
+        "Filter Network Traffic",
+        "Network Segmentation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1176",
+      "text": "Which of the following MITRE ATT&CK techniques involves the interception and relay of authentication materials?",
+      "choices": [
+        "T1071.001: Application Layer Protocol",
+        "T1110.001: Brute Force",
+        "T1140: Deobfuscate/Decode Files or Information",
+        "T1557.001: Adversary-in-the-Middle: LLMNR/NBT-NS Poisoning and SMB Relay"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1177",
+      "text": "In the context of MITRE ATT&CK Enterprise, which of the following describes the primary method of execution in a Drive-By Compromise (T1456)?",
+      "choices": [
+        "Adversaries exploit vulnerabilities in an email client",
+        "Adversaries send phishing emails containing malicious payloads",
+        "Adversaries exploit vulnerabilities in the browser by injecting malicious code into a visited website",
+        "Adversaries use Remote Desktop Protocol to gain unauthorized access to a web server"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1178",
+      "text": "Which web browser vulnerability identification method might be used in a Drive-By Compromise (T1456)?",
+      "choices": [
+        "Manual assessment by a security researcher",
+        "Automated scripts running on the adversary-controlled website",
+        "Probing exploits sent via email attachments",
+        "Analysis of source code repositories for vulnerabilities"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1179",
+      "text": "Referring to the provided examples of Drive-By Compromise (T1456), which one involved distributing malware via a reputable Syrian government website?",
+      "choices": [
+        "Pegasus for iOS",
+        "INSOMNIA",
+        "Stealth Mango",
+        "StrongPity"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1180",
+      "text": "Which mitigation strategy is most effective in addressing exploits used in Drive-By Compromise (T1456)?",
+      "choices": [
+        "Implementing multi-factor authentication",
+        "Using advanced encryption protocols",
+        "Regularly applying security updates",
+        "Deploying honeypots"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1181",
+      "text": "What is the main objective of the MITRE ATT&CK technique T1407 \"Download New Code at Runtime\"?",
+      "choices": [
+        "Avoid dynamic analysis",
+        "Enable persistent access to the system",
+        "Assist in data exfiltration",
+        "Avoid static analysis checks and pre-publication scans in official app stores"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1182",
+      "text": "Which data source in the detection section can look for indications that the application downloads and executes new code at runtime?",
+      "choices": [
+        "API Monitoring",
+        "File Monitoring",
+        "Application Vetting",
+        "Network Traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1183",
+      "text": "Which of the procedures listed utilizes a backdoor in a Play Store app to install additional trojanized apps from the Command and Control server?",
+      "choices": [
+        "Desert Scorpion",
+        "WolfRAT",
+        "Skygofree",
+        "Triada"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1184",
+      "text": "Which mitigation technique could help limit the ability of applications to download and execute native code at runtime?",
+      "choices": [
+        "Use Firewall",
+        "Use VPN",
+        "Use Recent OS Version",
+        "Encrypt Communication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1185",
+      "text": "What specific technique can Anubis employ according to the MITRE ATT&CK procedure examples?",
+      "choices": [
+        "Download additional malware",
+        "Download attacker-specified APK files",
+        "Run code from C2 server",
+        "Load additional Dalvik code"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1186",
+      "text": "On which platform is the technique T1407 \"Download New Code at Runtime\" primarily observed?",
+      "choices": [
+        "Enterprise",
+        "Mobile",
+        "ICS",
+        "None of the above"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1187",
+      "text": "Which mitigation strategy is recommended for preventing T1641.001 Data Manipulation via clipboard on Android?",
+      "choices": [
+        "Regular application updates",
+        "Use a VPN",
+        "Use Recent OS Version with proper settings",
+        "Disable Internet access on mobile devices"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1188",
+      "text": "Which malware has been known to manipulate clipboard data to replace cryptocurrency addresses as per MITRE ATT&CK technique T1641.001?",
+      "choices": [
+        "S1094 - BRATA",
+        "S1062 - S.O.V.A.",
+        "S1059 - BankBot",
+        "S1061 - Joker"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1189",
+      "text": "What is a key method adversaries use to monitor and manipulate clipboard activity on Android as described in the T1641.001 technique?",
+      "choices": [
+        "OnSharedPreferenceChangeListener interface",
+        "ActivityLifecycleCallbacks",
+        "ClipboardManager.OnPrimaryClipChangedListener",
+        "AccessibilityEventListener"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1190",
+      "text": "Which of the following mitigation strategies is associated with making Data Manipulation (T1641) more difficult according to MITRE ATT&CK?",
+      "choices": [
+        "Using multi-factor authentication",
+        "Implementing network segmentation",
+        "Using the latest operating system version",
+        "Deploying endpoint detection and response"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1191",
+      "text": "Regarding Data Manipulation (T1641) in MITRE ATT&CK, which method can be used for detection based on the specified document?",
+      "choices": [
+        "Application logging",
+        "File integrity monitoring",
+        "Application vetting",
+        "Network traffic analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1192",
+      "text": "ID:T1533 falls under which MITRE ATT&CK tactic?",
+      "choices": [
+        "Execution",
+        "Collection",
+        "Exfiltration",
+        "Persistence"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1193",
+      "text": "Which of the following adversaries is known for collecting Wi-Fi passwords?",
+      "choices": [
+        "Ginfl",
+        "SilkBean",
+        "RCSAndroid",
+        "ViceLeaker"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1194",
+      "text": "Which procedure example is associated with collecting Google Authenticator codes?",
+      "choices": [
+        "Jiwifty",
+        "Escobar",
+        "Viceroy",
+        "Viscount"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1195",
+      "text": "What type of data can Anubis exfiltrate from a device?",
+      "choices": [
+        "Photos",
+        "Videos",
+        "Encrypted files",
+        "PDF documents"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1196",
+      "text": "Which adversary is capable of stealing WhatsApp media?",
+      "choices": [
+        "Hornbill",
+        "Phenakite",
+        "Stealth Mango",
+        "TangleBot"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1197",
+      "text": "Which adversary is capable of exfiltrating authentication tokens from a local system?",
+      "choices": [
+        "Exodus",
+        "Gooligan",
+        "Windshift",
+        "ViceLeaker"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1198",
+      "text": "In the context of MITRE ATT&CK, and specifically referring to technique ID T1471 (Data Encrypted for Impact), which of the following malware is known for encrypting files on external storage such as an SD card and requesting a PayPal cash card as ransom?",
+      "choices": [
+        "Anubis",
+        "S.O.V.A.",
+        "Xbot",
+        "Mamba"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1199",
+      "text": "Considering the detection measures for MITRE ATT&CK technique T1471 (Data Encrypted for Impact), which data source and component are advised for identifying if an application attempts to encrypt files?",
+      "choices": [
+        "Endpoint Detection and Response (EDR), Process Monitoring",
+        "Application Vetting, API Calls",
+        "Network Traffic Analysis, Network Flow",
+        "Host-Based Firewall, Network Access Control"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1200",
+      "text": "In the context of the MITRE ATT&CK framework, specifically related to Technique T1662 (Data Destruction), which command might adversaries use to delete specific files?",
+      "choices": [
+        "pm uninstall",
+        "rm -d",
+        "rmdir",
+        "rm -f"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1201",
+      "text": "According to Procedure Example S1094 from the MITRE ATT&CK framework, what malware capability does BRATA have related to Technique T1662 (Data Destruction)?",
+      "choices": [
+        "Fetching data silently",
+        "Installing unauthorized applications",
+        "Factory reset",
+        "Encrypting files"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1202",
+      "text": "Which mitigation measure (as per ID M1011) is suggested to prevent unauthorized data destruction as per MITRE ATT&CK Technique T1662?",
+      "choices": [
+        "Disabling unnecessary system services",
+        "Limiting physical access to devices",
+        "Using firewalls",
+        "User training on device administrator permission requests"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1203",
+      "text": "Which adversary tactic can BRATA use to interact with other installed applications on an Android device?",
+      "choices": [
+        "A) Emulating network traffic",
+        "B) Insert text into data fields",
+        "C) Modify system settings",
+        "D) Overwrite file permissions"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1204",
+      "text": "What mitigation strategy can an organization implement using EMM/MDM to control accessibility services on Android?",
+      "choices": [
+        "A) Android Keystore",
+        "B) Dynamic Analysis of apps",
+        "C) Network Segmentation",
+        "D) Enterprise Policy"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1205",
+      "text": "Which technique ID corresponds to \"Input Capture: GUI Input Capture\" in MITRE ATT&CK framework?",
+      "choices": [
+        "T1053",
+        "T1417.002",
+        "T1087",
+        "T1065"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1206",
+      "text": "Which mobile malware uses the SYSTEM_ALERT_WINDOW permission to create overlays to capture user credentials for targeted applications?",
+      "choices": [
+        "BRATA",
+        "FlixOnline",
+        "Anubis",
+        "Marcher"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1207",
+      "text": "Why might mobile device users be more susceptible to Input Capture attacks compared to traditional PC users?",
+      "choices": [
+        "Sturdier hardware",
+        "Simpler operating systems",
+        "Smaller display size",
+        "Older software"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1208",
+      "text": "Which Android version introduced the HIDE_OVERLAY_WINDOWS permission to prevent overlay attacks?",
+      "choices": [
+        "Android 9",
+        "Android 10",
+        "Android 11",
+        "Android 12"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1209",
+      "text": "Manually vetting applications requesting which permission can help detect potential overlay attacks?",
+      "choices": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "appleid.Authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1210",
+      "text": "Which malware can perform overlay attacks specifically by injecting HTML phishing pages into a webview?",
+      "choices": [
+        "Cerberus",
+        "Tiktok Pro",
+        "Chameleon",
+        "Xbot"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1211",
+      "text": "Which of the following methods can adversaries use to capture keystrokes on Android as described in MITRE ATT&CK T1417.001?",
+      "choices": [
+        "OnAccessibilityEvent method and AccessibilityEvent.TYPE_VIEW_TEXT_CHANGED event type",
+        "BIND_ACCESSIBILITY_SERVICE permission with user authorization",
+        "Override AccessibilityService class and system permissions",
+        "Intercept system calls and hardware interrupts"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1212",
+      "text": "Which malicious software mentioned in MITRE ATT&CK T1417.001 is capable of using web injects to capture user credentials?",
+      "choices": [
+        "Windshift",
+        "Escobar",
+        "EventBot",
+        "Exobot"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1213",
+      "text": "Which of the following is a recommended mitigation technique for preventing keylogging described in MITRE ATT&CK T1417.001?",
+      "choices": [
+        "Implement stronger encryption for stored data",
+        "Use biometric authentication",
+        "Regularly change passwords",
+        "Explicitly adding third-party keyboards to an allow list using Samsung Knox device profiles"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1214",
+      "text": "How can application vetting services detect potential keylogging threats as per MITRE ATT&CK T1417.001?",
+      "choices": [
+        "Scan for malicious signatures in applications",
+        "Look for applications requesting the BIND_ACCESSIBILITY_SERVICE permission",
+        "Check for unauthorized root access",
+        "Monitor network traffic for suspicious activity"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1215",
+      "text": "Premise: Under MITRE ATT&CK Technique T1548.006, adversaries may manipulate the TCC database. What is the primary file path of the TCC database on macOS systems?",
+      "choices": [
+        "/System/Library/com.apple.TCC/TCC.dbb",
+        "/Library/Application Support/com.apple.TCC/TCC.db",
+        "/Applications/Utilities/com.apple.TCC/TCC.db",
+        "/Users/Shared/com.apple.TCC/TCC.db"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1216",
+      "text": "Premise: Considering the detection methods for Technique T1548.006, what kind of system logs might indicate an attempt to abuse TCC mechanisms?",
+      "choices": [
+        "Network logs",
+        "Authentication logs",
+        "AuthorizationExecuteWithPrivileges log",
+        "macOS system logs showing sudo usage"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1217",
+      "text": "Premise: M1047 Audit Mitigation for Technique T1548.006 includes monitoring of certain applications. What command is suggested for resetting permissions?",
+      "choices": [
+        "resetTCC",
+        "tccreset",
+        "tccutil reset",
+        "permissionreset"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1218",
+      "text": "What is a common tactic used by adversaries employing the Adversary-in-the-Middle (AiTM) method, specifically noted in the MITRE ATT&CK framework?",
+      "choices": [
+        "Network Sniffing",
+        "IP Spoofing",
+        "Domain Shadowing",
+        "Network Tunneling"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1219",
+      "text": "Which MITRE ATT&CK technique involves adversaries manipulating victim DNS settings to redirect users or push additional malware?",
+      "choices": [
+        "T1598.001: Victim DNS Poisoning",
+        "T1071.003: Device Authentication Spoofing",
+        "T1553.003: System DNS Blind Injection",
+        "T1557: Adversary-in-the-Middle"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1220",
+      "text": "What mitigation strategy recommended by MITRE ATT&CK involves the use of best practices for authentication protocols such as Kerberos and ensuring web traffic is protected by SSL/TLS?",
+      "choices": [
+        "M1035: Limit Access to Resource Over Network",
+        "M1037: Filter Network Traffic",
+        "M1041: Encrypt Sensitive Information",
+        "M1017: User Training"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1221",
+      "text": "In the context of detecting AiTM techniques, what data source should be monitored for changes to settings associated with network protocols and services commonly abused for AiTM?",
+      "choices": [
+        "Network Traffic Logs",
+        "Process Monitoring",
+        "Application Logs",
+        "DNS Query Data Analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1222",
+      "text": "As noted in the MITRE ATT&CK examples, which adversary group has used modified versions of PHProxy to examine web traffic?",
+      "choices": [
+        "APT28",
+        "Sandworm Team",
+        "Kimsuky",
+        "Cozy Bear"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1223",
+      "text": "Which mitigation method should be used to prevent an application from creating overlay windows in Android 12?",
+      "choices": [
+        "Use Recent OS Version (M1006)",
+        "Enterprise Policy (M1012)",
+        "User Guidance (M1011)",
+        "Application Vetting (DS0041)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1224",
+      "text": "Phenakite is known to use which technique during its operations, as per MITRE ATT&CK?",
+      "choices": [
+        "Keylogging (T1417)",
+        "GUI Input Capture (T1417)",
+        "Clipboard Data (T1115)",
+        "Input Prompt (T1139)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1225",
+      "text": "In which detection source can permissions requests be identified?",
+      "choices": [
+        "Application Vetting (DS0041)",
+        "User Interface (DS0042)",
+        "System Settings (DS0042)",
+        "Debug Logs (DS0031)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1226",
+      "text": "In the context of MITRE ATT&CK focusing on Defense Evasion, which technique might involve renaming a binary to avoid detection on a compromised device?",
+      "choices": [
+        "Is it T1027 – Obfuscated Files or Information?",
+        "Is it T1630.003 – Indicator Removal on Host: Disguise Root/Jailbreak Indicators?",
+        "Is it T1221 – Local Job Scheduling?",
+        "Is it T1190 – Exploit Public-Facing Application?"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1227",
+      "text": "Which of the following procedures involves wiping the entire device, referenced under technique T1630.002: Indicator Removal on Host: File Deletion?",
+      "choices": [
+        "Agent Smith",
+        "GPlayed",
+        "CarbonSteal",
+        "ViceLeaker"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1228",
+      "text": "In the context of MITRE ATT&CK’s T1630.002, which operation could CarbonSteal perform to evade detection?",
+      "choices": [
+        "Prevent system updates",
+        "Delete call log entries",
+        "Delete infected applications’ update packages",
+        "Manipulate SMS messages"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1229",
+      "text": "Which mitigation strategy is recommended to address the risks associated with T1630.002: Indicator Removal on Host: File Deletion?",
+      "choices": [
+        "Application Vetting",
+        "User Guidance",
+        "System Patch Management",
+        "Network Segmentation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1230",
+      "text": "What data source can be used to detect applications requesting device administrator permissions under T1630.002: Indicator Removal on Host: File Deletion?",
+      "choices": [
+        "Application Logs",
+        "Authentication Logs",
+        "Application Vetting",
+        "User Interface"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1231",
+      "text": "Which malware example leverages the accessibility service to uninstall itself, as per MITRE ATT&CK T1630.001 (Indicator Removal on Host: Uninstall Malicious Application)?",
+      "choices": [
+        "BRATA",
+        "Cerberus",
+        "SharkBot",
+        "TrickMo"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1232",
+      "text": "What mitigation strategy suggested for T1630.001 (Indicator Removal on Host: Uninstall Malicious Application) focuses on identifying rooted devices and can inform mobile security software to take action?",
+      "choices": [
+        "Attestation",
+        "Security Updates",
+        "User Guidance",
+        "Encryption"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1233",
+      "text": "To detect misuse of the accessibility service for uninstalling malware as described in MITRE ATT&CK T1630.001, what data source should be monitored?",
+      "choices": [
+        "Application Vetting",
+        "User Interface",
+        "System Logging",
+        "File Monitoring"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1234",
+      "text": "Which mitigation technique advises providing users with guidance on the risks of device rooting?",
+      "choices": [
+        "M1002 - Attestation",
+        "M1001 - Security Updates",
+        "M1011 - User Guidance",
+        "None of the above"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1235",
+      "text": "Which data source is used to detect if an application has device administrator permissions?",
+      "choices": [
+        "DS0041 - Application Vetting",
+        "DS0042 - User Interface",
+        "DS0003 - Process Monitoring",
+        "DS0017 - File Monitoring"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1236",
+      "text": "In the context of MITRE ATT&CK, T1629.003 pertains to which tactic?",
+      "choices": [
+        "Execution",
+        "Persistence",
+        "Defense Evasion",
+        "Privilege Escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1237",
+      "text": "Which mitigation technique can help detect unauthorized modification of system files, according to the MITRE ATT&CK framework for T1629.003?",
+      "choices": [
+        "System Partition Integrity (M1004)",
+        "Deploy Compromised Device Detection Method (M1010)",
+        "Security Updates (M1001)",
+        "User Guidance (M1011)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1238",
+      "text": "Which of the following malware has been documented to modify SELinux configuration as described in MITRE ATT&CK ID T1629.003?",
+      "choices": [
+        "AbstractEmu (S1061)",
+        "Anubis (S0422)",
+        "BRATA (S1094)",
+        "Zen (S0494)"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1239",
+      "text": "What specific callback method does AndroidOS/MalLocker.B override to spawn a new notification instance upon dismissal?",
+      "choices": [
+        "OnPause()",
+        "onSaveInstanceState()",
+        "onUserLeaveHint()",
+        "onDestroy()"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1240",
+      "text": "Which mitigation technique, as described in the document, became more effective with the release of Android 7 to counteract Impair Defenses: Device Lockout?",
+      "choices": [
+        "M1001 | Single Sign-On",
+        "M1010 | Multi-factor Authentication",
+        "M1006 | Use Recent OS Version",
+        "M1041 | Alternative Messaging Services"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1241",
+      "text": "How does the malware Rotexy inhibit the removal of administrator permissions as per its described behavior?",
+      "choices": [
+        "It forcibly reboots the device",
+        "It freezes the device settings",
+        "It locks an HTML page in the foreground",
+        "It periodically switches off the phone screen to inhibit permission removal"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1242",
+      "text": "When targeting an Android device, which API call could adversaries use to prevent the uninstallation of a malicious application?",
+      "choices": [
+        "This: performGlobalAction(int)",
+        "That: controlGlobal(int)",
+        "Other: globalActionPerform(int)",
+        "None: global(int)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1243",
+      "text": "Which of the following tools abuse Accessibility Services to prevent application removal?",
+      "choices": [
+        "Anubis",
+        "FluBot",
+        "Mandrake",
+        "OBAD"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1244",
+      "text": "Regarding MITRE ATT&CK technique T1629.001, which mitigation strategy involves using an EMM/MDM to manage application permissions?",
+      "choices": [
+        "Use Recent OS Version",
+        "Enterprise Policy",
+        "User Guidance",
+        "Application Vetting"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1245",
+      "text": "Which detection method involves monitoring API calls to detect the use of performGlobalAction(int)?",
+      "choices": [
+        "User Interface",
+        "Application Vetting",
+        "System Settings",
+        "Device Settings"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1246",
+      "text": "1. In the context of MITRE ATT&CK technique T1629 (Impair Defenses), which detection data source is most directly associated with identifying if security tools are terminated?",
+      "choices": [
+        "API Calls",
+        "Network Traffic",
+        "Log Analysis",
+        "Process Termination"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1247",
+      "text": "2. What is the primary objective of the mitigation strategy M1001 (Security Updates) concerning the MITRE ATT&CK technique T1629 (Impair Defenses)?",
+      "choices": [
+        "Ensure applications are vetted before installation",
+        "Provide guidance for using accessibility features",
+        "Patch vulnerabilities to prevent root access",
+        "Detect process terminations on mobile devices"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1248",
+      "text": "Which tools are mentioned in the description of Active Scanning: Wordlist Scanning (T1595.003) for enumerating a website's pages and directories?",
+      "choices": [
+        "A. Nmap, Nikto, Metasploit",
+        "B. Dirb, DirBuster, GoBuster",
+        "C. Hydra, John the Ripper, Hashcat",
+        "D. Burp Suite, SQLmap, Acunetix"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1249",
+      "text": "Which adversary groups are noted for utilizing brute force techniques on web directories according to the procedure examples of T1595.003?",
+      "choices": [
+        "A. APT28, Lazarus Group",
+        "B. Charming Kitten, APT32",
+        "C. APT41, Volatile Cedar",
+        "D. Sandworm Team, APT10"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1250",
+      "text": "What is a recommended mitigation strategy for minimizing exposure to the techniques described in T1595.003 according to the document?",
+      "choices": [
+        "A. Implement SSL/TLS for all communication",
+        "B. Employ rate limiting and IP blocking",
+        "C. Remove or disable access to unnecessary external resources",
+        "D. Use multi-factor authentication on all accounts"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1251",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which of the following frameworks might adversaries use to implement T1617 Hooking for evasion?",
+      "choices": [
+        "Xposed",
+        "SELinux",
+        "AppArmor",
+        "Firejail"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1252",
+      "text": "Which mitigation strategy is recommended for detecting devices compromised through T1617 Hooking?",
+      "choices": [
+        "M1005 Use TLS/SSL for network communication",
+        "M1013 Evasion Detection Analysis",
+        "M1002 Attestation",
+        "M1011 Thread Analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1253",
+      "text": "Which procedure involves replacing /system/bin/ip to achieve execution hijacking on an Android device?",
+      "choices": [
+        "FlexiSpy",
+        "Zen",
+        "Dvmap",
+        "XHelper"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1254",
+      "text": "What mitigation technique can detect unauthorized modifications to the system partition on Android devices?",
+      "choices": [
+        "App Sandboxing",
+        "Anti-Malware",
+        "Attestation",
+        "Android Verified Boot"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1255",
+      "text": "Which of the following mitigations helps in detecting unauthorized modifications made to the system partition, potentially preventing T1625: Hijack Execution Flow?",
+      "choices": [
+        "Use of sandboxing",
+        "Device attestation",
+        "Android Verified Boot",
+        "Network segmentation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1256",
+      "text": "In the context of T1625: Hijack Execution Flow, YiSpecter hijacks which specific system routine to achieve its goal?",
+      "choices": [
+        "Root file directories",
+        "Configuration files",
+        "User authentication routines",
+        "Application launch routines"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1257",
+      "text": "Which of the following is an example of an adversary group that utilizes the \"Hide Artifacts: Conceal Multimedia Files\" technique (T1628.003)?",
+      "choices": [
+        "Fancy Bear",
+        "Windshift",
+        "APT29",
+        "Equation Group"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1258",
+      "text": "Regarding the use of the .nomedia file on Android devices in the context of T1628.003 (Hide Artifacts: Conceal Multimedia Files), which of the following statements is true?",
+      "choices": [
+        "The .nomedia file makes multimedia files in the folder encrypted.",
+        "The .nomedia file allows multimedia files to be visible in the Gallery application.",
+        "The .nomedia file makes multimedia files in the folder invisible to the user and some applications.",
+        "The .nomedia file deletes multimedia files in the folder that it resides in."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1259",
+      "text": "Which mitigation specifically addresses suppressing application icons in Android versions before Android 10?",
+      "choices": [
+        "M1006 - Use Recent OS Version",
+        "M1011 - User Guidance",
+        "Disable System Apps",
+        "Install a reliable antivirus"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1260",
+      "text": "Which data source might be the most effective in detecting the suppression of an application’s icon in the application launcher?",
+      "choices": [
+        "DS0041 - Application Vetting",
+        "DS0042 - User Interface",
+        "Network Traffic Analysis",
+        "Endpoint Monitoring"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1261",
+      "text": "Which malware family utilizes suppression of the application icon as a technique derived from a C2 server response?",
+      "choices": [
+        "S0440 - Agent Smith",
+        "S0525 - Android/AdDisplay.Ashas",
+        "S0480 - Cerberus",
+        "S0505 - Desert Scorpion"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1262",
+      "text": "What behavior change was introduced in Android 10 to inhibit malicious applications' ability to hide their icon?",
+      "choices": [
+        "A synthesized activity is shown instead",
+        "The application is removed from the system",
+        "The user is notified via email",
+        "Automatic uninstallation of the application"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1263",
+      "text": "In the context of MITRE ATT&CK, which method can adversaries use to evade detection by hiding application launcher icons on mobile platforms?",
+      "choices": [
+        "Hiding icons through legitimate system features",
+        "Hiding icons through modified firmware",
+        "Hiding icons by disabling network activity logs",
+        "Hiding icons by using rogue applications"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1264",
+      "text": "Under which data source category does ‘Application Vetting’ fall, which can help detect usage of APIs that adversaries might use to hide artifacts as per MITRE ATT&CK technique T1628?",
+      "choices": [
+        "DS0039",
+        "DS0040",
+        "DS0041",
+        "DS0042"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1265",
+      "text": "Which mitigation strategy is recommended to handle T1643 (Generate Traffic from Victim) according to MITRE ATT&CK for Mobile?",
+      "choices": [
+        "Restrict Network Traffic",
+        "Malware Signature Updating",
+        "User Guidance",
+        "Application Sandboxing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1266",
+      "text": "Which data source can detect applications requesting the SEND_SMS permission according to the detection recommendation for T1643 (Generate Traffic from Victim)?",
+      "choices": [
+        "Network Traffic Analysis",
+        "Application Vetting",
+        "User Interface",
+        "Process Monitoring"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1267",
+      "text": "T1643 (Generate Traffic from Victim) pertains to which MITRE ATT&CK tactic?",
+      "choices": [
+        "Collection",
+        "Credential Access",
+        "Impact",
+        "Execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1268",
+      "text": "Which procedure example associated with T1643 (Generate Traffic from Victim) involves generating revenue by displaying ads and automatically installing apps?",
+      "choices": [
+        "Gooligan",
+        "Judy",
+        "HummingWhale",
+        "MazarBOT"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1269",
+      "text": "In the context of MITRE ATT&CK for Mobile, which method can adversaries abuse to maintain continuous sensor access in Android?",
+      "choices": [
+        "Use of root access to modify system binaries",
+        "Usage of the startForeground() API",
+        "Utilizing Android's background services",
+        "Employing hidden application shortcuts"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1270",
+      "text": "Which APT technique (ID and Name) may involve presenting a persistent notification to the user to maintain access to device sensors on Android?",
+      "choices": [
+        "T1541 - Foreground Persistence",
+        "T1543 - Create or Modify System Process",
+        "T1112 - Modify Registry",
+        "T1003 - Credential Dumping"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1271",
+      "text": "Which threat actor has used C2 commands that can move the malware in and out of the foreground, according to the MITRE ATT&CK documentation?",
+      "choices": [
+        "Mandrake",
+        "Drinik",
+        "TERRACOTTA",
+        "Tiktok Pro"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1272",
+      "text": "In the context of MITRE ATT&CK, which procedure example is used by the adversary group PROMETHIUM for collecting file lists?",
+      "choices": [
+        "S1092 - Escobar",
+        "S0577 - FrozenCell",
+        "C0033 - StrongPity",
+        "S0549 - SilkBean"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1273",
+      "text": "Under the MITRE ATT&CK framework, which mitigation strategy is recommended to prevent file and directory discovery on mobile platforms?",
+      "choices": [
+        "M1006 - Use Recent OS Version",
+        "M1007 - Restrict External Storage Usage",
+        "M1005 - Secure Storage Directory",
+        "M2004 - Encrypt Sensitive Data"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1274",
+      "text": "Which MITRE ATT&CK procedure example can search for specific file types such as .pdf, .doc, and .xls for exfiltration?",
+      "choices": [
+        "S0505 - Desert Scorpion",
+        "S0577 - FrozenCell",
+        "S0529 - CarbonSteal",
+        "C0016 - Operation Dust Storm"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1275",
+      "text": "According to MITRE ATT&CK, which detection method can be used to identify applications attempting to access external device storage on Android?",
+      "choices": [
+        "DS0042 - User Interface: Network Activity Request",
+        "DS0041 - API Monitoring: File Read Request",
+        "DS0043 - File Monitoring: Unauthorized Access",
+        "DS0042 - User Interface: Permissions Request"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1276",
+      "text": "Adversaries conducting vulnerability scanning typically harvest which type of information from their scans?",
+      "choices": [
+        "Running software and version numbers via server banners",
+        "Listening ports via firewall logs",
+        "Process execution details via host-based detection",
+        "Anomalous traffic patterns via network traffic analysis"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1277",
+      "text": "What type of detection mechanism focuses on monitoring unexpected protocol standards and traffic flows to detect scanning activities?",
+      "choices": [
+        "APP ICONS",
+        "Network Traffic Content",
+        "Service Logs",
+        "End User Behavior Analytics"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1278",
+      "text": "Which mitigation strategy is suggested for vulnerability scanning techniques like T1595.002?",
+      "choices": [
+        "M1056: Pre-compromise",
+        "M1234: Post-compromise",
+        "Custom policy enforcement by enterprise firewalls",
+        "Isolation of vulnerable systems"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1279",
+      "text": "Under the MITRE ATT&CK technique T1655 (Masquerading), what is an effective detection method for identifying suspicious applications?",
+      "choices": [
+        "Application Vetting via Network Traffic Analysis",
+        "Application Vetting via Event Logs",
+        "Application Vetting via API Calls",
+        "Application Vetting via File Hashes"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1280",
+      "text": "What mitigation measure is recommended to prevent adversaries from exploiting MITRE ATT&CK technique T1655 (Masquerading)?",
+      "choices": [
+        "User Education on Phishing",
+        "Regular Patching and Updates",
+        "Encouraging Users to Install Apps from Authorized App Stores",
+        "Using Multi-Factor Authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1281",
+      "text": "In the context of MITRE ATT&CK for Mobile, which technique is used by adversaries to bypass lockscreen via biometric spoofing? (Tactic: Initial Access)",
+      "choices": [
+        "T1040 Browser Session Hijacking",
+        "T1518 Application Layer Protocol",
+        "T1461 Lockscreen Bypass",
+        "T1590 Gather Victim Organization Information"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1282",
+      "text": "Which mitigation strategy would best counteract both brute-force and shoulder surfing attempts to bypass a mobile device’s lockscreen passcode? (Tactic: Initial Access)",
+      "choices": [
+        "M1003 Restrict Web-Based Content",
+        "M1058 Physical Security Perimeter",
+        "M1012 Enterprise Policy",
+        "M1041 Reduce Scripability"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1283",
+      "text": "Which procedure example listed in MITRE ATT&CK for Mobile specifically requests permissions to disable the lockscreen? (Tactic: Initial Access)",
+      "choices": [
+        "S1012 Turla",
+        "S1095 Pegasus",
+        "S1094 BRATA",
+        "S1092 Escobar"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1284",
+      "text": "In the context of MITRE ATT&CK for Mobile, what primary method do adversaries use when exploiting Technique T1430.002: Location Tracking: Impersonate SS7 Nodes?",
+      "choices": [
+        "By modifying the firmware of the mobile device",
+        "By sending phishing messages to the victim",
+        "By exploiting the lack of authentication in signaling system network nodes",
+        "By installing malware on the victim's device"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1285",
+      "text": "Which mitigation technique ID is suggested for defending against the exploitation of Technique T1430.002: Location Tracking: Impersonate SS7 Nodes, according to the document?",
+      "choices": [
+        "M1037 - Network Segmentation",
+        "M1014 - Interconnection Filtering",
+        "M1042 - Disable or Remove Feature or Program",
+        "M1056 - Pre-compromise Countermeasures"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1286",
+      "text": "Given the context of MITRE ATT&CK technique T1430.001 (Location Tracking: Remote Device Management Services) and considering the mitigations, which of the following best describes how an organization can prevent tracking of physical device locations in a BYOD deployment?",
+      "choices": [
+        "Implementing a device firewall",
+        "Using a profile owner enrollment mode for Android",
+        "Deploying a VPN for secure communication",
+        "Performing regular device scans for malware"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1287",
+      "text": "Regarding the detection of threats as per MITRE ATT&CK technique T1430.001 (Location Tracking: Remote Device Management Services), which of the following data sources can help in identifying unauthorized location tracking activity?",
+      "choices": [
+        "Firewall logs",
+        "VPN logs",
+        "System Notifications",
+        "Antivirus logs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1288",
+      "text": "What is required for an iOS application to access location services specifically when the application is in use?",
+      "choices": [
+        "NSLocationAlwaysUsageDescription",
+        "NSLocationAlwaysAndWhenInUseUsageDescription",
+        "NSLocationWhenInUseUsageDescription",
+        "com.apple.locationd.preauthorized entitlement key"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1289",
+      "text": "Which Android permission allows an application to access the device's location even when running in the background from Android 10 onwards?",
+      "choices": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BAIDU_LOCATION"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1290",
+      "text": "Which mitigation strategy restricts enterprise-registered devices from accessing physical location data using enrolled profiles?",
+      "choices": [
+        "Interconnection Filtering",
+        "Enterprise Policy",
+        "Use Recent OS Version",
+        "User Guidance"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1291",
+      "text": "What technique has been used by adversaries to retrieve physical location using Baidu Map services in Android devices?",
+      "choices": [
+        "PERMISSION REQUEST (ID: T1434)",
+        "LOCATION TRACKING (ID: T1430)",
+        "NETWORK SNIFFING (ID: T1040)",
+        "SYSTEM INFORMATION DISCOVERY (ID: T1082)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1292",
+      "text": "Which iOS API must be used to request location access at all times regardless of app usage?",
+      "choices": [
+        "requestLocationPermissionOnce()",
+        "requestWhenInUseAuthorization()",
+        "requestAlwaysAuthorization()",
+        "requestBackgroundAuthorization()"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1293",
+      "text": "Which Android API allows applications to collect information about nearby Wi-Fi networks, and what permission must an application hold to use it?",
+      "choices": [
+        "A. WifiManager.GET_WIFI_LIST and ACCESS_NETWORK_STATE",
+        "B. BluetoothAdapter and ACCESS_FINE_LOCATION",
+        "C. WifiInfo and ACCESS_FINE_LOCATION",
+        "D. TelephonyManager.getNeighboringCellInfo() and ACCESS_NETWORK_STATE"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1294",
+      "text": "During which adversarial behavior did PROMETHIUM use StrongPity to collect information regarding available Wi-Fi networks?",
+      "choices": [
+        "A. S0405 (Exodus)",
+        "B. S0509 (FakeSpy)",
+        "C. C0033",
+        "D. S0407 (Monokle)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1295",
+      "text": "Which of the following attack techniques involves collecting the device’s cell tower information, and which adversary is known to use it?",
+      "choices": [
+        "A. T1421, ViperRAT (S0506)",
+        "B. T1421, FlexiSpy (S0408)",
+        "C. T1419, ViperRAT (S0506)",
+        "D. T1419, Pegasus for iOS (S0289)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1296",
+      "text": "In the context of MITRE ATT&CK, which procedure can collect device network configuration information such as the Wi-Fi SSID and IMSI when performing T1422.001 on mobile devices?",
+      "choices": [
+        "S0407 | Monokle",
+        "S0545 | TERRACOTTA",
+        "S0425 | Corona Updates",
+        "S1056 | TianySpy"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1297",
+      "text": "Which of the following procedures checks if the device is on Wi-Fi, a cellular network, and is roaming for MITRE ATT&CK technique T1422.001 on mobile platforms?",
+      "choices": [
+        "AbstractEmu",
+        "S0506 | ViperRAT",
+        "S0316 | Pegasus for Android",
+        "S1077 | Hornbill"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1298",
+      "text": "For MITRE ATT&CK technique T1422.001, which procedure involves querying the device for its IMEI code and phone number to validate the target of a new infection on mobile platforms?",
+      "choices": [
+        "S0506 | ViperRAT",
+        "S0529 | CarbonSteal",
+        "S0405 | Exodus",
+        "S0545 | TERRACOTTA"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1299",
+      "text": "According to MITRE ATT&CK, which of the following data sources is recommended to detect permissions requests that might indicate non-system apps attempting to access information related to T1422.001 on mobile devices?",
+      "choices": [
+        "Network Traffic Analysis",
+        "Host-based Sensors",
+        "Application Vetting",
+        "Behavioral Analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1300",
+      "text": "In the context of MITRE ATT&CK for Mobile, adversaries using Technique T1422.002 may gather network information from vulnerable mobile applications. Which of the following applications is capable of collecting a device's phone number and checking the Wi-Fi state?",
+      "choices": [
+        "Pegasus for Android",
+        "Hornbill",
+        "BOULDSPY",
+        "INSOMNIA"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1301",
+      "text": "Which mitigation strategy could help prevent adversaries from using Technique T1422.002 (System Network Configuration Discovery: Wi-Fi Discovery) on Android devices?",
+      "choices": [
+        "Enforce multi-factor authentication",
+        "Use recent OS version",
+        "Disable Wi-Fi and cellular data",
+        "Install anti-virus software"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1302",
+      "text": "What data source and component could be utilized to detect applications attempting to use the READ_PRIVILEGED_PHONE_STATE permission as part of Technique T1422.002?",
+      "choices": [
+        "User Activity Monitoring",
+        "Network Analytics",
+        "Application Vetting",
+        "Process Monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1303",
+      "text": "Which of the following techniques describes \"System Network Configuration Discovery\" in the MITRE ATT&CK framework?",
+      "choices": [
+        "T1416",
+        "T1422",
+        "T1405",
+        "T1456"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1304",
+      "text": "According to the document, from which Android version onwards can only specific applications access telephony-related device identifiers?",
+      "choices": [
+        "Android 9",
+        "Android 12",
+        "Android 10",
+        "Android 11"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1305",
+      "text": "Which of the following adversaries can collect a device's IP address and SIM card information, as per the examples provided?",
+      "choices": [
+        "AndroRAT",
+        "Exobot",
+        "BOULDSPY",
+        "AbstractEmu"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1306",
+      "text": "What information does the Trojan \"FakeSpy\" collect from a device according to the document?",
+      "choices": [
+        "IP address and phone number",
+        "Phone number, IMEI, and IMSI",
+        "Location and phone number",
+        "MAC addresses and IMEI"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1307",
+      "text": "Which mobile malware gathers the device IMEI and sends it to the command and control server?",
+      "choices": [
+        "Exodus",
+        "RedDrop",
+        "Riltok",
+        "Corona Updates"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1308",
+      "text": "What common mitigation is mentioned in the document to prevent regular applications from accessing sensitive device identifiers on Android?",
+      "choices": [
+        "Use encryption",
+        "Regular updating of applications",
+        "Blocking suspicious IPs",
+        "Use Recent OS Version"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1309",
+      "text": "What technique ID corresponds to System Information Discovery in the MITRE ATT&CK framework?",
+      "choices": [
+        "T1425",
+        "T1426",
+        "T1427",
+        "T1428"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1310",
+      "text": "Which platform does the MITRE ATT&CK System Information Discovery technique apply to?",
+      "choices": [
+        "Enterprise",
+        "ICS",
+        "Mobile"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1311",
+      "text": "Which malware leverages the android.os.Build class for system information discovery on Android?",
+      "choices": [
+        "AbstractEmu",
+        "AhRat",
+        "PHENAKITE",
+        "Monokle"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1312",
+      "text": "What type of information can AbstractEmu collect from a device?",
+      "choices": [
+        "Device location",
+        "Model, OS version, serial number, telephone number",
+        "Email content",
+        "User contacts"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1313",
+      "text": "Which malware is known to query its running environment for device metadata including make, model, and power levels?",
+      "choices": [
+        "RuMMS",
+        "ViceLeaker",
+        "Monokle",
+        "GolfSpy"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1314",
+      "text": "Which mitigation strategy is recommended for preventing System Information Discovery attacks?",
+      "choices": [
+        "Using antivirus software",
+        "Efficient network segmentation",
+        "No easily applicable preventive control",
+        "Implementing a strict firewall policy"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1315",
+      "text": "Which activity is defined under MITRE ATT&CK technique T1474.003 (Supply Chain Compromise: Compromise Software Supply Chain)?",
+      "choices": [
+        "Manipulating application source code prior to consumer receipt",
+        "Exploiting zero-day vulnerabilities in web applications",
+        "Bypassing user authentication mechanisms to gain initial access",
+        "Social engineering to obtain sensitive information"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1316",
+      "text": "Which data source could be used to detect applications compromised through the supply chain as per MITRE ATT&CK T1474.003?",
+      "choices": [
+        "Sensor Health",
+        "Network Traffic Analysis",
+        "Application Vetting",
+        "Behavioral Analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1317",
+      "text": "Which of the following is a mitigation strategy recommended for preventing the compromise of software supply chains in the context of MITRE ATT&CK T1474.003?",
+      "choices": [
+        "Regular employee training",
+        "Network segmentation",
+        "Security updates",
+        "Stopping services on suspicious activity"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1318",
+      "text": "When considering the MITRE ATT&CK technique T1474.002, which mitigation strategy is recommended to counteract a Compromise Hardware Supply Chain attack?",
+      "choices": [
+        "Isolate the affected system",
+        "Regular audits of supply vendors",
+        "Install security updates",
+        "Monitor network traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1319",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which of the following procedures is associated with the technique \"Supply Chain Compromise: Compromise Software Dependencies and Development Tools\" (ID: T1474.001)?",
+      "choices": [
+        "XcodeGhost",
+        "Stuxnet",
+        "NotPetya",
+        "Hydraq"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1320",
+      "text": "Which mitigation strategy is recommended to application developers to prevent threats identified by the technique \"Supply Chain Compromise: Compromise Software Dependencies and Development Tools\" (ID: T1474.001) according to MITRE ATT&CK?",
+      "choices": [
+        "Regular patch management",
+        "Strict access controls",
+        "Endpoint detection and response",
+        "Application Developer Guidance"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1321",
+      "text": "Under the MITRE ATT&CK framework, at which stage of the supply chain can adversaries manipulate development tools?",
+      "choices": [
+        "Initial product manufacturing",
+        "Development environment",
+        "Source code repository Software distribution mechanisms",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1322",
+      "text": "Which mitigation technique is recommended by MITRE ATT&CK (ID M1013) to safeguard against supply chain compromise via third-party libraries?",
+      "choices": [
+        "Regular system audits",
+        "Firewall and network segmentation",
+        "Application Developer Guidance",
+        "Supply chain protocol review"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1323",
+      "text": "What data source ID (DS0041) is associated with detecting malicious software development tools in MITRE ATT&CK?",
+      "choices": [
+        "API Calls",
+        "Endpoint Monitoring",
+        "Application Vetting",
+        "Operational Network Traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1324",
+      "text": "Which technique is specifically used by adversaries to modify code signing policies in order to run applications signed with unofficial keys? (MITRE ATT&CK for Enterprise, Tactic: Defense Evasion)",
+      "choices": [
+        "T1632.001: Code Signing Policy Manipulation",
+        "T1003.003: OS Credential Dumping",
+        "T1027: Obfuscated Files or Information",
+        "T1036: Masquerading"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1325",
+      "text": "Which mitigation strategy makes it difficult for adversaries to trick users into installing untrusted certificates and configurations on mobile devices?",
+      "choices": [
+        "M1006: Use Recent OS Version",
+        "M1011: User Guidance",
+        "M1040: Behavior Prevention on Endpoint",
+        "M1012: Enterprise Policy"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1326",
+      "text": "Which data source can be used to detect unexpected or unknown Configuration Profiles on iOS devices?",
+      "choices": [
+        "DS0017: Application Log",
+        "DS0030: Process Monitoring",
+        "DS0042: User Interface",
+        "DS0027: Network Traffic Flow"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1327",
+      "text": "Which adversary behavior related to T1632.001 involves adding itself to the protected apps list on Huawei devices, allowing it to run with the screen off?",
+      "choices": [
+        "S0420: Dvmap",
+        "S0551: GoldenEagle",
+        "S0485: Mandrake",
+        "S0505: Desert Scorpion"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1328",
+      "text": "What mitigation method can be used on iOS to prevent users from installing apps signed using enterprise distribution keys?",
+      "choices": [
+        "Deploy a firewall configuration policy",
+        "Enable the allowEnterpriseAppTrust configuration profile restriction",
+        "Use a mobile application management tool",
+        "Disable USB debugging mode"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1329",
+      "text": "Which data source should be examined to detect unexpected or unknown configuration profiles on iOS?",
+      "choices": [
+        "System Logs",
+        "Network Traffic",
+        "Device Settings Menu",
+        "Process Monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1330",
+      "text": "What is Technique ID T1632 primarily associated with in MITRE ATT&CK?",
+      "choices": [
+        "Privilege Escalation",
+        "Defense Evasion",
+        "Persistence",
+        "Credential Access"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1331",
+      "text": "Which of the following best describes Technique ID T1409?",
+      "choices": [
+        "Adversaries use credential dumping to obtain passwords",
+        "Adversaries collect data stored by applications on a device",
+        "Adversaries exploit vulnerabilities in web browsers",
+        "Adversaries perform social engineering attacks to gather information"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1332",
+      "text": "Which malware is known to request the GET_ACCOUNTS permission to gather a list of accounts on the device as part of Technique ID T1409?",
+      "choices": [
+        "Escobar",
+        "Exodus",
+        "Mandrake",
+        "FakeSpy"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1333",
+      "text": "In the context of Technique ID T1409, which malware uses a FileObserver object to monitor and retrieve chat messages from applications like Skype and WeChat?",
+      "choices": [
+        "FakeSpy",
+        "Mandrake",
+        "FlexiSpy",
+        "GoldenEagle"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1334",
+      "text": "What mitigation method is suggested to prevent applications from reading or writing data to other applications' internal storage directories, regardless of permissions?",
+      "choices": [
+        "Isolate System Services",
+        "Use Recent OS Version",
+        "Data Masking",
+        "Multi-factor Authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1335",
+      "text": "Which data source and component can help detect when applications store data insecurely, for example, in unprotected external storage?",
+      "choices": [
+        "Network Traffic | Packet Capture",
+        "Process Monitoring | Executable Files",
+        "Anti-virus | Signature Matching",
+        "Application Vetting | API Calls"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1336",
+      "text": "Regarding MITRE ATT&CK Technique T1635.001 for Credential Access, which strategy would best mitigate URI hijacking on Android devices?",
+      "choices": [
+        "Encouraging the use of explicit intents and checking the destination app's signing certificate",
+        "Implementing PKCE for all OAuth applications",
+        "Regularly updating the OS to the latest version",
+        "Educating users to avoid opening links from unknown sources"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1337",
+      "text": "For MITRE ATT&CK Technique T1635.001, which mitigation strategy explicitly involves a first-come-first-served principle?",
+      "choices": [
+        "Application Developer Guidance",
+        "Application Vetting",
+        "User Guidance",
+        "Use Recent OS Version"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1338",
+      "text": "To detect potential URI hijacking as described in MITRE ATT&CK Technique T1635.001, which data source and component combination should be primarily used?",
+      "choices": [
+        "Application Vetting and API Calls",
+        "User Interface and System Notifications",
+        "Application Developer Guidance and PKCE",
+        "User Guidance and System Notifications"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1339",
+      "text": "In the context of MITRE ATT&CK and tactic \"Credential Access\", under which circumstance could an adversary steal an application access token as described in technique T1635?",
+      "choices": [
+        "Insecure use of Intents in application vetting",
+        "Failure to update to the latest OS version on mobile devices",
+        "User action through systems such as \"Open With\"",
+        "Use of explicit intents within applications"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1340",
+      "text": "Which mitigation strategy is specified for OAuth use cases to prevent the use of stolen authorization codes in technique T1635 \"Steal Application Access Token\"?",
+      "choices": [
+        "Implementing iOS Universal Links",
+        "App Links implementation on Android 6",
+        "Utilizing the PKCE protocol",
+        "Enforcing first-come-first-served URI principle"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1341",
+      "text": "What should developers use to prevent malicious applications from intercepting redirections, according to the mitigation strategies for technique T1635?",
+      "choices": [
+        "Use Recent OS Version",
+        "Application Developer Guidance",
+        "User Guidance",
+        "Mandating explicit intents"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1342",
+      "text": "In the context of MITRE ATT&CK Enterprise, which of the following is the primary purpose of Active Scanning (T1595)?",
+      "choices": [
+        "To establish command and control channels on the victim's network.",
+        "To gather information directly from victim's infrastructure via network traffic.",
+        "To deploy malware on the victim's machines.",
+        "To perform social engineering attacks on victim personnel."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1343",
+      "text": "Which mitigation strategy is suggested for combating Active Scanning (T1595) in the MITRE ATT&CK framework?",
+      "choices": [
+        "Network segmentation to isolate critical assets.",
+        "Deployment of honeypots to mislead adversaries.",
+        "Minimizing the amount and sensitivity of data available to external parties.",
+        "Implementing multi-factor authentication for external access."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1344",
+      "text": "Which data sources are recommended for detecting Active Scanning (T1595) activities according to MITRE ATT&CK?",
+      "choices": [
+        "Process Monitoring and Network Traffic Content.",
+        "Endpoint Detection and Response (EDR) logs and System Event Logs.",
+        "User Activity Monitoring and Web Access Logs.",
+        "Firewall Logs and DNS Logs."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1345",
+      "text": "In the context of MITRE ATT&CK technique T1582 (SMS Control), which of the following malware can both send and delete SMS messages? (Platform: Mobile)",
+      "choices": [
+        "Cerberus",
+        "TrickMo",
+        "Desert Scorpion",
+        "Anubis"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1346",
+      "text": "Which malware specifically can set itself as the default SMS handler, modifying SMS messages on the user's device? (Platform: Mobile)",
+      "choices": [
+        "Mandrake",
+        "Terracotta",
+        "SharkBot",
+        "TangleBot"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1347",
+      "text": "Which piece of malware sends SMS messages containing logs or messages to custom numbers specified by the adversary, as described in MITRE ATT&CK technique T1582 (SMS Control)? (Platform: Mobile)",
+      "choices": [
+        "AndroRAT",
+        "BusyGasper",
+        "AhRat",
+        "Ginp"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1348",
+      "text": "To mitigate the risks associated with SMS Control (T1582), which of the following actions should users avoid? (Platform: Mobile)",
+      "choices": [
+        "Changing their default SMS handler",
+        "Carefully selecting which applications get SMS access",
+        "Viewing the default SMS handler in system settings",
+        "Updating their device’s operating system"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1349",
+      "text": "1. In the context of MITRE ATT&CK for Mobile, which of the following techniques describes adversaries using screen capture to collect sensitive information on a target device?",
+      "choices": [
+        "Deep Link Spoofing (T1651)",
+        "Application Emulator Detection (T1635)",
+        "Screen Capture (T1513)",
+        "Network Service Scanning (T1614)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1350",
+      "text": "2. Which procedure example can record the screen and is associated with the Screen Capture (T1513) technique on Mobile platforms?",
+      "choices": [
+        "AhRat (S1095)",
+        "BUSYHOLD (S0671)",
+        "AMFSpy (S0680)",
+        "GloomKat (S0614)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1351",
+      "text": "3. According to the provided document, which mitigation involves preventing users from enabling USB debugging on Android devices to hinder access by adversaries?",
+      "choices": [
+        "Application Developer Guidance (M1013)",
+        "Device Encryption (M1041)",
+        "User Guidance (M1011)",
+        "Enterprise Policy (M1012)"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1352",
+      "text": "4. Which data source can be used to detect malicious use of the Android MediaProjectionManager class for the Screen Capture (T1513) technique?",
+      "choices": [
+        "Application Vetting (DS0041)",
+        "Network Traffic Analysis (DS0057)",
+        "User Behavior Analytics (DS0034)",
+        "Endpoint Detection and Response (DS0031)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1353",
+      "text": "5. What malicious activity is associated with BOULDSPY (S1079) as described in the provided text?",
+      "choices": [
+        "Exfiltrating system logs",
+        "Taking and exfiltrating screenshots",
+        "Modifying application permissions",
+        "Infecting new devices via Bluetooth"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1354",
+      "text": "Given the MITRE ATT&CK technique ID T1603, which of the following libraries allows asynchronous tasks to be scheduled on Android, consolidating JobScheduler, GcmNetworkManager, and AlarmManager internally?",
+      "choices": [
+        "WorkJobManager",
+        "AsyncTaskHandler",
+        "WorkManager",
+        "TaskScheduler"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1355",
+      "text": "Which adversary has used timer events in React Native to initiate the foreground service as mentioned under the Scheduled Task/Job technique (ID: T1603) in the MITRE ATT&CK framework?",
+      "choices": [
+        "GPlayed",
+        "TERRACOTTA",
+        "Tiktok Pro",
+        "Mirai"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1356",
+      "text": "Regarding MITRE ATT&CK technique T1458: Replication Through Removable Media on mobile devices, which mitigation would help prevent arbitrary operating system code from being flashed onto a device?",
+      "choices": [
+        "Enforcing Enterprise Policies",
+        "Keeping the device's software up-to-date",
+        "Locking the bootloader",
+        "Using User Guidance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1357",
+      "text": "For mobile devices exploiting MITRE ATT&CK T1458: Replication Through Removable Media, which is NOT a valid procedure example listed in the document?",
+      "choices": [
+        "DualToy",
+        "WireLurker",
+        "Cellebrite",
+        "Google Pixel 2 via USB"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1358",
+      "text": "What is the significance of iOS 11.4.1 in the context of MITRE ATT&CK technique T1458: Replication Through Removable Media?",
+      "choices": [
+        "It introduced USB Debugging",
+        "It disables data access through the charging port under certain conditions",
+        "It introduced stronger encryption protocols",
+        "It prevents installation of third-party apps"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1359",
+      "text": "In the context of MITRE ATT&CK (Mobile), which mitigation strategy can prevent the installation of specific remote access applications on managed devices?",
+      "choices": [
+        "M1011 - User Guidance",
+        "M1012 - Enterprise Policy",
+        "DS0042 - User Interface",
+        "M1010 - Software Configuration Settings"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1360",
+      "text": "How can BRATA establish interactive command and control according to MITRE ATT&CK ID T1663?",
+      "choices": [
+        "By using AirDroid to connect to a device",
+        "By viewing the device through VNC",
+        "By using TeamViewer for remote sessions",
+        "By using AirMirror for device control"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1361",
+      "text": "Which of the following techniques describe an adversary using a compromised device to hide the true IP address of their C2 server?",
+      "choices": [
+        "Proxy Through Victim (T1604)",
+        "Proxy Command and Control (T1090.003)",
+        "Use Alternate Network Medium (T1090)",
+        "Web Portal (T1125)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1362",
+      "text": "How can an enterprise detect the usage of a SOCKS proxy connection on mobile devices?",
+      "choices": [
+        "Analyze application installation logs",
+        "Inspect firewall logs for IP-based anomalies",
+        "Examine Network Traffic Flow data from mobile devices",
+        "Review system event logs for unauthorized API calls"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1363",
+      "text": "Under the MITRE ATT&CK framework for mobile platforms, which technique ID refers to the collection of SMS messages using standard operating system APIs?",
+      "choices": [
+        "T1105: Ingress Tool Transfer",
+        "T1636.004: Protected User Data: SMS Messages",
+        "T1503: Credentials in Files",
+        "T1027: Obfuscated Files or Information"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1364",
+      "text": "Which of the following malware is capable of intercepting SMS messages containing two-factor authentication codes according to the MITRE ATT&CK framework?",
+      "choices": [
+        "AbstractEmu (S1061)",
+        "BOULDSPY (S1079)",
+        "Ginp (S0423)",
+        "Mandrake (S0485)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1365",
+      "text": "For detecting unauthorized SMS message access on Android devices, which data source should application vetting services check as per the MITRE ATT&CK framework?",
+      "choices": [
+        "Permissions Requests",
+        "System Logs",
+        "Network Traffic Monitor",
+        "File Integrity Monitoring"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1366",
+      "text": "Which malware can monitor SMS messages for keywords as mentioned in the MITRE ATT&CK technique T1636.004?",
+      "choices": [
+        "Cerberus (S0480)",
+        "FlexiSpy (S0408)",
+        "TangleBot (S1069)",
+        "XLoader for Android (S0318)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1367",
+      "text": "According to the MITRE ATT&CK framework, which mitigation strategy advises users to be cautious when granting SMS access permissions?",
+      "choices": [
+        "Network Segmentation",
+        "Malware Reverse Engineering",
+        "File Encryption",
+        "User Guidance"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1368",
+      "text": "In the MITRE ATT&CK framework, which malware used in Operation Dust Storm forwards all SMS messages to its command and control servers?",
+      "choices": [
+        "Stuxnet",
+        "BigPipe",
+        "RCSAndroid",
+        "Pallas"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1369",
+      "text": "Which adversary specifically targets both the phone and SIM card to steal contact list data?",
+      "choices": [
+        "Adups",
+        "AhRat",
+        "Android/Chuli.A",
+        "Golden Cup"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1370",
+      "text": "What mitigation strategy is recommended for users to protect their contact list according to MITRE ATT&CK?",
+      "choices": [
+        "Application Vetting",
+        "Network Segmentation",
+        "End-to-End Encryption",
+        "User Guidance"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1371",
+      "text": "Which detection source involves using the device settings screen to manage application permissions?",
+      "choices": [
+        "Application Vetting",
+        "User Interface",
+        "Network Traffic Analysis",
+        "Behavioral Analysis"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1372",
+      "text": "Which malware is known to steal contacts from an infected device as part of MITRE ATT&CK technique T1636.003?",
+      "choices": [
+        "Mandrake",
+        "FluBot",
+        "Exobot",
+        "Pegasus for iOS"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1373",
+      "text": "What is the common API used on Android to collect contact list data?",
+      "choices": [
+        "Contacts Content Provider",
+        "AddressBookUI",
+        "Contacts Framework",
+        "NSContactsUsageDescription"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1374",
+      "text": "How can application vetting detect apps aiming to gather contact list data, as outlined in MITRE ATT&CK?",
+      "choices": [
+        "By monitoring SSL/TLS traffic",
+        "By inspecting android.permission.READ_CONTACTS in the manifest file",
+        "By analyzing deep packet inspection logs",
+        "By matching suspicious IP addresses"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1375",
+      "text": "Which of the following malware can access device call logs and is associated with T1636.002 (Protected User Data: Call Log) on the Android platform?",
+      "choices": [
+        "Pegasus for iOS",
+        "Hornbill",
+        "WolfRAT",
+        "C0033"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1376",
+      "text": "For detecting applications that may attempt to access call logs, which data source should a security professional monitor according to the detection methods listed for T1636.002?",
+      "choices": [
+        "Application Vetting",
+        "System Logs",
+        "User Interface",
+        "Network Traffic"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1377",
+      "text": "What mitigation recommendation is provided to prevent unauthorized call log access for T1636.002?",
+      "choices": [
+        "Regular Software Updates",
+        "Encryption",
+        "Firewall Configuration",
+        "User Guidance"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1378",
+      "text": "Which of the following malware is specifically noted for accessing call logs on a jailbroken or rooted iOS device under T1636.002 (Protected User Data: Call Log)?",
+      "choices": [
+        "AbstractEmu",
+        "DoubleAgent",
+        "Pegasus for iOS",
+        "Drinik"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1379",
+      "text": "In the context of MITRE ATT&CK, which of the following best describes the technique ID T1583.008?",
+      "choices": [
+        "Acquire Infrastructure: DNS Servers",
+        "Acquire Infrastructure: Virtual Private Servers",
+        "Acquire Infrastructure: Social Media Accounts",
+        "Acquire Infrastructure: Malvertising"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1380",
+      "text": "For the technique ID T1583.008 in MITRE ATT&CK, which specific method might adversaries use to evade detection by advertising networks?",
+      "choices": [
+        "Use static IP addresses for all ads",
+        "Use randomized domain names to host ads",
+        "Dynamically route ad clicks to benign sites",
+        "Employ URL shorteners to hide malicious URLs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1381",
+      "text": "Which mitigation strategy is mentioned in the document for handling the technique \"Acquire Infrastructure: Malvertising\" (T1583.008)?",
+      "choices": [
+        "Employ multi-factor authentication",
+        "Block known malicious IP addresses",
+        "Use ad blockers to prevent execution of malicious code",
+        "Train employees on phishing awareness"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1382",
+      "text": "According to the provided text, what is one of the primary challenges in detecting malvertising activity (T1583.008) within an organization?",
+      "choices": [
+        "Adversaries often use highly sophisticated zero-day exploits",
+        "Detection efforts may be focused on phases outside the visibility of the target",
+        "Adversaries always contact end users directly via email",
+        "The infrastructure used for malvertising constantly changes"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1383",
+      "text": "According to MITRE ATT&CK technique T1636.001 for the collection of calendar entries, which of the following frameworks is used by adversaries to access calendar data on iOS?",
+      "choices": [
+        "EventKit framework",
+        "Calendar Content Provider",
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1384",
+      "text": "Which of the following is a recommended mitigation strategy for protecting against technique T1636.001 concerning unauthorized access to calendar data?",
+      "choices": [
+        "Using multi-factor authentication",
+        "Regularly changing passwords",
+        "Application vetting to scrutinize permissions requests",
+        "Encrypting data in transit"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1385",
+      "text": "In the context of MITRE ATT&CK for Mobile, which platform-specific configuration file must include permissions for an app to access protected user data on iOS?",
+      "choices": [
+        "manifest.json",
+        "Info.plist",
+        "permissions.xml",
+        "config.xml"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1386",
+      "text": "Based on the mitigation strategies for T1636 (Protected User Data), which action should be prioritized to enhance security and privacy controls around app permissions in a corporate mobile environment?",
+      "choices": [
+        "Implement Application Sandboxing",
+        "Ensure all devices are rooted or jailbroken",
+        "Use the latest version of the operating system",
+        "Disable application installation from app stores"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1387",
+      "text": "When investigating potential malicious activity leveraging MITRE ATT&CK technique T1631.001 (Process Injection: Ptrace System Calls), which situation would most likely indicate such an attack against a running process?",
+      "choices": [
+        "The presence of PTRACE_CONT calls in system logs",
+        "Unexpected high CPU usage correlating with PTRACE_CONT calls",
+        "Unusual outbound network traffic from a process shortly after a PTRACED call",
+        "Sudden changes in memory allocation patterns without corresponding process behaviors"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1388",
+      "text": "Which of the following would be the least reliable method to detect MITRE ATT&CK technique T1631.001 (Process Injection: Ptrace System Calls) based on the given document?",
+      "choices": [
+        "Monitoring for ptrace system call invocations",
+        "Inspecting regular API call patterns in high-privilege processes",
+        "Using file integrity monitoring tools to watch for injected executable code pieces",
+        "Analyzing runtime memory modifications for discrepancy"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1389",
+      "text": "Given the description of MITRE ATT&CK technique T1631.001 (Process Injection: Ptrace System Calls), which process characteristic might limit an adversary’s ability to successfully perform ptrace-based injection?",
+      "choices": [
+        "Processes with child processes",
+        "Processes using frequent malloc operations",
+        "Processes managed by high-privilege users",
+        "Processes with open network connections"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1390",
+      "text": "In the context of MITRE ATT&CK for Process Injection (T1631), which data source can be used to detect this technique through the monitoring of API calls?",
+      "choices": [
+        "Network Traffic Capturing",
+        "System Logs",
+        "Binary Analysis",
+        "Application Vetting"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1391",
+      "text": "Given the description of the Process Injection (T1631) technique, what is a notable limitation when attempting to mitigate this type of attack on mobile platforms such as Android and iOS?",
+      "choices": [
+        "It can be easily thwarted by updating antivirus software",
+        "There are no legitimate ways to perform process injection on these platforms without root access or vulnerabilities",
+        "It is easily detectable through regular system audits and manual inspections",
+        "Mobile platforms inherently block all process injection attempts"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1392",
+      "text": "Which mobile security product component can detect if applications attempt to use legacy process discovery methods such as the ps command?",
+      "choices": [
+        "Sandboxing",
+        "Runtime Monitoring",
+        "Application Vetting",
+        "Firewall"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1393",
+      "text": "Which mitigation involves verifying if a device is rooted and can take action when a device fails an attestation check?",
+      "choices": [
+        "Application Allowlisting",
+        "Remote Wipe and Lock",
+        "Attestation",
+        "Use Recent OS Version"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1394",
+      "text": "Which of the following adversaries is known to use SMS-based phishing to deliver malicious links according to MITRE ATT&CK T1660?",
+      "choices": [
+        "APT-C-23",
+        "Sandworm Team",
+        "Scattered Spider",
+        "UNC788"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1395",
+      "text": "Which attack technique is specifically described by adversaries utilizing Quick Response (QR) codes to conduct phishing attempts as outlined in T1660?",
+      "choices": [
+        "Smishing",
+        "Quishing",
+        "Vishing",
+        "Web Skimming"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1396",
+      "text": "In the context of MITRE ATT&CK T1660, which mitigation technique could be used to block traffic to known phishing websites on mobile devices?",
+      "choices": [
+        "Antivirus/Antimalware",
+        "User Guidance",
+        "Email Filtering",
+        "Network Segmentation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1397",
+      "text": "What specific adversary behavior is described by \"vishing\" in the context of Initial Access tactics in MITRE ATT&CK T1660?",
+      "choices": [
+        "Sending SMS messages with malicious URLs",
+        "Using QR codes to redirect to phishing sites",
+        "Calling victims to persuade them to perform actions",
+        "Social media-based phishing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1398",
+      "text": "Which of the following detection data sources is recommended to identify potentially malicious URLs visited by mobile devices under MITRE ATT&CK T1660?",
+      "choices": [
+        "Network Traffic Flow",
+        "Network Traffic Content",
+        "Host-based Firewall Logs",
+        "Behavioral Analytics"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1399",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which technique is referenced by T1406.002 and involves compressing or encrypting an executable to avoid detection?",
+      "choices": [
+        "Software Packing: File Integrity Monitoring",
+        "Software Packing: Obfuscated Code",
+        "Obfuscated Files or Information: Software Packing",
+        "File Signature Modification: Packing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1400",
+      "text": "Which of the following packers has been specifically mentioned as used by the malware Gustuff in the context of MITRE ATT&CK?",
+      "choices": [
+        "UPX",
+        "Petite",
+        "FTT",
+        "MPRESS"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1401",
+      "text": "Based on the MITRE ATT&CK T1406.001 (Obfuscated Files or Information: Steganography) for the Defense Evasion tactic, which of the following is NOT a typical medium used for steganography?",
+      "choices": [
+        "Images",
+        "Audio tracks",
+        "DNS queries",
+        "Video clips"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1402",
+      "text": "Concerning MITRE ATT&CK technique T1406 (Obfuscated Files or Information), under which tactic does this technique fall?",
+      "choices": [
+        "Collection",
+        "Defense Evasion",
+        "Command and Control",
+        "Lateral Movement"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1403",
+      "text": "Which mobile malware example encodes its configurations using a customized algorithm, according to MITRE ATT&CK technique T1406?",
+      "choices": [
+        "Ginp",
+        "GolfSpy",
+        "AhRat",
+        "AbstractEmu"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1404",
+      "text": "In the context of T1406 on mobile platforms, which example employs name mangling and meaningless variable names?",
+      "choices": [
+        "Dvmap",
+        "AhRat",
+        "GolfSpy",
+        "AndroidOS/MalLocker.B"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1405",
+      "text": "Which mobile malware example in T1406 base64 encodes its malicious functionality at runtime from an RC4-encrypted TTF file?",
+      "choices": [
+        "Cerberus",
+        "EventBot",
+        "HenBox",
+        "WolfRAT"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1406",
+      "text": "In MITRE ATT&CK technique T1406, which malware uses a Domain Generation Algorithm to decode the C2 server location?",
+      "choices": [
+        "Monokle",
+        "OBAD",
+        "SharkBot",
+        "TianySpy"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1407",
+      "text": "According to the detection methods in T1406, what data source is suggested for identifying malicious code in obfuscated or encrypted form?",
+      "choices": [
+        "File Monitoring",
+        "Application Vetting",
+        "Process Monitoring",
+        "Network Traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1408",
+      "text": "In the MITRE ATT&CK technique ID T1583.007 (Acquire Infrastructure: Serverless), which platform is specified?",
+      "choices": [
+        "Cloud Platforms",
+        "Enterprise",
+        "ICS"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1409",
+      "text": "Which mitigation strategy is listed under the MITRE ATT&CK technique ID T1583.007 for Acquire Infrastructure: Serverless?",
+      "choices": [
+        "Network Segmentation",
+        "Pre-compromise",
+        "MFA (Multi-Factor Authentication)",
+        "Disable Serverless Functions"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1410",
+      "text": "1. In the context of MITRE ATT&CK technique T1509 (Non-Standard Port), which adversary technique enables communication over port 7242 using HTTP?",
+      "choices": [
+        "A. Cerberus",
+        "B. Chameleon",
+        "C. Mandrake",
+        "D. Red Alert 2.0"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1411",
+      "text": "2. Which of the following techniques has INSOMNIA used to communicate with the command and control server?",
+      "choices": [
+        "A. HTTP over port 8888",
+        "B. HTTPS over ports 43111, 43223, and 43773",
+        "C. HTTP over port 7242",
+        "D. TCP over port 7777"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1412",
+      "text": "Which of the following is the technique ID and name for attempting to obtain a listing of services running on remote hosts in the context of mobile devices, according to the MITRE ATT&CK framework?",
+      "choices": [
+        "T1046: Network Service Scanning",
+        "T1423: Network Service Discovery",
+        "T1423: Network Service Scanning",
+        "T1046: Network Service Discovery"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1413",
+      "text": "Under MITRE ATT&CK reference T1464 for Network Denial of Service, which specific mitigation technique is recommended?",
+      "choices": [
+        "Deploying advanced firewalls",
+        "Implementing strong access controls",
+        "Monitoring system notifications",
+        "Using bandwidth throttling"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1414",
+      "text": "Which of the following is a documented example of a Network DoS attack related to MITRE ATT&CK T1464?",
+      "choices": [
+        "NetSpectre utilizing side-channel attacks",
+        "S.O.V.A. adding infected devices to a DDoS pool",
+        "Zeus malware stealing banking credentials",
+        "WannaCry ransomware encrypting files"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1415",
+      "text": "In the context of MITRE ATT&CK and mobile platforms, which of the following malware families has used native code to disguise its malicious functionality?",
+      "choices": [
+        "Asacub",
+        "Bread",
+        "TERRACOTTA",
+        "CHEMISTGAMES"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1416",
+      "text": "Which of the following statements accurately describes a limitation in mitigating attacks that utilize the MITRE ATT&CK technique T1575 (Native API) for mobile platforms?",
+      "choices": [
+        "A. Implementing preventive controls can completely block this technique.",
+        "B. This type of attack relies on exploiting application vulnerabilities, making it preventable with regular updates.",
+        "C. The abuse of system features in this technique makes it difficult to mitigate with preventive controls.",
+        "D. End users can easily detect this type of abuse through standard OS-level detection tools."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1417",
+      "text": "Which of the following data sources can be used to detect Network Connection Creation related to Web Service: One-Way Communication (T1481.003)?",
+      "choices": [
+        "Application Logging",
+        "Application Vetting",
+        "Intrusion Detection Systems",
+        "Network Traffic"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1418",
+      "text": "According to MITRE ATT&CK, which data source can be utilized to identify bidirectional communication through web services in a network environment?",
+      "choices": [
+        "Authentication Logs",
+        "File monitoring",
+        "Application Vetting",
+        "Binary Files"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1419",
+      "text": "In the MITRE ATT&CK framework, BusyGasper uses which method for Command and Control communication?",
+      "choices": [
+        "HTTP over port 443",
+        "Firebase",
+        "Slack",
+        "IRC using freenode.net servers"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1420",
+      "text": "In the context of MITRE ATT&CK T1481.001: Web Service: Dead Drop Resolver, which malware retrieves its C2 address from encoded Twitter names, among other sources?",
+      "choices": [
+        "ANDROIDOS_ANSERVER.A",
+        "Anubis",
+        "Red Alert 2.0",
+        "XLoader for Android"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1421",
+      "text": "Which of the following is a key reason why Web Service: Dead Drop Resolver (T1481.001) is challenging to mitigate with preventive controls?",
+      "choices": [
+        "It uses strong encryption protocols like SSL/TLS.",
+        "It leverages legitimate, frequently accessed web services.",
+        "It can dynamically change its C2 infrastructure.",
+        "It only operates within internal networks."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1422",
+      "text": "Which detection technique can be used to identify suspicious network connection creation as part of identifying T1481.001?",
+      "choices": [
+        "Application Vetting",
+        "Firewall Rules",
+        "Network Traffic Analysis",
+        "Intrusion Detection System"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1423",
+      "text": "In the context of MITRE ATT&CK, which data source would help detect the usage of legitimate external web services for command and control? (Enterprise Platform)",
+      "choices": [
+        "DS0038 - File Monitoring",
+        "DS0029 - Network Traffic",
+        "DS0010 - Process Monitoring",
+        "DS0034 - Driver Monitoring"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1424",
+      "text": "Given the tactic of Command and Control, which characteristic of web services provides adversaries with additional operational resiliency?",
+      "choices": [
+        "Use of public IP exclusion",
+        "filesystem API concealment",
+        "ability to dynamically change infrastructure",
+        "shared threat intelligence feeds"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1425",
+      "text": "Which technique involves adversaries employing system checks to avoid virtualization and analysis environments under MITRE ATT&CK?",
+      "choices": [
+        "Execution: API Execution (T1059.001)",
+        "Collection: Data from Local System (T1005)",
+        "Defense Evasion: Virtualization/Sandbox Evasion: System Checks (T1633.001)",
+        "Persistence: Boot or Logon Autostart Execution (T1547.001)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1426",
+      "text": "Considering MITRE ATT&CK and technique T1633.001, which malware can avoid triggering payload on known Google IPs?",
+      "choices": [
+        "AbstractEmu",
+        "Android/AdDisplay.Ashas",
+        "Anubis",
+        "Cerberus"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1427",
+      "text": "In the context of MITRE ATT&CK (Mobile), which malware uses motion sensor data to evade virtualization detection corresponding to T1633.001?",
+      "choices": [
+        "Ginp",
+        "TERRACOTTA",
+        "Anubis",
+        "BRATA"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1428",
+      "text": "To detect the usage of technique T1633.001, which data source and component should application vetting services monitor according to MITRE ATT&CK?",
+      "choices": [
+        "System Logs; Logs",
+        "API Calls; Network Traffic",
+        "Application Vetting; API Calls",
+        "Network Traffic; Application Behavior"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1429",
+      "text": "Which of the following is NOT a method adversaries use for Virtualization/Sandbox Evasion according to MITRE ATT&CK (ID T1633)?",
+      "choices": [
+        "Checking for system artifacts associated with analysis",
+        "Abusing system features",
+        "Checking for legitimate user activity",
+        "Injecting malicious code into the hypervisor"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1430",
+      "text": "In the context of Virtualization/Sandbox Evasion (ID T1633), what data component is used by Application Vetting to detect this technique according to MITRE ATT&CK?",
+      "choices": [
+        "System Logs",
+        "API Calls",
+        "Network Traffic",
+        "File Metadata"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1431",
+      "text": "In the context of MITRE ATT&CK, which group has been documented using Twitter and Dropbox for Command and Control (C2) operations?",
+      "choices": [
+        "A. APT28",
+        "B. APT29",
+        "C. FIN7",
+        "D. HAFNIUM"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1432",
+      "text": "Which MITRE ATT&CK technique involves adversaries registering for web services to be used during different stages of an attack lifecycle?",
+      "choices": [
+        "A. T1588.002 - Acquire Infrastructure: DNS",
+        "B. T1583.006 - Acquire Infrastructure: Web Services",
+        "C. T1583.005 - Acquire Infrastructure: Virtual Private Servers (VPS)",
+        "D. T1584.004 - Acquire Infrastructure: Colocated & Datacenter Services"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1433",
+      "text": "Which threat group has used Amazon S3 buckets to host trojanized digital products as per their MITRE ATT&CK profile?",
+      "choices": [
+        "A. Magic Hound",
+        "B. Earth Lusca",
+        "C. FIN7",
+        "D. MuddyWater"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1434",
+      "text": "Which detection strategy is suggested for identifying adversaries using web services as infrastructure according to MITRE ATT&CK?",
+      "choices": [
+        "A. Monitor file hashes of downloads",
+        "B. Analyze network traffic for known C2 patterns",
+        "C. Investigate anomalies in DNS queries",
+        "D. Look for unique characteristics associated with adversary software in response content from internet scans"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1435",
+      "text": "An adversary wants to leverage a device’s camera to capture video recordings. Which MITRE ATT&CK technique would this align with? (ID and Name required)",
+      "choices": [
+        "T1519 - Audio Capture",
+        "T1511 - Screen Capture",
+        "T1512 - Video Capture",
+        "T1056 - Input Capture"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1436",
+      "text": "According to the document, which of the following mitigations would help prevent unauthorized access to a device’s camera on the most recent operating systems?",
+      "choices": [
+        "Install a firewall",
+        "Use Recent OS Version",
+        "Enable multi-factor authentication",
+        "Use device encryption"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1437",
+      "text": "Which specific Android permission must an application hold to access the device's camera as per the MITRE ATT&CK T1512 technique?",
+      "choices": [
+        "android.permission.MICROPHONE",
+        "android.permission.CAMERA",
+        "android.permission.STORAGE",
+        "android.permission.LOCATION"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1438",
+      "text": "Which of the following malware examples is capable of capturing video recordings from a device's camera?",
+      "choices": [
+        "AndroRAT",
+        "Sunbird",
+        "BOULDSPY",
+        "TangleBot"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1439",
+      "text": "During the application vetting process, which Android permission should be closely scrutinized to detect the potential misuse of the device camera? (ID and Name required)",
+      "choices": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1440",
+      "text": "Which of the following procedure examples involved using free trial accounts for server registration?",
+      "choices": [
+        "Earth Lusca",
+        "C0006 (Operation Honeybee)",
+        "G0093 (GALLIUM)",
+        "C0022 (Operation Dream Job)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1441",
+      "text": "Which mitigation strategy is recommended for the technique T1583.004, Acquire Infrastructure: Server?",
+      "choices": [
+        "M1056 (Pre-compromise)",
+        "Detecting during Command and Control",
+        "Use of SSL/TLS certificates",
+        "Monitoring response metadata"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1442",
+      "text": "Which threat group used Bitcoin to purchase servers according to the procedure examples?",
+      "choices": [
+        "G0034 (Sandworm Team)",
+        "G0094 (Kimsuky)",
+        "C0014 (Operation Wocao)",
+        "G1006 (Earth Lusca)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1443",
+      "text": "What is a detection method mentioned for identifying servers provisioned by adversaries according to the technique T1583.004?",
+      "choices": [
+        "Analyzing internet scan response content",
+        "Inspecting user account creations",
+        "Monitoring DNS requests",
+        "Reviewing system logs"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1444",
+      "text": "Which of the following adversaries used the AdjustTokenPrivileges API to gain system-level privilege as part of MITRE ATT&CK technique T1134 (Access Token Manipulation) on the Enterprise platform?",
+      "choices": [
+        "AppleSeed",
+        "BlackCat",
+        "Blue Mockingbird",
+        "Duqu"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1445",
+      "text": "What is the primary purpose of adversaries modifying access tokens in the context of technique T1134 (Access Token Manipulation) on the Windows platform?",
+      "choices": [
+        "Elevating execution context to a higher privilege",
+        "Bypassing operating system kernel protections",
+        "Manipulating user interface interactions",
+        "Hijacking real-time data transmission"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1446",
+      "text": "Which data source should be monitored for detecting changes to AD settings that may modify access tokens according to the MITRE ATT&CK Access Token Manipulation technique (T1134)?",
+      "choices": [
+        "Command",
+        "Process",
+        "User Account",
+        "Active Directory"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1447",
+      "text": "Which Windows API function might an adversary use to create impersonation tokens as described in MITRE ATT&CK technique T1134 (Access Token Manipulation)?",
+      "choices": [
+        "LogonUser",
+        "OpenProcess",
+        "AdjustTokenPrivileges",
+        "CreateProcess"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1448",
+      "text": "Which threat group has utilized JuicyPotato to abuse the SeImpersonate token privilege for privilege escalation as documented in MITRE ATT&CK technique T1134?",
+      "choices": [
+        "Blue Mockingbird",
+        "C0135",
+        "APT41",
+        "BlackCat"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1449",
+      "text": "What GPO configuration setting can help mitigate the risk of access token manipulation (T1134) on a local system according to MITRE ATT&CK?",
+      "choices": [
+        "Enable system audit policy",
+        "Limit who can create process level tokens",
+        "Disable administrative shares",
+        "Restrict access to remote desktop services"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1450",
+      "text": "Within the MITRE ATT&CK framework targeting the tactic of Resource Development, which adversary group has utilized VPS hosting providers in targeting their victims? (ID: T1583.003 - Acquire Infrastructure: Virtual Private Server)",
+      "choices": [
+        "G0007 - APT28",
+        "G0001 - Axiom",
+        "C0032 - TEMP.Veles",
+        "G0035 - Dragonfly"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1451",
+      "text": "In the context of the technique Acquire Infrastructure: Virtual Private Server, which data source is relevant for detecting the presence of adversary-controlled VPS infrastructure? (ID: T1583.003 - Acquire Infrastructure: Virtual Private Server)",
+      "choices": [
+        "DS0017 - Network Traffic",
+        "DS0035 - Internet Scan",
+        "DS0024 - Application Log",
+        "DS0009 - DNS Records"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1452",
+      "text": "Why might adversaries prefer to acquire VPSs from cloud service providers with minimal registration information requirements? (ID: T1583.003 - Acquire Infrastructure: Virtual Private Server)",
+      "choices": [
+        "It allows them to access higher bandwidth",
+        "It ensures their operations have better physical security",
+        "It enables more anonymous acquisition of infrastructure",
+        "It provides better scalability for their needs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1453",
+      "text": "Which adversary group has used custom DNS servers to send commands to compromised hosts via TXT records, based on Technique ID T1583.002 in the MITRE ATT&CK framework for Resource Development?",
+      "choices": [
+        "Axiom",
+        "HEXANE",
+        "APT28",
+        "The Dukes"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1454",
+      "text": "In the context of Technique ID T1583.002 (Acquire Infrastructure: DNS Server) from the MITRE ATT&CK, which of the following mitigation IDs indicates that the technique cannot be easily mitigated with preventive controls and why?",
+      "choices": [
+        "M1020, because the modifications are not easily detectable.",
+        "M1056, because the behaviors occur outside the scope of enterprise defenses.",
+        "M1045, because it relates more to infiltration prevention.",
+        "M1060, as the resource acquisition happens before the compromise."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1455",
+      "text": "Adversaries may acquire domains that can be used during targeting to aid in which of the following activities?",
+      "choices": [
+        "Phishing",
+        "Code Injection",
+        "Privilege Escalation",
+        "Denial of Service"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1456",
+      "text": "Which adversary technique ID pertains to using domains for targeting purposes?",
+      "choices": [
+        "T1583.001",
+        "T1082",
+        "T1071",
+        "T1027"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1457",
+      "text": "Within MITRE ATT&CK, adversaries may acquire domains to create look-alike or spoofed domains to aid in which type of attack?",
+      "choices": [
+        "Watering Hole Attack",
+        "SQL Injection",
+        "Privilege Escalation",
+        "System Reboot"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1458",
+      "text": "MITRE ATT&CK mentions that domains can be dynamically generated for specific purposes. These purposes can include which of the following?",
+      "choices": [
+        "One-time, single use domains",
+        "Backup storage",
+        "Public file sharing",
+        "Vulnerability patching"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1459",
+      "text": "For monitoring purposes, which data source does MITRE ATT&CK suggest for detecting purchased domains?",
+      "choices": [
+        "Domain Name System logs",
+        "Action Logs",
+        "Process Monitoring",
+        "Packet Capture"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1460",
+      "text": "What mitigative action does MITRE ATT&CK suggest to deter adversaries from creating typosquatting domains?",
+      "choices": [
+        "Register similar domains to your own",
+        "Implement Advanced Endpoint Protection",
+        "Enable Multifactor Authentication",
+        "Use Full Disk Encryption"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1461",
+      "text": "What is a potential advantage for adversaries to acquire infrastructure that blends in with normal traffic?",
+      "choices": [
+        "Allows for rapid provisioning",
+        "Enables the use of SSL/TLS encryption",
+        "Makes it difficult to physically tie back to them",
+        "Supports their exploit development processes"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1462",
+      "text": "Which data source is suggested for detecting newly acquired domains by adversaries?",
+      "choices": [
+        "Email Content Analysis",
+        "Passive DNS",
+        "Internet Scan Response Content",
+        "Active Directory Logs"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1463",
+      "text": "What is a primary reason why the technique \"Acquire Infrastructure\" is challenging to mitigate with preventive controls?",
+      "choices": [
+        "It involves the use of encryption",
+        "It is conducted outside the scope of enterprise defenses",
+        "It requires significant computational resources",
+        "It uses sophisticated malware"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1464",
+      "text": "What technique would you use to detect infrastructure provisioned by adversaries based on SSL/TLS negotiation features?",
+      "choices": [
+        "Response Metadata",
+        "Domain Registration",
+        "Passive DNS",
+        "Internet Scan Response Content"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1465",
+      "text": "During the 2016 Ukraine Electric Power Attack, which software was trojanized to add a layer of persistence for Industroyer?",
+      "choices": [
+        "A. Windows Calculator",
+        "B. Windows Media Player",
+        "C. Windows Notepad",
+        "D. Windows Explorer"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1466",
+      "text": "Which of the following groups has modified legitimate binaries and scripts for Pulse Secure VPNs to achieve persistent access?",
+      "choices": [
+        "A. APT3",
+        "B. APT5",
+        "C. APT10",
+        "D. APT28"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1467",
+      "text": "In the context of MITRE ATT&CK, what does Technique ID T1554 specifically involve?",
+      "choices": [
+        "A. Establishing remote access using stolen credentials",
+        "B. Modifying host software binaries for persistence",
+        "C. Gaining access through unpatched vulnerabilities",
+        "D. Using social engineering to compromise emails"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1468",
+      "text": "What type of technique did the threat actor S0595 (ThiefQuest) use to maintain the appearance of normal behavior while maintaining persistent access?",
+      "choices": [
+        "A. DLL Injection",
+        "B. IAT Hooking",
+        "C. Prepending a copy of itself to executables",
+        "D. Using PowerShell scripts"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1469",
+      "text": "Which of the following mitigations is recommended for preventing modifications to client software binaries?",
+      "choices": [
+        "A. Implement multi-factor authentication",
+        "B. Conduct regular penetration testing",
+        "C. Ensure code signing for application binaries",
+        "D. Use sandbox environment for testing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1470",
+      "text": "Which advanced persistent threat (APT) group has used residential proxies, including Azure Virtual Machines, according to the procedure examples for ID T1586.003 Compromise Accounts: Cloud Accounts?",
+      "choices": [
+        "A. APT29",
+        "B. APT33",
+        "C. APT28",
+        "D. APT41"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1471",
+      "text": "What mitigation strategy is identified for technique ID T1586.003 Compromise Accounts: Cloud Accounts in the provided text?",
+      "choices": [
+        "A. Implement strong anti-virus solutions.",
+        "B. Use multi-factor authentication.",
+        "C. Pre-compromise (M1056)",
+        "D. Conduct regular employee training."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1472",
+      "text": "Regarding MITRE ATT&CK technique T1586.002 (Compromise Accounts: Email Accounts), which tactic does it belong to?",
+      "choices": [
+        "Persistence",
+        "Credential Access",
+        "Initial Access",
+        "Resource Development"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1473",
+      "text": "Which group has been reported to compromise email accounts to take control of dormant accounts according to MITRE ATT&CK technique T1586.002?",
+      "choices": [
+        "APT28",
+        "IndigoZebra",
+        "APT29",
+        "Magic Hound"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1474",
+      "text": "Considering MITRE ATT&CK technique T1586.002 (Compromise Accounts: Email Accounts), what is a potential mitigation challenges for this technique listed under Preventive Controls?",
+      "choices": [
+        "Use of Multi-Factor Authentication (MFA)",
+        "Encryption of Email Data",
+        "Pre-compromise measures",
+        "Regular Patching"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1475",
+      "text": "Using MITRE ATT&CK for Enterprise, attackers in the tactic 'Resource Development' may use various methods for compromising social media accounts. Which technique ID and name correspond to this action?",
+      "choices": [
+        "T1585.002 - Establish Accounts: Email Accounts",
+        "T1586.001 - Compromise Accounts: Social Media Accounts",
+        "T1078.001 - Valid Accounts: Default Accounts",
+        "T1071.001 - Application Layer Protocol: Web Protocols"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1476",
+      "text": "In the context of MITRE ATT&CK for Enterprise, which group is known to have used credential capture webpages to compromise legitimate social media accounts?",
+      "choices": [
+        "TA0042 - TTPLabels",
+        "G0065 - Leviathan",
+        "G0010 - APT33",
+        "G0034 - Sandworm Team"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1477",
+      "text": "Which of the following methods is NOT typically used by adversaries to compromise social media accounts under the technique T1586.001?",
+      "choices": [
+        "Phishing for Information",
+        "Brute forcing credentials",
+        "Purchasing credentials from third-party sites",
+        "Exploiting zero-day vulnerabilities in social media platforms"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1478",
+      "text": "Regarding detection of the technique T1586.001 in the MITRE ATT&CK framework for Enterprise, which data source and component would be best for identifying suspicious social media activity?",
+      "choices": [
+        "DS0017 - Command",
+        "DS0029 - Network Traffic",
+        "DS0021 - Persona",
+        "DS0039 - System Time"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1479",
+      "text": "Based on MITRE ATT&CK Technique ID: T1586, which mitigation approach cannot easily prevent this technique?",
+      "choices": [
+        "M1075: Restrict Web-Based Content",
+        "M1056: Pre-compromise",
+        "M1047: Audit",
+        "M1027: Password Policies"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1480",
+      "text": "In the context of MITRE ATT&CK for the technique \"Compromise Accounts\" (ID: T1586), which data source would most likely help detect anomalies in network traffic?",
+      "choices": [
+        "DS0017: Credentials",
+        "DS0009: File Monitoring",
+        "DS0021: Persona",
+        "DS0029: Network Traffic"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1481",
+      "text": "Considering the platform 'None' for MITRE ATT&CK T1586, what is one of the primary methods adversaries use for compromising accounts?",
+      "choices": [
+        "Firewall Configuration Alteration",
+        "Malware Injections",
+        "Phishing for Information",
+        "Command and Control Server Configuration"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1482",
+      "text": "**According to MITRE ATT&CK (Enterprise), which of the following techniques is used by adversaries to duplicate and impersonate tokens?**",
+      "choices": [
+        "Using SetThreadToken on a newly created thread**",
+        "Using CreateProcessAsUserW on the existing thread**",
+        "Using DuplicateTokenEx on an existing token**",
+        "Using CreateProcessWithTokenW to initiate network logon sessions**"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1483",
+      "text": "**Which of the following mitigations can significantly reduce the risk of token manipulation by limiting who can create tokens according to MITRE ATT&CK Enterprise framework?**",
+      "choices": [
+        "Privileged Account Management (M1026)**",
+        "Network Segmentation (M1030)**",
+        "Software Configuration (M1042)**",
+        "Behavioral Analytics (M1043)**"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1484",
+      "text": "**What API call usage should be monitored to detect possible token manipulation activities, as per the detection techniques in MITRE ATT&CK framework?**",
+      "choices": [
+        "OpenProcess and CreateRemoteThread**",
+        "CreateFile and WriteFile**",
+        "DuplicateToken and ImpersonateLoggedOnUser**",
+        "VirtualAlloc and VirtualFree**"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1485",
+      "text": "**Which group has utilized CVE-2015-1701 to achieve privilege escalation by accessing and copying the SYSTEM token as noted in the provided document?**",
+      "choices": [
+        "G0007 (APT28)**",
+        "G0061 (FIN8)**",
+        "S0367 (Emotet)**",
+        "S0603 (Stuxnet)**"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1486",
+      "text": "**Which malware leverages the NtImpersonateThread API call to impersonate the main thread of CExecSvc.exe, according to MITRE ATT&CK Enterprise framework?**",
+      "choices": [
+        "S1011 (Tarrask)**",
+        "S0140 (Shamoon)**",
+        "S0962 (Siloscape)**",
+        "S0439 (Okrum)**"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1487",
+      "text": "In the context of MITRE ATT&CK technique T1059.010 for Enterprise, which of the following describes a relevant use by adversaries for malicious activities?",
+      "choices": [
+        "Executing payloads and modular malware like keyloggers with custom AutoIT scripts",
+        "Embedding AutoIT scripts in PDF documents to download malicious payloads",
+        "Using AutoHotKey scripts in Linux systems to automate benign tasks",
+        "Utilizing AutoHotKey for legitimate, automated administrative tasks on servers"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q1488",
+      "text": "Which mitigation technique, according to MITRE ATT&CK technique T1059.010, is effective in preventing the execution of AutoIT and AutoHotKey scripts?",
+      "choices": [
+        "M1045: Software Configuration",
+        "M1018: User Account Control",
+        "M1038: Execution Prevention",
+        "M1040: Behavior Analysis"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1489",
+      "text": "Which of these MITRE ATT&CK data components is essential for detecting suspicious usage of AutoHotKey and AutoIT scripts by monitoring command executions?",
+      "choices": [
+        "DS0034: Network Traffic",
+        "DS0022: File Modification",
+        "DS0017: Command Execution",
+        "DS0008: File Access"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1490",
+      "text": "In the MITRE ATT&CK technique T1059.009 (Command and Scripting Interpreter: Cloud API), which of the following tools is associated with APT29's usage for accessing APIs in Azure and M365 environments?",
+      "choices": [
+        "Pacu",
+        "Azure Cloud Shell",
+        "AADInternals PowerShell Modules",
+        "AWS CLI"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1491",
+      "text": "Which of the following is a recommended mitigation (M1038) to prevent abuse of cloud APIs through PowerShell CmdLets according to MITRE ATT&CK technique T1059.009 (Command and Scripting Interpreter: Cloud API)?",
+      "choices": [
+        "Disabling command line access",
+        "Using application control",
+        "Implementing Least Privilege",
+        "Using Multi-Factor Authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1492",
+      "text": "Which of the following data sources is recommended for reviewing command history to detect suspicious activity for MITRE ATT&CK technique T1059.009 (Command and Scripting Interpreter: Cloud API)?",
+      "choices": [
+        "Vulnerability Scan",
+        "Logon Session",
+        "Network Traffic",
+        "Command Execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1493",
+      "text": "Which MITRE ATT&CK technique involves the abuse of command and scripting interpreters on network devices for malicious purposes?",
+      "choices": [
+        "Command and Scripting Interpreter: PowerShell (T1059.001)",
+        "Command and Scripting Interpreter: Network Device CLI (T1059.008)",
+        "Command and Scripting Interpreter: AppleScript (T1059.002)",
+        "Command and Scripting Interpreter: Python (T1059.006)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1494",
+      "text": "To limit actions administrators can perform and detect unauthorized use on network devices, which mitigation strategy should be utilized?",
+      "choices": [
+        "User Account Management (M1018)",
+        "Execution Prevention (M1038)",
+        "Privileged Account Management (M1026)",
+        "Network Segmentation (M1048)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1495",
+      "text": "When detecting unauthorized modifications on a network device's configuration via the CLI, which MITRE ATT&CK data source and component should be reviewed?",
+      "choices": [
+        "Network Traffic Content | Network Traffic",
+        "Configuration File Access | File Access",
+        "Command | Command Execution",
+        "Network Traffic Flow | Network Traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1496",
+      "text": "Which component is integrated with Windows Script engine for interpreting JScript?",
+      "choices": [
+        "Java Runtime Environment",
+        "Component Object Model",
+        "PyScript Engine",
+        "AppleScript Framework"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1497",
+      "text": "What scripting language is part of Apple’s Open Scripting Architecture (OSA)?",
+      "choices": [
+        "PyScript",
+        "RShell",
+        "JScript",
+        "JavaScript for Automation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q1498",
+      "text": "Which procedure example is known for using JavaScript to inject into the victim's browser?",
+      "choices": [
+        "APT32",
+        "Avaddon",
+        "Bundlore",
+        "KOPILUWAK"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q1499",
+      "text": "During which campaign did APT41 deploy JScript web shells on compromised systems?",
+      "choices": [
+        "C0015",
+        "C0017",
+        "Operation Dust Storm",
+        "JSS Loader"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q1500",
+      "text": "Which mitigation technique involves enabling Attack Surface Reduction (ASR) rules on Windows 10?",
+      "choices": [
+        "M1040",
+        "M1042",
+        "M1038",
+        "M1021"
+      ],
+      "answer": 0
+    }
+  ]
+}

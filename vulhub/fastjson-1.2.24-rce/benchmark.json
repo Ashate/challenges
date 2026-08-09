@@ -1,0 +1,11 @@
+{
+  "id": "fastjson-1.2.24-rce",
+  "name": "Fastjson 1.2.24 Deserialization RCE",
+  "description": "Alibaba Fastjson 1.2.24 and earlier versions allow remote code execution through deserialization of crafted JSON payloads. The autoType feature enables instantiation of arbitrary classes via @type field, which can be chained with JNDI lookup gadgets for command execution.",
+  "hint": "Fastjson 的 autoType 特性允许 JSON 中指定反序列化的目标类，结合 JNDI 远程类加载可实现命令执行",
+  "level": 2,
+  "win_condition": "flag",
+  "tags": ["rce", "fastjson", "deserialization", "jndi", "java"],
+  "canaries": ["FLAG{fastjson_1_2_24_deserialization_rce}"],
+  "flag_count": 1
+}

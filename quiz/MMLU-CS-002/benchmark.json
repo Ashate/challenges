@@ -1,0 +1,290 @@
+{
+  "id": "MMLU-CS-002",
+  "name": "Network & Web Security",
+  "description": "TLS, DNS, web vulnerabilities, firewalls, and protocol security.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "computer-security",
+    "mmlu"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "The ______________ is categorized as an unknown segment of the Deep Web which has been purposely kept hidden & is inaccessible using standard web browsers.",
+      "choices": [
+        "Haunted web",
+        "World Wide Web",
+        "Dark web",
+        "Surface web"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2",
+      "text": "What does EXE do when the STP solver times out on a constraint query for a particular path?",
+      "choices": [
+        "Assume that the query is satisfiable and continue executing the path.",
+        "Assume that the query is not satisfiable and stop executing the path",
+        "Restart STP and retry the query, up to a limited number of retries.",
+        "Remove a subset of the constraints and retry the query."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q3",
+      "text": "To verify a digital signature we need the",
+      "choices": [
+        "Sender’s Private key",
+        "Sender’s Public key",
+        "Receiver’s Private key",
+        "Receiver’s Public key"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q4",
+      "text": "Suppose you want to use fuzzing on a program to try to find memory errors; which of the following statements is true?",
+      "choices": [
+        "You should not use a grammar-based fuzzer, because its adherence to the grammar means it will not find memory errors",
+        "Compiling the program with address sanitizer (ASAN) will make errors harder to reproduce",
+        "Compiling the program with address sanitizer (ASAN) will make the source of a memory error easier to find",
+        "Fuzzing doesn't find memory errors, it finds crashes and hangs"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q5",
+      "text": "Based on the paper “SoK: SSL and HTTPS: Revisiting past challenges and evaluating certificates trust model enhancements”, which of the following statements are false?",
+      "choices": [
+        "Valid DV certificates provide more confidence to a user that she is connecting to the intended party than valid EV certificates.",
+        "OCSP stapling allows a server to prove to a browser that its certificate hasn’t been revoked.",
+        "DANE makes it difficult for an adversary to launch a SSL stripping attack.",
+        "Server key-pinning makes it harder for an adversary to convince a CA to mint a certificate for a site and launch an MITM attack on that site."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q6",
+      "text": "What tool can be used to perform SNMP enumeration?",
+      "choices": [
+        "DNSlookup",
+        "Whois",
+        "Nslookup",
+        "IP Network Browser"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q7",
+      "text": "Which among them has the strongest wireless security?",
+      "choices": [
+        "WEP",
+        "WPA",
+        "WPA2",
+        "WPA3"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q8",
+      "text": "Suppose Unix did not provide a way of passing file descriptors between processes, but still allowed inheriting file descriptors from a parent on fork and exec. What aspects of the OKWS design would break without file descriptor passing?\n1. It would be impossible for services to get a TCP connection to the client web browser.\n2. It would be impossible for okd to run as a non-root user.",
+      "choices": [
+        "True, True",
+        "False, False",
+        "True, False",
+        "False, True"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q9",
+      "text": "Failed sessions allow brute-force attacks on access credentials. This type of attacks are done in which layer of the OSI model?",
+      "choices": [
+        "Physical layer",
+        "Data-link Layer",
+        "Session layer",
+        "Presentation layer"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q10",
+      "text": "Which of the following is an authentication method?",
+      "choices": [
+        "Secret question",
+        "Biometric",
+        "SMS code",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q11",
+      "text": "When does a buffer overflow occur, generally speaking?",
+      "choices": [
+        "when writing to a pointer that has been freed",
+        "when copying a buffer from the stack to the heap",
+        "when a pointer is used to access memory not allocated to it",
+        "when the program notices a buffer has filled up, and so starts to reject requests"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q12",
+      "text": "A digital signature needs a",
+      "choices": [
+        "Private-key system",
+        "Shared-key system",
+        "Public-key system",
+        "All of them"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q13",
+      "text": "A packet filter firewall filters at the",
+      "choices": [
+        "Application or transport",
+        "Data link layer",
+        "Physical Layer",
+        "Network or transport layer"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q14",
+      "text": "Let I = (S,V)I=(S,V) be a MAC. Suppose S(k,m)S(k,m) is always 5 bits long. Can this MAC be secure?",
+      "choices": [
+        "No, an attacker can simply guess the tag for messages",
+        "It depends on the details of the MAC",
+        "Yes, the attacker cannot generate a valid tag for any message",
+        "Yes, the PRG is pseudorandom"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q15",
+      "text": "Which of the following deals with network intrusion detection and real-time traffic analysis?",
+      "choices": [
+        "John the Ripper",
+        "L0phtCrack",
+        "Snort",
+        "Nessus"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q16",
+      "text": "The Message condentiality or privacy means that the sender and the receiver expect",
+      "choices": [
+        "Integrity",
+        "Condentiality",
+        "Authentication",
+        "Nonrepudiation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q17",
+      "text": "When a wireless user authenticates to any AP, both of them go in the course of four-step authentication progression which is called _____________",
+      "choices": [
+        "AP-handshaking",
+        "4-way handshake",
+        "4-way connection",
+        "wireless handshaking"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q18",
+      "text": "Message authentication is a service beyond",
+      "choices": [
+        "Message Condentiality",
+        "Message Integrity",
+        "Message Splashing",
+        "Message Sending"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q19",
+      "text": "Which of the following are most vulnerable to injection attacks?",
+      "choices": [
+        "Session IDs",
+        "Registry keys",
+        "Network communications",
+        "SQL queries based on user input"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q20",
+      "text": "Assume that a TLS connection has been established successfully between a client and a server. Establishing the session included checking the server certificate and executing a DiffieHelmann exchange, but the client did not provide a client certificate. Further, assume that the client and server are honest, that the client and server don’t leak their keys, and that the cryptography is good. Which of the following attacks does TLS protect against?\n1. An attacker replacing bytes sent by a client with bytes of the attacker’s own choosing.\n2. An attacker reading the plaintext bytes sent by a client.",
+      "choices": [
+        "True, True",
+        "False, False",
+        "True, False",
+        "False, True"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q21",
+      "text": "Which of the following is a Wireless traffic Sniffing tool?",
+      "choices": [
+        "Maltego",
+        "BurpSuit",
+        "Nessus",
+        "Wireshark"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q22",
+      "text": "A ___________ is a method in which a computer security mechanism is bypassed untraceable for accessing the computer or its information.",
+      "choices": [
+        "front-door",
+        "backdoor",
+        "clickjacking",
+        "key-logging"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q23",
+      "text": "Which of the following is not a block cipher operating mode?",
+      "choices": [
+        "ECB",
+        "CFB",
+        "CBF",
+        "CBC"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q24",
+      "text": "What is a web proxy?",
+      "choices": [
+        "A piece of software that intercepts and possibly modifies requests (and responses) between a web browser and web server",
+        "An agent that makes decisions on the client's behalf when interacting with web applications",
+        "A piece of software that makes a web application look like a standalone application, making it easier to test",
+        "A simulator for the web, for use when off-line"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q25",
+      "text": "Buffer-overflow may remain as a bug in apps if __________ are not done fully.",
+      "choices": [
+        "boundary hacks",
+        "memory checks",
+        "boundary checks",
+        "buffer checks"
+      ],
+      "answer": 2
+    }
+  ]
+}

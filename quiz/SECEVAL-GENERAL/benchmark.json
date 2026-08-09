@@ -1,0 +1,268 @@
+{
+  "id": "SECEVAL-GENERAL",
+  "name": "SecEval: General",
+  "description": "Security evaluation questions on General from SecEval benchmark.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "seceval",
+    "general"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "In the context of authentication factors, 'something you have' can be represented by various methods. Which of the following does NOT typically fall under the 'something you have' category?",
+      "choices": [
+        "A USB hardware token that generates one-time passwords",
+        "A mobile app that receives push notifications for authentication",
+        "A smart card that stores a user's certificates for identification",
+        "A user's unique fingerprint used for biometric authentication"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2",
+      "text": "Why is padding not required for the last block of plaintext in CTR mode as opposed to CBC mode when encrypting messages that are not a multiple of the block size?",
+      "choices": [
+        "CTR mode uses a stream cipher approach, avoiding the need for input to be a fixed block size.",
+        "CTR mode generates a one-time pad that can be truncated without compromising the encryption.",
+        "CTR mode includes an internal padding mechanism that automatically adjusts block sizes.",
+        "CTR mode encryption strength is not dependent on the block size, so padding is optional."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q3",
+      "text": "A cryptosystem is designed such that when Bob receives a message from Alice, he verifies the integrity and authenticity using a tag that Alice generates. An adversary, Mallory, has managed to intercept and modify the message, but Bob's verification process fails to detect the tampering. What could be the reason for the failure of Bob's verification process?",
+      "choices": [
+        "Mallory possesses the same key Alice uses and successfully generates a valid tag for the tampered message.",
+        "The cryptosystem lacks deniability, which allows Mallory to convincingly argue that the message originated from Bob.",
+        "Alice's original tag was generated using a weak encryption algorithm that Mallory could easily reverse-engineer.",
+        "Bob is using an outdated verification mechanism that does not account for modern tampering techniques employed by Mallory."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q4",
+      "text": "Alice and Bob are setting up a secure communication using the Diffie-Hellman key exchange protocol. They have agreed on the public parameters p and g, where p is a large prime and g is a generator. Alice chooses a secret value a and computes A=g^a mod p, which she sends to Bob. Bob chooses his secret value b and sends back B=g^b mod p. How should Alice and Bob proceed to ensure both end up with the same shared secret key?",
+      "choices": [
+        "Alice computes K=B^a mod p, and Bob computes K=A^b mod p, resulting in the same shared secret key K.",
+        "Alice and Bob exchange their secret values a and b, then individually compute K=g^ab mod p.",
+        "Alice computes K=A^b mod p, and Bob computes K=B^a mod p, and they use these different keys for encryption and decryption respectively.",
+        "Alice and Bob publicly announce the computed values A and B, and an external trusted third party calculates K=g^(ab) mod p and sends it to both."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q5",
+      "text": "In a scenario where a cryptosystem utilizes a pRNG to sequentially generate secret keys and then initialization vectors (IVs) for encryption operations, what would be a potential consequence of using a pRNG that lacks rollback resistance?",
+      "choices": [
+        "It would enhance the performance of the cryptosystem due to simpler algorithmic requirements.",
+        "It would make the pRNG's output more predictable, facilitating cryptographic operations.",
+        "It could allow an attacker to deduce the value of the secret key if they compromise the internal state after IV generation.",
+        "It would increase the cryptographic strength of the IVs generated after the secret keys."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q6",
+      "text": "In a cryptographic system, security is paramount. An encryption method is considered insecure if an adversary can easily recover the original message without knowledge of the secret key. Given this premise, which of the following reasons justify the insecurity of the Caesar cipher?",
+      "choices": [
+        "The Caesar cipher relies on a short fixed key space that can be exhaustively searched.",
+        "The Caesar cipher's algorithm for encryption and decryption is not publicly known, leading to obscurity but not security.",
+        "The Caesar cipher uses quantum-resistant algorithms that are not yet proven to be secure against classical computers.",
+        "The Caesar cipher maintains secure communication, as long as the shift value remains undiscovered by an unauthorized party."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q7",
+      "text": "In a system that employs XOR-based symmetric-key encryption, a developer has written the following code snippet to manipulate a bit sequence (represented as 'y'). Identify which operation will not result in the expected outcome based on the properties of XOR.",
+      "choices": [
+        "y = y ^ 0; // Expectation: y remains unchanged.",
+        "y = y ^ y; // Expectation: y becomes all 0s.",
+        "y = y ^ 1; // Expectation: All bits of y are flipped.",
+        "y = (y ^ 1) ^ 1; // Expectation: y becomes all 1s."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q8",
+      "text": "Why would a decentralized digital cryptocurrency like Bitcoin ensure that a user cannot impersonate another and perform transactions as them, without involving a centralized authority?",
+      "choices": [
+        "Because a decentralized system inherently prevents any form of identity theft or impersonation.",
+        "Because Bitcoin uses cryptographic techniques to verify the identity of users and the authenticity of transactions.",
+        "Because all users must physically meet to confirm each other's identities before transacting.",
+        "Because a centralized cryptocurrency exchange monitors and prevents unauthorized access to user accounts."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q9",
+      "text": "In a system where confidentiality is as crucial as integrity and authenticity, which MAC function design would be most appropriate?",
+      "choices": [
+        "A MAC function that includes a part of the plaintext within the MAC to increase complexity.",
+        "A MAC function that uses a deterministic algorithm based on a secret key without including the plaintext.",
+        "A MAC function that tags each message with a random number before applying the MAC algorithm.",
+        "A MAC function that applies multiple rounds of hashing to the message before generating the MAC."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q10",
+      "text": "In what scenario is the use of cryptographic hashes particularly inappropriate?",
+      "choices": [
+        "Verifying that a downloaded file has not been tampered with during transmission.",
+        "Decrypting a message to reveal its original contents.",
+        "Confirming that a message has not been altered since a digital signature was computed.",
+        "Ensuring that a password is not stored in plain text in a database."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q11",
+      "text": "Why are digital signatures critical in the Bitcoin security model for ensuring that a user's identity cannot be impersonated by an attacker?",
+      "choices": [
+        "Digital signatures are crucial because they are unforgeable and an attacker without the secret signing key cannot create a signature that validates with the original public key.",
+        "Digital signatures are essential because they rely on a centralized authority to certify the identity of users, which prevents impersonation.",
+        "Digital signatures provide security solely because they encrypt messages, which means only the intended recipient can read the message content.",
+        "Digital signatures are not necessary for security because all transactions are public, and the community can identify malicious behavior."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q12",
+      "text": "A company discovers that the secret key for their cryptosystem has been potentially leaked. According to Kerckhoff’s Principle, what should the company's immediate response be to maintain the security of their system?",
+      "choices": [
+        "Re-write the encryption and decryption algorithms from scratch",
+        "Inform all users to cease using the system immediately",
+        "Change the secret key(s) and inform relevant parties to update their keys",
+        "Keep using the same key, assuming the complexity of the algorithm will prevent breaches"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q13",
+      "text": "A company is considering using the Caesar cipher to encrypt their internal communication. As a security consultant, you are required to assess the suitability of the Caesar cipher for this purpose. Which of the following points would be valid in your security assessment report?",
+      "choices": [
+        "The Caesar cipher provides a high level of security due to its simplicity and ease of use.",
+        "The Caesar cipher's fixed key space of 26 possible shifts makes it vulnerable to brute-force attacks.",
+        "The Caesar cipher is suitable for real-time communication because it requires minimal computational resources.",
+        "The Caesar cipher ensures message confidentiality, as long as the employees do not disclose the shift value to outsiders."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q14",
+      "text": "In the context of Message Authentication Codes (MACs), why is it necessary for MACs to be deterministic? (Select all that apply.)",
+      "choices": [
+        "Determinism ensures that the MAC value is unique for each different message, preventing replay attacks.",
+        "A deterministic MAC ensures that the same message and key will always produce the same MAC value, necessary for the receiver to verify the message's integrity.",
+        "Determinism is required to make the MAC computation process faster and more efficient.",
+        "The deterministic nature of MACs allows for the use of multiple keys for the same message to produce different MAC values for added security."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q15",
+      "text": "Which of the following statements is incorrect regarding the Diffie-Hellman key exchange protocol?",
+      "choices": [
+        "The public parameters p and g do not need to be chosen for each key exchange as they are often hardcoded or defined in a standard.",
+        "Alice and Bob use their private values to compute a shared secret key that cannot be efficiently deduced by an eavesdropper.",
+        "The shared secret key generated through the Diffie-Hellman key exchange is directly used for a symmetric-key cryptosystem without any further processing.",
+        "The fastest known algorithms for an eavesdropper to solve the Diffie-Hellman problem take exponential time in the number of bits of the prime p."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q16",
+      "text": "Imagine you are designing a Secure Enclave similar to Apple's, and you are concerned about the potential security risks if the device's electronics are operated outside their safe voltage and frequency envelope. Which of the following features would you incorporate to mitigate these risks, based on Apple's Secure Enclave design?",
+      "choices": [
+        "A monitoring circuit with a larger operating envelope than the rest of the Secure Enclave to detect illegal operating points and halt Secure Enclave clocks.",
+        "An external voltage regulator that adjusts the power supply to the Secure Enclave according to the device's overall power consumption.",
+        "A software-based watchdog timer that restarts the Secure Enclave if the operating envelope is exceeded.",
+        "A built-in battery backup to maintain the Secure Enclave's operation even when the device's power fluctuates beyond acceptable levels."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q17",
+      "text": "In the paint analogy of Diffie-Hellman key exchange, identify the component that is NOT necessary for Alice and Bob to successfully establish a shared secret.",
+      "choices": [
+        "Alice’s and Bob’s agreement on a publicly-known common color to mix with their secret colors before exchange.",
+        "The ability for Alice and Bob to send their mixed colors securely without Eve being able to intercept and see them.",
+        "Alice and Bob each having their own secret color which they do not reveal to each other or to Eve.",
+        "A method for Alice and Bob to remove the publicly-known common color from the mixed colors they receive from each other."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q18",
+      "text": "In which of the following scenarios would the use of cryptographic hash functions NOT be suitable for ensuring the integrity of a downloaded file? Select all that apply.",
+      "choices": [
+        "The adversary is capable of tampering with the hash value provided by the file's creators along with the file itself.",
+        "The file's creators have only published the hash value on their secure official website, which is known to be free from adversarial control.",
+        "The hash function used by the file's creators is known to be fast and efficient, making it easy to compute hashes for large files.",
+        "The adversary has a realistic amount of computing power, which is insufficient to break the properties of the cryptographic hash function in use."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q19",
+      "text": "In a security game described to evaluate the robustness of a MAC algorithm, Georgia is an adversary interacting with Reginald, who uses a secure MAC algorithm with a randomly chosen key K. Which of the following statements is true about Georgia's capabilities in this game?",
+      "choices": [
+        "Georgia can win the game by observing the MAC tag on a set of messages and using it to forge a valid tag for a new message.",
+        "Georgia can win the game if she asks a verification query for a message that appeared in a previous generation query.",
+        "Georgia cannot win the game by choosing a set of messages, obtaining their MACs, and using these to forge a MAC for a new message.",
+        "Georgia can win the game if she successfully forges a tag for an unseen message without any interaction with Reginald."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q20",
+      "text": "When using RSA keys in an Android Keymaster for unpadded signing operations, which of the following measures should be taken if the provided data is shorter than the key's length?",
+      "choices": [
+        "The data should be left zero-padded on the right before signing.",
+        "The data should be left zero-padded on the left before signing.",
+        "The operation should proceed without padding, as the input length is irrelevant.",
+        "The data should be rejected and the operation aborted, as RSA keys require data to match their length exactly."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q21",
+      "text": "In designing a new cryptosystem for a secure communication application, which of the following should be the top priority to keep secret from potential attackers based on Kerckhoff's Principle?",
+      "choices": [
+        "The underlying mathematical problems on which the encryption is based",
+        "The source code of the encryption and decryption algorithms",
+        "The secret key(s) used in the encryption and decryption process",
+        "The documentation detailing the use and limitations of the cryptosystem"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q22",
+      "text": "Alice and Bob are using various cryptographic measures to secure their communication. Identify the measure that would not effectively counter the specified type of adversary:",
+      "choices": [
+        "Using end-to-end encryption to prevent Eve from eavesdropping on the message content.",
+        "Implementing a public key infrastructure (PKI) to prevent Mallory from impersonating Alice or Bob.",
+        "Relying solely on a network-level firewall to prevent Mallory from altering the messages in transit.",
+        "Employing a secure key exchange protocol to prevent Eve from discovering the encryption keys."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q23",
+      "text": "Alice wants to send a sensitive document to Bob over an insecure channel. She desires to ensure that the document remains private, is not tampered with, and that Bob can confirm the document was indeed sent by her. Which set of cryptographic properties should Alice ensure are implemented to achieve her goals?",
+      "choices": [
+        "Confidentiality to prevent Eve from reading the document, and integrity to ensure that the document is not altered during transmission.",
+        "Authenticity to confirm the sender's identity, and deniability to prevent Bob from proving the origin of the document to others.",
+        "Integrity to prevent tampering with the document, and authenticity to verify the sender's identity to Bob.",
+        "Confidentiality to keep the document secret, integrity to detect any tampering, and authenticity to confirm Alice as the sender."
+      ],
+      "answer": 3
+    }
+  ]
+}

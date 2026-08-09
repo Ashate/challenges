@@ -1,0 +1,290 @@
+{
+  "id": "MMLU-CS-004",
+  "name": "Applied Cryptography & Privacy",
+  "description": "Encryption schemes, digital signatures, authentication, and privacy mechanisms.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "computer-security",
+    "mmlu"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "Which Nmap scan is does not completely open a TCP connection?",
+      "choices": [
+        "SYN stealth scan",
+        "TCP connect",
+        "XMAS tree scan",
+        "ACK scan"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "text": "Based on the paper “Click Trajectories: End-to-End Analysis of the Spam Value Chain”, which of the following statements are true? “Spammers” here refer to operators of various parts of the “spam value chain.”",
+      "choices": [
+        "Spammers run their spam-advertised web sites on compromised user machines that are part of a botnet.",
+        "Spammers need to register domain names in order for their spam-based advertisements to be effective.",
+        "There is a high cost for spammers to switch acquiring banks.",
+        "B and C"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q3",
+      "text": "In a _____________ attack, the extra data that holds some specific instructions in the memory for actions is projected by a cyber-criminal or penetration tester to crack the system.",
+      "choices": [
+        "Phishing",
+        "MiTM",
+        "Buffer-overflow",
+        "Clickjacking"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q4",
+      "text": "_______________ is a popular tool used for network analysis in multiprotocol diverse network.",
+      "choices": [
+        "Snort",
+        "SuperScan",
+        "Burp Suit",
+        "EtterPeak"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q5",
+      "text": "___________________ is alike as that of Access Point (AP) from 802.11, & the mobile operators uses it for offering signal coverage.",
+      "choices": [
+        "Base Signal Station",
+        "Base Transmitter Station",
+        "Base Transceiver Station",
+        "Transceiver Station"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q6",
+      "text": "A __________ is a sequential segment of the memory location that is allocated for containing some data such as a character string or an array of integers.",
+      "choices": [
+        "stack",
+        "queue",
+        "external storage",
+        "buffer"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q7",
+      "text": "Which form of encryption does WPA use?",
+      "choices": [
+        "Shared key",
+        "LEAP",
+        "TKIP",
+        "AES"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q8",
+      "text": "Let suppose a search box of an application can take at most 200 words, and you’ve inserted more than that and pressed the search button; the system crashes. Usually this is because of limited __________",
+      "choices": [
+        "buffer",
+        "external storage",
+        "processing power",
+        "local storage"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q9",
+      "text": "___________________ began to show up few years back on wireless access points as a new way of adding or connecting new devices.",
+      "choices": [
+        "WPA2",
+        "WPA",
+        "WPS",
+        "WEP"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q10",
+      "text": "What are the port states determined by Nmap?",
+      "choices": [
+        "Active, inactive, standby",
+        "Open, half-open, closed ",
+        "Open, filtered, unfiltered",
+        "Active, closed, unused"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q11",
+      "text": "Which among the following is the least strong security encryption standard?",
+      "choices": [
+        "WEP",
+        "WPA",
+        "WPA2",
+        "WPA3"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q12",
+      "text": "Why is it that the compiler does not know the absolute address of a local variable?",
+      "choices": [
+        "Programs are not allowed to reference memory using absolute addresses",
+        "The size of the address depends on the architecture the program will run on",
+        "As a stack-allocated variable, it could have different addresses depending on when its containing function is called",
+        "Compiler writers are not very good at that sort of thing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q13",
+      "text": "The stack is memory for storing",
+      "choices": [
+        "Local variables",
+        "Program code",
+        "Dynamically linked libraries",
+        "Global variables"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q14",
+      "text": "Can a stream cipher have perfect secrecy?",
+      "choices": [
+        "Yes, if the PRG is really “secure”",
+        "No, there are no ciphers with perfect secrecy",
+        "Yes, every cipher has perfect secrecy",
+        "No, since the key is shorter than the message"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q15",
+      "text": "Which of the following does authorization aim to accomplish?",
+      "choices": [
+        "Restrict what operations/data the user can access",
+        "Determine if the user is an attacker",
+        "Flag the user if he/she misbehaves",
+        "Determine who the user is"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q16",
+      "text": "The message must be encrypted at the sender site and decrypted at the",
+      "choices": [
+        "Sender Site",
+        "Site",
+        "Receiver site",
+        "Conferencing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q17",
+      "text": "A _________________ may be a hidden part of a program, a separate infected program a Trojan in disguise of an executable or code in the firmware of any system’s hardware.",
+      "choices": [
+        "crypter",
+        "virus",
+        "backdoor",
+        "key-logger"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q18",
+      "text": "How is IP address spoofing detected?",
+      "choices": [
+        "Installing and configuring a IDS that can read the IP header",
+        "Comparing the TTL values of the actual and spoofed addresses",
+        "Implementing a firewall to the network",
+        "Identify all TCP sessions that are initiated but does not complete successfully"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q19",
+      "text": "Which of the following is not an example of presentation layer issues?",
+      "choices": [
+        "Poor handling of unexpected input can lead to the execution of arbitrary instructions",
+        "Unintentional or ill-directed use of superficially supplied input",
+        "Cryptographic flaws in the system may get exploited to evade privacy",
+        "Weak or non-existent authentication mechanisms"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q20",
+      "text": "Suppose Unix did not provide a way of passing file descriptors between processes, but still allowed inheriting file descriptors from a parent on fork and exec. What aspects of the OKWS design would break without file descriptor passing?\n1. It would be impossible for services to send messages to oklogd.\n2. It would be impossible for services to get a TCP connection to a database proxy.",
+      "choices": [
+        "True, True",
+        "False, False",
+        "True, False",
+        "False, True"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q21",
+      "text": "Why would a ping sweep be used?",
+      "choices": [
+        "To identify live systems",
+        "To locate live systems",
+        "To identify open ports",
+        "To locate firewalls"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q22",
+      "text": "The four Primary Security Principles related to messages are",
+      "choices": [
+        "Confidentiality, Integrity, Non repudiation and Authentication",
+        "Confidentiality, Access Control, Integrity, Non repudiation",
+        "Authentication, Authorization, Availability, Integrity",
+        "Availability, Authorization, Confidentiality, Integrity"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q23",
+      "text": "What was the first buffer overflow attack?",
+      "choices": [
+        "Love Bug",
+        "SQL Slammer",
+        "Morris Worm",
+        "Code Red"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q24",
+      "text": "The ______________ can cost you money, by sending text messages from your mobile phone numbers.",
+      "choices": [
+        "IM – Trojans",
+        "Backdoor Trojans",
+        "SMS Trojan",
+        "Ransom Trojan"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q25",
+      "text": "Three of the following are classic security properties; which one is not?",
+      "choices": [
+        "Confidentiality",
+        "Availability",
+        "Correctness",
+        "Integrity"
+      ],
+      "answer": 1
+    }
+  ]
+}

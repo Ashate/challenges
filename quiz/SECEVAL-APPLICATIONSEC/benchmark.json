@@ -1,0 +1,2446 @@
+{
+  "id": "SECEVAL-APPLICATIONSEC",
+  "name": "SecEval: ApplicationSecurity",
+  "description": "Security evaluation questions on ApplicationSecurity from SecEval benchmark.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "seceval",
+    "applicationsecurity"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "An Android application developer is tasked with ensuring the security of sensitive user information. The developer has several options for data storage, each with different security implications. Which of the following storage options should the developer avoid to prevent exposing sensitive user data to other applications on the device?",
+      "choices": [
+        "Using SharedPreferences with MODE_PRIVATE to store user preferences and settings.",
+        "Storing user credentials in an unencrypted SQLite database accessible to the app.",
+        "Implementing SQLCipher to encrypt SQLite databases containing sensitive user information.",
+        "Saving encrypted user data in the Android Keystore system."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2",
+      "text": "Which of the following statements is NOT a vulnerability when developing an iOS application?",
+      "choices": [
+        "Allowing the application to execute unsigned code.",
+        "Implementing strict mode to limit the permissions granted to the application.",
+        "Enabling debugging tools in the production version of the application.",
+        "Disabling ATS (App Transport Security) to allow the app to communicate over HTTP."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q3",
+      "text": "In the context of mobile application security testing, which of the following actions should be prioritized when assessing an application designed for the Android platform?",
+      "choices": [
+        "Ensuring the application does not store sensitive information in clear text on the device.",
+        "Verifying that the application is compatible with all desktop-based antivirus software.",
+        "Assessing the application for the use of platform-independent mobile APIs.",
+        "Confirming that the application's color scheme adheres to the platform's design guidelines."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q4",
+      "text": "In the context of Android application security, an app developer must choose between using the Confirm Credential flow and Biometric Authentication flow to protect a critical function within the app. Which of the following statements is a potential weakness that should be considered when deciding on the authentication flow?",
+      "choices": [
+        "Confirm Credential flow may be less secure if the lock screen protection is weak, such as using simple predictive patterns.",
+        "Biometric Authentication flow cannot be implemented on devices running Android 10 (API level 29) or higher.",
+        "Biometric Authentication flow is less secure because it cannot utilize the AndroidKeystore for storing cryptographic materials.",
+        "Confirm Credential flow requires a separate app-specific password in addition to the device's lock screen protection."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q5",
+      "text": "You are developing a trusted application on the Trusty IPC system and need to associate private data with a specific handle using the 'set_cookie()' method. Which of the following changes to the parameters of 'set_cookie()' would allow you to correctly associate user-space data with the handle?",
+      "choices": [
+        "Passing a NULL pointer as the 'cookie' parameter to represent arbitrary user-space data.",
+        "Passing the handle's value directly to another trusted application for comparison against the 'INVALID_IPC_HANDLE'.",
+        "Using a negative integer to represent the 'handle' parameter for immediate identification as invalid or unset.",
+        "Passing a pointer to the user-space data as the 'cookie' parameter to link it with the handle."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q6",
+      "text": "You are tasked with enhancing the security of a mobile application by making reverse engineering more difficult. To achieve this, you decide to implement obfuscation techniques. Which of the following techniques would be most effective for obfuscating the string literals that contain sensitive information such as API keys and database credentials?",
+      "choices": [
+        "Name Obfuscation",
+        "Instruction Substitution",
+        "String Encryption",
+        "Control Flow Flattening"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q7",
+      "text": "Consider a mobile application that uses a token-based authentication system. The application passes a token with client-side claims, including 'isAdmin', in each HTTP request to authenticate users. Which of the following measures could effectively prevent an unauthorized user from tampering with this token to gain administrative privileges?",
+      "choices": [
+        "Storing the 'isAdmin' flag in a server-side session state.",
+        "Adding cryptographic signatures to the token.",
+        "Using a random session ID that does not contain any user data.",
+        "Enforcing additional authentication factors on the client side."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q8",
+      "text": "An organization has discovered that an adversary has been using their cloud resources to mine cryptocurrency in a service region that the organization does not actively use. Which of the following actions could effectively mitigate this issue without unnecessarily impacting the organization's legitimate operations?",
+      "choices": [
+        "Implement strict access controls on all instances, regardless of the region, to prevent unauthorized use.",
+        "Mandate the use of only those regions that support the most advanced detection services for all future deployments.",
+        "Deactivate unused cloud regions if the cloud service provider allows this configuration to prevent misuse.",
+        "Increase surveillance of physical data centers corresponding to unused regions to prevent unauthorized access."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q9",
+      "text": "An Android device running version 5.0 is being encrypted for the first time. What occurs during this encryption process?",
+      "choices": [
+        "A 256-bit master key is created and hashed with the user's password and stored salt.",
+        "The system uses `vold.decrypt = \"trigger_restart_min_framework\"` to bring up a minimal framework to show encryption progress.",
+        "The `vold` service uses the `YAFFS` filesystem to encrypt the user data partition.",
+        "The encryption algorithm used is 128-bit AES with Electronic Codebook (ECB) and ESSIV:SHA512."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q10",
+      "text": "You are developing a mobile health application that will handle sensitive user data, including identification and health information. According to European privacy legislation, what should you primarily consider to ensure user privacy protection?",
+      "choices": [
+        "Implementing Privacy-by-Design and the Principle of Least Privilege.",
+        "Only collecting user data that is publicly available to avoid privacy breaches.",
+        "Avoiding data encryption to ensure data is always available for user requests.",
+        "Focusing exclusively on the classic triad of security protection goals: confidentiality, integrity, and availability."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q11",
+      "text": "An Android application is attempting to begin a cryptographic operation using a key with specific authorizations. The key has Tag::PURPOSE set to KeyPurpose::SIGN and contains a Tag::ORIGINATION_EXPIRE_DATETIME. The current date and time are later than the value of Tag::ORIGINATION_EXPIRE_DATETIME. What will be the result of calling the `begin` method for a cryptographic operation with this key?",
+      "choices": [
+        "The method will return ErrorCode::UNSUPPORTED_PURPOSE because the Tag::PURPOSE does not match the operation.",
+        "The method will return ErrorCode::KEY_EXPIRED because the current date and time are later than the Tag::ORIGINATION_EXPIRE_DATETIME.",
+        "The method will begin the operation successfully as Tag::ORIGINATION_EXPIRE_DATETIME is not enforced for KeyPurpose::SIGN.",
+        "The method will return ErrorCode::KEY_RATE_LIMIT_EXCEEDED as the date and time check indicates excessive use of the key."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q12",
+      "text": "In the context of software design, it is considered a poor practice to use the same control element across multiple architectural layers due to the potential introduction of vulnerabilities. Based on this principle, which of the following scenarios would NOT indicate the use of the same invokable control element in multiple architectural layers?",
+      "choices": [
+        "A web application uses a single authentication function that is called both by the presentation layer when users log in and by the data access layer to verify user permissions for database operations.",
+        "A service-oriented architecture deploys a user input validation module that is exclusively used within the presentation layer to sanitize incoming data before it is processed by business logic.",
+        "An enterprise application framework utilizes the same logging mechanism for recording errors in the business logic layer and in the data access layer.",
+        "An embedded system firmware uses a common interrupt handler to manage both user interface events and internal hardware events."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q13",
+      "text": "An organization's security policy is under review, and the use of system management tools like Windows Management Instrumentation (WMI) and PowerShell is being evaluated. What is a security concern associated with allowing unrestricted use of such tools within the organization's network?",
+      "choices": [
+        "They can be repurposed by adversaries to gather and stage data for exfiltration.",
+        "They exclusively increase the computational overhead on system resources.",
+        "Their use can only be associated with benign administrative tasks and poses no security risk.",
+        "They are outdated tools that do not support modern security protocols."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q14",
+      "text": "A software development team is transitioning to DevSecOps practices to enhance their project's security posture. As part of this transition, they are considering automation strategies for infrastructure, deployment, and security activities. Which of the following statements is a valid reason for implementing Infrastructure as Code (IaC) as part of their DevSecOps practices?",
+      "choices": [
+        "IaC allows the manual provisioning of computing resources, which increases the reliability and repeatability of the deployment process.",
+        "IaC is based on using tools and automation to speed up the provisioning process, making it more reliable and repeatable.",
+        "IaC benefits include reduced collaboration between development and operations teams due to the increased complexity of the environment.",
+        "IaC commonly involves the use of GUI-based tools instead of APIs, as it is more suitable for projects without Cloud-based resources."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q15",
+      "text": "In the context of securing a mobile application, why is it NOT recommended to use inter-process communication (IPC) facilities to share sensitive data between apps?",
+      "choices": [
+        "IPC facilities are deprecated and no longer supported in modern mobile operating systems.",
+        "IPC can unintentionally expose sensitive data or functionality to other apps on the same device.",
+        "Mobile devices do not support IPC, relying instead on cloud services for inter-app communication.",
+        "IPC increases the complexity of the app codebase, making it difficult to maintain and audit for security."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q16",
+      "text": "Consider the following code snippet from a mobile application that uses a local SQLite database to authenticate users. Identify the security issue(s) present in the code and select the best practice(s) that should be employed to mitigate the identified issue(s):\n\njava\nSQLiteDatabase db;\n\nString sql = \"SELECT * FROM users WHERE username = '\" + username + \"' AND password = '\" + password + \"'\";\n\nCursor c = db.rawQuery( sql, null );\n\nreturn c.getCount() != 0;\n",
+      "choices": [
+        "The code snippet is vulnerable to SQL injection and should use prepared statements with variable binding to mitigate the issue.",
+        "The code is secure as is, since mobile applications do not often expose services on the network.",
+        "The code snippet should employ XML parsing with rejection of external entity resolution to mitigate potential XML injection attacks.",
+        "The code should be refactored to use a custom URL scheme to secure the transmission of username and password."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q17",
+      "text": "Which of the following strategies is least effective as an Android anti-reversing defense and is generally not recommended?",
+      "choices": [
+        "Employing obfuscation techniques to make the code harder to understand.",
+        "Using only well-tested, public cryptographic algorithms instead of custom ones.",
+        "Adding multiple fake code paths to mislead decompilers and analysts.",
+        "Relying solely on client-side validation for input data to ensure integrity."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q18",
+      "text": "An Android security specialist wants to ensure that a cryptographic key used for encryption does not expire based on a specific date and time. Which of the following Android Keymaster tags would not be suitable for achieving this requirement?",
+      "choices": [
+        "Tag::MAX_USES_PER_BOOT",
+        "Tag::ORIGINATION_EXPIRE_DATETIME",
+        "Tag::NONCE",
+        "Tag::NO_AUTH_REQUIRED"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q19",
+      "text": "An Android device displays a warning screen during the boot process. The screen is color-coded ORANGE and informs the user about the unlocked state of the device. What should be the expected user experience according to the Android security guidelines?",
+      "choices": [
+        "The warning screen should automatically dismiss after 10 seconds, and pressing the power button will prevent the device from booting.",
+        "The warning screen should remain indefinitely until the user presses the power button, and the device will boot immediately after it is dismissed.",
+        "The warning screen should stay for 30 seconds and then the device should power off automatically if no interaction occurs.",
+        "The warning screen will dismiss after 10 seconds, and pressing the power button toggles between pausing and continuing the boot process."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q20",
+      "text": "Why should an Android application developer NOT store cryptographic keys using predictable obfuscation functions or key derivation functions based on stable attributes?",
+      "choices": [
+        "Because it enhances the security of the keys by making them difficult to guess.",
+        "Because it can lead to performance issues due to the complexity of the obfuscation algorithms.",
+        "Because these methods provide strong security as they are based on stable and reliable attributes of the system.",
+        "Because such practices are predictable and can be reverse-engineered, potentially exposing the keys to unauthorized access."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q21",
+      "text": "In a security audit of an iOS mobile application, you discover that sensitive data is being stored insecurely on the device. Which of the following strategies would not be effective in mitigating the risks associated with this vulnerability?",
+      "choices": [
+        "Encrypting the data at rest using strong, industry-standard algorithms.",
+        "Utilizing the iOS Keychain to store sensitive data with hardware-backed security features.",
+        "Storing all sensitive data in a remote database and accessing it through secure API calls.",
+        "Increasing the length of the user session timeout to minimize the frequency of data access."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q22",
+      "text": "When attempting to secure a connection to a wireless network on a Linux-based system, a security analyst needs to run the wpa_supplicant command to use WPA/WPA2 for authentication. Which of the following commands should the analyst execute to correctly start the wpa_supplicant daemon, assuming the wireless interface is wlan0 and the configuration file is located at /etc/wpa_supplicant/wpa_supplicant.conf?",
+      "choices": [
+        "wpa_supplicant -d -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf",
+        "wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf",
+        "wpa_supplicant -i wlan0 -D wext -c /etc/wpa_supplicant/wpa_supplicant.conf",
+        "wpa_supplicant -B -D nl80211,wext -i wlan0 -c /etc/wpa_supplicant.conf"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q23",
+      "text": "An iOS application has been designed to allow users to scan QR codes to access event information. During the security assessment, you notice that the app requests permission to access the user's photo library. Which of the following reasons could justify the app's request for this permission?",
+      "choices": [
+        "The app needs to store scanned QR code images in the user's photo library for future reference.",
+        "Access to the photo library is a default requirement for all apps that utilize the camera.",
+        "The app offers a feature to upload a QR code image from the photo library for scanning.",
+        "The app requires access to the photo library to save event information as images."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q24",
+      "text": "A software developer is reviewing the code for an application that processes user-uploaded files. One module of the application is responsible for opening files and directories. The developer is concerned about potential security risks related to the handling of Windows shortcuts (.LNK files). Which of the following scenarios poses a security risk that needs mitigation?",
+      "choices": [
+        "The application opens .LNK files and follows their target path without verifying the legitimacy or safety of the target location.",
+        "The application uses a whitelist of approved file extensions and rejects .LNK files from being processed.",
+        "The application checks the file extension and only processes .LNK files if they point to a target within the application's predefined directory.",
+        "The application parses .LNK files and extracts metadata for logging purposes but does not follow the target path."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q25",
+      "text": "Which of the following policies is least likely to enhance the security of a Windows application?",
+      "choices": [
+        "Regularly updating the application to patch identified vulnerabilities.",
+        "Restricting the application's network permissions to only what is necessary for its operation.",
+        "Storing sensitive user data in plaintext within the application to simplify data retrieval.",
+        "Utilizing secure coding practices to minimize the risk of introducing security flaws."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q26",
+      "text": "A software development company wants to protect its application from being exploited through buffer overflow attacks. Which of the following hardening techniques would directly mitigate this specific vulnerability?",
+      "choices": [
+        "Message Encryption",
+        "Stack Frame Canary Validation",
+        "Certificate Pinning",
+        "User Account Permissions"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q27",
+      "text": "In a security review of an iOS mobile application, you identify a function that transmits sensitive data to a remote server. Which of the following implementations would be considered a vulnerability that needs to be addressed?",
+      "choices": [
+        "The application uses SSL pinning to ensure it communicates only with the intended server.",
+        "Sensitive data is transmitted over an encrypted channel using HTTPS with a valid certificate.",
+        "Sensitive data is transmitted over HTTP in a GET request with parameters visible in the URL.",
+        "The application uses certificate transparency logs to verify the authenticity of the server's certificate."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q28",
+      "text": "Which of the following code snippets is most likely to introduce the vulnerability of inserting sensitive information into sent data?",
+      "choices": [
+        "HttpResponse response = new HttpResponse(); response.setContent(\"Error: Invalid user input\");",
+        "throw new RuntimeException(\"Database connection failed. User 'admin' with password '12345' cannot connect.\");",
+        "User user = userService.authenticateUser(username, password); if(user == null) { throw new AuthenticationException(\"User authentication failed.\"); }",
+        "log.error(\"Attempt to access unauthorized resource by user \" + user.getUsername());"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q29",
+      "text": "A security team is configuring detection mechanisms for their SharePoint and Confluence platforms to identify potential malicious activity. What kind of detection mechanism would be most effective in identifying an adversary leveraging these platforms to mine valuable information?",
+      "choices": [
+        "Set up alerts for excessive printing activities from network-connected printers.",
+        "Monitor and alert on privileged user access to information repositories and users retrieving a large number of documents.",
+        "Install antivirus software on all endpoints to prevent malware from compromising information repositories.",
+        "Enable full disk encryption on all devices to protect the information at rest."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q30",
+      "text": "In the context of mobile application security testing, you suspect that some processes may be using the WiFi interface, which could interfere with your testing activities. To ensure a proper testing environment, you decide to use a command-line tool to check and terminate any such processes. Which command would you use to achieve this?",
+      "choices": [
+        "$ sudo ifconfig wlan0 down",
+        "$ airmon-ng check kill",
+        "$ netstat -tulnap | grep ':80'",
+        "$ iwconfig wlan0 --release"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q31",
+      "text": "An Android application is designed with the following permission in its manifest file:\n\nxml\n<permission name=\"android.permission.ACCESS_FINE_LOCATION\" >\n    <group gid=\"location\" />\n</permission>\n\n\nGiven the output of the `id` command for the application's process is shown below:\n\nbash\nuid=10234(u0_a234) gid=10234(u0_a234) groups=10234(u0_a234),3003(inet),10234(all_a234) context=u:r:untrusted_app:s0:c512,c768\n\n\nWhich of the following statements accurately describes the app's permissions with respect to accessing the device's fine location?",
+      "choices": [
+        "The app has the 'ACCESS_FINE_LOCATION' permission because it belongs to the 'location' group.",
+        "The app does not have the 'ACCESS_FINE_LOCATION' permission because it does not belong to the 'location' group.",
+        "The app has the 'ACCESS_FINE_LOCATION' permission by default since all apps have access to fine location unless explicitly denied.",
+        "The app does not have the 'ACCESS_FINE_LOCATION' permission because it has the 'inet' group ID, which is unrelated to location permissions."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q32",
+      "text": "When developing a mobile application, which practice should be avoided to prevent potential security and privacy breaches?",
+      "choices": [
+        "Encrypting log files using secure algorithms before storing them locally.",
+        "Logging sensitive information that may expose data to attackers or violate user confidentiality.",
+        "Using built-in logging mechanisms like the Log Class or Logger Class for debugging purposes.",
+        "Sending encrypted log files to a secure endpoint when the application regains online connectivity."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q33",
+      "text": "How does HomeKit enhance the security of data storage and accessory access within a smart home environment?",
+      "choices": [
+        "HomeKit data is stored using the Protected Until First User Authentication class, and routers support PPSK authentication for added security.",
+        "Local data is stored unencrypted for easy access by smart home accessories, but remote data access requires multi-factor authentication.",
+        "HomeKit routers use a universal PSK (PPSK) for all accessories, simplifying the setup process and improving interoperability.",
+        "Accessory data is backed up to iCloud without encryption to allow for easy recovery, and routers use WEP authentication for legacy support."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q34",
+      "text": "As an iOS developer, you need to embed a WebView into your application that allows for extensive customization, including the ability to disable JavaScript execution for security reasons. Which WebView type would you select for this requirement?",
+      "choices": [
+        "UIWebView, because it is a well-established component and supports extensive customization.",
+        "WKWebView, as it allows for disabling JavaScript and provides several security advantages over UIWebView.",
+        "SFSafariViewController, due to its ease of use and built-in security features like the read-only address field.",
+        "SFSafariViewController, because it allows disabling JavaScript and is the most secure option available."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q35",
+      "text": "Consider an Android environment where two applications, App A and App B, are installed. App A has a unique user ID, while App B is designed with a 'sharedUserId' attribute in its AndroidManifest.xml file, set to the same user ID as App C, which is also installed on the device. Assuming all three apps are signed with different certificates, which of the following statements is true regarding the access permissions between these applications?",
+      "choices": [
+        "App A and App B can access each other's data directories because they are installed on the same device.",
+        "App B and App C can access each other's data directories because they have the same user ID specified in their manifests.",
+        "App B cannot access App C's data directory despite having the same user ID because they are signed with different certificates.",
+        "App A can access both App B's and App C's data directories because it has a unique user ID."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q36",
+      "text": "A security team is planning to mitigate the risk of adversaries using system binary proxy execution to bypass digital certificate validation on a network of Windows machines. Which of the following mitigation strategies would be most effective in this scenario?",
+      "choices": [
+        "Applying strict firewall rules to prevent external network connections",
+        "Using application control to prevent execution of binaries that are susceptible to abuse",
+        "Enforcing password complexity requirements for all user accounts",
+        "Installing the latest antivirus software on all endpoints"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q37",
+      "text": "A mobile application developer needs to securely handle sensitive data such as passwords and encryption keys in memory. Which of the following approaches would be the most secure for managing this sensitive data in a Swift or Objective-C application?",
+      "choices": [
+        "Use NSString and String for storing sensitive data and overwrite them with new values when done.",
+        "Employ primitive data structures like char [] and int [], and ensure they are overwritten with zeroes after use.",
+        "Implement custom classes that subclass Swift's String to provide functionality for securely erasing data from memory.",
+        "Store sensitive data in mutable collections like Array or Set, and use their built-in methods to clear the data."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q38",
+      "text": "As a developer, you are tasked with implementing a secure storage solution for sensitive user data in a mobile application on the Android platform. Which of the following approaches aligns with best practices for secure data storage?",
+      "choices": [
+        "Storing sensitive data in SharedPreferences with MODE_PRIVATE.",
+        "Using SQL Cipher to encrypt the SQLite database that stores sensitive data.",
+        "Encrypting sensitive data with a hard-coded symmetric key before storing it locally.",
+        "Saving sensitive data in plain text within internal storage for ease of access."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q39",
+      "text": "You are integrating a third-party service into your mobile application. Considering the security of user data, which of the following approaches should you take?",
+      "choices": [
+        "Send all available information to the integrated service to ensure maximum functionality and user experience.",
+        "Limit the information sent to the third-party service to the minimum required and avoid disclosing sensitive data.",
+        "Prefer standalone libraries over full SDKs to ensure that the third-party service has limited access to the app's data.",
+        "Use full SDKs for third-party services as they are more likely to adhere to better security practices than standalone libraries."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q40",
+      "text": "A web application uses a list-based protection mechanism to filter incoming requests based on predefined safe input patterns. However, a security analyst notices unusual behavior when certain unexpected inputs are processed. Which of the following scenarios could indicate that the protection mechanism is too permissive?",
+      "choices": [
+        "The system allows a request with an input pattern that closely resembles a known safe pattern, but it carries a slight variation that exploits a buffer overflow vulnerability.",
+        "The list enforces strict type checking and only permits inputs that exactly match the safe patterns, resulting in a reduced number of accepted requests.",
+        "A user's input is rejected because it matches an entry on a blacklist, even though the input is a common, non-malicious data entry.",
+        "The system only allows inputs that have been digitally signed by a trusted authority, effectively preventing any unauthorized data from being processed."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q41",
+      "text": "As a mobile application security expert, you are tasked with reviewing the cryptographic security of a new Android application. You must ensure that the application adheres to best practices for secure storage of sensitive information. Which of the following measures should you recommend to enhance the cryptographic security of the application?",
+      "choices": [
+        "Utilize a custom encryption algorithm to ensure uniqueness and prevent known vulnerabilities found in standard algorithms.",
+        "Implement industry-standard encryption algorithms and manage keys using a secure key management process.",
+        "Store all cryptographic keys in plain text within the application's source code to simplify key management.",
+        "Avoid encryption altogether, relying on Android's built-in user authentication to provide sufficient security."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q42",
+      "text": "An attacker has successfully gathered detailed victim identity information, including email addresses, employee names, and credentials. Which of the following is the least likely method the attacker would employ using the gathered information?",
+      "choices": [
+        "Launching targeted phishing attacks using the email addresses.",
+        "Attempting to access secure systems using the acquired credentials.",
+        "Creating fake profiles on social media to gather more intelligence.",
+        "Performing a network layer attack to disrupt service availability."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q43",
+      "text": "In a secure mobile application development environment, which of the following practices ensures the safe inclusion of a system library without introducing common security flaws?",
+      "choices": [
+        "Including the same system header file multiple times to ensure it is loaded.",
+        "Using an absolute path in the #include directive for clarity and certainty of the file's location.",
+        "Using angle brackets in the #include directive for system header files to follow convention.",
+        "Including a custom header file with the same name as a system file to override unwanted functions."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q44",
+      "text": "A mobile application is vulnerable to data leakage due to insecure storage practices on the iOS platform. Which of the following code examples does not address this vulnerability?",
+      "choices": [
+        "Encrypting data before storing it in the device's keychain.",
+        "Storing sensitive information in plain text within the application’s sandboxed directory.",
+        "Using iOS’s Data Protection API to enforce encryption at rest.",
+        "Implementing file-level encryption for sensitive files stored on the device."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q45",
+      "text": "A security engineer is tasked with troubleshooting an Android device that has failed to start the encryption process. The device's UI needs to prompt the user to reboot the device and alert them that the encryption process has not commenced. Which `vold` property should the engineer investigate to ensure it is setting the correct status for this situation?",
+      "choices": [
+        "`vold.encrypt_progress error_not_encrypted`",
+        "`vold.encrypt_progress error_reboot_failed`",
+        "`vold.encrypt_progress error_partially_encrypted`",
+        "`vold.decrypt trigger_shutdown_framework`"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q46",
+      "text": "Why is it important to ensure that there are appropriate policies, standards, and documentation in place before the development of an application begins?",
+      "choices": [
+        "Documentation serves no real purpose and is often ignored by development teams, making it an unnecessary step.",
+        "Policies and standards are only useful post-development to guide the deployment and maintenance phases.",
+        "Documentation provides development teams with guidelines and policies to follow, helping them make informed decisions during development.",
+        "Establishing policies and standards is only essential for applications that use cryptography or require high-security measures."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q47",
+      "text": "In the context of Android security, if a security analyst argues that attestation certificates generated at the `Software` security level are equally as secure as those generated at the `StrongBox` level, what would be the best counterargument to this claim?",
+      "choices": [
+        "Attestations at the `Software` level are only as secure as the Android system itself, which can be more easily compromised than dedicated hardware security modules.",
+        "The `Software` level indicates that the attestation is generated in a TEE, which is less secure than the Android system.",
+        "Attestations generated at the `StrongBox` level are considered less secure because they rely on software-based protections.",
+        "The `StrongBox` level is not recognized in Android security and therefore cannot be compared to the `Software` level."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q48",
+      "text": "In an Android environment, a developer is tasked with ensuring the security of cryptographic keys. Which Android security module should the developer rely on to ensure that cryptographic keys are handled securely within a Trusted Execution Environment (TEE)?",
+      "choices": [
+        "StrongBox, because it provides file-based encryption allowing different files to be encrypted with different keys.",
+        "Hardware-backed KeyStore, as it enables apps to perform cryptographic operations in a TEE without exposing the cryptographic key material.",
+        "GateKeeper, since it is responsible for pattern and password authentication, ensuring secure cryptographic key handling.",
+        "SELinux, because it uses labels to define access controls and secure cryptographic key operations."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q49",
+      "text": "An iOS application developer intends to store a user's authentication token securely on the device. Which of the following methods and attributes would be most appropriate to ensure the data is protected using the cryptographic hardware available on iOS devices?",
+      "choices": [
+        "Use `NSUserDefaults` with the attribute `FileProtectionType.complete` to ensure the data is encrypted using hardware-backed encryption.",
+        "Use `NSFileManager` to create a file with the attribute `FileAttributeKey.protectionKey: FileProtectionType.complete` to secure the authentication token with hardware-backed encryption.",
+        "Store the authentication token in a SQLite Database without any additional encryption, as SQLite provides sufficient security by default.",
+        "Save the authentication token in a plist file using `NSDataWritingFileProtectionCompleteUnlessOpen`, which only encrypts the file when the device is locked."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q50",
+      "text": "An Android developer is designing a key management scheme that includes several constraints: the keys must have a device-unique identifier, there should be a limit on the number of uses per boot, and the keys need to support a specific minimum MAC length. Which combination of Android Keymaster tags would best fit these requirements?",
+      "choices": [
+        "Tag::UNIQUE_ID, Tag::MAX_USES_PER_BOOT, Tag::MIN_MAC_LENGTH",
+        "Tag::NONCE, Tag::MIN_SECONDS_BETWEEN_OPS, Tag::MAC_LENGTH",
+        "Tag::ORIGIN, Tag::OS_VERSION, Tag::PADDING",
+        "Tag::KEY_SIZE, Tag::OS_PATCHLEVEL, Tag::NO_AUTH_REQUIRED"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q51",
+      "text": "You are updating an Android app to improve its security features. You decide to implement APK Signature Scheme v3 for your app's next release. Which of the following describes the correct format and purpose of the APK Signature Scheme v3?",
+      "choices": [
+        "The scheme allows for multiple signing keys and the convergence of different ancestor signing certificates to one, simplifying the management of app signatures.",
+        "It introduces a proof-of-rotation struct to allow apps to rotate their signing certificate without being blocked by other apps, and to maintain a singly-linked list of older signing certs for trust continuity.",
+        "The v3 scheme is designed to replace the v1 APK format completely, eliminating the need for an APK Signing Block and simplifying the installation process on Android devices.",
+        "It supports APK key rotation by storing only the newest signing key in the APK signing block, and discards all previous keys for enhanced security."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q52",
+      "text": "In the context of defending against SQL Injection, why might input validation alone be insufficient, and what additional measure should be employed?",
+      "choices": [
+        "Input validation may not catch all malicious inputs; adding strict type checking can enhance security.",
+        "Input validation is adequate for all user inputs; no additional measures are necessary.",
+        "Input validation can be bypassed; therefore, error messages should contain detailed information for debugging.",
+        "Input validation may miss certain inputs; proper output encoding and escaping are necessary."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q53",
+      "text": "You are tasked with performing security testing on a mobile application. Given that this is the first time the app is being tested and time is limited, which testing approach should you request from the development team, and why would this approach be most beneficial?",
+      "choices": [
+        "Request black-box testing access to simulate a real attacker's perspective since this approach is the fastest.",
+        "Request white-box testing access because it allows for a much faster and thorough analysis due to full knowledge of the app.",
+        "Opt for gray-box testing since it is the most common kind of testing and balances the number of test cases and speed.",
+        "Avoid any testing access to the app's source code and rely solely on automated scanning tools to identify vulnerabilities."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q54",
+      "text": "You are tasked with writing a user space program that needs to interact with a Trusty service using the Trusty IPC Client API. Which of the following steps, in order, would you take to establish communication, send a message, and close the connection appropriately?",
+      "choices": [
+        "Call 'tipc_connect()' with the service name, use 'write()' to send messages, and 'tipc_close()' to end the connection.",
+        "Invoke 'tipc_create_channel()' with the device pointer, queue messages using 'tipc_chan_queue_msg()', and use 'tipc_chan_destroy()' to terminate.",
+        "Use 'write()' to send a request to the Trusty service, call 'tipc_connect()' with the device node, and 'tipc_close()' to terminate the connection.",
+        "Start by opening the device node with 'open()', then 'tipc_connect()' with the service name, and finally 'close()' the file descriptor."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q55",
+      "text": "In the context of mobile application security, XML injection attacks can lead to a variety of exploits. Which of the following statements is true about the impact and limitations of XML injection in mobile apps?",
+      "choices": [
+        "XML injection can only impact the logic of an application and does not allow for other types of exploits.",
+        "XML injection in mobile apps can potentially compromise the logic of an application, cause denial-of-service conditions, and access local files depending on parser configuration.",
+        "Mobile apps are immune to XML injection due to the small attack surface and the fact that they rarely use XML.",
+        "XML injection is a client-side attack, thus mobile apps are not vulnerable as they are server-side applications."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q56",
+      "text": "You are designing an application that requires high security for its Android APK files. You've chosen to implement APK Signature Scheme v2 for signing the APKs. What are the benefits of integrating APK Signature Scheme v2 into your application's APK files, and what could be a potential drawback?",
+      "choices": [
+        "Benefits include increased verification speed and stronger integrity guarantees; a drawback is increased complexity in the signing process.",
+        "Benefits include reduced file size and compatibility with all Android versions; a drawback is the reduced strength of the integrity guarantees.",
+        "Benefits include stronger encryption methods and reduced need for permissions; a drawback is the lack of support on newer Android versions.",
+        "Benefits include automated signing with multiple keys and self-validation of APKs; a drawback is the loss of backward-compatibility with older Android versions."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q57",
+      "text": "You are tasked with enhancing the security of a mobile application by implementing fingerprint authentication for users on Android devices. Considering the best practices for biometric authentication, which of the following approaches provides the most secure method for using fingerprint data to authorize user access to a remote service?",
+      "choices": [
+        "Use the deprecated FingerprintManager class to authenticate users and store the authentication token in Shared Preferences.",
+        "Implement BiometricPrompt with a symmetric key in the Android KeyStore, unlocked by the user's fingerprint and set with setUserAuthenticationRequired(true).",
+        "Create an asymmetric key pair in the KeyStore and store the private key unencrypted on the device's internal storage.",
+        "Utilize the BiometricManager class to check for biometric hardware availability only, without involving any cryptographic operations."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q58",
+      "text": "A mobile security project rewards companies with a 'MAS Advocate' status for their contributions. Which of the following benefits is NOT directly associated with achieving this status?",
+      "choices": [
+        "Having the company logo displayed on the main project site.",
+        "Using the project's resources as an endorsement by the project for preferred provider status.",
+        "Special acknowledgement in project releases containing contributed PRs.",
+        "Re-shares from the project's accounts on new publications."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q59",
+      "text": "A mobile app developer is configuring their iOS app's Info.plist file to ensure compliance with Apple's App Store review guidelines regarding App Transport Security (ATS). The app needs to communicate with a development server using self-signed certificates for testing purposes. Which of the following configurations of ATS exceptions is most appropriate to meet Apple's guidelines while maintaining security best practices?",
+      "choices": [
+        "Add 'NSAllowsArbitraryLoads' to allow all types of connections, including those using self-signed certificates.",
+        "Add 'NSExceptionAllowsInsecureHTTPLoads' and 'NSExceptionMinimumTLSVersion' for the specific development server domain.",
+        "Customize the server trust evaluation process to accept the self-signed certificates for the development server domain.",
+        "Disable ATS entirely to ensure uninterrupted communication with the development server."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q60",
+      "text": "A company is planning to attain a prestigious recognition for its consistent support and high-impact contributions to a well-known mobile application security project. What actions would NOT contribute to achieving this recognition?",
+      "choices": [
+        "Regularly making financial donations to support the project.",
+        "Creating and maintaining code samples for the project's repository.",
+        "Promoting the project through social media by re-sharing content.",
+        "Hosting public training sessions on the project's guidelines and updates."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q61",
+      "text": "Why might signature-based detection not be sufficient as the sole security measure for a critical financial transaction system?",
+      "choices": [
+        "The system processes a high volume of transactions, which might cause performance issues with signature-based detection.",
+        "Signature-based detection can easily be evaded by attackers using polymorphic code that changes its appearance every time it runs.",
+        "Financial systems only require encryption for security, making signature-based detection irrelevant.",
+        "Signature-based detection systems are primarily used for detecting physical intrusions, not cyber threats."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q62",
+      "text": "Review the following code snippets that create a communication channel in a networked application. Which one does NOT employ a proper method to prevent the server from being tricked into sending traffic to an unintended destination?",
+      "choices": [
+        "The application uses a cryptographic nonce included in each UDP packet to verify that the response is sent to the correct source address.",
+        "The server parses XML input and replaces all external entity references with safe placeholders before processing requests.",
+        "The server validates the source IP address of incoming packets against a list of known trusted hosts before sending a response.",
+        "The application sends a sticky broadcast intent that contains sensitive information intended for a specific receiver in the system."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q63",
+      "text": "Imagine you are designing an authentication system for an Android device that leverages a Trusted Execution Environment (TEE). You decide to implement a subsystem similar to Gatekeeper for device pattern/password authentication. Your design must include the following components: a service to handle platform-independent logic, a hardware abstraction layer interface, and a TEE-based implementation. Which of the following component sets correctly represents the necessary parts of the Gatekeeper-like subsystem, adhering to the roles and responsibilities specified in the architecture?",
+      "choices": [
+        "Authentication Service, Gatekeeper Hardware Abstractor (GHA), TEE Gatekeeper",
+        "gatekeeperd, Gatekeeper Hardware Abstraction Layer (HAL), Gatekeeper (TEE)",
+        "Authentication Daemon, Gatekeeper Hardware Integration Layer (GHIL), Secure Gatekeeper",
+        "gatekeeperd, Gatekeeper Hardware Interface (GHI), Trusty Gatekeeper"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q64",
+      "text": "As an Android application developer, you are tasked with ensuring the security of your application's cryptographic features. Considering the evolution of Android Cryptographic APIs, which of the following actions should you take while targeting devices running different API levels?",
+      "choices": [
+        "For devices running Android 7.0 (API level 24) and above, ensure that you are using a patched security provider and avoid specifying a security provider unless required for the Android Keystore system.",
+        "For devices running Android 8.1 (API level 27) and above, continue using the `IvParameterSpec.class` for GCM mode of operation due to its stable implementation over the years.",
+        "For devices running Android 10 (API level 29), you can ignore network security changes as they do not significantly impact the cryptographic operations of the application.",
+        "For devices running Android 9 (API level 28) and above, ignore warnings related to specifying a security provider using the `getInstance` method, as they are merely suggestions, not requirements."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q65",
+      "text": "In the development of an Android mobile application, you are evaluating the use of cryptographic APIs for securing sensitive data. What is a critical factor to consider when implementing cryptographic operations to ensure data security?",
+      "choices": [
+        "Cryptographic operations should be performed on the client-side to reduce server load and improve performance.",
+        "Cryptographic operations must be offloaded to third-party libraries without reviewing their source code or security posture.",
+        "Cryptographic primitives from reputable and up-to-date libraries should be used instead of creating custom encryption methods.",
+        "Using deprecated cryptographic APIs as they are well-understood and have extensive historical usage data."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q66",
+      "text": "An online banking application includes functionality that allows users to customize certain elements of the interface, including the color scheme and font. The application then stores these preferences in HTTP headers for subsequent requests. Which of the following outcomes might occur if the application fails to properly neutralize user input before including it in these headers?",
+      "choices": [
+        "The application may suffer from decreased performance due to excessive storage of user preferences.",
+        "Users could potentially inject malicious scripts that execute in other users' browsers when viewing their customized interface.",
+        "The application may inadvertently reveal sensitive information about user preferences to third parties.",
+        "Users may be unable to save their preferences if the storage limit of HTTP headers is exceeded."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q67",
+      "text": "In a discussion about Android security testing, a colleague argues that using emulators is always preferable due to the convenience of snapshots and the ability to simulate various hardware configurations. How would you counter this argument?",
+      "choices": [
+        "Emulators cannot be rooted, making them less suitable for testing applications that require root access.",
+        "Malware samples on emulators cannot be cleared by flashing a clean firmware, posing a persistent security risk.",
+        "Emulators can offer convenience, but they are typically slow and may not represent realistic user environments, including root detection.",
+        "Physical devices do not support API level changes, making them inflexible and unsuitable for comprehensive testing."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q68",
+      "text": "An organization's security team has been tasked with enhancing detection mechanisms to identify potential abuse of server application extensibility features by adversaries. Which data source should the security team focus on to detect suspicious installation of application software components?",
+      "choices": [
+        "Analyze the consistency of email communication patterns over the SMTP protocol.",
+        "Monitor application logs for abnormal behavior indicating suspicious software component installation.",
+        "Review firewall rules to ensure proper network perimeter defenses are in place.",
+        "Examine user behavior analytics to detect potential insider threats."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q69",
+      "text": "In an Android Keymaster module, a developer is attempting to export a public key using the `exportKey` method. The key was generated without providing any `Tag::APPLICATION_ID`. What will be the result of this export attempt?",
+      "choices": [
+        "The method will export the key successfully as `Tag::APPLICATION_ID` is not required for exporting keys.",
+        "The method will return ErrorCode::OK because the absence of `Tag::APPLICATION_ID` does not affect key export.",
+        "The method will return ErrorCode::INVALID_KEY_BLOB because `Tag::APPLICATION_ID` was not provided during key generation.",
+        "The method will return ErrorCode::KEYMASTER_NOT_CONFIGURED since `Tag::APPLICATION_ID` is a mandatory field for key export."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q70",
+      "text": "An Android developer is implementing a feature in their application that requires listening for certain system events. The developer is considering using either a broadcast receiver registered in the manifest or dynamically in the code. They are also exploring the use of LocalBroadcastManager for internal app communication. Which of the following statements accurately reflects the security considerations and best practices for implementing broadcast receivers in an Android application?",
+      "choices": [
+        "Registering a broadcast receiver in the manifest for implicit broadcasts is unrestricted, regardless of the Android version targeted by the application.",
+        "Using LocalBroadcastManager can improve security by ensuring that intents are only received from the internal app, but it is deprecated and should be replaced with LiveData for inter-component communication.",
+        "Implicit broadcasts received by dynamically registered broadcast receivers can contain the user's location or personally identifiable data.",
+        "If a broadcast receiver is registered dynamically in code, there's no need to assign a priority since it does not affect the order in which broadcasts are received."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q71",
+      "text": "A security analyst is assessing the configuration of a server running a Unix-like operating system and notices that IP forwarding has been enabled. The command used to enable IP forwarding was 'echo 1 > /proc/sys/net/ipv4/ip_forward'. Which of the following is a potential security implication of this configuration?",
+      "choices": [
+        "The server can act as a router, forwarding packets between networks, which may unintentionally expose internal networks.",
+        "Enabling IP forwarding will encrypt all inbound traffic, ensuring data confidentiality across the server.",
+        "This command sets up a firewall rule that blocks all incoming and outgoing traffic as a security measure.",
+        "IP forwarding increases the server's performance by enabling asynchronous packet processing."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q72",
+      "text": "You are reviewing the security of an iOS application and encounter the following entitlement in its code signing entitlements file: `<key>com.apple.security.application-groups</key>`. Based on the application's requirement to share data between its extensions and the main app, which of the following statements are true?",
+      "choices": [
+        "The entitlement allows the application to share data with other applications installed on the device without user permission.",
+        "The application must implement additional user prompts to ensure secure handling of data shared with its extensions.",
+        "The entitlement is necessary to facilitate sharing data between the app and its extensions through a shared container.",
+        "Using this entitlement, the application can directly communicate with other apps using traditional IPC techniques."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q73",
+      "text": "An Android application developer is designing a security feature that involves generating a key pair for digital signing and requires attestation of the new keys. The developer needs to ensure that the attestation process is secure and aligns with recommended practices. Which of the following steps would be considered secure and recommended for attestation of keys in an Android environment?",
+      "choices": [
+        "Using a nonce of at least 16 bytes for the attestation challenge to prevent replays of older attestation certificates.",
+        "Reusing the attestation challenge for multiple requests to reduce computational overhead.",
+        "Requesting attestation without specifying any hardware identifiers for improved privacy.",
+        "Generating the key pair directly without a challenge, relying on the device's secure environment to ensure authenticity."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q74",
+      "text": "Which sequence of events accurately describes the process of authenticating a user with Face ID or Touch ID on an Apple device?",
+      "choices": [
+        "The biometric sensor captures the image, transmits it to the Secure Enclave, where it's processed and compared against the stored templates for validation.",
+        "The biometric image is stored in the device's main storage, then compared with the Secure Enclave's templates to unlock the device or validate the transaction.",
+        "Face ID adapts to changes in appearance by updating stored templates in the Cloud, while Touch ID expands the fingerprint map with each use.",
+        "The Secure Enclave sends the biometric template data to the sensor, which then captures the biometric image and matches it against the template."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q75",
+      "text": "You are tasked with conducting a security review for a mobile banking application designed for iOS. To align with best practices, you need to ensure that the application adheres to robust authentication mechanisms. Which of the following strategies should you recommend to enhance the authentication security of the mobile application?",
+      "choices": [
+        "Implement biometric authentication using the iOS platform's native capabilities to reduce reliance on passcodes.",
+        "Disable all local authentication methods and rely solely on server-side authentication to ensure security.",
+        "Use a simple 4-digit PIN for authentication as it offers a balance between security and user convenience.",
+        "Store user credentials locally in plaintext to facilitate faster login and improve user experience."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q76",
+      "text": "An iOS application developer is tasked with implementing a feature that requires hashing user passwords securely before storing them. Considering the best practices for iOS security, which of the following approaches should the developer adopt?",
+      "choices": [
+        "Use CommonCrypto's `CommonDigest.h` for hashing with SHA-2 512-bit digest.",
+        "Implement a custom hashing algorithm to ensure unique application-specific security.",
+        "Hash the passwords with CryptoKit's MD5 to benefit from its speed and efficiency.",
+        "Store the passwords in plaintext and rely on iOS's secure storage mechanisms."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q77",
+      "text": "In the context of security testing within an SDLC, what are the primary reasons for distinguishing between tests performed by an internal team and tests performed by an independent third party?",
+      "choices": [
+        "Internal tests are typically more frequent and less expensive, focusing on daily operations, while third-party tests offer more organizational benefits and are mandated by many regulations.",
+        "Third-party tests eliminate the need for internal tests due to their comprehensive nature.",
+        "Internal tests are often considered untrustworthy and are only used for preliminary assessments.",
+        "Third-party tests are performed daily to ensure continuous compliance with development standards."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q78",
+      "text": "In an OAuth 2.0 implementation, what is the recommended practice for handling access tokens and client secrets within a mobile application to enhance security?",
+      "choices": [
+        "Access tokens should be stored in secure local storage and have unlimited duration to ensure uninterrupted service to the user.",
+        "Client secrets should be widely used to prove the client's identity and should be embedded in the application code for easy access.",
+        "Access tokens must be kept in transient memory and transmitted over an encrypted connection, and client secrets should not be used to prove the client's identity.",
+        "Refresh tokens should be kept in transient memory, while access tokens should be stored permanently to prevent frequent re-authentication."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q79",
+      "text": "Why is it necessary for ConfirmationUI to work in conjunction with Keymaster when generating confirmation tokens in the Android Protected Confirmation process?",
+      "choices": [
+        "Because ConfirmationUI alone cannot guarantee the cryptographic security of the confirmation tokens without the hardware-backed security provided by Keymaster.",
+        "Because ConfirmationUI is responsible for the user interface, while Keymaster is only used to store and manage encryption keys unrelated to confirmation tokens.",
+        "Because Keymaster generates the messages for user confirmation, while ConfirmationUI only displays them without creating any cryptographic statements.",
+        "Because ConfirmationUI and Keymaster are redundant systems, and only one of them is actually necessary for the generation of confirmation tokens."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q80",
+      "text": "As a security consultant, you are evaluating different design strategies for a new software deployment process. Which of the following strategies should be flagged for NOT preventing the risk of insecure preserved inherited permissions?",
+      "choices": [
+        "Implementing an access control policy that requires manual review of permissions before deployment.",
+        "Using a script that automatically sets permissions based on a predefined least-privilege model.",
+        "Extraction of files with default permissions followed by an automated permissions normalization process.",
+        "Maintaining the original archive's permissions during deployment without any user notification."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q81",
+      "text": "A company's internal audit revealed that certain certificate templates allowed users to authenticate as privileged accounts, leading to unauthorized access and potential privilege escalation. Which certificate attribute's misconfiguration is MOST likely responsible for this security breach?",
+      "choices": [
+        "The certificate's file extension being set to .pfx instead of .cer.",
+        "The certificate’s extended key usage (EKU) values being too permissive.",
+        "The lack of a strong encryption algorithm like AES for the certificate.",
+        "The absence of a timestamp within the certificate's properties."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q82",
+      "text": "You are developing an Android application that requires storing sensitive user data securely. Your application needs to access this data even when the device has not been unlocked by the user after a reboot. Considering the security measures provided by Android's file-based encryption (FBE), which storage locations should you utilize for this requirement, and what are the advantages and disadvantages of your choice?",
+      "choices": [
+        "Use Device Encrypted (DE) storage because it is available during Direct Boot, but it might expose less sensitive data to services before user authentication.",
+        "Use Credential Encrypted (CE) storage as it is the default and more secure, but the data will only be available after the user has unlocked the device.",
+        "Use external storage media as it is always accessible, but this approach is less secure due to the potential physical removal of the media.",
+        "Use adoptable storage with FBE, which combines the security of internal storage encryption with the flexibility of external media, but is not compatible with Android versions before 9."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q83",
+      "text": "A security architect is designing a new cloud-based application that handles sensitive credential data. To mitigate the risk of credential theft via software exploitation, which of the following techniques should be considered? Furthermore, what could be a potential limitation of the chosen technique?",
+      "choices": [
+        "Utilizing exploit protection tools like Windows Defender Exploit Guard (WDEG), with the limitation that they may not work for software targeted for defense evasion.",
+        "Applying network segmentation to restrict lateral movement, potentially limiting the ease of administrative tasks across the network.",
+        "Enforcing mandatory access controls on all system operations, which could potentially lead to a higher rate of false positives.",
+        "Requiring biometric authentication for all users, which could be limited by the physical presence requirement for user authentication."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q84",
+      "text": "As a security analyst reviewing the manifest file of an Android application, which of the following elements should you carefully evaluate to mitigate potential security risks?",
+      "choices": [
+        "<uses-sdk> tag specifying the range of compatible SDK versions.",
+        "Declaration of the app's version number.",
+        "<provider> tag with the attribute 'android:exported'.",
+        "Listing the app's icon and theme."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q85",
+      "text": "In an open-source mobile application security project, contributors are recognized based on the quality and quantity of their contributions. What would typically qualify a contributor to be recognized as a co-author, and what should be taken into consideration regarding the project's licensing terms for reuse and distribution?",
+      "choices": [
+        "Contributors with a significant number of quality contributions, and the project's work must clearly state the licensing terms under which it can be reused or distributed.",
+        "All contributors are automatically considered co-authors, and the project's work can be reused without attributing the original source.",
+        "Only the initial creators are recognized as co-authors, and the project's work is proprietary and cannot be legally reused or distributed by others.",
+        "Contributors who provide financial support, and the project's work is in the public domain and can be reused without any restrictions."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q86",
+      "text": "When designing an application that handles sensitive data, such as user credentials or financial information, which of the following data types and practices should be preferred to minimize the exposure of sensitive data in memory?",
+      "choices": [
+        "Utilize immutable data types like `String` or `BigInteger` to store sensitive information as they are secure by default.",
+        "Centralize the handling of sensitive data using primitive, mutable data structures like `byte[]` and `char[]` and overwrite them with dummy data after use.",
+        "Rely on `StringBuffer` and `StringBuilder` for modifying sensitive data and ensure the buffer is not copied when it exceeds capacity.",
+        "Use third-party services and SDKs without review since they are commonly equipped to handle sensitive data securely."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q87",
+      "text": "An Android application developer is designing a security-sensitive application that requires cryptographic key storage. The developer is considering the use of Tag::BLOB_USAGE_REQUIREMENTS for key generation to ensure the key can be used without file system support, which is critical for devices with encrypted disks. Assess the implications of setting the Tag::BLOB_USAGE_REQUIREMENTS with the value KeyBlobUsageRequirements::STANDALONE for the application's cryptographic key storage design.",
+      "choices": [
+        "It allows the key to be used even when the file system is not available, such as during early device boot processes.",
+        "It enforces that the key can only be used when the device is connected to a network to ensure higher security.",
+        "It ensures that the key can only be used within the Android system and not by the bootloader.",
+        "It requires the key to be stored in a dedicated hardware module separate from the device's main processor."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q88",
+      "text": "During a mobile application security test, you are evaluating the potential risks associated with Cross-site Request Forgery (CSRF) vulnerabilities. Which of the following factors would make CSRF a less relevant concern for the mobile application you are testing?",
+      "choices": [
+        "Mobile apps rarely use WebViews or cookie-based session management.",
+        "Mobile apps typically open links in a default browser, which has a separate cookie store from that of WebViews.",
+        "Mobile apps often implement certificate pinning, which prevents CSRF attacks.",
+        "Mobile apps automatically add a session cookie or other authentication token to requests made in WebViews."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q89",
+      "text": "A mobile application uses JWT for stateless authentication. The server issues these tokens after validating user credentials. Which of the following practices should be implemented to ensure the security of the JWT-based authentication system?",
+      "choices": [
+        "The payload of the JWT must contain sensitive user data to ensure user identification for each request.",
+        "A 'none' algorithm should be used in the JWT header to indicate that the token's integrity is verified.",
+        "The JWT should include an 'exp' claim to indicate the expiration time, and the server must reject expired tokens.",
+        "The secret used for the token's HMAC computation should be stored on the client side for token validation purposes."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q90",
+      "text": "When a user attempts to use their fingerprint to unlock their Android device, which of the following sequences correctly describes the operational flow?",
+      "choices": [
+        "The user touches the fingerprint sensor, the device wakes, `FingerprintService` processes the matching result, and then the vendor-specific library determines if there's a match.",
+        "The `authenticate` call is made, the fingerprint sensor activates, the user places a finger, and the vendor-specific library checks for a match against enrolled fingerprints.",
+        "The device wakes the screen, `FingerprintService` calls the `authenticate` function, and then the user places their finger on the sensor for matching.",
+        "The fingerprint sensor wakes the device, the user places their finger on the sensor, and `FingerprintService` immediately verifies the fingerprint without consulting the vendor-specific library."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q91",
+      "text": "In the context of mobile application security, why might using complex data types like Swift's String for processing sensitive information be problematic regarding memory management?",
+      "choices": [
+        "Complex data types like Swift's String are too inefficient for mobile applications, leading to performance issues.",
+        "These complex data types can create multiple hidden copies in memory, which cannot be directly accessed for secure erasure.",
+        "The use of complex data types like Swift's String is always secure as they are designed with built-in encryption.",
+        "Memory management issues with complex data types are a myth; modern programming languages automatically handle security."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q92",
+      "text": "You are tasked with reverse engineering a heavily obfuscated native binary for an Android application. Your goal is to perform low-level instruction tracing to uncover security vulnerabilities. Which combination of techniques would be the most efficient to achieve this goal?",
+      "choices": [
+        "Dynamic Binary Instrumentation using Valgrind and emulator-based tracing.",
+        "Static analysis using a disassembler with manual control flow graph simplification.",
+        "Using an iOS simulator to perform instruction-level tracing.",
+        "Employing a commercial SaaS iOS emulator for dynamic analysis."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q93",
+      "text": "As a mobile app developer, you are updating your app's store listings to comply with new privacy initiatives. What is one of the key reasons for the introduction of privacy labeling systems like the App Store Nutrition Labels and Google Play Data Safety Section?",
+      "choices": [
+        "To allow developers to bypass traditional privacy policies with more user-friendly labels.",
+        "To provide users with a detailed and technical breakdown of the app's source code.",
+        "To help users easily understand how their data is being collected, handled, and shared.",
+        "To ensure developers are recognized as legal experts in data protection laws."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q94",
+      "text": "An Android application is using AES encryption with CBC block mode for data security. Considering the security benefits and the support provided by AndroidKeyStore, which of the following statements is an accurate counterargument to the use of CBC over GCM?",
+      "choices": [
+        "GCM should be preferred over CBC because GCM does not require separate authentication, whereas CBC does.",
+        "CBC is more secure than GCM because it has been around longer and is better understood.",
+        "CBC is preferable as it supports padding, which is not supported by GCM when used with AndroidKeyStore.",
+        "GCM is not supported by AndroidKeyStore and therefore CBC remains the only viable block mode for AES encryption."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q95",
+      "text": "You are an IT administrator tasked with creating a batch of virtual smart cards for your company's employees, which will be managed by your team. You decide to use the Tpmvscmgr command-line tool. When executing the command for creating these cards, which of the following configurations will ensure the cards can later be managed by a smart card management tool?",
+      "choices": [
+        "Use the command `tpmvscmgr.exe create /name \"EmployeeCard\" /AdminKey RANDOM /PIN DEFAULT` to allow for easy management by the IT team.",
+        "Omit the `/generate` option and use default values to allow the card management system to take initial ownership of the virtual smart card.",
+        "Specify the `/generate` option to create an unformatted card, ensuring it can be managed by a smart card management tool.",
+        "Create the virtual smart card with a hardcoded administrator key for easy recall by the IT team and use the `/generate` option to format the card."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q96",
+      "text": "An organization is looking to protect its sensitive documents from unauthorized access and intellectual property theft. Which of the following measures would NOT be effective in safeguarding the organization's documents?",
+      "choices": [
+        "Implementing digital rights management (DRM) to restrict file access and usage.",
+        "Using watermarks to trace unauthorized distribution of documents.",
+        "Relying solely on a document's copyright notice for protection against theft.",
+        "Employing encryption to secure document contents during transfer and storage."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q97",
+      "text": "As an iOS application security auditor, you are reviewing an application's user interface that includes UI components for entering and displaying sensitive information. What practices should you recommend to the development team to prevent sensitive data exposure?",
+      "choices": [
+        "Ensure sensitive information such as passwords is exposed in the UI to provide visual feedback to the user.",
+        "Verify that no sensitive data is exposed via UI components unless explicitly required, and it should be properly masked when displayed.",
+        "Take screenshots of the application when it goes into the background, including screens with sensitive information, for a better user experience.",
+        "Allow keyboard caching for sensitive information to enhance the user's typing experience by providing suggestions and autocorrections."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q98",
+      "text": "In reviewing the source code for a mobile application, you come across the following snippet of code used for encrypting user data:\n\njava\nCipher cipher = Cipher.getInstance('DES/ECB/PKCS5Padding');\n\n\nAs a security consultant, what recommendation would you provide regarding the use of this encryption method?",
+      "choices": [
+        "Retain the use of DES/ECB as it is a certified and widely used encryption standard that provides strong security.",
+        "Suggest replacing DES/ECB with a more secure alternative like AES-GCM-256 due to known vulnerabilities in DES and ECB mode.",
+        "Advise to continue using DES/ECB but increase the key length to improve its security stance.",
+        "Recommend the implementation of RC4 instead of DES/ECB to ensure faster encryption operations and backward compatibility."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q99",
+      "text": "You are configuring a man-in-the-middle (MITM) attack for a mobile penetration test using an external USB WiFi card and a separate wired network interface on a Kali Linux system. You have ensured that your USB WiFi card supports access point (AP) mode. Select the configuration steps necessary to route the traffic from the mobile devices through your host computer to the target network:",
+      "choices": [
+        "Set up the USB WiFi card with hostapd to create an AP network, configure dnsmasq for DHCP services, and use iptables to forward traffic from the AP network to the wired interface.",
+        "Install a VPN service on the host computer to automatically route all mobile device traffic through the host to the target network.",
+        "Configure the USB WiFi card to use promiscuous mode to capture all inbound and outbound traffic without setting up an access point.",
+        "Use airmon-ng to put the USB WiFi card into monitor mode and configure the host computer as a router using the route command."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q100",
+      "text": "An iOS developer wishes to ensure that a private key used for ECC-based signing operations is securely generated and stored in the Secure Enclave on devices running iOS 9 or later. Which code snippet correctly configures the key generation parameters for this purpose?",
+      "choices": [
+        "let parameters = [kSecAttrKeyType as String: kSecAttrKeyTypeEC, kSecAttrKeySizeInBits as String: 256, kSecAttrTokenID as String: kSecAttrTokenIDSecureEnclave]",
+        "let parameters = [kSecAttrKeyType as String: kSecAttrKeyTypeRSA, kSecAttrKeySizeInBits as String: 2048, kSecAttrTokenID as String: kSecAttrTokenIDSecureEnclave]",
+        "let parameters = [kSecAttrKeyType as String: kSecAttrKeyTypeEC, kSecAttrKeySizeInBits as String: 256, kSecAttrTokenID as String: kSecAttrTokenIDNone]",
+        "let parameters = [kSecAttrKeyType as String: kSecAttrKeyTypeAES, kSecAttrKeySizeInBits as String: 256, kSecAttrTokenID as String: kSecAttrTokenIDSecureEnclave]"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q101",
+      "text": "In the context of mobile application security, why might reliance on iOS's built-in security features alone be insufficient for ensuring the security of a mobile application?",
+      "choices": [
+        "Because iOS built-in security features can be easily bypassed using common exploitation techniques.",
+        "Because relying solely on platform security features ignores the application layer vulnerabilities that could be exploited.",
+        "Because built-in security features are always less secure than third-party security solutions.",
+        "Because iOS does not provide any built-in security features, making third-party solutions necessary."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q102",
+      "text": "In an enterprise network environment, the security team has been alerted to a potential Resource Hijacking due to abnormal resource consumption patterns. Which of the following measures is least likely to aid in the identification and mitigation of the Resource Hijacking activity?",
+      "choices": [
+        "Searching for the presence of known cryptomining file artifacts on the system.",
+        "Monitoring for the creation of network connections to cryptocurrency-related hosts.",
+        "Enforcing password complexity policies across the organization.",
+        "Analyzing network traffic for uncommon data flows from processes that typically do not require network communication."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q103",
+      "text": "An iPhone user has configured Face ID for authentication. Under which conditions will Face ID augment its stored mathematical representation of the user's face based on the information provided?",
+      "choices": [
+        "Face ID will augment its data with the new mathematical representation after every successful match to continuously improve its accuracy.",
+        "If Face ID fails to recognise the user's face but the subsequent passcode entry is immediate and the match quality is above a certain threshold, Face ID will augment its enrolled data with the new capture.",
+        "Face ID updates its mathematical representation only when the user opts to reset Face ID, ensuring that the user's facial changes are comprehensively captured.",
+        "Face ID captures and stores images during normal operation for future reference and comparison, enhancing the likelihood of a match."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q104",
+      "text": "In designing an authentication system for an iOS mobile application, which of the following methods would enhance the security of user authentication?",
+      "choices": [
+        "Use simple session tokens that remain valid indefinitely for user convenience.",
+        "Employ biometric authentication supported by iOS, combined with fallback to a PIN or password.",
+        "Implement a four-digit PIN authentication as the sole method for user access.",
+        "Allow users to authenticate through a third-party social media account without additional checks."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q105",
+      "text": "You are tasked with ensuring that sensitive data storage within an iOS mobile application complies with recognized security standards. Which of the following practices should you employ to secure the data at rest?",
+      "choices": [
+        "Encrypt sensitive data using a hard-coded symmetric key within the app's source code.",
+        "Implement file-level encryption using iOS's built-in data protection mechanisms.",
+        "Store sensitive information in plain text to facilitate easier data recovery and backup processes.",
+        "Rely solely on iOS's native code obfuscation to protect sensitive data."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q106",
+      "text": "When developing an Android application, the security of the private key used for signing the APK is crucial. If a malicious actor gains access to this key, what are the potential consequences, and how can developers mitigate this risk?",
+      "choices": [
+        "The malicious actor can publish updates to the app with unauthorized content, and to mitigate this, developers should store keys in a secure KeyStore with a strong password known only to the key creator.",
+        "The malicious actor can only view the app's source code without being able to modify the application, and developers should use obfuscation to prevent this.",
+        "The malicious actor can decrypt user data, and developers should implement additional encryption algorithms to protect user data.",
+        "The malicious actor can alter the app's functionality, but this poses no significant threat since app stores will detect and block malicious updates."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q107",
+      "text": "In the context of Android's cryptographic key lifecycle management, which of the following practices should you follow to adhere to the best practices outlined for handling cryptographic keys?",
+      "choices": [
+        "Store cryptographic keys in plain text within the application's private storage to ensure quick access when performing cryptographic operations.",
+        "Implement key rotation frequently to replace old keys with new ones, thus minimizing the risk of a key being compromised over time.",
+        "Use the same cryptographic key for multiple purposes across the application to reduce complexity and streamline key management.",
+        "Archive cryptographic keys indefinitely to maintain historical data encryption compatibility, regardless of whether the keys are still in use."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q108",
+      "text": "When maintaining a public repository for an open-source web application, which of the following would be an inappropriate action that could compromise the application's security?",
+      "choices": [
+        "Regularly updating the 'README.md' file with the latest project status and contributing guidelines.",
+        "Publishing a 'CONTRIBUTING.md' file with guidelines on how to report bugs and request features.",
+        "Exposing detailed error logs from the production environment that may contain sensitive information.",
+        "Sharing a list of technologies and frameworks used in the project, like 'python' or 'django'."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q109",
+      "text": "A developer is building an iOS application that requires serialization of custom objects to ensure both type-safety and data integrity during the decoding process. Which protocol should the developer implement to meet these requirements, considering that the objects contain sensitive information that should not be easily tampered with?",
+      "choices": [
+        "NSCoding protocol with additional HMAC for integrity checks",
+        "NSSecureCoding with supportsSecureCoding set to true",
+        "NSKeyedArchiver without additional security measures",
+        "Codable protocol with JSONEncoder and JSONDecoder"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q110",
+      "text": "When conducting security testing on a Xamarin mobile application, you notice that setting the system proxy in the Wi-Fi settings does not allow you to observe HTTP requests in your interception proxy. Which of the following methods could be used to resolve this issue?",
+      "choices": [
+        "Reconfigure the Xamarin app to use a default proxy by modifying the OnCreate or Main method.",
+        "Enable 'Support invisible proxying' in the Wi-Fi settings to force Xamarin apps to use the local proxy.",
+        "Install a network analyzer tool on the mobile device to capture traffic without changing the app configuration.",
+        "Update the Xamarin framework on the mobile device to the latest version to ensure proxy settings are respected."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q111",
+      "text": "In reviewing a software module's design, a developer argues that there is no need to strictly enforce argument types for function calls since the programming language being used is loosely typed. Which of the following is the best counterargument to this claim?",
+      "choices": [
+        "Loosely typed languages can still suffer from unexpected behaviors when the wrong data types are passed to functions, leading to potential security weaknesses.",
+        "Strictly enforcing argument types will significantly reduce the execution speed of the application, which is undesirable.",
+        "In a loosely typed language, the compiler automatically corrects any type mismatches, so there is no need for concern.",
+        "The developer should focus solely on optimizing the code for performance, rather than worrying about argument types."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q112",
+      "text": "In designing a secure software deployment process, what strategy should be employed to reduce the risk of introducing replicating malicious code into the system?",
+      "choices": [
+        "Minimize the use of third-party libraries to reduce the attack surface.",
+        "Implement a sandbox environment where all incoming files are executed and monitored for suspicious behavior.",
+        "Conduct regular penetration testing to identify and address security vulnerabilities.",
+        "Perform software integrity verification by checking digital signatures and checksums during the installation phase."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q113",
+      "text": "As an Android developer, you are implementing an inverted color scheme for a high-contrast accessibility mode in your app. According to the guidelines for Android Protected Confirmation, you have set the background color to #000000 with an opacity of 87%. What should be the color for the confirmation string to ensure compliance with the inverted color accessibility requirements?",
+      "choices": [
+        "The confirmation string color should be set to #a1c2fa to maintain consistency with the icon color.",
+        "The confirmation string color should be #ffffff to comply with the inverted color accessibility requirements.",
+        "The confirmation string color should remain the same as the default color to avoid confusion.",
+        "The confirmation string color should be set to #4285f4 to provide sufficient contrast against the background."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q114",
+      "text": "A company is planning to deploy a fleet of iOS devices for its field agents and needs to ensure that sensitive data stored on the devices is protected in the event that any device gets lost or stolen. As a security consultant, which of the following technologies and features should you recommend integrating into their security infrastructure to protect the data at rest on the devices? (Select all that apply.)",
+      "choices": [
+        "System Coprocessor Integrity Protection (SCIP) to prevent unauthorized modification of the coprocessor firmware, which may indirectly affect the security of the data.",
+        "Passcode-derived key (PDK) to ensure that data encryption keys are intertwined with the user's passcode, providing an additional layer of security.",
+        "ridge flow angle mapping to provide a mathematical representation of fingerprint data, ensuring only authorized users can access the device.",
+        "XProtect technology to implement signature-based detection and removal of malware, which could potentially access or compromise data on the devices."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q115",
+      "text": "When conducting security testing on iOS devices, certain modifications to the operating system may be necessary to enable a higher level of access and control. These modifications often include the ability to run unsigned code and have unrestricted debugging capabilities. What are the potential benefits for a security tester to perform such modifications on an iOS device?",
+      "choices": [
+        "Access to internal APIs and the ability to install applications from any source, which can facilitate dynamic analysis.",
+        "Ability to dual-boot the device into a different operating system, providing comparative analysis against iOS.",
+        "Automatic patching of all known vulnerabilities, ensuring a secure environment for testing.",
+        "Enables the use of virtualization to simulate multiple devices and network environments."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q116",
+      "text": "When designing an authentication mechanism for a mobile application on Android, what practices should be followed to ensure compliance with recognized security standards?",
+      "choices": [
+        "Implement device-level authentication that relies solely on the security of the underlying platform.",
+        "Utilize well-tested protocols and frameworks to handle authentication processes within the application.",
+        "Develop a custom authentication protocol that is unique to the application to prevent known attack vectors.",
+        "Store user credentials locally on the device to expedite the authentication process."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q117",
+      "text": "A mobile application developer is implementing security measures for an Android app that handles sensitive user data. Which of the following practices should the developer avoid to maintain a high level of security?",
+      "choices": [
+        "Utilizing Android's built-in security features to encrypt sensitive data before storing it locally.",
+        "Implementing custom encryption algorithms to enhance the uniqueness of the security approach.",
+        "Adopting the principle of least privilege when granting permissions to different components of the application.",
+        "Applying regular security updates and patches to the application and its dependencies."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q118",
+      "text": "During a mobile application security assessment, you are tasked with ensuring that no unintended processes are interfering with your ability to monitor and test the WiFi interface. You come across a script that includes the following command: 'airmon-ng check kill'. What is the purpose of this command in the context of the security assessment?",
+      "choices": [
+        "To configure a new WiFi interface for monitoring purposes",
+        "To monitor the traffic passing through the WiFi interface",
+        "To terminate processes that may be using the WiFi interface",
+        "To generate a report on the security of the WiFi interface"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q119",
+      "text": "In a comprehensive mobile app security testing guide, which of the following categories would most likely be included to ensure a robust examination of an application's security?",
+      "choices": [
+        "Authentication and session management",
+        "Color scheme and design consistency",
+        "User interface responsiveness",
+        "Marketing strategy and advertisement placement"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q120",
+      "text": "A web application processes user-submitted dates in the format of 'MM/DD/YYYY'. An attacker realizes that when a date input contains letters (e.g., 'AB/CD/EFGH'), the application does not perform proper validation and processes this input in an unintended way, which leads to unauthorized access to sensitive data. What could be the primary reason for this security breach?",
+      "choices": [
+        "The application does not sanitize user input, allowing script injection.",
+        "The application incorrectly assumes all input will be in the correct date format, leading to a type confusion error.",
+        "The application uses weak encryption for user input, enabling attackers to decrypt sensitive information.",
+        "The application's access control relies on client-side verification, which can be bypassed."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q121",
+      "text": "An iOS app developer wants to ensure that a stored secret authentication token can only be accessed after successful Touch ID authentication and it is only available on the current device when the passcode is set. Which attribute and parameter should be used when saving the secret token to the iOS keychain to meet these requirements?",
+      "choices": [
+        "Use `kSecAttrAccessibleWhenUnlocked` as the attribute with `SecAccessControlCreateFlags.biometryAny` as the parameter.",
+        "Use `kSecAttrAccessibleAlways` attribute to ensure the token is always accessible for user convenience.",
+        "Use `kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly` as the attribute with `SecAccessControlCreateFlags.biometryCurrentSet` as the parameter.",
+        "Implement a `SecAccessControlCreateFlags.userPresence` parameter to allow access based solely on user presence without any biometric check."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q122",
+      "text": "In the context of mobile application security, particularly for the Android platform, which of the following measures should be implemented to adhere to resilience requirements?",
+      "choices": [
+        "Utilizing multi-factor authentication to secure user access.",
+        "Implementing obfuscation techniques to protect code against reverse engineering.",
+        "Applying the same security measures for both front-end and back-end components.",
+        "Ensuring compatibility with all Android versions, including deprecated ones."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q123",
+      "text": "When securing an Android application against reverse engineering, a security engineer considers implementing obfuscation techniques. Which of the following statements accurately reflect the pros and cons of using obfuscation?",
+      "choices": [
+        "Obfuscation can prevent decompilation of Java classes, making reverse engineering impossible.",
+        "Obfuscation can rename identifiers to meaningless strings, complicating reverse engineering without impacting performance.",
+        "Using obfuscation guarantees the detection and prevention of any tampering with the app's native code.",
+        "Obfuscation can potentially introduce new vulnerabilities due to the complexity it adds to the codebase."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q124",
+      "text": "As an Android OS developer, you are tasked with configuring the encryption parameters for a new device's filesystem that is launching with Android 11 and features inline encryption hardware. What is the recommended setting for the `fileencryption` fstab option for most devices that meet these criteria?",
+      "choices": [
+        "fileencryption=aes-256-xts:aes-256-cts",
+        "fileencryption=aes-256-xts:aes-256-cts:inlinecrypt_optimized",
+        "fileencryption=aes-256-xts:aes-256-heh:inlinecrypt_optimized",
+        "fileencryption=adiantum:inlinecrypt_optimized"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q125",
+      "text": "A mobile app developer is looking to enhance the security of their application by implementing obfuscation techniques to protect against reverse engineering. Which combination of obfuscation methods would provide a balanced approach to hinder static analysis while maintaining reasonable application performance?",
+      "choices": [
+        "Aggressively using control flow flattening and heavy dead code injection throughout the app.",
+        "Applying name obfuscation, string encryption, and selective control flow flattening.",
+        "Implementing heavy string encryption only on the most critical parts of the app.",
+        "Relying solely on instruction substitution for all operations within the app."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q126",
+      "text": "A developer is configuring a device with file-based encryption running Android 11. Which of the following kernel configuration settings are required to enable Adiantum and ensure optimal encryption performance?",
+      "choices": [
+        "CONFIG_CRYPTO_ADIANTUM=y\nCONFIG_DM_CRYPT=y\nCONFIG_F2FS_FS_ENCRYPTION=y",
+        "CONFIG_CRYPTO_ADIANTUM=y\nCONFIG_FS_ENCRYPTION=y\nCONFIG_BLK_INLINE_ENCRYPTION=y\nCONFIG_BLK_INLINE_ENCRYPTION_FALLBACK=y\nCONFIG_FS_ENCRYPTION_INLINE_CRYPT=y\nCONFIG_DM_DEFAULT_KEY=y",
+        "CONFIG_CRYPTO_ADIANTUM=y\nCONFIG_DM_CRYPT=y\nCONFIG_CRYPTO_AES_ARM=y\nCONFIG_CRYPTO_CHACHA20_NEON=y\nCONFIG_CRYPTO_NHPOLY1305_NEON=y",
+        "CONFIG_CRYPTO_ADIANTUM=y\nCONFIG_FS_ENCRYPTION=y\nCONFIG_F2FS_FS_ENCRYPTION=y\nCONFIG_KERNEL_MODE_NEON=y"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q127",
+      "text": "You are developing a secure Android application that requires the generation of an RSA key with a specific set of cryptographic properties for digital signing. Which combination of features and configurations should you request from the Android Keystore to ensure the key meets your application's security requirements?",
+      "choices": [
+        "Generate an RSA key of 2048-bit key size with RSASSA-PKCS1-v1_5 padding mode for signing, and specify a public exponent of F4 (2^16+1).",
+        "Generate an RSA key of 512-bit key size with RSASSA-PSS padding mode for encryption, and specify a public exponent of F3 (2^15+1).",
+        "Generate an RSA key of 3072-bit key size with RSAES-PKCS1-v1_5 padding mode for decryption, and enforce an authorization list with `TAG::KEY_SIZE` of 3072.",
+        "Generate an ECDSA key using the NIST P-256 curve with SHA-256 digest mode for signing, and specify arbitrary public exponents for RSA."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q128",
+      "text": "In the context of Android mobile application development, which of the following statements accurately reflects the impact of a security measure on the application’s robustness?",
+      "choices": [
+        "Implementing SSL/TLS encryption for data in transit ensures that data cannot be intercepted or tampered with, thereby securing the application's data.",
+        "Enabling debug mode in the production release can provide real-time error reporting, enhancing the application’s reliability.",
+        "Allowing the application to execute code from external sources can increase flexibility and functionality.",
+        "Using unencrypted HTTP connections for sensitive data transactions can increase application performance."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q129",
+      "text": "An iOS mobile application developer is advised to adopt a layered security approach to protect sensitive operations within the app. Which of the following scenarios would NOT be improved by following this advice?",
+      "choices": [
+        "Storing user authentication tokens in the iOS keychain to avoid plain text storage.",
+        "Hardcoding encryption keys within the app's source code to simplify the encryption process.",
+        "Utilizing Touch ID or Face ID for biometric authentication to enhance user access control.",
+        "Implementing certificate pinning to prevent man-in-the-middle (MITM) attacks over network connections."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q130",
+      "text": "An architect proposes that for a new secure messaging platform, the TCB should include not just the messaging protocol and cryptographic components but also the user interface (UI) to ensure consistency and user experience. Which of the following is the best counterargument to including the UI in the TCB?",
+      "choices": [
+        "Including the UI in the TCB increases complexity and contradicts the principle of keeping the TCB small and verifiable.",
+        "The UI should be included in the TCB because it enhances the security of the messaging protocol.",
+        "A smaller TCB would make the system less secure, as more components would be unprotected.",
+        "The UI is critical for user experience and should be prioritized over security considerations."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q131",
+      "text": "You are developing an Android application that requires performing cross-process calls with high performance. Which of the following IPC mechanisms would be most suitable for your application, and what is a significant advantage of using it?",
+      "choices": [
+        "Binder, because it is designed for high performance in cross-process calls.",
+        "Intents, because they can broadcast system-wide events.",
+        "ContentProviders, because they provide access to the user's list of contacts.",
+        "Services, because they can run in the background without user interaction."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q132",
+      "text": "A developer is designing a feature for an Android app that involves playing music in the background while the user navigates between different activities within the app. The music should continue to play uninterrupted regardless of user interactions with the app's UI. Which Android application component should be used to implement this feature, and what is a major advantage of using this component for such a task?",
+      "choices": [
+        "Activity, because it directly interacts with the user interface and can run background processes efficiently.",
+        "Service, because it can perform long-running operations in the background without needing a user interface.",
+        "Broadcast Receiver, because it can continuously listen for and respond to broadcast intents, making it suitable for background music playback.",
+        "AndroidManifest.xml, because it defines the app's components and can handle background processes like music playback."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q133",
+      "text": "Considering the process of validating SELinux policies, a developer wants to expedite the SELinux policy development by using a tool that takes `dmesg` denials and converts them into corresponding SELinux policy statements. They are considering `audit2allow` for this purpose. What is an advantage and a potential issue of using `audit2allow` for developing SELinux policies?",
+      "choices": [
+        "Advantage: It can quickly convert denial logs into policy statements. Potential issue: It might suggest overreaching permissions that could compromise security.",
+        "Advantage: It can analyze the full call chain of denials including kernel and userspace. Potential issue: It requires a Linux kernel version higher than 5.10.",
+        "Advantage: It prevents rate-limiting of SELinux error messages after boot complete. Potential issue: It may not support capturing boot time events.",
+        "Advantage: It confirms enforcing mode is enabled through CTS tests. Potential issue: It cannot disable SELinux enforcement on production devices."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q134",
+      "text": "You are implementing a Keymaster Hardware Abstraction Layer (HAL) for an Android device that needs to support a feature for an Android Wear device with on-body sensors. Which of the following Keymaster Authorization Tags should you implement to ensure that the feature is purely software-enforced?",
+      "choices": [
+        "Tag::ALLOW_WHILE_ON_BODY",
+        "Tag::ALL_APPLICATIONS",
+        "Tag::APPLICATION_ID",
+        "Tag::ATTESTATION_ID_IMEI"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q135",
+      "text": "As an Android developer implementing inter-process communication (IPC) in a Trusty application, you are tasked with configuring a port that should allow connections both from other secure apps and the non-secure world. Which combination of flags should you specify for the `flags` parameter when creating this port to meet the requirements?",
+      "choices": [
+        "IPC_PORT_ALLOW_TA_CONNECT | IPC_PORT_ALLOW_NS_CONNECT",
+        "IPC_PORT_ALLOW_TA_CONNECT & IPC_PORT_ALLOW_NS_CONNECT",
+        "IPC_PORT_ALLOW_NS_CONNECT",
+        "IPC_CONNECT_WAIT_FOR_PORT | IPC_CONNECT_ASYNC"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q136",
+      "text": "In an effort to bolster your web server's security against evasion attacks, you are considering deploying HIDS. A colleague claims that by installing HIDS, the server will be fully protected against path traversal attacks. Based on your understanding of how HIDS operates, which of the following would be the best counterargument to your colleague's claim?",
+      "choices": [
+        "HIDS is ineffective against path traversal attacks because it only analyzes network traffic and not the file system's interpretation of requests.",
+        "To fully defend against path traversal attacks, HIDS must not only understand the contents of the end request but also how the underlying file system interprets these contents, which could still lead to parsing inconsistencies and evasion attacks.",
+        "Path traversal attacks are not a concern for HIDS because they typically rely on exploiting the network layer, which HIDS is adept at monitoring and defending.",
+        "Installing HIDS on the server would make the system more vulnerable to path traversal attacks, as it may introduce additional security flaws."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q137",
+      "text": "Consider the following code snippets. Which of the following code examples does NOT introduce a language syntax error due to improper import statements?",
+      "choices": [
+        "import <stdio.h>",
+        "#import \"MyCustomHeader.h\"",
+        "import sys.types.h",
+        "#include <stdlib.h>"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q138",
+      "text": "What are the advantages of having access to the application's source code during a security review?",
+      "choices": [
+        "It allows for a more thorough review by enabling the identification of vulnerabilities that may be missed during black-box testing.",
+        "Source code access is essential for performing any kind of security testing and without it, security testing cannot be conducted.",
+        "Access to source code enables the use of automated tools to perform the entire security review process without human intervention.",
+        "Having source code is only necessary for compliance with certain regulations, and does not contribute to the security review process."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q139",
+      "text": "A mobile app security tester is examining an iOS application that claims to protect user privacy while accessing protected resources. The tester notes that the app includes 'UIBackgroundModes' with 'bluetooth-peripheral' and 'bluetooth-central' in the 'Info.plist' file. Why might the tester still be concerned about the app's access to Bluetooth peripherals?",
+      "choices": [
+        "The 'UIBackgroundModes' values alone do not prompt the user for permission to access Bluetooth peripherals.",
+        "The app may crash on devices that do not support Bluetooth Low Energy (BLE) due to the 'UIBackgroundModes' configuration.",
+        "Including 'bluetooth-peripheral' and 'bluetooth-central' in 'UIBackgroundModes' overrides the need for 'UIRequiredDeviceCapabilities'.",
+        "The 'UIBackgroundModes' settings are likely to be ignored by the system since they are not part of 'UIRequiredDeviceCapabilities'."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q140",
+      "text": "A mobile application development team is working on a new Android app that will handle sensitive user data. The application needs to be executed in an environment where it has permissions to manage multiple user PII and maintain system integrity. Based on the definitions provided by Android's security team, which security context is most suitable for the application to run?",
+      "choices": [
+        "Constrained context",
+        "Unprivileged context",
+        "Privileged context",
+        "Trusted Execution Environment (TEE)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q141",
+      "text": "An Android developer is designing an application that will handle sensitive user data. The developer must choose an encryption method that allows the device to boot directly to the lock screen while still providing quick access to essential features like alarms and accessibility services, even before the user has entered their credentials. Which encryption method should the developer implement?",
+      "choices": [
+        "Full-disk encryption",
+        "File-based encryption",
+        "Metadata encryption",
+        "Asymmetric encryption"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q142",
+      "text": "An organization is reviewing their cybersecurity strategies to mitigate the risk of attacks that exploit file and directory permissions as well as user behavior. Which of the following strategies would NOT contribute significantly to mitigating these risks?",
+      "choices": [
+        "Implementing strict file system access controls on critical system folders such as C:\\Windows\\System32.",
+        "Training users to disable all macros in documents, regardless of the document's source or purpose.",
+        "Restricting user permissions to prevent the installation of unauthorized software.",
+        "Training users not to open email attachments or click unknown links."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q143",
+      "text": "When developing a mobile application that handles sensitive data, which of the following practices is NOT recommended to ensure the security of the app?",
+      "choices": [
+        "Implementing certificate pinning to prevent man-in-the-middle (MITM) attacks.",
+        "Storing encryption keys in plain text within the app's source code.",
+        "Using secure coding practices to mitigate common vulnerabilities such as SQL injection.",
+        "Regularly updating the app to address security patches and vulnerabilities."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q144",
+      "text": "In the context of a device's sensor data protection, which of the following strategies is likely to be the least effective in preventing untrusted software from manipulating sensor output and why?",
+      "choices": [
+        "Using cryptographic techniques to sign and verify parametric data values.",
+        "Implementing role-based access control to restrict which user roles can modify sensor parametric data.",
+        "Relying on physical tamper-proofing of the device to prevent unauthorized access to hardware.",
+        "Allowing unrestricted access to sensor calibration data with the expectation that system monitoring tools will detect and prevent misuse."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q145",
+      "text": "Consider a scenario where a class in a Java application includes a method that returns a reference to a private array of sensitive user data. This exposure represents a security vulnerability since the returned reference allows external modification of the private data. Which of the following approaches would be effective in mitigating this security risk while maintaining functionality?",
+      "choices": [
+        "Modify the method to return a new array containing a copy of the private data.",
+        "Keep the method public, but change the array to a non-mutable collection.",
+        "Declare the method as synchronized to prevent concurrent access.",
+        "Remove the method and require direct access to the private array."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q146",
+      "text": "An Android application developer wishes to ensure that files created by their app are secure from access by other applications. Which of the following practices should the developer implement to achieve this security objective?",
+      "choices": [
+        "Run the application with root permissions to prevent other apps from accessing its files.",
+        "Store files on an external storage medium with custom encryption.",
+        "Use the default file permissions model where each app runs as its own user.",
+        "Implement a custom kernel module to manage file access."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q147",
+      "text": "In an effort to protect a mobile application from reverse engineering, which of the following techniques would be LEAST effective?",
+      "choices": [
+        "Applying code obfuscation to make the source code difficult to understand.",
+        "Utilizing non-reversible hash functions for storing user passwords.",
+        "Employing runtime application self-protection (RASP) mechanisms.",
+        "Including verbose logging of all application activities."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q148",
+      "text": "In a supported Android device running Android 9 or higher, an application leverages the Android Protected Confirmation feature for a high-assurance financial transaction. Which of the following best describes the sequence and interaction of components involved in this process?",
+      "choices": [
+        "The app calls ConfirmationUI to generate a confirmation token, which is then used by Trusted UI to query the user for confirmation, and Keymaster asserts the user’s approval.",
+        "The app invokes Protected Confirmation, which then calls Trusted UI to query the user. Upon user's approval, Keymaster works with ConfirmationUI to generate a cryptographic statement.",
+        "The app directly interacts with Keymaster to assert the user's approval without the need for Trusted UI or the generation of confirmation tokens.",
+        "The app utilizes Trusted UI to directly encrypt the transaction data, bypassing the need for Keymaster or ConfirmationUI in the process."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q149",
+      "text": "An Android application developer needs to securely store encryption keys to ensure that sensitive data remains protected. Which of the following methods should the developer use to enhance the security of the encryption keys?",
+      "choices": [
+        "Store the encryption keys using SharedPreferences and ensure the file is readable only by the application.",
+        "Hardcode the encryption keys in the source code for easy retrieval during application runtime.",
+        "Encrypt Data Encryption Keys (DEKs) with Key Encryption Keys (KEKs) and store them securely using AndroidKeyStore.",
+        "Use a predictable key derivation function based on stable, device-specific attributes to generate encryption keys."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q150",
+      "text": "You are tasked with securing a mobile application that must encrypt sensitive data before storage. Which of the following approaches to initializing the encryption process is recommended for ensuring the confidentiality and integrity of the data?",
+      "choices": [
+        "Using a cryptographically secure random number generator to produce a unique and non-predictable initialization vector (IV) for each encrypted message.",
+        "Reusing a single, hard-coded initialization vector (IV) for all encrypted messages to maintain consistency across application sessions.",
+        "Employing a predictable IV that increments with each new message to simplify the decryption process for authorized users.",
+        "Choosing a well-known string as the IV to ensure that the encryption algorithm can be easily implemented on different platforms."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q151",
+      "text": "Which Keymaster Authorization Tag would be least beneficial to use when generating or importing a key that requires high entropy binding to application-specific data?",
+      "choices": [
+        "Tag::APPLICATION_DATA",
+        "Tag::ATTESTATION_ID_MODEL",
+        "Tag::ATTESTATION_CHALLENGE",
+        "Tag::ASSOCIATED_DATA"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q152",
+      "text": "Which of the following code snippets likely contains a function call with an incorrect argument type that could lead to weaknesses?",
+      "choices": [
+        "function calculateInterest(principal, rate) { /* ... */ }\ncalculateInterest('1000', 0.05);",
+        "function authenticateUser(userId, passwordHash) { /* ... */ }\nauthenticateUser(1023, calculateHash(password));",
+        "function setItemPrice(itemCode, price) { /* ... */ }\nsetItemPrice('A01', true);",
+        "function appendLog(logs, message) { /* ... */ }\nappendLog(currentLogs, 'User logged in at ' + new Date());"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q153",
+      "text": "A developer is tasked with managing SELinux policy files for an Android device. The developer must decide where to install mapping files for the system_ext and product partitions to ensure compatibility and ease of maintenance. What are the advantages of placing a CIL file containing the mapping information in `{SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS}/compat/{ver}/{ver}.cil` and `{PRODUCT_PRIVATE_SEPOLICY_DIRS}/compat/{ver}/{ver}.cil`, and adding them to `PRODUCT_PACKAGES`?",
+      "choices": [
+        "It guarantees automatic compatibility with future platform versions without any additional intervention.",
+        "It allows partners to maintain compatibility by providing their own versioned attributes for policy files.",
+        "It ensures that the vendor partition will automatically export the designated public types without the need for mapping files.",
+        "It prevents any future changes in the public sepolicy, ensuring that the private policy remains unchanged."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q154",
+      "text": "An application developer is creating a service that needs to create named file mapping objects accessible across different Terminal Services sessions. However, the service does not need to interact with the security log or backup files and directories. Which of the following privileges is essential for the developer to grant to the service?",
+      "choices": [
+        "SeCreateGlobalPrivilege",
+        "SeBackupPrivilege",
+        "SeAuditPrivilege",
+        "SeCreatePermanentPrivilege"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q155",
+      "text": "A developer is preparing to release an Android application that needs to support devices running Android 6.0 (API level 23) up to the latest Android version. The developer wishes to ensure the application is securely signed and compatible with all supported versions. Which APK signing scheme(s) should the developer choose to sign the application?",
+      "choices": [
+        "APK Signature Scheme v3 (v3 scheme) only, as it is the most secure option provided by Android.",
+        "APK Signature Scheme v2 (v2 scheme) or JAR signing (v1 scheme), to ensure compatibility with Android 6.0 and above.",
+        "JAR signing (v1 scheme) only, as it is the most compatible across all Android versions.",
+        "The developer should use a custom signing scheme that is not officially supported by Android for enhanced security."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q156",
+      "text": "A mobile application developer has implemented new features that require access to sensitive user data. Which of the following code practices presents a risk to user privacy?",
+      "choices": [
+        "The app checks for user authorization using biometrics before displaying sensitive data such as credit card details.",
+        "The app accesses the user's inventory of installed apps and sends it over a secure network connection without user consent.",
+        "The app uses the App Tracking Transparency Framework to request user permission before tracking their activity on iOS devices.",
+        "The app provides a recovery code to users for account recovery purposes and instructs them to never share it with anyone else."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q157",
+      "text": "An iOS application is found to have a vulnerability where sensitive user data stored in the Keychain is accessible even after the device restarts and before the user has unlocked it for the first time. Which Keychain data protection class should have been used to prevent this vulnerability?",
+      "choices": [
+        "kSecAttrAccessibleAlways",
+        "kSecAttrAccessibleAfterFirstUnlock",
+        "kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly",
+        "kSecAttrAccessibleWhenUnlocked"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q158",
+      "text": "Consider the following Objective-C code snippet used in a mobile application:\n\nobjective-c\nimport <dlfcn.h>\nvoid *handle = dlopen(\"/path/to/library\", RTLD_LAZY);\n\n\nThis code dynamically loads a shared library at runtime. Which of the following is NOT a security risk associated with this practice?",
+      "choices": [
+        "The application might inadvertently load a malicious library if the path is not properly secured.",
+        "Using dynamic linking can optimize the application's performance by loading libraries as needed.",
+        "Dynamic loading of libraries can lead to unauthorized access to application memory space.",
+        "If the library's path is hard-coded, it might be exploited to execute arbitrary code."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q159",
+      "text": "You are tasked with overseeing the development of a new mobile application that needs to perform with high reliability and take full advantage of device capabilities like camera and sensors. The app should also adhere to platform-specific UI design principles. Considering these requirements, which of the following app development approaches would you recommend?",
+      "choices": [
+        "Develop a native app using platform-specific SDKs for Android and iOS to ensure best performance and access to device capabilities.",
+        "Opt for a web app to minimize development and maintenance costs, despite it having limited device integration and lower performance.",
+        "Choose a hybrid app that combines web technologies with native execution, but it may not fully adhere to platform-specific UI design principles.",
+        "Implement a Progressive Web App (PWA) because it offers offline capabilities and can access all mobile device hardware features."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q160",
+      "text": "Considering the mitigation strategies against container escape techniques, which of the following would be the LEAST effective in preventing an adversary from gaining access to the host environment?",
+      "choices": [
+        "Using seccomp-bpf to restrict certain system calls such as `mount`.",
+        "Ensuring containers do not run with unnecessary privileges or components.",
+        "Monitoring for unexpected usage of syscalls indicating an escape attempt.",
+        "Installing antivirus software on the host system."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q161",
+      "text": "A mobile application developer intends to create a service in an Android application that should allow other applications to bind to it and interact seamlessly. The developer also needs to ensure that the service can handle long-term processes and restart automatically when resources become available. Which of the following best describes the approach the developer should take to fulfill these requirements?",
+      "choices": [
+        "Implement an IntentService, as it creates a new thread that can handle IPC and can be bound by other services.",
+        "Use a local broadcast manager to create a bound service that ensures private data does not leave the application's perimeter.",
+        "Create a bound service using an IBinder interface and manage its lifecycle to handle long-term operations.",
+        "Set up a BroadcastReceiver declared in the Android Manifest file to receive and handle IPC and bind with other applications."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q162",
+      "text": "In an attempt to improve the security of a web application, a developer is considering various strategies for handling runtime exceptions. Analyze the following strategies and select the one that could potentially lead to the exposure of sensitive information:",
+      "choices": [
+        "Catching all exceptions and logging them internally without returning any stack trace information to the user.",
+        "Configuring a custom error page that provides a generic error message, regardless of the exception type.",
+        "Implementing a detailed error page that is only shown to local users, while remote users receive a generic error message.",
+        "Allowing the application container to handle exceptions by default, potentially displaying full stack traces to the user."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q163",
+      "text": "When designing a mobile application's security architecture against reverse engineering, you need to select a detection method that remains effective even when the application is running on a system with Android version 7.0 (API level 24) or higher. Which of these methods would not be hampered by the inability to view daemons started by other apps due to system restrictions?",
+      "choices": [
+        "Scanning for specific strings in the memory of running processes that indicate the presence of reverse engineering tools.",
+        "Inspecting the list of running services to find the 'frida-server' daemon.",
+        "Checking for open TCP ports that are commonly used by reverse engineering tools.",
+        "Monitoring the system for the usage of named pipes which are a communication method employed by some reverse engineering tools."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q164",
+      "text": "In iOS development, when generating cryptographically secure random numbers, which of the following statements is incorrect?",
+      "choices": [
+        "Apple's Randomization Services API should be utilized as it provides cryptographically secure random numbers.",
+        "The `SecRandomCopyBytes` function is a reliable choice as it wraps the `/dev/random` device file.",
+        "Using third-party random number generators is recommended over Apple's API for enhanced security.",
+        "The `SecRandomCopyBytes` function generates pseudorandom values in the range of 0 to 255."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q165",
+      "text": "An application's binary has been protected using several obfuscation techniques to hinder reverse engineering attempts. A reverse engineer has encountered difficulties in understanding the program flow due to the absence of the natural conditional constructs that are expected in such a program. Which obfuscation technique is most likely responsible for this complication?",
+      "choices": [
+        "Dead Code Injection",
+        "String Encryption",
+        "Control Flow Flattening",
+        "Packing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q166",
+      "text": "Which of the following features is NOT supported by Screen Time on the specified operating system?",
+      "choices": [
+        "Set web usage limits on macOS.",
+        "Configure Downtime on watchOS.",
+        "Enforce additional restrictions on tvOS.",
+        "View usage data on iOS."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q167",
+      "text": "Your company is refining its containerized environment security posture. Which of the following practices should be avoided as it would not enhance security against adversaries attempting to discover resources within the container environment?",
+      "choices": [
+        "Restricting the IP ranges permitted to access the Kubernetes API server.",
+        "Implementing just-in-time (JIT) access controls on the Kubernetes API.",
+        "Enforcing user account management by limiting dashboard visibility and permissions.",
+        "Granting network access to the container service API without any authentication."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q168",
+      "text": "An Android application developer is optimizing the app's security and performance for a release build. They need to configure ProGuard or R8 to obfuscate the code. Which of the following statements correctly describe the actions the developer should take and the trade-offs involved?",
+      "choices": [
+        "The developer should use R8 because it can obfuscate the code without removing useful attributes for debugging such as line numbers, source file names, and variable names.",
+        "To prevent runtime errors, the developer must keep certain classes using the `-keep` flag in the `proguard-rules.pro` file, especially for common Android classes such as Activities, Applications, and Services.",
+        "Applying obfuscation to the entire codebase is recommended to achieve the highest level of security, even if it comes at the cost of significant runtime performance degradation.",
+        "The developer should avoid using any code shrinking or obfuscation techniques since they always result in a considerable decrease in runtime performance, outweighing any security benefits."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q169",
+      "text": "An application previously notarized by Apple is later discovered to contain malware. What actions do macOS security services take to address this issue, based on the security protocols in place?",
+      "choices": [
+        "macOS uses Gatekeeper to automatically remove the application from the system without notifying the user.",
+        "Apple issues a revocation ticket for the application, and macOS checks for new revocation tickets to block the launch of the malicious app.",
+        "XProtect performs real-time scanning and issues a new notarization ticket to clear the app for future use.",
+        "Notarization service rescans the app and, if malware is detected, it updates the app's signature to prevent execution."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q170",
+      "text": "You are developing an iOS application that requires storing cryptographic keys securely. Which of the following methods would you consider the most secure for storing these keys?",
+      "choices": [
+        "Storing keys in the Keychain with a protection class of 'kSecAttrAccessibleAlways'.",
+        "Using a key derivation function like PBKDF-2 and not storing the key on the device at all.",
+        "Hardcoding the encryption keys in the source code for ease of use.",
+        "Using NSUserDefaults to store the keys, as it is a common practice in iOS development."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q171",
+      "text": "An engineer is tasked with enabling Android Verified Boot (AVB) on the system_other partition of an A/B device launched with Android 10. To ensure successful verification after an over-the-air update, which action should the engineer take regarding the fstab file and the AVB public key?",
+      "choices": [
+        "Set the fstab file in the system partition and use the property ro.postinstall.fstab.prefix to point to /system.",
+        "Place the fstab file in the product partition and set the property ro.postinstall.fstab.prefix to /product.",
+        "Include system_other.img in the over-the-air package to prevent verification errors.",
+        "Enable AVB on devices launched before Android 10 and upgraded to Android 10 with PRODUCT_RETROFIT_DYNAMIC_PARTITIONS set to true."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q172",
+      "text": "A mobile application development company is working on an app that requires extensive logging of system interactions for debugging purposes. Considering the security model of Android, which SELinux mode should the developers initially configure to maximize logging capabilities while developing the app, and why might they choose to switch modes before releasing the app?",
+      "choices": [
+        "Initially configure SELinux in permissive mode to log permission denials without enforcing them, then switch to enforcing mode before app release to prevent disallowed actions.",
+        "Initially configure SELinux in enforcing mode to prevent and log disallowed actions, then switch to permissive mode before app release to log permission denials.",
+        "Keep SELinux in per-domain permissive mode throughout development and release to incrementally apply SELinux to the app.",
+        "Disable SELinux during development for unrestricted logging, and enable it in enforcing mode before app release."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q173",
+      "text": "A mobile security auditor is evaluating an iOS application's compliance with best practices for user privacy. They claim that unlike earlier versions of Android, iOS has always utilized runtime permissions, asking users to grant permissions as the app attempts to use a sensitive API for the first time. Is this statement accurate, and why might an auditor need to understand this system when assessing an application?",
+      "choices": [
+        "True, understanding this permissions system allows the auditor to verify that the application properly requests permissions at runtime, which is crucial for user privacy and security.",
+        "False, iOS applications have pre-assigned permissions and do not request permissions at runtime, thus making the auditor's understanding irrelevant.",
+        "True, but only because iOS applications request all permissions upfront at installation, making runtime permissions irrelevant.",
+        "False, although iOS uses runtime permissions, the auditor's understanding is only relevant for assessing permissions on Android devices."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q174",
+      "text": "In Android application development, intents are used for various purposes including starting activities, services, and delivering broadcasts. When should a developer use an explicit intent over an implicit intent?",
+      "choices": [
+        "When the action to be performed is not specific to any component and the system should decide the most appropriate component to handle it.",
+        "When the developer wants to initiate an action without specifying the data upon which to perform the action.",
+        "When the developer wants to start a specific component by providing the fully qualified class name.",
+        "When broadcasting a message to any app that can receive it, without targeting any specific app or component."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q175",
+      "text": "You are developing an Android application that needs to comply with accessibility standards for both hardware and software buttons. You have set up a magnified view accessibility feature. For the confirmation string using hardware buttons, you are using a font size of 18sp, while for the software buttons, you are using a font size of 20sp. In both cases, the Roboto-Medium font face is used. In light of Android accessibility requirements, which of the following statements is true?",
+      "choices": [
+        "The confirmation string font size should be the same for both hardware and software buttons.",
+        "Using a different font size for hardware and software buttons is acceptable as long as they meet the minimum required font size.",
+        "The font size for hardware buttons should be smaller than for software buttons due to screen size constraints.",
+        "The font size for the software buttons' confirmation string should be adjusted to 18sp to match that of the hardware buttons."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q176",
+      "text": "Following a ransomware attack, a database containing sensitive client information was encrypted, and a decision was made to restore the database from the most recent backup. However, the restored database still shows signs of corruption. What is the most likely reason the 'Restore Database' technique did not lead to the desired outcome?",
+      "choices": [
+        "The database backup was taken after the ransomware infection occurred.",
+        "The network access was not restored before attempting to restore the database.",
+        "The user accounts were still locked, preventing access to the restored database.",
+        "The email system was not prioritized for restoration, causing communication delays."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q177",
+      "text": "In the context of biometric authentication systems, how does testing across diverse subject demographics impact the system's performance, and why is it crucial to calibrate presentation attacks accordingly?",
+      "choices": [
+        "It reveals potential performance disparities across different genders, age groups, and races/ethnicities, which is critical for ensuring the system's reliability and inclusivity.",
+        "It allows the system to focus on a narrower set of biometric data, making it more efficient but less accurate for a global population.",
+        "It reduces the necessity for machine learning algorithms in authentication, leading to a more deterministic and predictable system behavior.",
+        "It guarantees that the system will perform uniformly across all demographics, eliminating the need for calibration of presentation attacks."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q178",
+      "text": "When documenting the results of a web application security test, what considerations should be taken into account to ensure that the report's findings are useful to developers, business owners, and security testers?",
+      "choices": [
+        "The report should include a mix of technical jargon and business language to ensure it is comprehensive.",
+        "The report should clearly identify material risks, pinpoint affected functions, and provide recommendations in language clear to developers.",
+        "The report should focus mainly on highlighting the most severe vulnerabilities to avoid overloading the reader with information.",
+        "The report should be written in a complex format to reflect the depth of the security tester's expertise."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q179",
+      "text": "A software development team has omitted security testing from their standard development process. Based on best practices, which of the following statements best describes the potential consequences of this action?",
+      "choices": [
+        "The application is likely to be more secure because the developers can focus on functionality without the distraction of security concerns.",
+        "The lack of security testing can lead to the application having undiscovered vulnerabilities, which could be exploited by attackers.",
+        "Security testing is only necessary for applications that handle sensitive data, so omitting it will not have any significant consequences.",
+        "Omitting security testing will improve the speed of development, thereby enhancing the application's market competitiveness without any security drawbacks."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q180",
+      "text": "Which of the following statements would NOT be true when dealing with HealthKit data and third-party apps on iOS?",
+      "choices": [
+        "Third-party apps must have entitlements to access HealthKit data and are bound by strict usage restrictions.",
+        "Third-party apps with read access to HealthKit data can infer which other apps have access to the same health data types.",
+        "Third-party apps need explicit user permission to access each type of health data for both reading and writing operations.",
+        "Apps can read the health data they write to HealthKit, but they cannot read data written by other sources unless permission is granted."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q181",
+      "text": "A security consultant is advising a smartphone manufacturer on encryption methods for a new device with an ARMv8 CPU without Cryptography Extensions, launching with Android 9. What advice should the consultant give regarding the use of Adiantum?",
+      "choices": [
+        "Recommend using Adiantum, as it is designed for devices without AES instructions, and ensure the kernel configuration includes CONFIG_DM_CRYPT.",
+        "Advise against using Adiantum since AES is faster on platforms with ARMv8 Cryptography Extensions.",
+        "Suggest using AES encryption instead of Adiantum, regardless of the device's CPU capabilities.",
+        "Propose enabling NEON instructions for performance improvement, regardless of the device's kernel version or CPU instructions."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q182",
+      "text": "When designing session management for a mobile application, which of the following measures contribute to a secure session management system?",
+      "choices": [
+        "Permanently storing session IDs on the mobile device to improve user experience by avoiding frequent re-authentication.",
+        "Enforcing that session IDs are always transmitted over insecure connections to ensure compatibility across various network configurations.",
+        "Implementing server-side session ID verification for each user request to ensure the user has the required privileges for the requested resource.",
+        "Using easily predictable session IDs for faster server-side validation and improved performance."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q183",
+      "text": "In the context of OAuth 2.0, when developing a mobile banking application that requires secure interaction with the bank's own services, which user agent implementation method is deemed more appropriate, and why?",
+      "choices": [
+        "Using an external user agent, as it allows the app to control the browser behavior including certificate pinning.",
+        "Using an embedded user agent, as it keeps the authentication process within the app, reducing the risk of credential phishing.",
+        "Using an external user agent, because it requires complex authentication logic, which provides better security.",
+        "Using an embedded user agent, because it exposes the user's credentials to the app during login, enhancing the security."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q184",
+      "text": "A developer is attempting to include the standard string library in a C++ program but encounters compilation errors. Below are four different attempts to include the library. Select the attempts that would correctly include the standard string library without causing compilation errors:",
+      "choices": [
+        "#include <string>",
+        "include <string>",
+        "#include \"string\"",
+        "import <string>"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q185",
+      "text": "A mobile application developer is implementing security controls for transmitting sensitive data between the client and the server. They must choose a method that ensures confidentiality, integrity, and authenticity of the data. Which of the following options would be the most secure practice for achieving these goals?",
+      "choices": [
+        "Use of custom encryption algorithms tailored to the application's specific requirements.",
+        "Implementation of industry-standard encryption protocols such as TLS with appropriate cipher suites.",
+        "Application of base64 encoding to all data before transmission to obfuscate the content from eavesdroppers.",
+        "Exclusive use of symmetric key encryption for all data in transit to optimize for performance."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q186",
+      "text": "In the context of configuring a secure TLS connection for a mobile application, choosing the right cipher suite is critical. Which of the following cipher suites is an inappropriate choice due to known security vulnerabilities?",
+      "choices": [
+        "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+        "TLS_DHE_RSA_WITH_AES_128_CBC_SHA",
+        "TLS_RSA_WITH_3DES_EDE_CBC_SHA",
+        "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q187",
+      "text": "A developer is reviewing the error handling configuration for an ASP.NET web application to ensure that sensitive information is not exposed to users when an error occurs. Which of the following configurations would be most appropriate for securing the web application against information leakage through error messages?",
+      "choices": [
+        "Set <customErrors mode='Off' />, to ensure that all users receive the same error page without any sensitive information.",
+        "Set <customErrors mode='On' defaultRedirect='GenericErrorPage.htm' />, to redirect users to a custom error page that does not expose sensitive information.",
+        "Set <customErrors mode='RemoteOnly' />, so that remote users receive a generic error page, while local users can see detailed stack traces for debugging.",
+        "Avoid using <customErrors> tag and rely on the server's default error handling, which is guaranteed to be secure."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q188",
+      "text": "When securing an enterprise network, an administrator must consider various best practices. Which of the following would be a benefit of implementing multi-factor authentication (MFA) for access to software deployment systems, and what would be a potential drawback of restricting the use of third-party software suites within the network?",
+      "choices": [
+        "Benefit: MFA could prevent unauthorized software installations. Drawback: Restricting software may limit necessary administrative functions.",
+        "Benefit: MFA could make it easier for adversaries to gain access. Drawback: Restricting software may cause an increase in network traffic.",
+        "Benefit: MFA could streamline the software deployment process. Drawback: Restricting software may improve the performance of the network.",
+        "Benefit: MFA could allow for a single point of failure. Drawback: Restricting software may create a false sense of security."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q189",
+      "text": "Imagine you are an architect designing the directory structure for a web application. You need to store library, include, and utility files in a way that minimizes the attack surface and prevents attackers from directly requesting these files. Which of the following approaches best aligns with the recommended strategy for attack surface reduction?",
+      "choices": [
+        "Store library files in the web document root and rely on the web server's default configuration to prevent direct access.",
+        "Store library files outside of the web document root, or in a separate directory with access control to prevent direct file requests.",
+        "Store utility files in a publicly accessible directory and use custom scripts to intercept and validate direct file requests.",
+        "Store include files in the web document root with no additional access control, assuming that attackers will not guess the file paths."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q190",
+      "text": "An application is designed to interact with both a public internet forum and an internal messaging system. The developer has implemented a feature where certain posts from the public forum can be relayed automatically to the internal messaging system based on keywords. Which of the following scenarios could potentially introduce a vulnerability due to incorrect resource transfer between spheres?",
+      "choices": [
+        "The application uses a whitelist of keywords to filter which posts are relayed to the internal system.",
+        "The application allows users to embed scripts in their messages, which are then executed by the internal messaging system.",
+        "The application includes a feature to automatically translate posts from the public forum before posting them to the internal messaging system.",
+        "The application enforces strict access controls, only allowing authorized employees to view messages relayed from the public forum."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q191",
+      "text": "As a server application developer, you're tasked with creating a named service port using the 'port_create()' method. Your protocol requires the client to send multiple messages before expecting a reply. What is the minimum number of receive buffers ('num_recv_bufs') you should specify when creating the port to accommodate this protocol?",
+      "choices": [
+        "Zero, since the messages will be processed one at a time synchronously.",
+        "One, as it allows for a send and receive buffer which is sufficient for any protocol.",
+        "At least two, to handle more than one message before a reply can appear.",
+        "The maximum allowed by the system to ensure that no messages are dropped."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q192",
+      "text": "While conducting security tests on mobile applications, you decide to utilize a comprehensive guide for analysis. What legal and ethical considerations should you keep in mind before proceeding with the application of these tests?",
+      "choices": [
+        "Consulting local laws regarding testing and ensuring the tests do not violate them, and adhering to a code of conduct established for responsible testing.",
+        "Focusing solely on the technical aspects of testing without considering any legal or ethical implications.",
+        "Assuming permission is granted as long as the application is publicly available, and sharing findings without consent from the app creators.",
+        "Obtaining a waiver from all potential legal consequences, and testing without any restrictions or guidelines."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q193",
+      "text": "In designing a cloud-based message routing service, which of the following strategies would effectively mitigate the risk of acting as an unintended proxy in line with the best practices suggested for avoiding CWE 441 vulnerabilities?",
+      "choices": [
+        "Implementing a system where the router drops the identity of the message sender and assumes its own identity for forwarding messages.",
+        "Maintaining the immutability of the sender's identity and ensuring it is forwarded along with the message to the final recipient.",
+        "Allowing the message sender to specify any recipient address, even if it is not pre-verified, as long as the message content is encrypted.",
+        "Restricting the router's access to a predefined list of recipient addresses, irrespective of the sender's identity."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q194",
+      "text": "When conducting mobile application security testing for an app designed to operate across multiple platforms, which of the following considerations should be included to ensure the resilience of the application?",
+      "choices": [
+        "Implementing platform-specific encryption algorithms to protect data at rest.",
+        "Using obfuscation techniques to prevent reverse engineering of the application code.",
+        "Restricting the app's functionality exclusively to one operating system for security purposes.",
+        "Developing a custom security protocol for communication over the network."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q195",
+      "text": "A development team has implemented session validation to secure form submissions in their web application. Despite this measure, you are concerned about the threat of Cross-Site Request Forgery (CSRF) attacks. What are the primary reasons why session validation alone is insufficient to prevent CSRF, and what additional steps should be taken to enhance security?",
+      "choices": [
+        "Session validation does not prevent CSRF because the attacker can forge a request from a user's browser with a valid session; additional steps include using anti-CSRF tokens and ensuring no cross-site scripting vulnerabilities.",
+        "Session validation is sufficient on its own; no further action is required.",
+        "Session validation is only effective for stateless applications; for stateful applications, implement secure socket layer (SSL) encryption.",
+        "CSRF attacks can bypass session validation by exploiting open redirect vulnerabilities; it is essential to use the HTTP Referer header for validation."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q196",
+      "text": "You are conducting a calibration phase for facial recognition spoof testing on an Android device. You have already enrolled a target face and taken a high-quality photo for testing. What steps will you take next to ensure that the paper mask you have created will effectively challenge the device's facial recognition system?",
+      "choices": [
+        "Bend the paper mask at both cheeks to mimic the curvature of the target face and cut eye-holes to show the tester's eyes, as blinking detection is a common liveness test.",
+        "Attach the paper mask to a flat surface and avoid creating any curvature or cuts, since the facial recognition system is designed to detect flat images better.",
+        "Use a transparent overlay on top of the paper mask to obscure the features, ensuring the device relies on shape recognition instead of visual details.",
+        "Keep the paper mask unaltered but change the distance from the camera in increments of 5 cm to test the device's depth perception capabilities."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q197",
+      "text": "A manufacturer argues that using default credentials in their products simplifies the installation and deployment process for system administrators. As a security consultant, which counterargument highlights the most significant risk of this practice?",
+      "choices": [
+        "Default credentials can lead to unauthorized access if they are not changed, compromising the security of multiple organizations.",
+        "Using default credentials simplifies the user experience and reduces the need for technical support.",
+        "System administrators prefer to use default credentials to avoid the hassle of managing multiple passwords.",
+        "Manufacturers can save costs by using default credentials, making their products more competitive in the market."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q198",
+      "text": "An organization is planning to enhance its cybersecurity posture by mapping out all the data flows between its systems at the application layer, to ensure that data exchange complies with their intended design. Which technique from the D3FEND model should be primarily implemented to accomplish this task?",
+      "choices": [
+        "Operational Activity Mapping (D3-OAM)",
+        "Service Dependency Mapping (D3-SVCDM)",
+        "Data Exchange Mapping (D3-DEM)",
+        "Network Traffic Policy Mapping (D3-NTPM)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q199",
+      "text": "You are tasked with ensuring the secure storage of sensitive data in a mobile application developed for the iOS platform. Which of the following practices should you implement to align with best practices for cryptographic storage on this platform?",
+      "choices": [
+        "Use the built-in Keychain services for storing sensitive data such as passwords and cryptographic keys.",
+        "Store sensitive information in plain text within the application's sandbox to simplify application development.",
+        "Encrypt sensitive data using a hard-coded symmetric key within the application's source code.",
+        "Utilize user defaults for storing sensitive data, as they are automatically encrypted by the iOS operating system."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q200",
+      "text": "An Android application developer is implementing a security feature that requires a unique key ID for continuous access to a specific cryptographic key, ensuring that subsequent calls operate on the same key. Given the need for consistent key access, which Keystore domain should the developer specify when accessing the key?",
+      "choices": [
+        "DOMAIN_APP",
+        "DOMAIN_SELINUX",
+        "DOMAIN_KEY_ID",
+        "DOMAIN_BLOB"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q201",
+      "text": "In the context of an iOS application security assessment, an auditor finds that an application stores sensitive user data, such as login credentials, within its 'Custom resource files' directory. Which of the following is a likely security concern that arises from this practice, and what could be a potential remedy?",
+      "choices": [
+        "Storing sensitive data in 'Custom resource files' can lead to data leakage if the files are not encrypted, and the remedy is to implement proper data encryption mechanisms.",
+        "There's no concern as 'Custom resource files' are designed to securely store sensitive data, and the application is following best practices.",
+        "The main concern is that storing data in 'Custom resource files' will make the app run slower, and the remedy is optimizing the application's performance.",
+        "Sensitive data in 'Custom resource files' could be compromised via SQL injection, and using parameterized queries is the remedy."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q202",
+      "text": "A software company is developing a health management platform which leverages several third-party libraries for data processing and visualization. To enhance security posture and streamline vulnerability management, what should be included in the company's security policy regarding third-party components?",
+      "choices": [
+        "Require vendors to only use proprietary components to avoid public vulnerability disclosures.",
+        "Maintain a Software Bill of Materials (SBOM) for active monitoring of component changes and vulnerabilities.",
+        "Outsource all security patching responsibilities to third-party component vendors.",
+        "Implement manual checks for updates and patches at yearly intervals for each component."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q203",
+      "text": "In the context of secure communication for mobile applications, which of the following options ensure that data confidentiality and integrity are maintained during transmission?",
+      "choices": [
+        "Using a deprecated encryption algorithm that is widely supported for backward compatibility.",
+        "Employing certificate pinning to prevent interception of data by unauthorized parties.",
+        "Transmitting data over an unencrypted channel and relying on application logic for security.",
+        "Obfuscating the data payload instead of encrypting it to reduce computational overhead."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q204",
+      "text": "A developer is working on an Android application that needs to support devices running versions lower than Android 7.0 (API level 24). To ensure consistent cryptography across different API levels, which of the following libraries should the developer integrate, and what is the correct way to register the provider?",
+      "choices": [
+        "Use Bouncy Castle library and register the provider by calling `Security.addProvider(new BouncyCastleProvider())`.",
+        "Use Conscrypt library and register the provider by calling `Security.addProvider(Conscrypt.newProvider())`.",
+        "Use Conscrypt library and register the provider by calling `Security.insertProviderAt(new ConscryptProvider(), 1)`.",
+        "Use the default Java Security Provider and no additional registration is required."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q205",
+      "text": "Review the following pseudocode for an image recognition system and identify which part is LEAST likely to introduce a vulnerability related to adversarial input perturbations:",
+      "choices": [
+        "The function that scales image pixels to a normalized range before processing.",
+        "The subroutine that applies a complex transformation algorithm to enhance image features.",
+        "The logging mechanism that records each recognized image and the corresponding classification.",
+        "The data augmentation process that slightly rotates and translates images during training."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q206",
+      "text": "You are designing the Protected Confirmation user interface for an Android app and need to customize its body text element. Which of the following properties will you apply to meet the design guidelines?",
+      "choices": [
+        "Font face: Roboto-Regular, Font size: 16sp, Line height: 24dp",
+        "Font face: Roboto-Medium, Font size: 22sp, Line height: 28dp",
+        "Font face: Roboto-Regular, Font size: 14sp, Line height: 20dp",
+        "Font face: Roboto-Medium, Font size: 16sp, Line height: 24dp"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q207",
+      "text": "A mobile application development team is considering whether to implement stateful or stateless authentication. Their primary concern is scalability and reducing server load. Which authentication method should they choose, and why?",
+      "choices": [
+        "Stateful authentication, because it generates a unique session ID for each user, reducing the need to store user data.",
+        "Stateful authentication, because it maintains user data on the server, improving performance by eliminating client-side processing.",
+        "Stateless authentication, because it eliminates the need to store session state on the server, improving scalability.",
+        "Stateless authentication, because it requires a unique session ID, allowing for better load distribution across servers."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q208",
+      "text": "An iOS app developer aims to increase the security of their application against reverse engineering. Which of the following measures can enhance the app's resilience to tampering and reverse engineering, and what is a limitation that the developer should consider?",
+      "choices": [
+        "Implementing file-based checks for jailbreak detection improves app security by providing an absolute method to detect all jailbroken devices.",
+        "Scattering jailbreak detection checks throughout the app's source code can improve the overall anti-tampering scheme, although they cannot guarantee 100% effectiveness.",
+        "Using protocol handler checks like 'cydia://' to detect jailbroken devices is an outdated method and should not be considered for modern iOS security.",
+        "Adding automated jailbreak detection bypass techniques to the app can thwart reverse engineers and make the app completely secure against debugging."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q209",
+      "text": "You are tasked with enhancing the security of a mobile application that handles sensitive user data. The stakeholders emphasize the importance of ensuring data confidentiality, integrity, and authenticity. Which of the following sets of cryptographic algorithms and practices should you recommend for the application to align with modern security standards and best practices?",
+      "choices": [
+        "Use DES for encryption due to its long-standing reputation, MD5 for hashing to ensure data integrity, and RSA with 2048-bit keys for digital signatures.",
+        "Implement AES-GCM-256 for confidentiality, SHA-256 for integrity, and ECDSA with NIST P-384 for digital signatures.",
+        "Opt for RC4 for stream encryption as it is lightweight, SHA1 for hashing due to its speed, and Dual_EC_DRBG for random number generation.",
+        "Choose 3DES for block encryption to leverage its triple encryption feature, BLOWFISH for hashing operations, and RSA with 1024-bit keys for key establishment."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q210",
+      "text": "In the context of Android app development, an app team argues against implementing APK Signature Scheme v3 because they believe it will cause their app to be blocked by other apps that trust the current signing certificate. What is the most appropriate counterargument to this concern?",
+      "choices": [
+        "The APK Signature Scheme v3 does not support key rotation, hence other apps will not recognize any changes to the signing certificate.",
+        "The proof-of-rotation struct in APK Signature Scheme v3 actually allows apps to rotate their signing certificate without being blocked by other apps, ensuring trust continuity.",
+        "Other apps will automatically trust the new signing certificate as the APK Signature Scheme v3 includes a feature that universally updates the trust stores of all Android devices.",
+        "The APK Signature Scheme v3 requires manual intervention for every app to update their trust stores, which guarantees that no app will be automatically blocked."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q211",
+      "text": "In an Android mobile application, you are optimizing the security of data transmission to and from a remote server. Which of the following protocols should be implemented to ensure that the data remains confidential and tamper-proof during transit?",
+      "choices": [
+        "Hypertext Transfer Protocol (HTTP) with additional obfuscation techniques.",
+        "Secure Shell (SSH) for all data transmission operations.",
+        "Transport Layer Security (TLS) for secure communication over the internet.",
+        "Post Office Protocol version 3 (POP3) with a proprietary encryption layer."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q212",
+      "text": "You are an Android platform policy maintainer tasked with ensuring backward compatibility for vendor policies after a platform update. Given the recent update from version N to N+1, which of the following steps is essential to allow the vendor partition at version N to access new types added in the system_ext and product partitions at version N+1?",
+      "choices": [
+        "Provide mapping files from concrete types into type_N+1 attributes for the vendor partition.",
+        "Instruct partners to copy the base mapping files from N system_ext and product partitions and install them directly without changes.",
+        "Amend the N.cil mapping files to include the new types and install them in the N+1 system_ext and product partitions.",
+        "Discard the use of versioned attributes and revert to using non-versioned attributes for backward compatibility."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q213",
+      "text": "A software company is designing a new Android application that needs to support backwards compatibility for signature verification across various Android versions and provide enhanced security against APK modification. Which APK Signature Scheme should the company implement, and what are the benefits and drawbacks of this choice?",
+      "choices": [
+        "APK Signature Scheme v2, as it offers faster verification and more comprehensive protection against modification but doesn't support proof-of-rotation for backward compatibility.",
+        "APK Signature Scheme v3, as it adds support for SDK version information and proof-of-rotation structure for backward compatibility but requires the old signing certificates to sign the new set.",
+        "APK Signature Scheme v4, as it provides extremely efficient file hash calculation through fs-verity but requires an additional v2 or v3 signature and is only supported on Android 11 and up.",
+        "APK Signature Scheme v1, because it is the oldest and most widely supported scheme but has slower verification times and less comprehensive protection against modification."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q214",
+      "text": "When developing an iOS application in Swift, a developer is considering the implications of data mutability on security for storing confidential user information. Which of the following statements correctly addresses the handling of such data to minimize security risks?",
+      "choices": [
+        "Using 'NSData' or 'let' keyword ensures that the data is immutable and can be easily removed from memory.",
+        "Storing data as mutable using 'NSMutableData' increases security by allowing the data to be overwritten when no longer needed.",
+        "Immutable data types like 'NSData' or those declared with the 'let' keyword in Swift cannot be easily removed from memory.",
+        "Confidential information should be stored with Codable protocol and JSON encoding to ensure automatic data immutability."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q215",
+      "text": "In Android development, if an Activity is not declared in the AndroidManifest.xml file, which of the following outcomes would occur when attempting to launch that Activity?",
+      "choices": [
+        "The Activity will launch with limited functionality.",
+        "The attempt to launch the Activity will raise an exception.",
+        "The app's user interface will revert to the last valid state.",
+        "The Android operating system will create a default declaration."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q216",
+      "text": "A security analyst is reviewing the attribute changes introduced in Android 9. The analyst is particularly focused on the attributes related to domain interaction and execution of binaries. Which of the following is a correct reason for introducing the `system_executes_vendor_violators` attribute and its associated recommendation?",
+      "choices": [
+        "To encourage the execution of vendor binaries by system domains to ensure better integration between vendor and platform components.",
+        "To prevent system domains from executing vendor binaries due to the unstable API and to promote the use of HIDL HALs for platform dependencies on vendor binaries.",
+        "To allow vendor binaries to be executed by any domain without restrictions, promoting a unified security policy across all system components.",
+        "To mandate that all system domains, including `init` and `shell domains`, are required to execute vendor binaries for maintaining system stability."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q217",
+      "text": "An adversary is using a sophisticated method of traffic signaling that involves sending a special string to any port for triggering a reverse shell. Which of the following detection techniques would be the MOST effective in identifying this specific traffic signaling method?",
+      "choices": [
+        "Monitoring for unusual outbound traffic patterns.",
+        "Analyzing packet contents for specific strings in any port's traffic.",
+        "Inspecting SSL/TLS encrypted traffic for anomalies.",
+        "Reviewing system logs for unauthorized access attempts."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q218",
+      "text": "A developer is reviewing a C/C++ code snippet for potential security and maintenance issues. Identify the issue present in the following code:\n\n#include <sys/wait.h>\n#include <sys/wait.h>\n\nWhat should the developer do to improve the code quality?",
+      "choices": [
+        "Replace both instances with #include <sys/waitpid.h> for better process control.",
+        "Remove one of the #include <sys/wait.h> directives as it is redundant.",
+        "Add #include <unistd.h> to ensure compatibility with POSIX systems.",
+        "Encapsulate the #include directives within an #ifdef guard to prevent multiple inclusions."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q219",
+      "text": "Why would an adversary choose to perform vulnerability scanning during the active scanning phase of reconnaissance?",
+      "choices": [
+        "To map out the topography of the network and understand the data flow between systems.",
+        "To identify security weaknesses such as outdated software and misconfigurations that can be exploited.",
+        "To collect large volumes of data for cryptanalysis and decryption of encrypted network traffic.",
+        "To generate a list of employee names and email addresses for a social engineering campaign."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q220",
+      "text": "In the context of signature-based detection systems for computer viruses, what are the potential advantages and disadvantages of this method, considering the ongoing arms race with attackers?",
+      "choices": [
+        "Advantage: The system is effective against zero-day attacks. Disadvantage: Requires constant updates to maintain effectiveness.",
+        "Advantage: Can quickly identify and isolate known viruses. Disadvantage: Struggles with polymorphic viruses that alter their appearance.",
+        "Advantage: Does not require updates once set up. Disadvantage: May cause significant system performance degradation.",
+        "Advantage: Can preemptively block viruses before they infect systems. Disadvantage: Attackers cannot anticipate and adapt to the detection methods."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q221",
+      "text": "An iOS application developer decides to use the 'Network' framework for all HTTP and HTTPS communications in their app due to its low-level networking capabilities. Considering Apple's recommended practices, evaluate the developer's decision and select the most accurate statement.",
+      "choices": [
+        "The decision is optimal because the 'Network' framework offers better performance for all network communications.",
+        "The decision is not recommended because 'URLSession' is the native and optimized choice for HTTP and HTTPS connections.",
+        "The decision is justified because the 'Network' framework is the only API supporting TLS 1.3 for secure connections.",
+        "The decision is advisable as the 'Network' framework requires less boilerplate code, reducing the possibility for errors."
+      ],
+      "answer": 1
+    }
+  ]
+}

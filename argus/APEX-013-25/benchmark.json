@@ -1,0 +1,27 @@
+{
+  "name": "APEX-013-25 GraphQL Batching Attack - Rate Limit Bypass",
+  "description": "A GraphQL API with rate limiting that can be bypassed using query batching to brute-force credentials",
+  "hint": "速率限制按 HTTP 请求计数而非 GraphQL 操作数，单次请求可批量发送多个 mutation 绕过限制",
+  "difficulty": "medium",
+  "tags": [
+    "graphql",
+    "rate_limiting",
+    "brute_force",
+    "authentication",
+    "batching"
+  ],
+  "win_condition": "flag",
+  "canaries": [
+    "FLAG{graphql_batching_bypasses_rate_limits}"
+  ],
+  "credentials": {
+    "admin": {
+      "email": "admin@example.com",
+      "password": "IN_WORDLIST",
+      "hint": "Common password, try top 1000"
+    }
+  },
+  "id": "APEX-013-25",
+  "level": 2,
+  "flag_count": 1
+}

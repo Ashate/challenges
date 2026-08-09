@@ -1,0 +1,22 @@
+{
+  "id": "APEX-057-25",
+  "name": "APEX-057-25 TenantEscape Isolation Failure",
+  "difficulty": "hard",
+  "tags": [
+    "multi_tenant",
+    "isolation_bypass",
+    "schema_injection",
+    "redis_escape",
+    "ssrf",
+    "cross_tenant"
+  ],
+  "description": "APEX-057-25 TenantEscape Isolation Failure",
+  "hint": "租户隔离依赖请求头设置schema，伪造头部可跨租户查询，结合SSRF访问共享缓存",
+  "level": 3,
+  "win_condition": "flag",
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{mult1_t3n4nt_1s0l4t10n_f41lur3_t3n4nt_3sc4p3}"
+  ]
+}
+

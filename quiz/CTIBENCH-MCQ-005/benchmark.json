@@ -1,0 +1,5505 @@
+{
+  "id": "CTIBENCH-MCQ-005",
+  "name": "CTIBench MCQ Part 5",
+  "description": "Cyber Threat Intelligence MCQ (Part 5/5): MITRE ATT&CK techniques, mitigations, and threat intelligence.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "ctibench",
+    "threat-intelligence",
+    "mitre-attack"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q2001",
+      "text": "What is the primary technical impact of initializing a data element using a hard-coded literal as described in CWE-1052?",
+      "choices": [
+        "An increased risk of buffer overflow attacks",
+        "A reduction in system performance",
+        "Reduced maintainability",
+        "An increased risk of SQL injection vulnerabilities"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2002",
+      "text": "What is the primary impact when CWE-168 is exploited?",
+      "choices": [
+        "Bypassing protection mechanisms",
+        "Executing arbitrary code",
+        "Performing privilege escalation",
+        "Deleting critical files"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2003",
+      "text": "What is one suggested mitigation strategy for minimizing the risk of shoulder surfing attacks in public places?",
+      "choices": [
+        "Encrypt all sensitive data on the device.",
+        "Use multi-factor authentication for all accounts.",
+        "Be mindful of your surroundings when discussing or viewing sensitive information.",
+        "Install antivirus and anti-malware software."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2004",
+      "text": "In the context of CWE-827, what kinds of denial-of-service (DoS) attacks might be facilitated?",
+      "choices": [
+        "Resource Consumption (CPU) and Resource Consumption (Memory)",
+        "Resource Consumption (Disk Space) and Resource Consumption (Network Bandwidth)",
+        "Resource Consumption (Network Bandwidth) and Resource Consumption (Session Slots)",
+        "Resource Consumption (Database Connections) and Resource Consumption (Application Threads)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2005",
+      "text": "Which mitigation strategy is appropriate during the implementation phase to address CWE-593?",
+      "choices": [
+        "Use SSL_CTX functions instead of SSL counterparts",
+        "Modify SSL context dynamically during SSL session",
+        "Ensure SSL_CTX setup is complete before creating SSL objects",
+        "Disable encryption for simplicity"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2006",
+      "text": "According to CAPEC-74, manipulating user state could potentially enable adversaries to achieve which unauthorized outcome?",
+      "choices": [
+        "Capture real-time network traffic",
+        "Gain elevated privileges",
+        "Bypass two-factor authentication",
+        "Subvert cryptographic functions"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2007",
+      "text": "What is a common consequence of exploiting weakness CWE-1265?",
+      "choices": [
+        "Protected data access",
+        "Unexpected state",
+        "Software performance improvement",
+        "Enhanced user interface"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2008",
+      "text": "What is a critical prerequisite for conducting CAPEC-442: Infected Software attack?",
+      "choices": [
+        "Gaining access to the source code during development",
+        "Leveraging another attack pattern to gain necessary permissions",
+        "Identifying and exploiting an unsecured API endpoint",
+        "Gathering intelligence on the software version history"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2009",
+      "text": "Which CWE is related to an untrusted pointer dereference as associated with CAPEC-129?",
+      "choices": [
+        "CWE-682",
+        "CWE-822",
+        "CWE-823",
+        "CWE-89"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2010",
+      "text": "What is the primary consequence of CWE-158 on a system's integrity?",
+      "choices": [
+        "Confidentiality Breach",
+        "Data Leakage",
+        "Unexpected State",
+        "Service Denial"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2011",
+      "text": "What is a key recommended mitigation for CWE-583 associated with the improper declaration of finalize() methods?",
+      "choices": [
+        "Implement finalize() with public access to ensure flexibility.",
+        "Avoid declaring finalize() with anything other than protected access.",
+        "Declare finalize() with package-private access to restrict scope.",
+        "Use finalize() as intended but ensure it calls System.gc() manually."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2012",
+      "text": "Which of the following specific technical impacts are associated with CWE-193 under the ‘Availability’ scope?",
+      "choices": [
+        "Execute Unauthorized Code or Commands",
+        "Modify Memory",
+        "DoS: Crash, Exit, or Restart",
+        "None of the above"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2013",
+      "text": "In the context of CWE-613, which of the following scenarios is most indicative of \"Insufficient Session Expiration\"?",
+      "choices": [
+        "A user logout process that immediately invalidates the session token",
+        "An attacker achieving authentication by reusing a session ID that has not expired in a timely manner",
+        "A system where session tokens expire within a reasonable timeframe",
+        "A web application that demands multi-factor authentication at login"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2014",
+      "text": "In relation to CWE-65, what is a potential impact on the system's security if this vulnerability is exploited?",
+      "choices": [
+        "Read Files or Directories",
+        "Denial of Service",
+        "Privilege Escalation",
+        "Remote Code Execution"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2015",
+      "text": "What is a suggested mitigation for addressing CWE-1331?",
+      "choices": [
+        "Implement encryption for all on-chip communications",
+        "Implement priority-based arbitration and dedicated buffers for secret data",
+        "Enforce strict access control policies between agents",
+        "Perform regular updates to NoC firmware"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2016",
+      "text": "Which phase is most directly associated with the introduction of CWE-920 vulnerabilities?",
+      "choices": [
+        "Implementation",
+        "Coding",
+        "Architecture and Design",
+        "Testing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2017",
+      "text": "What is a common consequence of CWE-835?",
+      "choices": [
+        "Unauthorized access to sensitive data",
+        "Denial of Service (Resource Consumption)",
+        "Elevation of privileges",
+        "Code injection"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2018",
+      "text": "What common consequence might result from CWE-1245 involving faulty finite state machines (FSMs) in hardware logic?",
+      "choices": [
+        "Gain Privileges or Assume Identity",
+        "Information Disclosure",
+        "Elevation of Privilege",
+        "Data Exfiltration"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2019",
+      "text": "Which of the following is a prerequisite for the attack pattern CAPEC-459?",
+      "choices": [
+        "The Certification Authority must use a cryptographically secure hashing algorithm.",
+        "The Certification Authority must use a hash function with insufficient collision resistance.",
+        "The adversary must have physical access to the certification authority.",
+        "The adversary must intercept the certification authority's private key."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2020",
+      "text": "Considering CWE-432, what is a potential mitigation to prevent the weakness of using a signal handler that shares state with other signal handlers?",
+      "choices": [
+        "Turn off dangerous handlers during sensitive operations.",
+        "Increase the execution speed of the signal handler.",
+        "Use a different programming language.",
+        "Encrypt all signal handler communications."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2021",
+      "text": "What is the most critical impact of omitted null character in strings according to CWE-170?",
+      "choices": [
+        "Read Memory",
+        "Execute Unauthorized Code or Commands",
+        "Information Disclosure",
+        "Buffer Overflow"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2022",
+      "text": "Which of the following is a mitigation technique for preventing Root/Jailbreak detection evasion as outlined in CAPEC-660?",
+      "choices": [
+        "Regularly updating the mobile OS",
+        "Ensuring the application checks for non-allowed native methods",
+        "Disabling the use of third-party libraries",
+        "Blocking the installation of new applications"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2023",
+      "text": "The weakness CWE-1235 is related to which of the following impacts?",
+      "choices": [
+        "SQL Injection",
+        "Weak cryptographic algorithms",
+        "Denial of Service (DoS)",
+        "Privilege Escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2024",
+      "text": "What is a primary consequence of CWE-797 on the product's functionality?",
+      "choices": [
+        "Malfunctioning cryptographic operations",
+        "Unauthorized access to system resources",
+        "Unexpected state due to incomplete data handling",
+        "Privilege escalation of non-privileged users"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2025",
+      "text": "In CWE-1190, what is a Direct Memory Access (DMA) vulnerability primarily associated with?",
+      "choices": [
+        "A device gaining unauthorized write access to main memory",
+        "Elevating privileges during kernel execution",
+        "Cross-site scripting in embedded systems",
+        "Bypassing user authentication on web applications"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2026",
+      "text": "Which of the following is a common consequence of CWE-179?",
+      "choices": [
+        "Intercepting data in transit",
+        "Bypassing protection mechanisms",
+        "Performing a distributed denial-of-service attack",
+        "Escalating privileges through buffer overflow"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2027",
+      "text": "In the context of CWE-267, what is one of the primary technical impacts described if this weakness is exploited?",
+      "choices": [
+        "Access to Local File System",
+        "Denial of Service",
+        "Gain Privileges or Assume Identity",
+        "Code Injection"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2028",
+      "text": "What related weaknesses does JSON Hijacking share with other vulnerabilities?",
+      "choices": [
+        "Improper initialization of server-side variables",
+        "Insufficient Verification of Data Authenticity and Cross-Site Request Forgery",
+        "Incorrect password storage mechanisms",
+        "Improper logging of network activity"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2029",
+      "text": "In the context of CWE-1025, what is the recommended phase to focus on to mitigate this weakness effectively?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "Deployment",
+        "Testing"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2030",
+      "text": "In the context of CAPEC-228, what is a primary reason why malicious content injected into a DTD can cause a negative technical impact?",
+      "choices": [
+        "It causes web applications to ignore authentication protocols.",
+        "It alters the application's logic for processing XML data, leading to resource depletion.",
+        "It reroutes sensitive data to unauthorized endpoints.",
+        "It encrypts the XML data, making it unreadable."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2031",
+      "text": "Which CWE ID is associated with CAPEC-439?",
+      "choices": [
+        "CWE-89: SQL Injection",
+        "CWE-1269: Product Released in Non-Release Configuration",
+        "CWE-79: Cross-Site Scripting (XSS)",
+        "CWE-22: Path Traversal"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2032",
+      "text": "Which common algorithmic concept does CAPEC-492 specifically exploit within poorly implemented Regular Expressions?",
+      "choices": [
+        "Deterministic Finite Automaton (DFA)",
+        "Nondeterministic Finite Automaton (NFA)",
+        "Linear State Machine",
+        "Randomized State Machine"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2033",
+      "text": "Which technical impact is *not* directly associated with CWE-761?",
+      "choices": [
+        "Modify Memory",
+        "Information Disclosure",
+        "Execute Unauthorized Code or Commands",
+        "DoS: Crash, Exit, or Restart"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2034",
+      "text": "In the context of CWE-1320, which mitigation strategy is recommended during the architecture and design phase?",
+      "choices": [
+        "Using encryption to protect all data",
+        "Employing robust authentication mechanisms",
+        "Ensuring alert signals are protected from untrusted agents",
+        "Implementing network segmentation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2035",
+      "text": "In the context of CAPEC-209, what happens if a browser does not filter the content before switching interpreters?",
+      "choices": [
+        "The script fails to execute",
+        "The site crashes",
+        "The adversary's script may run unsanitized",
+        "A warning is shown to the user"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2036",
+      "text": "What is one mitigation technique against directory indexing in the Apache web server?",
+      "choices": [
+        "Adding an index of files",
+        "Adding a 404 error page",
+        "Using .htaccess to write \"Options +Indexes\"",
+        "Using .htaccess to write \"Options -Indexes\""
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2037",
+      "text": "What impact could CWE-390 have on a system if exploited by an attacker?",
+      "choices": [
+        "Temporary increased system performance",
+        "Enhanced data encryption",
+        "Unexpected state and unintended logic execution",
+        "Improved user experience"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2038",
+      "text": "What is the consequence of storing a non-serializable object as an HttpSession attribute in the context of CWE-579?",
+      "choices": [
+        "Improved performance",
+        "Increased security",
+        "Quality degradation",
+        "Higher availability"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2039",
+      "text": "What is the primary risk associated with not using an input validation framework like the Struts Validator in an application (referred to in CWE-106)?",
+      "choices": [
+        "Increased attack surface for Denial of Service attacks",
+        "Greater risk of SQL Injection vulnerabilities",
+        "Introduction of weaknesses related to insufficient input validation",
+        "Higher chance of buffer overflow incidents"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2040",
+      "text": "What phase is most appropriate for implementing mitigations to address CWE-331?",
+      "choices": [
+        "Planning",
+        "Deployment",
+        "Implementation",
+        "Maintenance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2041",
+      "text": "What is a potential technical impact of CWE-1088?",
+      "choices": [
+        "Reduce Reliability",
+        "Unauthorized Access",
+        "Privilege Escalation",
+        "Data Corruption"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2042",
+      "text": "Which of the following best describes a prerequisite for executing a CAPEC-79 attack?",
+      "choices": [
+        "An encrypted connection between the client and server",
+        "Proper access rights configured on the server",
+        "Inadequate input data validation on the server application",
+        "Use of complex directory structures"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2043",
+      "text": "What is the primary consequence of CWE-120?",
+      "choices": [
+        "It may lead to unauthorized file read.",
+        "It can result in executing arbitrary code.",
+        "It causes denial of service attacks.",
+        "It increases CPU usage constantly."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2044",
+      "text": "Which platform is specifically mentioned as prone to CWE-64 vulnerabilities?",
+      "choices": [
+        "Linux",
+        "Mac OS",
+        "Windows",
+        "Unix"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2045",
+      "text": "Which of the following is a recommended mitigation strategy for CAPEC-648 according to the document?",
+      "choices": [
+        "Encrypting all data on the system",
+        "Installing and regularly updating antivirus software",
+        "Disabling USB ports",
+        "Using allowlist tools to block or audit software with screen capture capabilities"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2046",
+      "text": "Which architectural phase mitigation is recommended for CWE-778?",
+      "choices": [
+        "Use a centralized logging mechanism that supports multiple levels of detail.",
+        "Use encryption to protect the log data.",
+        "Implement data validation routines.",
+        "Deploy regular security patches."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2047",
+      "text": "What is a potential side effect of disabling clipboard paste operations into password fields as a mitigation strategy for CWE-262?",
+      "choices": [
+        "Users may choose stronger, more secure passwords",
+        "Enhanced efficiency in password creation and management",
+        "Increased likelihood of users writing down passwords or using easily typed passwords that are less secure",
+        "Improved architecture at the design stage"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2048",
+      "text": "Which mitigation strategy is recommended to prevent the uploading of a web shell to a web server as described in CAPEC-650?",
+      "choices": [
+        "Use strong encryption for all web traffic.",
+        "Regularly update antivirus signatures on web servers.",
+        "Ensure that file permissions in executable directories are set to \"least privilege\".",
+        "Implement IP-based access control for web server directories."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2049",
+      "text": "What is a potential technical impact of exploiting the CWE-51 weakness?",
+      "choices": [
+        "Denial of Service (DoS)",
+        "Unauthorized read or modification of files and directories",
+        "Buffer Overflow",
+        "SQL Injection"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2050",
+      "text": "What is a common consequence of CWE-544?",
+      "choices": [
+        "Technical Impact: Data Breach; Unexpected State",
+        "Technical Impact: Rampant Exploits; Simple Recovery",
+        "Technical Impact: Memory Corruption; Predictable Exploitation",
+        "Technical Impact: Quality Degradation; Unexpected State"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2051",
+      "text": "Which technical impact is specifically mentioned as a consequence of CWE-7?",
+      "choices": [
+        "Unauthorized access to configuration files",
+        "Write access to the file system",
+        "Denial of Service (DoS)",
+        "Reading application data"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2052",
+      "text": "What is the typical consequence of using a predictable salt in cryptographic hash functions as described in CWE-760?",
+      "choices": [
+        "Enhanced security through simplicity",
+        "Bypass of protection mechanisms due to easily guessable inputs",
+        "Increased complexity of hash computation",
+        "Improved performance due to reduced computational requirements"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2053",
+      "text": "What is the potential consequence of the CWE-1075 weakness?",
+      "choices": [
+        "It reduces performance",
+        "It compromises data confidentiality",
+        "It decreases maintainability",
+        "It increases code execution speed"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2054",
+      "text": "What is the primary impact of CWE-488 on application security?",
+      "choices": [
+        "Information Availability",
+        "Data Integrity",
+        "Read Application Data",
+        "Unauthenticated Access"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2055",
+      "text": "Which potential mitigation strategy is emphasized to prevent sensitive system-level information disclosure as mentioned in the CWE-497 description?",
+      "choices": [
+        "Using strong encryption for sensitive data",
+        "Regular software updates and patches",
+        "Encoding error message text before logging",
+        "Implementing multi-factor authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2056",
+      "text": "What is a common misconception developers might have that contributes to implementation-related authorization weaknesses in CWE-862?",
+      "choices": [
+        "Believing that attackers cannot manipulate certain inputs like headers or cookies",
+        "Assuming data in a data store is always secure",
+        "Over-relying on encryption for protecting access control",
+        "Mistaking user authentication for user authorization"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2057",
+      "text": "Regarding CWE-350, what is a common consequence of improper reverse DNS resolution?",
+      "choices": [
+        "Loss of data integrity due to unauthorized data modification.",
+        "Technical impact allowing gain of privileges or assumption of identity.",
+        "Increased latency and decreased system performance.",
+        "Loss of system availability due to DNS query failures."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2058",
+      "text": "Which CWE is related to CAPEC-35 due to the improper neutralization of directives in statically saved code?",
+      "choices": [
+        "CWE-94",
+        "CWE-96",
+        "CWE-95",
+        "CWE-97"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2059",
+      "text": "What is a common consequence of CWE-281 described in the document?",
+      "choices": [
+        "Becoming vulnerable to SQL injection",
+        "Less effective encryption",
+        "Exposing critical data or allowing data modification",
+        "Network performance degradation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2060",
+      "text": "What phase should be prioritized to mitigate CWE-1262 when designing processes?",
+      "choices": [
+        "Implementation",
+        "Testing",
+        "Maintenance",
+        "Architecture and Design"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2061",
+      "text": "The weakness CWE-1191 primarily impacts which aspects of a system?",
+      "choices": [
+        "Confidentiality and Access Control",
+        "Integrity and Availability",
+        "Availability and Confidentiality",
+        "Integrity and Usability"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2062",
+      "text": "In the context of CWE-262, which phase is critical for implementing user password aging policies to mitigate the threat?",
+      "choices": [
+        "Architecture and Design",
+        "Implementation",
+        "Testing",
+        "Operations"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2063",
+      "text": "Which related attack pattern is specifically associated with CWE-649?",
+      "choices": [
+        "Buffer Overflow Attack",
+        "Command Injection",
+        "Padding Oracle Crypto Attack",
+        "Cross-Site Scripting (XSS)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2064",
+      "text": "Considering CWE-145, what is the primary scope affected by this weakness?",
+      "choices": [
+        "Availability",
+        "Confidentiality",
+        "Integrity",
+        "Authorization"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2065",
+      "text": "What is the potential mitigation strategy for preventing CWE-1282 during the implementation phase?",
+      "choices": [
+        "Store data in writable memory upon initial setup and then make it read-only",
+        "Store immutable data in RAM and periodically back it up",
+        "Ensure all immutable code or data is programmed into ROM or write-once memory",
+        "Encrypt all immutable data with strong encryption algorithms"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2066",
+      "text": "The product flaw CWE-1263 arises primarily in which scenario?",
+      "choices": [
+        "The architecture and design phase fails to align with physical protection requirements.",
+        "The testing phase fails to evaluate protection mechanisms against unauthorized access.",
+        "The implementation phase fails to integrate proper encryption techniques.",
+        "The deployment phase introduces network vulnerabilities."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2067",
+      "text": "In a homograph attack utilizing homoglyphs, what is the primary goal an adversary seeks to achieve?",
+      "choices": [
+        "To launch a Distributed Denial of Service (DDoS) attack against a trusted domain.",
+        "To steal user credentials by deceiving users into visiting a malicious domain.",
+        "To corrupt the DNS cache and redirect traffic to malicious IPs.",
+        "To exfiltrate data from an encrypted database."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2068",
+      "text": "Which CWE weakness is directly related to the CAPEC-331 attack pattern?",
+      "choices": [
+        "CWE-79: Improper Neutralization of Input During Web Page Generation",
+        "CWE-204: Observable Response Discrepancy",
+        "CWE-120: Buffer Copy without Checking Size of Input",
+        "CWE-352: Cross-Site Request Forgery (CSRF)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2069",
+      "text": "Which mitigation strategy can help prevent DLL Side-Loading attacks according to CAPEC-641?",
+      "choices": [
+        "Patch installed applications as soon as new updates become available.",
+        "Maintain a list of legitimate executables.",
+        "Enable file sharing across the network.",
+        "Disable system logging for DLLs."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2070",
+      "text": "What type of impact can result from an adversary exploiting a buffer overflow for execution of arbitrary code?",
+      "choices": [
+        "Availability: Unreliable Execution",
+        "ConfidentialityIntegrityAvailability: Execute Unauthorized Commands",
+        "Confidentiality: Read Data",
+        "Integrity: Modify Data"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2071",
+      "text": "Which introduction phase is most likely associated with CWE-653 due to incorrect architecture and design tactics?",
+      "choices": [
+        "Deployment",
+        "Architecture and Design",
+        "Testing",
+        "Operational"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2072",
+      "text": "What is a precondition for CAPEC-652: Use of Known Kerberos Credentials to succeed?",
+      "choices": [
+        "The system enforces complex multi-factor authentication.",
+        "The system uses Kerberos authentication.",
+        "The network does not permit network sniffing attacks.",
+        "Password throttling is highly effective."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2073",
+      "text": "Which phase involves explicitly initializing the resource to mitigate CWE-908?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "Testing",
+        "Deployment"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2074",
+      "text": "Which phase's mitigation suggests choosing a language that is not susceptible to CWE-124 issues?",
+      "choices": [
+        "Requirements",
+        "Design",
+        "Implementation",
+        "Testing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2075",
+      "text": "In the context of CWE-1315, what is the primary function of the bus controller in the fabric end-point?",
+      "choices": [
+        "To manage data encryption and decryption processes",
+        "To allow responder devices to control transactions on the fabric",
+        "To enhance data processing speeds across the network",
+        "To facilitate the configuration of network topology"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2076",
+      "text": "What is the primary method an adversary uses to deliver a malicious script in CAPEC-209?",
+      "choices": [
+        "Embedding the script in a legitimate file extension",
+        "Using social engineering to trick users",
+        "Uploading a file with a mismatched MIME type",
+        "Exploiting a system vulnerability"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2077",
+      "text": "In the context of CWE-597, what is a primary mitigation technique to avoid the weakness when comparing strings in Java?",
+      "choices": [
+        "Use \"==\" operator for string comparison",
+        "Use the hashCode() method to compare strings",
+        "Use the compareTo() method exclusively for string comparison",
+        "Use the .equals() method to compare string values"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2078",
+      "text": "Which of the following is a recommended mitigation strategy for preventing CWE-473 type weaknesses during the implementation phase?",
+      "choices": [
+        "Utilize data encryption for all variables",
+        "Adopt a naming convention to emphasize externally modifiable variables",
+        "Disable PHP's error reporting feature",
+        "Deploy an intrusion detection system"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2079",
+      "text": "In what phase should mechanisms be created to prevent users from reusing passwords or creating similar passwords?",
+      "choices": [
+        "Implementation",
+        "Testing",
+        "Architecture and Design",
+        "Deployment"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2080",
+      "text": "During which phase should prohibiting the use of default cryptographic keys be implemented to mitigate CWE-1394?",
+      "choices": [
+        "Requirements",
+        "Architecture and Design",
+        "Implementation",
+        "Testing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2081",
+      "text": "What is the primary goal of CAPEC-48 attacks?",
+      "choices": [
+        "Stealing financial data from users through phishing",
+        "Executing remote code through malicious URLs",
+        "Accessing local files and sending them to attacker-controlled sites",
+        "Exploiting SQL injection vulnerabilities"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2082",
+      "text": "What is a key prerequisite for successfully performing a fault injection attack on mobile devices?",
+      "choices": [
+        "Advanced knowledge in software engineering",
+        "Physical control of the device for significant experimentation time",
+        "Access to the device's firmware",
+        "Networking expertise"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2083",
+      "text": "Which consequence is NOT mentioned as a result of manipulating inputs using escaped slashes?",
+      "choices": [
+        "Read Data",
+        "Denial of Service",
+        "Execute Unauthorized Commands",
+        "Resource Consumption"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2084",
+      "text": "Regarding CWE-1312, which architectural weakness could lead to exposure of mirrored memory or MMIO regions?",
+      "choices": [
+        "Failure to secure memory initialization",
+        "Absence of error logging in memory modules",
+        "Lack of protection for non-main memory regions",
+        "Incorrect encryption of main addressed region"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2085",
+      "text": "Which of the following CAPEC attack patterns is directly related to CWE-1021?",
+      "choices": [
+        "CAPEC-21: Encryption Brute Forcing",
+        "CAPEC-103: Clickjacking",
+        "CAPEC-4: HTTP Response Splitting",
+        "CAPEC-9: Directory Traversal"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2086",
+      "text": "What is the primary consequence of the CWE-304 weakness?",
+      "choices": [
+        "Bypass Protection Mechanism",
+        "Trigger Denial of Service (DoS)",
+        "Vulnerability to Brute-Force Attacks",
+        "Susceptibility to Phishing Attacks"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2087",
+      "text": "CWE-430 is primarily concerned with which of the following issues?",
+      "choices": [
+        "Incorrect cryptographic implementation",
+        "Assignment of wrong handler to process an object",
+        "Misuse of function calls",
+        "Failure in access control"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2088",
+      "text": "According to CAPEC-679, which skill is necessary for an adversary to exploit improperly configured or implemented memory protections?",
+      "choices": [
+        "Deep understanding of network protocols.",
+        "Ability to craft malicious code to inject into the memory region.",
+        "Proficiency in social engineering techniques.",
+        "Knowledge of cryptographic algorithms."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2089",
+      "text": "In the context of CAPEC-679, what is a correct mitigation strategy to address memory protection issues?",
+      "choices": [
+        "Ensure that protected and unprotected memory ranges are isolated and do not overlap.",
+        "Implement encryption for all memory regions.",
+        "Require multi-factor authentication for memory access.",
+        "Use only statically allocated memory regions."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2090",
+      "text": "In which phase can using an abstraction library to abstract away risky APIs be considered a mitigation strategy for CWE-122?",
+      "choices": [
+        "Implementation",
+        "Operation",
+        "Architecture and Design",
+        "Build and Compilation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2091",
+      "text": "What is a primary prerequisite for a successful CAPEC-644 attack?",
+      "choices": [
+        "The adversary possesses a zero-day exploit.",
+        "The target system uses strict access controls.",
+        "The system/application uses multi-factor authentication.",
+        "The system/application leverages Lan Man or NT Lan Man authentication protocols."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2092",
+      "text": "One of the key mitigations against CAPEC-79 involves:",
+      "choices": [
+        "Using secure HTTP methods such as GET",
+        "Ensuring URL decoding is repeated multiple times",
+        "Enforcing the principle of least privilege for file system access",
+        "Implementing static IP address filtering"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2093",
+      "text": "Which technique is NOT used in Tapjacking as described in CAPEC-506?",
+      "choices": [
+        "Using transparent properties to allow taps to pass through an overlay.",
+        "Using a small object to overlay a visible screen element.",
+        "Modifying the device's kernel to intercept screen taps.",
+        "Leveraging transparent properties to spoof user interface elements."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2094",
+      "text": "What phase of development is mentioned for potential mitigation strategies for CWE-926?",
+      "choices": [
+        "Testing",
+        "Build and Compilation",
+        "Maintenance",
+        "Implementation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2095",
+      "text": "Which related attack pattern for CWE-1258 involves retrieving data intentionally left in places that are easily accessible?",
+      "choices": [
+        "CAPEC-150: Collect Data from Common Resource Locations",
+        "CAPEC-204: Lifting Sensitive Data Embedded in Cache",
+        "CAPEC-37: Retrieve Embedded Sensitive Data",
+        "CAPEC-545: Pull Data from System Resources"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2096",
+      "text": "Which of the following describes a common consequence of CWE-221 vulnerability in a cyber threat intelligence context?",
+      "choices": [
+        "Hide Activities within Network Traffic",
+        "Improper Escalation of Privileges",
+        "Denial of Service",
+        "Phishing Campaigns"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2097",
+      "text": "Given an adversary targeting Unix systems as described in CAPEC-150, which directory is most likely targeted due to default file organization conventions?",
+      "choices": [
+        "/usr/bin",
+        "/var",
+        "log",
+        "/etc"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2098",
+      "text": "Which of the following best describes the primary security risk associated with CWE-208?",
+      "choices": [
+        "Compromised system integrity",
+        "Disclosure of technical secrets",
+        "Compromised system availability",
+        "Exposure of sensitive data"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2099",
+      "text": "What is a common characteristic of the CAPEC-464 evercookie attack pattern?",
+      "choices": [
+        "It only affects one browser on a victim's machine.",
+        "It stores cookies in over ten different places.",
+        "It relies on social engineering techniques.",
+        "It can be easily mitigated by clearing the browser's cache."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2100",
+      "text": "Which CWE-114 related attack pattern involves potentially executing unauthorized code through SQL Injection?",
+      "choices": [
+        "CAPEC-CAPEC-640",
+        "CAPEC-CAPEC-108",
+        "CAPEC-CAPEC-112",
+        "CAPEC-CAPEC-111"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2101",
+      "text": "Considering CWE-823, what is a potential technical impact of pointer arithmetic with offsets pointing outside valid memory ranges on the availability of a system?",
+      "choices": [
+        "Read Memory",
+        "Process Hangs",
+        "Memory Leak",
+        "Crash, Exit, or Restart"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2102",
+      "text": "What is the prerequisite for an attacker's success in a DLL Side-Loading attempt as described in CAPEC-641?",
+      "choices": [
+        "The operating system must use binary files only.",
+        "The target must fail to verify the integrity of the DLL before using them.",
+        "Windows Side-by-Side (WinSxS) directory must be corrupted.",
+        "DLL Redirection must be disabled."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2103",
+      "text": "What is a potential consequence of CWE-124 if the corrupted memory can be effectively controlled?",
+      "choices": [
+        "DoS: Crash, Exit, or Restart",
+        "Execute Unauthorized Code or Commands",
+        "Memory Leakage",
+        "Data Loss"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2104",
+      "text": "In what context might the weakness identified in CWE-110 most commonly appear?",
+      "choices": [
+        "Windows Operating Systems",
+        "Java Programming Language",
+        "Microcontroller Architectures",
+        "Human-Machine Interfaces"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2105",
+      "text": "Which phase in software development does NOT offer a potential mitigation for CWE-362?",
+      "choices": [
+        "Architecture and Design",
+        "Testing",
+        "Implementation",
+        "Operation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2106",
+      "text": "In the context of CWE-288, which of the following best describes a potential mode of introduction?",
+      "choices": [
+        "Incorrect implementation of access control lists (ACLs)",
+        "Using outdated authentication protocols",
+        "Assuming access to a CGI program is exclusively through a front screen in web applications",
+        "Storage of passwords in plaintext"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2107",
+      "text": "Which is an applicable platform for CWE-96?",
+      "choices": [
+        "Java (High Prevalence)",
+        "PHP (Undetermined Prevalence)",
+        "C++ (High Prevalence)",
+        "Assembly (Undetermined Prevalence)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2108",
+      "text": "What potential consequence(s) can result from a successful CAPEC-692 attack?",
+      "choices": [
+        "Modify Data and Hide Activities",
+        "Execute Unauthorized Commands",
+        "Send Phishing Emails to Users",
+        "Change Software User Interfaces"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2109",
+      "text": "What is a prerequisite for a successful Local Code Inclusion attack under CAPEC-251?",
+      "choices": [
+        "The application must allow execution of arbitrary shell commands.",
+        "The application must have a bug permitting control over which code file is loaded.",
+        "The application must have outdated libraries with logged vulnerabilities.",
+        "The application must be running with elevated privileges."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2110",
+      "text": "In the context of CWE-655, which of the following is a potential consequence of making protection mechanisms too difficult or inconvenient to use?",
+      "choices": [
+        "Users may improve the security by accident.",
+        "Users might switch to a more secure mechanism.",
+        "Non-malicious users may disable or bypass the mechanism.",
+        "Non-malicious users may decide to increase security."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2111",
+      "text": "In the context of CWE-235, which related attack pattern can be a potential risk?",
+      "choices": [
+        "SQL Injection",
+        "HTTP Parameter Pollution (HPP)",
+        "Cross-Site Scripting (XSS)",
+        "Man-in-the-middle (MITM)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2112",
+      "text": "Which mitigation strategy should be employed during the implementation phase to reduce the impact of CWE-250?",
+      "choices": [
+        "Perform extensive input validation for any privileged code exposed to users.",
+        "Environment Hardening",
+        "Separation of Privilege",
+        "Attack Surface Reduction"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2113",
+      "text": "What might transient execution during processor operations potentially impact, according to CWE-1422?",
+      "choices": [
+        "Availability",
+        "Confidentiality",
+        "Integrity",
+        "Non-repudiation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2114",
+      "text": "What mitigation strategy is recommended to prevent backslash from being used for malicious purposes?",
+      "choices": [
+        "Use strong password policies",
+        "Assume all input is malicious and create an allowlist",
+        "Encrypt all user inputs",
+        "Regularly update security patches"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2115",
+      "text": "Which of the following scenarios could lead to an Object Relational Mapping (ORM) injection vulnerability?",
+      "choices": [
+        "A developer using safe ORM-provided methods to interact with the database",
+        "An attacker successfully injecting ORM syntax due to improperly used access methods",
+        "An application validating and sanitizing user inputs before executing queries",
+        "A system that does not utilize any ORM tools"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2116",
+      "text": "What is a primary risk when a Java application uses JNI to call code written in another language?",
+      "choices": [
+        "Access control issues can occur",
+        "Performance degradation may happen",
+        "Java garbage collection could malfunction",
+        "Multi-threading issues could arise"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2117",
+      "text": "What is a primary consequence of failing to verify the identity of an actor during key exchange as per CWE-322?",
+      "choices": [
+        "Injection of malicious code",
+        "Misconfiguration of system settings",
+        "Bypass of protection mechanisms",
+        "Exploitation of buffer overflow vulnerabilities"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2118",
+      "text": "When considering the execution flow of CAPEC-24, what is a common method attackers use to experiment with inducing buffer overflows?",
+      "choices": [
+        "Brute forcing passwords",
+        "Manual injections of data",
+        "Using a firewall testing tool",
+        "Social engineering"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2119",
+      "text": "What is the most critical impact of CWE-113 in terms of HTTP header manipulation?",
+      "choices": [
+        "Unauthorized access to system files",
+        "Control over subsequent HTTP headers and body",
+        "Injection of malicious URLs",
+        "Denial of Service attack"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2120",
+      "text": "In the context of JSON Hijacking, what is a common target for attackers?",
+      "choices": [
+        "Encrypted database files",
+        "Javascript variables stored on the client",
+        "Victim's session cookie",
+        "SSL certificates"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2121",
+      "text": "What is one mitigation technique to prevent weaknesses in cryptographic algorithms as per CAPEC-97?",
+      "choices": [
+        "Implementing custom encryption algorithms",
+        "Using non-random initialization vectors",
+        "Using proven cryptographic algorithms with recommended key sizes",
+        "Generating key material from predictable sources"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2122",
+      "text": "What type of variable is commonly manipulated in pointer manipulation attacks?",
+      "choices": [
+        "Integer variable",
+        "String variable",
+        "Floating-point variable",
+        "Boolean variable"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2123",
+      "text": "In the context of CAPEC-27, what does the term 'race condition' specifically refer to?",
+      "choices": [
+        "The delay between the system's file existence check and file creation",
+        "Simultaneous writing of data by multiple users to a file",
+        "Parallel processing leading to inconsistent file states",
+        "Exploiting multiple vulnerabilities concurrently"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2124",
+      "text": "What is a common consequence of CWE-89 regarding the confidentiality of an application?",
+      "choices": [
+        "Read Application Data",
+        "Bypass Protection Mechanism",
+        "Modify Application Data",
+        "Denial of Service"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2125",
+      "text": "What is a primary characteristic of CWE-1250's weakness as it pertains to multiple distributed components?",
+      "choices": [
+        "The components always share data in real-time across the network.",
+        "The product ensures local copies of shared data are always consistent.",
+        "Each component or sub-system keeps its own local copy of shared data, but consistency is not ensured.",
+        "The weakness only appears in specific operating systems and languages."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2126",
+      "text": "What mitigation can reduce the feasibility of a brute force attack according to CAPEC-49?",
+      "choices": [
+        "Using two-factor authentication.",
+        "Implementing strong encryption for stored passwords.",
+        "Employing password throttling mechanisms.",
+        "Regularly updating the software."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2127",
+      "text": "What is the primary impact of exploiting CWE-920 in mobile technologies?",
+      "choices": [
+        "Unauthorized data access",
+        "Denial of Service (DoS): Resource Consumption",
+        "Privilege escalation",
+        "Code injection"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2128",
+      "text": "In CAPEC-263, what could be a potential consequence if an application detects a corrupted file but fails in an unsafe way?",
+      "choices": [
+        "Denial of Service",
+        "Disabling of filters or access controls",
+        "Exploitable buffer overflow",
+        "Data exfiltration"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2129",
+      "text": "In the context of CWE-1209, what is a primary reason adversaries exploit reserved bits in hardware designs?",
+      "choices": [
+        "To initiate a denial of service attack",
+        "To covertly communicate between systems",
+        "To force a rollback to a previous firmware version",
+        "To compromise the hardware state"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2130",
+      "text": "Which phase is NOT associated with the introduction of CWE-1310?",
+      "choices": [
+        "Test and Evaluation",
+        "Architecture and Design",
+        "Implementation",
+        "Manufacturing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2131",
+      "text": "In the context of CWE-618, which of the following is a recommended mitigation strategy to minimize vulnerabilities in ActiveX controls?",
+      "choices": [
+        "Expose all methods for ease of access",
+        "Perform input validation on all arguments when exposing a method",
+        "Avoid using code signing as it does not offer any protection",
+        "Ignore the designation of the control as safe for scripting"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2132",
+      "text": "What is a potential consequence of CWE-927 regarding confidentiality?",
+      "choices": [
+        "Unauthorized modification of application code",
+        "Unauthorized authentication",
+        "Reading of application data by other applications",
+        "Interception of network traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2133",
+      "text": "Given CAPEC-32's described consequences, what is a potential impact an attack could have on a system?",
+      "choices": [
+        "Execution of valid management commands",
+        "Causing a system reboot",
+        "Read data from the user's session",
+        "Increase system memory allocation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2134",
+      "text": "What scope and impact are associated with the consequence \"Execute Unauthorized Commands\" in CAPEC-13?",
+      "choices": [
+        "Confidentiality; Execute Arbitrary Code",
+        "Integrity; Data Tampering",
+        "Availability; Denial of Service",
+        "Confidentiality, Integrity, Availability; Execute Unauthorized Commands"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2135",
+      "text": "In the context of CWE-487, what is the primary reason Java packages are not inherently closed?",
+      "choices": [
+        "Java packages lack built-in access control mechanisms.",
+        "Java packages cannot implement cryptographic functions.",
+        "Java packages do not support multithreading.",
+        "Java packages are not compatible with modern IDEs."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2136",
+      "text": "When dealing with CWE-25, which aspect is particularly critical to protect against using input validation?",
+      "choices": [
+        "Properly neutralizing \"/../\" sequences",
+        "Encrypting external input data",
+        "Minimizing the use of third-party libraries",
+        "Utilizing a sandbox environment"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2137",
+      "text": "What is a primary consequence of using hard-coded constants as highlighted in CWE-547?",
+      "choices": [
+        "It may lead to syntax errors during code compilation.",
+        "It increases the predictability of security-critical values and can be easily exploited.",
+        "It could cause unexpected behavior and the introduction of weaknesses during code maintenance.",
+        "It can lead to dependency on external libraries for proper functioning."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2138",
+      "text": "What is one potential mitigation strategy for CWE-537 regarding unhandled exception errors?",
+      "choices": [
+        "Only log error messages on the server without exposing them to the client.",
+        "Handle errors by displaying a generic error message to users.",
+        "Reboot the system automatically on unhandled exceptions.",
+        "Disable error logging to prevent sensitive information leakage."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2139",
+      "text": "What differentiates a Dictionary Attack (CAPEC-16) from Credential Stuffing (CAPEC-600)?",
+      "choices": [
+        "Focus on known username-password pairs",
+        "Reusability of passwords across different websites",
+        "Indifference to account lockouts",
+        "Use of social engineering techniques to gather passwords"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2140",
+      "text": "In the context of CWE-437, what is the potential risk when a product does not have a complete model of an endpoint's features, behaviors, or state?",
+      "choices": [
+        "It may lead to unexpected state changes and security breaches.",
+        "It could cause the system to slow down without any security impact.",
+        "It might result in improved system performance due to simplified endpoint interactions.",
+        "It ensures reliable and consistent user experience across all endpoints."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2141",
+      "text": "What is a primary concern when a product uses a component that is not sufficiently trusted?",
+      "choices": [
+        "Decreased user interface performance",
+        "Increased costs and slow time-to-market",
+        "Reduced maintainability of the product",
+        "Enhanced user experience"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2142",
+      "text": "What is a primary cause for the inability to update or patch certain components in a product's architecture?",
+      "choices": [
+        "Expense considerations",
+        "Requirements development oversight",
+        "Both technical complexity and cost are the primary concerns",
+        "Efforts to avoid redundancy in design"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2143",
+      "text": "Regarding CWE-805, in which language is this weakness often prevalent?",
+      "choices": [
+        "Java",
+        "Python",
+        "C#",
+        "C++"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2144",
+      "text": "What is a potential consequence of CWE-765 in a system?",
+      "choices": [
+        "Unexpected legal liability",
+        "Increased power consumption",
+        "Service unavailability through a DoS attack",
+        "Hardware failure"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2145",
+      "text": "Regarding CWE-594, what is a common consequence of attempting to write unserializable objects to disk in a J2EE container?",
+      "choices": [
+        "Modification of Application Data",
+        "Increase in system performance",
+        "Improvement in data encryption",
+        "Enhanced user authentication"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2146",
+      "text": "Regarding CWE-598, which phase should developers focus on to mitigate the risk of including sensitive information in query strings?",
+      "choices": [
+        "Deployment and Monitoring",
+        "Implementation",
+        "Testing",
+        "Requirement Analysis"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2147",
+      "text": "Which mitigation strategy is recommended to prevent the misuse of the account lockout mechanism described in CAPEC-2?",
+      "choices": [
+        "Disable the account lockout mechanism altogether.",
+        "Implement intelligent password throttling mechanisms considering factors like IP address.",
+        "Increase the number of failed login attempts required to lockout the account.",
+        "Use two-factor authentication exclusively."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2148",
+      "text": "What is a prerequisite for the successful exploitation of trusted identifiers according to CAPEC-21?",
+      "choices": [
+        "Use of weak encryption for data transmission",
+        "Concurrent sessions must be allowed",
+        "High user login frequency",
+        "Complex and lengthy identifiers"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2149",
+      "text": "Which phase is recommended for mitigating weaknesses identified in CWE-184?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "Testing",
+        "Maintenance"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2150",
+      "text": "In the CAPEC-698 attack pattern, which is a potential consequence of a successful attack in terms of access control?",
+      "choices": [
+        "Read Data",
+        "Invoke Denial-of-Service",
+        "Trigger firmware updates",
+        "Access physical hardware controls"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2151",
+      "text": "What related attack pattern is explicitly linked to CWE-98?",
+      "choices": [
+        "SQL Injection",
+        "Buffer Overflow",
+        "Cross-Site Scripting (XSS)",
+        "PHP Remote File Inclusion"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2152",
+      "text": "In the context of CWE-781, what is a possible consequence if an IOCTL using METHOD_NEITHER is not properly validated?",
+      "choices": [
+        "Accessing unauthorized network resources",
+        "Accessing memory belonging to another process or user",
+        "Injecting SQL commands into databases",
+        "Triggering safe mode on the operating system"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2153",
+      "text": "Which of the following is NOT listed as a mitigation strategy against CAPEC-69?",
+      "choices": [
+        "Apply the principle of least privilege.",
+        "Use encrypted communication channels.",
+        "Validate all untrusted data.",
+        "Apply the latest patches."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2154",
+      "text": "What is a common consequence of using hard-coded cryptographic keys as described in CWE-321?",
+      "choices": [
+        "Increased system performance",
+        "Enhanced data integrity",
+        "Technical Impact: Bypass Protection Mechanism",
+        "Reduced risk of unauthorized access"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2155",
+      "text": "Which of the following CAPEC attack patterns is most relevant to CWE-263 due to the risk associated with aging passwords?",
+      "choices": [
+        "CAPEC-600: Credential Stuffing",
+        "CAPEC-555: Remote Services with Stolen Credentials",
+        "CAPEC-49: Password Brute Forcing",
+        "CAPEC-509: Kerberoasting"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2156",
+      "text": "Which of the following CWE weaknesses is NOT associated with CAPEC-386?",
+      "choices": [
+        "Modification of Assumed-Immutable Data (CWE-471)",
+        "Client-Side Enforcement of Server-Side Security (CWE-602)",
+        "Manipulation of Web Posting (CWE-434)",
+        "Insufficient Verification of Data Authenticity (CWE-345)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2157",
+      "text": "What is a likely consequence of a successful buffer overflow attack via parameter expansion, according to CAPEC-47?",
+      "choices": [
+        "Crashing of the network infrastructure",
+        "Reading and modifying data unlawfully",
+        "Injecting spam emails into an email server",
+        "Exploiting supply chain vulnerabilities"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2158",
+      "text": "Which phase is crucial to include proper authentication measures to mitigate CWE-322?",
+      "choices": [
+        "Implementation",
+        "Post-Deployment",
+        "Architecture and Design",
+        "Maintenance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2159",
+      "text": "What prerequisite is required for an adversary to exploit transient instruction execution in CAPEC-663?",
+      "choices": [
+        "User access and admin rights",
+        "User access and non-privileged crafted code",
+        "Admin rights and involvement in system boot process",
+        "User access and physical access to the hardware"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2160",
+      "text": "What is a potential severe consequence of having a function defined as a handler for more than one signal as described in CWE-831?",
+      "choices": [
+        "Information disclosure due to buffer overflow",
+        "Breach of confidentiality due to unencrypted storage",
+        "Privilege escalation and protection mechanism bypass",
+        "Network traffic interception and tampering"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2161",
+      "text": "In the context of CWE-483, which platform is occasionally affected by this weakness as prevalent?",
+      "choices": [
+        "Java",
+        "Python",
+        "Rust",
+        "C++"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2162",
+      "text": "What is a common consequence of failing to explicitly delimit a block intended to contain multiple statements in code, particularly in lightly tested or untested environments?",
+      "choices": [
+        "Confidentiality and availability impacts without technical impact",
+        "Altered control flow leading to unexpected states and additional attack vectors",
+        "Improved code readability and maintainability",
+        "Increased compliance with coding standards"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2163",
+      "text": "When addressing CWE-1091, what general impact is most likely to result from not invoking an object's finalize/destructor method?",
+      "choices": [
+        "Memory leaks",
+        "Resource starvation",
+        "Functionality loss",
+        "Performance reduction"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2164",
+      "text": "In the context of CWE-642, what is the primary reason why storing security-critical state information on the client side is risky?",
+      "choices": [
+        "It can lead to increased data storage costs.",
+        "It can be lost if the user clears their browser cache.",
+        "It exposes the state information to unauthorized modification and access by attackers.",
+        "It makes it difficult to synchronize state between client and server."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2165",
+      "text": "What is the primary method an adversary uses in CAPEC-653 to gain unauthorized access to a system?",
+      "choices": [
+        "Social engineering to trick users into revealing their passwords",
+        "Exploiting software vulnerabilities within the operating system",
+        "Guessing or obtaining legitimate operating system credentials",
+        "Bypassing security mechanisms through brute force attacks"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2166",
+      "text": "What is the consequence of calling a thread's run() method directly instead of using the start() method according to CWE-572?",
+      "choices": [
+        "The code runs in the thread of the callee instead of the caller.",
+        "The code runs in a new, separate thread created by the system.",
+        "The code runs in the thread of the caller instead of the callee.",
+        "The code does not run at all."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2167",
+      "text": "What mitigation should be applied during the architecture and design phase to address CWE-640?",
+      "choices": [
+        "Impose a maximum password length",
+        "Thoroughly filter and validate all input supplied by the user to the password recovery mechanism",
+        "Allow users to control the e-mail address for sending the new password",
+        "Use a single weak security question for recovery"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2168",
+      "text": "Which phase can introduce CWE-669 due to improper implementation of an architectural security tactic?",
+      "choices": [
+        "Architecture and Design",
+        "Implementation",
+        "Operation",
+        "Testing"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2169",
+      "text": "What is a primary characteristic of CWE-758?",
+      "choices": [
+        "It always arises from the misuse of encryption algorithms.",
+        "It involves using an entity relying on non-guaranteed properties.",
+        "It typically results from network configuration errors.",
+        "It exclusively pertains to user authentication issues."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2170",
+      "text": "Which of the following best describes a distinguishing characteristic of CAPEC-242: Code Injection?",
+      "choices": [
+        "It involves addition of a reference to a code file.",
+        "It exploits a weakness in input validation to inject new code into executing code.",
+        "It relies on manipulating existing code rather than injecting new code.",
+        "It does not involve user-controlled input."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2171",
+      "text": "In the context of CWE-149, what is one of the main consequences of quote injection into a product?",
+      "choices": [
+        "Memory Corruption",
+        "Unexpected State",
+        "Data Exfiltration",
+        "Privilege Escalation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2172",
+      "text": "In the context of CWE-229, which of the following is the most likely impact if the product fails to handle an incorrect number of input parameters?",
+      "choices": [
+        "It may lead to erroneous code execution and system crashes.",
+        "It could cause sensitive data exposure through improper input validation.",
+        "It might result in escalating user privileges beyond their authorization.",
+        "It would lead to an unexpected state affecting system integrity."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2173",
+      "text": "Which CWE does NOT relate directly to buffer overflow issues in the context of CAPEC-8?",
+      "choices": [
+        "CWE-118",
+        "CWE-733",
+        "CWE-120",
+        "CWE-680"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2174",
+      "text": "What is one of the primary purposes for an adversary to manipulate registry information in the context of CAPEC-203?",
+      "choices": [
+        "To elevate privileges without detection",
+        "To completely delete the target application",
+        "To hide configuration information or remove indicators of compromise",
+        "To upgrade the security features of an application"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2175",
+      "text": "Which related attack pattern to CWE-1270 specifically deals with impersonation using tokens?",
+      "choices": [
+        "CAPEC-121",
+        "CAPEC-633",
+        "CAPEC-681",
+        "CAPEC-59"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2176",
+      "text": "Which of the following mitigations is recommended for addressing CWE-486 in the Implementation phase?",
+      "choices": [
+        "Refactor code to use dynamic typing instead of static typing.",
+        "Use annotation processing to enforce class equivalencies.",
+        "Use class equivalency to determine type using getClass() and == operator instead of class name.",
+        "Implement signature-based verification for object identity."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2177",
+      "text": "In CAPEC-177, what is a critical prerequisite for the attack to succeed?",
+      "choices": [
+        "The target application must use configuration files.",
+        "The directories the target application searches first must be writable by the attacker.",
+        "The target application must be a web-based service.",
+        "The target application must have admin privileges."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2178",
+      "text": "Which phase includes the mitigation strategy of ensuring all resources allocated are freed consistently, especially in error conditions?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "Testing",
+        "Deployment"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2179",
+      "text": "Which implementation phase strategy is most effective for mitigating CWE-30?",
+      "choices": [
+        "Error Handling",
+        "Authentication Mechanisms",
+        "Input Validation",
+        "Access Control"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2180",
+      "text": "Which of the following related attack patterns would involve manipulating structured data in transit?",
+      "choices": [
+        "Cache Poisoning",
+        "DNS Cache Poisoning",
+        "Exploitation of Trusted Identifiers",
+        "JSON Hijacking"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2181",
+      "text": "In which phase should mitigations for CWE-1254 primarily be applied according to the document?",
+      "choices": [
+        "Testing",
+        "Design",
+        "Implementation",
+        "Deployment"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2182",
+      "text": "Which of the following scenarios can exploit the weakness described in CWE-59?",
+      "choices": [
+        "Executing malicious code by leveraging buffer overflow vulnerabilities.",
+        "Manipulating web input to manipulate file system calls.",
+        "Performing a Man-in-the-Middle (MitM) attack.",
+        "Exploiting a SQL injection vulnerability."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2183",
+      "text": "What is a likely impact of CWE-1322 on a system?",
+      "choices": [
+        "DoS: Authentication Bypass",
+        "Access Control Bypass",
+        "DoS: Resource Consumption (CPU)",
+        "Memory Leak"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2184",
+      "text": "What is a common mitigation strategy for security checks performed on the client side, according to CWE-807?",
+      "choices": [
+        "Using encryption",
+        "Ensuring duplication on the server side",
+        "Minimizing user input",
+        "Improving hardware security"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2185",
+      "text": "Which of the following is a key recommendation by NIST for generating unpredictable IVs for CBC mode?",
+      "choices": [
+        "Generate the IV using a static value",
+        "Use a predictable nonce and encrypt it with the same key and cipher used for plaintext",
+        "Use the same IV for multiple encryption operations",
+        "Derive the IV from user input"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2186",
+      "text": "Which of the following is a recommended mitigation strategy during the Implementation phase to address CWE-1241 vulnerabilities?",
+      "choices": [
+        "Specify a true random number generator for cryptographic algorithms",
+        "Conduct more thorough code reviews",
+        "Ensure regular updates to all software components",
+        "Implement a true random number generator for cryptographic algorithms"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2187",
+      "text": "Which phase emphasizes duplicating client-side security checks on the server side to avoid CWE-602?",
+      "choices": [
+        "Implementation",
+        "Operation",
+        "Architecture and Design",
+        "Testing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2188",
+      "text": "Which one of the following is specifically mentioned as an incomplete mitigation effort for passwords according to CWE-256?",
+      "choices": [
+        "Use of base 64 encoding",
+        "Implementing two-factor authentication",
+        "Employing a password manager",
+        "Encrypting passwords with modern cryptographic algorithms"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2189",
+      "text": "Which phase can CWE-440 be introduced in?",
+      "choices": [
+        "Architecture and Design",
+        "Implementation",
+        "Operation",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2190",
+      "text": "Which prerequisite is essential for leveraging a race condition according to CAPEC-26?",
+      "choices": [
+        "Adversary has advanced knowledge of cryptographic techniques.",
+        "A resource is accessed/modified concurrently by multiple processes.",
+        "The system uses hard-coded credentials.",
+        "The adversary has physical access to the server."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2191",
+      "text": "Which phase in software development is specifically recommended for using static analysis tools to identify non-initialized variables in the context of CWE-456?",
+      "choices": [
+        "Requirements Gathering",
+        "Implementation",
+        "Testing",
+        "Deployment"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2192",
+      "text": "Which of the following is a potential mitigation strategy for CWE-419 during the architecture and design phase?",
+      "choices": [
+        "Implement two-factor authentication for all users",
+        "Encrypt all user data stored in the database",
+        "Protect administrative/restricted functionality with a strong authentication mechanism",
+        "Monitor user activities and log anomalies"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2193",
+      "text": "What is the primary impact on availability caused by CWE-333?",
+      "choices": [
+        "Program consumes excessive memory resources",
+        "Program enters an infinite loop",
+        "Program crashes or blocks",
+        "Program becomes vulnerable to SQL injection"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2194",
+      "text": "Which CWE is NOT related to CAPEC-21 exploitation techniques?",
+      "choices": [
+        "CWE-290",
+        "CWE-523",
+        "CWE-346",
+        "CWE-384"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2195",
+      "text": "According to CWE-182, one of the suggested mitigations involves canonicalizing names. What is the purpose of this mitigation?",
+      "choices": [
+        "Preventing SQL Injection attacks",
+        "Matching the system's representation of names to avoid inconsistencies",
+        "Allowing multiple representations of the same file name",
+        "Encrypting file names for security"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2196",
+      "text": "Which of the following CWE is related to improper protection against voltage and clock glitches?",
+      "choices": [
+        "CWE-1247",
+        "CWE-1256",
+        "CWE-1319",
+        "CWE-1332"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2197",
+      "text": "What is the common consequence of CWE-231?",
+      "choices": [
+        "Data Breach",
+        "Unexpected State",
+        "Privilege Escalation",
+        "Service Denial"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2198",
+      "text": "What is the primary action an adversary looks to perform during the 'Explore' phase in CAPEC-17?",
+      "choices": [
+        "Identify a non-root account",
+        "Determine file/directory configuration",
+        "Perform vulnerability scanning",
+        "Log system activities"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2199",
+      "text": "In the context of CAPEC-636, which file system characteristic allows an attacker to hide malicious data or code within files?",
+      "choices": [
+        "The use of unencrypted file systems",
+        "The presence of alternate data streams",
+        "The support for large file sizes",
+        "The reliance on single-partition structures"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2200",
+      "text": "What technical impact can arise from an attacker exploiting CWE-642 to modify state information improperly related to user privileges?",
+      "choices": [
+        "Breach of confidentiality",
+        "Denial of Service (DoS)",
+        "Bypass of authentication or privilege escalation",
+        "Data corruption"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2201",
+      "text": "What is the primary security concern associated with the CWE-924 weakness when an endpoint is spoofed?",
+      "choices": [
+        "Denial of Service",
+        "Privilege Escalation",
+        "Data Exfiltration",
+        "Information Disclosure"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2202",
+      "text": "What is the scope and technical impact of CWE-258 regarding password use?",
+      "choices": [
+        "Data Integrity; Data Theft",
+        "Access Control; Gain Privileges or Assume Identity",
+        "Availability; Denial of Service",
+        "Authentication; Bypass Authentication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2203",
+      "text": "What is a common consequence of CWE-482 (Use of Comparison Operator Instead of Assignment)?",
+      "choices": [
+        "Unauthorized data access",
+        "Unexpected program state",
+        "Privilege escalation",
+        "Information disclosure"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2204",
+      "text": "What is the primary technical impact on confidentiality when an untrusted pointer is used in a read operation as described in CWE-822?",
+      "choices": [
+        "Modification of sensitive data",
+        "Unauthorized code execution",
+        "Termination of the application",
+        "Reading sensitive memory content"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2205",
+      "text": "Which strategy is recommended during the Implementation phase to mitigate CWE-175?",
+      "choices": [
+        "Code Obfuscation",
+        "Access Control",
+        "Role-Based Access Control",
+        "Input Validation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2206",
+      "text": "Which mitigation strategy can be employed to combat the attack described in CAPEC-159?",
+      "choices": [
+        "Restrict write access to non-critical configuration files.",
+        "Implement a firewall to block unauthorized access.",
+        "Encrypt all data libraries used by the application.",
+        "Check the integrity of dynamically linked libraries before use."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2207",
+      "text": "Which strategy is recommended to mitigate CWE-212 during the implementation phase?",
+      "choices": [
+        "Separation of Privilege",
+        "Input Validation",
+        "Use of Strong Cryptography",
+        "Attack Surface Reduction"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2208",
+      "text": "What is the main consequence of a successful CAPEC-25 attack?",
+      "choices": [
+        "Information Disclosure",
+        "Availability",
+        "Resource Consumption",
+        "Privilege Escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2209",
+      "text": "What mitigating strategy does CAPEC-1 suggest for J2EE environments to prevent access to functionalities not properly constrained by ACLs?",
+      "choices": [
+        "Implementing two-factor authentication for all users.",
+        "Associating an \"NoAccess\" role with protected servlets.",
+        "Encrypting all sensitive communications.",
+        "Regularly updating ACLs based on user feedback."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2210",
+      "text": "Which of the following are prerequisites for a CAPEC-105 HTTP Request Splitting attack?",
+      "choices": [
+        "HTTP/2 protocol usage on back-end connections",
+        "Availability of a Web Application Firewall (WAF)",
+        "Intermediary HTTP agent capable of parsing and interpreting HTTP requests",
+        "Uniform parsing process for all HTTP agents in the network path"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2211",
+      "text": "What is the primary threat introduced by CWE-23?",
+      "choices": [
+        "Unauthorized network access",
+        "Manipulation of database entries",
+        "Compromising the path integrity using \"..\"",
+        "Altering cryptographic keys"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2212",
+      "text": "Which of the following is a significant potential consequence of CWE-1329 issues in a product?",
+      "choices": [
+        "Decreased usability",
+        "Simplified development process",
+        "Increase in product marketability",
+        "Decreased maintainability"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2213",
+      "text": "Which phase of the software development lifecycle should be considered to prevent CWE-76 by selecting appropriate technologies?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "Requirements",
+        "Maintenance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2214",
+      "text": "In the context of CWE-181, which potential consequence is associated with validating data before it is filtered?",
+      "choices": [
+        "Data corruption",
+        "Data leakage",
+        "Bypass protection mechanism",
+        "Execution of unintended commands"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2215",
+      "text": "Which of the following is a key characteristic of CWE-307 that makes it a security vulnerability?",
+      "choices": [
+        "The product allows unlimited access after multiple authentication attempts.",
+        "It allows attackers to gain privileged access through incorrect session handling.",
+        "It does not prevent multiple failed authentication attempts within a short time frame.",
+        "It mishandles input validation for highly restricted fields."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2216",
+      "text": "What is a common technical impact of CWE-471 on system integrity?",
+      "choices": [
+        "Modify application configuration",
+        "Disrupt system availability",
+        "Modify application data",
+        "Leak sensitive information"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2217",
+      "text": "Which related attack pattern involves flooding specifically targeted at HTTP protocol, potentially exploiting CWE-770?",
+      "choices": [
+        "CAPEC-482",
+        "CAPEC-488",
+        "CAPEC-495",
+        "CAPEC-491"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2218",
+      "text": "What is the primary concern of CWE-215?",
+      "choices": [
+        "Violation of integrity",
+        "Data exfiltration",
+        "Exposure of sensitive information",
+        "Denial of service"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2219",
+      "text": "Which mitigation strategy helps reduce the risk of CAPEC-74 exploitation?",
+      "choices": [
+        "Storing user states exclusively in cookies",
+        "Encrypting all cookies",
+        "Handling all possible states in hardware finite state machines",
+        "Using plaintext storage for sensitive information"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2220",
+      "text": "In CWE-1311, what is the potential technical impact of improperly translating security attributes?",
+      "choices": [
+        "Denial of Service",
+        "Modify Memory",
+        "Information Disclosure",
+        "Execute Unauthorized Code or Commands"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2221",
+      "text": "Which mitigation strategy is recommended in CAPEC-243 to counter XSS attacks?",
+      "choices": [
+        "Use encryption algorithms",
+        "Regularly update system patches",
+        "Normalize, filter, and use an allowlist for all input",
+        "Conduct regular penetration tests"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2222",
+      "text": "Which mitigation strategy specifically aims to restrict SSI execution in directories that do not need it in an Apache server?",
+      "choices": [
+        "Disable JavaScript execution",
+        "Set 'Options Indexes' in httpd.conf",
+        "Set 'Options IncludesNOEXEC' in access.conf",
+        "Enable HTTPS with HSTS"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2223",
+      "text": "In the context of CWE-213, what is a potential consequence of architecture and design decisions?",
+      "choices": [
+        "Unnecessary exposure of sensitive data due to overly inclusive data exchange frameworks.",
+        "Inaccurate tracking of sensitive data flow within API usage.",
+        "The platform-specific attack patterns not being addressed during deployment.",
+        "Implementing insufficient security controls through improper stakeholder requirement interpretation."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2224",
+      "text": "In the context of CWE-1261, what is a primary consequence of hardware logic not effectively handling single-event upsets (SEUs)?",
+      "choices": [
+        "Denial of Service: Data Corruption",
+        "Gain Privileges or Assume Identity",
+        "Bypass Authentication",
+        "Cross-Site Scripting (XSS)"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2225",
+      "text": "What makes default usernames and passwords particularly dangerous according to CAPEC-70?",
+      "choices": [
+        "They are difficult to guess without vendor documentation",
+        "They usually consist of complex and unique values",
+        "These credentials are well-known and frequently not removed in production environments",
+        "They are unique to each user and hard to predict"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2226",
+      "text": "In the context of CWE-683, what is a common cause for this weakness?",
+      "choices": [
+        "Incorrect API usage",
+        "Debugging errors",
+        "Copy and paste errors",
+        "Improper data validation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2227",
+      "text": "Which mitigation strategy is mentioned as incomplete without additional measures?",
+      "choices": [
+        "Using a language with automatic bounds checking",
+        "Using an abstraction library to abstract away risky APIs",
+        "Implementing canary mechanisms like StackGuard",
+        "Validating all user input"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2228",
+      "text": "Which step involves determining how to deliver the overflowing content to the target application's buffer?",
+      "choices": [
+        "Overflow the buffer",
+        "Craft overflow content",
+        "Identify target application",
+        "Find injection vector"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2229",
+      "text": "Which of the following related attack patterns is most directly associated with observing responses from an application to deduce its parameters and internal structure?",
+      "choices": [
+        "CAPEC-331: ICMP IP Total Length Field Probe",
+        "CAPEC-541: Application Fingerprinting",
+        "CAPEC-332: ICMP IP 'ID' Field Error Message Probe",
+        "CAPEC-580: System Footprinting"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2230",
+      "text": "Which impact is most likely associated with CWE-167's failure to handle unexpected special elements?",
+      "choices": [
+        "Data Loss",
+        "Availability Issue",
+        "Unexpected State",
+        "Code Corruption"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2231",
+      "text": "Which of the following languages shows a prevalence of the weakness identified by CWE-362?",
+      "choices": [
+        "Python",
+        "C++",
+        "Ruby",
+        "PHP"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2232",
+      "text": "Under which phase of development is CWE-770 primarily introduced by omission of a security tactic?",
+      "choices": [
+        "Implementation",
+        "System Configuration",
+        "Architecture and Design",
+        "Operation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2233",
+      "text": "Which mitigation strategy is most effective against session fixation?",
+      "choices": [
+        "Using static session identifiers",
+        "Allowing user-generated session identifiers",
+        "Regenerating session identifiers upon privilege change",
+        "Sharing session identifiers through URL"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2234",
+      "text": "Which related attack pattern specifically pertains to retrieving data from decommissioned devices?",
+      "choices": [
+        "CAPEC-150",
+        "CAPEC-37",
+        "CAPEC-546",
+        "CAPEC-675"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2235",
+      "text": "Which mitigation strategy is NOT mentioned for protecting against attacks described in CAPEC-13?",
+      "choices": [
+        "Protect environment variables against unauthorized access",
+        "Implement multi-factor authentication",
+        "Create an allowlist for valid input",
+        "Apply the least privilege principle"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2237",
+      "text": "At which phase should a Software Bill of Materials (SBOM) be maintained according to the recommended potential mitigations?",
+      "choices": [
+        "Requirements",
+        "Architecture and Design",
+        "Operation",
+        "Implementation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2238",
+      "text": "What is a primary impact of CWE-1120 (\"Code is too complex\")?",
+      "choices": [
+        "Increase susceptibility to attacks",
+        "Reduce Maintainability",
+        "Increase application security",
+        "Enhance functionality"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2239",
+      "text": "Which of the following is a listed CWE related to CAPEC-538?",
+      "choices": [
+        "CWE-419: Unprotected Primary Channel",
+        "CWE-494: Download of Code Without Integrity Check",
+        "CWE-306: Missing Authentication for Critical Function",
+        "CWE-502: Deserialization of Untrusted Data"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2240",
+      "text": "What is a strategy suggested during the architecture and design phase to mitigate risks associated with CWE-862?",
+      "choices": [
+        "Deploying encryption for all data interactions",
+        "Implementing two-factor authentication",
+        "Ensuring business logic-related access control checks",
+        "Conducting regular vulnerability assessments"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2241",
+      "text": "What is a potential impact of a product that suffers from CWE-270?",
+      "choices": [
+        "Performance degradation",
+        "Data corruption",
+        "Unauthorized privilege escalation",
+        "Availability loss"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2242",
+      "text": "Which mitigation strategy is recommended in CWE-641 to prevent users from controlling resource names used on the server side?",
+      "choices": [
+        "Perform sanitization of user inputs at entry points.",
+        "Reject bad file names rather than trying to cleanse them.",
+        "Do not allow users to control names of resources used on the server side.",
+        "Ensure technologies consuming resources are not vulnerable to buffer overflow or format string bugs."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2243",
+      "text": "Among the mitigations recommended for CAPEC-242, which measure specifically targets sanitizing data that might reach the client?",
+      "choices": [
+        "Utilize strict type, character, and encoding enforcement.",
+        "Ensure all input content that is delivered to client is sanitized against an acceptable content specification.",
+        "Perform input validation for all content.",
+        "Enforce regular patching of software."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2244",
+      "text": "When handling the CSV file generation process to prevent CWE-1236, which precautionary measure is NOT recommended?",
+      "choices": [
+        "Escaping risky characters such as '=', '+', '-' before storage",
+        "Implementing field validation to ensure the integrity of all user inputs",
+        "Prepending a ' (single apostrophe) for fields starting with formula characters",
+        "Disabling macros in spreadsheet software"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2245",
+      "text": "Which of the following is a prerequisite for executing an XML Schema Poisoning attack?",
+      "choices": [
+        "Ability to execute arbitrary code on the server",
+        "Access to modify the target schema",
+        "Access to a privileged user account on the target system",
+        "Control over network traffic"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2246",
+      "text": "What phase should microarchitectural covert channels be addressed to mitigate CWE-1303?",
+      "choices": [
+        "Implementation and Testing",
+        "Architecture and Design",
+        "Deployment and Maintenance",
+        "Testing and Evaluation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2247",
+      "text": "Which technology platform is often prevalent for CWE-863 weaknesses?",
+      "choices": [
+        "Mobile Operating Systems",
+        "Web Servers",
+        "Embedded Systems",
+        "Local Area Networks"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2248",
+      "text": "Which strategy is recommended at the implementation phase to mitigate CWE-37?",
+      "choices": [
+        "Encrypting data at rest",
+        "Deploying access control lists (ACL)",
+        "Running services with least privilege",
+        "Input validation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2249",
+      "text": "What is a common consequence of CWE-804 when CAPTCHA mechanisms are bypassed by non-human actors?",
+      "choices": [
+        "Denial of Service (DoS)",
+        "Vulnerability disclosure",
+        "Bypass Protection Mechanism",
+        "Privilege escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2250",
+      "text": "What is a related attack pattern to CWE-943 as stated in the document?",
+      "choices": [
+        "SQL Injection",
+        "Buffer Overflow",
+        "Cross-Site Scripting (XSS)",
+        "NoSQL Injection"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2251",
+      "text": "Which of the following is a related attack pattern for CWE-696?",
+      "choices": [
+        "Padding Oracle Crypto Attack",
+        "SQL Injection",
+        "Buffer Overflow",
+        "Man-in-the-Middle Attack"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2252",
+      "text": "The weakness CWE-28 primarily impacts which aspects of a system?",
+      "choices": [
+        "Availability, Integrity",
+        "Confidentiality, Integrity",
+        "Accessibility, Confidentiality",
+        "Scalability, Confidentiality"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2253",
+      "text": "What is the primary consequence of a missing immutable root of trust in hardware according to CWE-1326?",
+      "choices": [
+        "Allows the system to execute authenticated boot code only",
+        "Prevents unauthorized access to hardware components",
+        "Bypasses secure boot or executes untrusted boot code",
+        "Enables the secure storage of cryptographic keys"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2254",
+      "text": "Which of the following languages is specifically mentioned as potentially susceptible to CWE-195 in the provided document?",
+      "choices": [
+        "Java",
+        "Python",
+        "C",
+        "C#"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2255",
+      "text": "Which related attack pattern involves the exploitation of transient instruction execution as per CWE-1264?",
+      "choices": [
+        "CAPEC-562",
+        "CAPEC-582",
+        "CAPEC-663",
+        "CAPEC-903"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2256",
+      "text": "Which of the following consequences can result from an XSS attack as described in CAPEC-244?",
+      "choices": [
+        "Modifying server-side application logic",
+        "Bypassing remote firewalls",
+        "Modifying client-side data",
+        "Injecting rootkits into the server"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2257",
+      "text": "What is the primary technical impact due to CWE-393?",
+      "choices": [
+        "Information Disclosure",
+        "Unexpected System Reboot",
+        "Unexpected State",
+        "Unauthorized Data Modification"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2258",
+      "text": "Which skill is required for executing a CAPEC-35 attack?",
+      "choices": [
+        "Rootkit development",
+        "Phishing techniques",
+        "Over-privileged system interface exploitation",
+        "Steganography"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2259",
+      "text": "What type of common consequences can arise from CWE-250?",
+      "choices": [
+        "Executing unauthorized code or commands, crashing the system, and reading restricted data.",
+        "Only service disruptions due to DoS attacks.",
+        "Exposing sensitive information stored in cookies.",
+        "Minor UI glitches that do not affect system security."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2260",
+      "text": "What kind of technical impact can a race condition in CWE-362 lead to when combined with predictable resource names and loose permissions?",
+      "choices": [
+        "Denial of Service (DoS)",
+        "Resource Exhaustion",
+        "Resource Corruption",
+        "Read confidential data"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2261",
+      "text": "What CWE is associated with the description \"Insufficiently Protected Credentials\" in the context of CAPEC-509?",
+      "choices": [
+        "CWE-263",
+        "CWE-522",
+        "CWE-309",
+        "CWE-294"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2262",
+      "text": "Which scenario best illustrates CWE-790 in a production environment?",
+      "choices": [
+        "An application receives a user input with special characters and improperly filters the data before passing to another module",
+        "An application implements insufficient logging for security events",
+        "An application stores sensitive data in plain text on the server",
+        "An application fails to validate the length of the input data, leading to a potential buffer overflow attack"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2263",
+      "text": "Which of the following attack patterns is related to CWE-695?",
+      "choices": [
+        "Using Inappropriate Encoding Techniques",
+        "Using Unpublished Interfaces or Functionality",
+        "Performing Insecure Communication",
+        "Exposing Sensitive Data"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2264",
+      "text": "What is a potential impact on data integrity due to CWE-116 as detailed in the document?",
+      "choices": [
+        "Enhanced security features",
+        "Vulnerability patches",
+        "Modify application data",
+        "Optimized data storage"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2265",
+      "text": "Which of the following is a recommended mitigation strategy for CWE-154?",
+      "choices": [
+        "Intrusion detection system",
+        "Extended validation certificates",
+        "Output encoding",
+        "List-based firewall rules"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2266",
+      "text": "Which of the following describes a situation where CWE-1045 could introduce risk to an application?",
+      "choices": [
+        "A parent class lacks a constructor, leading to the wrong initialization of a child class.",
+        "A parent class has a non-virtual destructor while its child classes have non-virtual destructors as well.",
+        "A parent class has a virtual destructor, but one or more of its child classes do not have a virtual destructor.",
+        "A child class has methods that are not defined as virtual."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2267",
+      "text": "In the context of CWE-58, which aspect is directly impacted if the weakness is exploited?",
+      "choices": [
+        "Availability",
+        "Recoverability",
+        "Integrity and Confidentiality",
+        "Non-repudiation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2268",
+      "text": "What primary recommendation is given for mitigating CWE-637 during the architecture and design phase?",
+      "choices": [
+        "Avoid using any security mechanisms.",
+        "Avoid complex data models and unnecessarily complex operations.",
+        "Implement security mechanisms as late as possible.",
+        "Adopt architectures that provide minimal features and functionalities."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2269",
+      "text": "In the context of CWE-446, which scenario best describes the primary security concern?",
+      "choices": [
+        "A user interface fails to encrypt data correctly.",
+        "A user interface misleads the user into thinking a security feature is active while it is not.",
+        "A user interface allows unauthorized access due to weak passwords.",
+        "A user interface exposes sensitive information without proper authentication."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2270",
+      "text": "Which of the following best describes the main impact of CWE-314?",
+      "choices": [
+        "Integrity: Modification of application data",
+        "Confidentiality: Unintended disclosure of sensitive information",
+        "Availability: Denial of service",
+        "Authenticity: Misrepresentation of data"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2271",
+      "text": "In terms of platform applicability for CWE-1296, which of the following statements is correct?",
+      "choices": [
+        "It is specific to Verilog and VHDL languages",
+        "It is specific to a particular Operating System",
+        "It is specific to Processor Hardware technology",
+        "It is not specific to any language, OS, or technology"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2272",
+      "text": "What is the main consequence of a successful reflection attack?",
+      "choices": [
+        "Description of attacks' mechanics.",
+        "Gaining illegitimate access to the system.",
+        "Client-server protocol optimization.",
+        "Disabling encryption on the server."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2273",
+      "text": "In the context of CAPEC-459, what is achieved by the adversary upon successful exploitation?",
+      "choices": [
+        "Gain full control over the Certification Authority's operations.",
+        "Issue multiple valid certificates without detection.",
+        "Gain privileges by spoofing a certificate authority signature.",
+        "Intercept all encrypted communications."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2274",
+      "text": "Which technical impact is associated with CWE-87?",
+      "choices": [
+        "Data corruption",
+        "Read Application Data",
+        "Denial of Service (DoS)",
+        "Server Configuration Exposure"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2275",
+      "text": "Which related attack pattern involves exploiting the vulnerability described in CWE-363?",
+      "choices": [
+        "CAPEC-123",
+        "CAPEC-56",
+        "CAPEC-76",
+        "CAPEC-26"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2276",
+      "text": "Which phase is not explicitly mentioned as a potential mitigation phase for CWE-532: Information Exposure Through Log Files?",
+      "choices": [
+        "Architecture and Design",
+        "Integration",
+        "Distribution",
+        "Operation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2277",
+      "text": "What is the primary security risk associated with CWE-1253?",
+      "choices": [
+        "Privilege escalation due to an unblown fuse",
+        "Denial of service due to memory read vulnerability",
+        "Exploitable insecure state due to a blown fuse",
+        "Inability to perform remote code execution"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2278",
+      "text": "Which scenario best exemplifies CWE-837?",
+      "choices": [
+        "A user gains unauthorized admin privileges after multiple failed login attempts",
+        "A user is able to double-submit an online payment leading to double charges",
+        "A user bypasses access controls by directly modifying URL parameters",
+        "A user leverages buffer overflow to execute arbitrary code"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2279",
+      "text": "In the context of CWE-1303, what is an effective mitigation technique during the Architecture and Design phase?",
+      "choices": [
+        "Increased Logging Frequency",
+        "Installation of Security Patches",
+        "Partitioned Caches",
+        "Use of Firewalls"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2280",
+      "text": "In the context of CWE-1283, which phase is NOT mentioned as a possible point of introduction for this weakness?",
+      "choices": [
+        "Architecture and Design",
+        "Testing",
+        "System Configuration",
+        "Maintenance"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2281",
+      "text": "Which of the following is a common consequence of CWE-926 in Android applications related to confidentiality?",
+      "choices": [
+        "DoS: Crash, Exit, or Restart",
+        "Modify Application Data",
+        "Unexpected State",
+        "Read Application Data"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2282",
+      "text": "A key prerequisite for carrying out a hardware fault injection attack as described in CAPEC-624 is:",
+      "choices": [
+        "The ability to remotely access the firmware",
+        "Proficiency in network intrusion techniques",
+        "Physical access to the system",
+        "High-level encryption algorithm knowledge"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2283",
+      "text": "Which of the following accurately describes the primary risk associated with CWE-574 in the context of the Enterprise JavaBeans (EJB) specification?",
+      "choices": [
+        "It allows unauthorized access to sensitive data.",
+        "It degrades system quality by violating the EJB specification.",
+        "It increases the complexity of EJB transaction management.",
+        "It creates potential deadlocks by mismanaging Java threads."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2284",
+      "text": "When an attacker exploits CWE-36, what potential impact could they have on the availability of the system?",
+      "choices": [
+        "The system could become non-responsive due to processor overheating",
+        "Data could be deleted or corrupted, causing a crash",
+        "The system could execute endless loops, causing high CPU consumption",
+        "Network bandwidth could be fully utilized, preventing legitimate access"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2285",
+      "text": "What is a recommended mitigation phase for addressing the weakness described in CWE-1021?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "Testing",
+        "Deployment"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2286",
+      "text": "What phase in the development lifecycle is most likely to introduce the CWE-1039: Automated Recognition Handling Error?",
+      "choices": [
+        "A. Deployment",
+        "B. Maintenance",
+        "C. Architecture and Design",
+        "D. Testing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2287",
+      "text": "Which of the following is a prerequisite for a Command Delimiters attack to be successful?",
+      "choices": [
+        "Software must have an allowlist validation mechanism.",
+        "Software must rely solely on denylist input validation.",
+        "Software must not allow any form of command input.",
+        "Software must perform thorough input validation on all user inputs."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2288",
+      "text": "When considering the potential consequences of CWE-1395, which factor most significantly influences the impact of vulnerabilities in third-party components?",
+      "choices": [
+        "The specific language used",
+        "The operating system class",
+        "The criticality of privilege levels and features",
+        "The type of technology used"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2289",
+      "text": "What is a common technical impact of CWE-467 (Using sizeof() on a malloced pointer type)?",
+      "choices": [
+        "It can corrupt the stack memory.",
+        "It can lead to denial of service.",
+        "It can modify memory improperly.",
+        "It can create a command injection vulnerability."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2290",
+      "text": "In the context of CWE-439, what common consequence is most often associated with this weakness?",
+      "choices": [
+        "Unauthorized Access",
+        "Quality Degradation",
+        "System Downtime",
+        "Data Corruption"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2291",
+      "text": "When addressing CWE-1025, what is the primary focus when performing a comparison between two entities?",
+      "choices": [
+        "Examine only the data types of the entities",
+        "Analyze the intended behavior and context of the entities",
+        "Ensure the comparison includes all possible attributes without exception",
+        "Compare the entities based solely on their names"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2292",
+      "text": "Which CAPEC pattern is most directly related to CWE-113 involving improper handling of CR and LF characters in HTTP headers?",
+      "choices": [
+        "CAPEC-105 (HTTP Request Splitting)",
+        "CAPEC-31 (Accessing/Intercepting/Modifying HTTP Cookies)",
+        "CAPEC-34 (HTTP Response Splitting)",
+        "CAPEC-85 (AJAX Footprinting)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2293",
+      "text": "Which of the following strategies is a potential mitigation for CWE-775, pertaining to file descriptor management?",
+      "choices": [
+        "Resource Redistribution",
+        "Resource Limitation",
+        "Access Redundancy",
+        "Resource Allocation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2294",
+      "text": "Which of the following languages is often prevalently affected by CWE-474?",
+      "choices": [
+        "JAVA",
+        "PYTHON",
+        "C",
+        "PHP"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2295",
+      "text": "Regarding CAPEC-69, what is a prerequisite for executing an attack?",
+      "choices": [
+        "The targeted program runs with standard user privileges.",
+        "The targeted program refuses all external communication.",
+        "The targeted program is giving away information about itself.",
+        "The targeted program is patched to the latest version."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2296",
+      "text": "What is one potentially effective mitigation phase for reducing the risk of CWE-410?",
+      "choices": [
+        "Operation",
+        "Design",
+        "Implementation",
+        "Testing"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2297",
+      "text": "In the context of CWE-706, what is one of the technical impacts associated with the weakness?",
+      "choices": [
+        "Privilege Escalation",
+        "Data Breach",
+        "Read and Modify Application Data",
+        "Service Denial"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2298",
+      "text": "Regarding CWE-135, which of the following best describes a mitigation strategy during the implementation phase?",
+      "choices": [
+        "Using standard string functions",
+        "Employing boundary checks through manual code review",
+        "Validating input lengths",
+        "Utilizing safe libraries or frameworks"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2299",
+      "text": "During which phase should alternate channels be identified and the same protection mechanisms employed to prevent CWE-420?",
+      "choices": [
+        "Implementation",
+        "Testing",
+        "Architecture and Design",
+        "Deployment"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2300",
+      "text": "In the context of CWE-449, which mitigation strategy is recommended to address this UI-related weakness?",
+      "choices": [
+        "Conducting security code reviews",
+        "Performing extensive functionality testing of the UI",
+        "Implementing stricter access controls",
+        "Applying frequent software patches and updates"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2301",
+      "text": "Which related CWE primarily focuses on the vulnerability exploited by capturing and reusing session IDs in CAPEC-60?",
+      "choices": [
+        "CWE-200",
+        "CWE-384",
+        "CWE-539",
+        "CWE-294"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2302",
+      "text": "Which of the following best describes CWE-160?",
+      "choices": [
+        "A weakness where the product does not neutralize or incorrectly neutralizes leading special elements that can be misinterpreted when sent to a downstream component.",
+        "A weakness where the product's authentication mechanisms can be bypassed due to improper validation of credentials.",
+        "A vulnerability that occurs due to inadequate encryption of sensitive data in transit or at rest.",
+        "A flaw in the logic of the application that leads to unintended behavior or output."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2303",
+      "text": "What is a primary risk associated with CWE-455 when a product does not handle errors during initialization properly?",
+      "choices": [
+        "Alteration of execution logic",
+        "Denial-of-Service (DoS)",
+        "Unintentional information disclosure",
+        "Privilege escalation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2304",
+      "text": "What is a primary consequence of CWE-356's weakness in a user interface?",
+      "choices": [
+        "Modification of data",
+        "Unauthorized access",
+        "Hiding malicious activities",
+        "Elevation of privileges"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2305",
+      "text": "In the context of CWE-317, which of the following scenarios is most likely to introduce this type of weakness?",
+      "choices": [
+        "Implementing encryption algorithms without proper padding during the coding phase.",
+        "Storing authentication credentials in cleartext within the graphical user interface (GUI).",
+        "Using hard-coded cryptographic keys in the source code.",
+        "Failing to sanitize user inputs, leading to SQL injection vulnerabilities."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2306",
+      "text": "What common consequence is primarily associated with the exploitation of weaknesses in the password authentication mechanism as described in CWE-309?",
+      "choices": [
+        "Denial of Service (DoS)",
+        "Elevation of Privilege",
+        "Information Disclosure",
+        "Unauthorized Access"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2307",
+      "text": "In which phase can the issue described in CWE-1302 first be introduced?",
+      "choices": [
+        "Testing",
+        "System Configuration",
+        "Implementation",
+        "Architecture and Design"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2308",
+      "text": "Regarding CAPEC-654: Credential Prompt Impersonation, what is the primary prerequisite for an adversary to carry out this attack?",
+      "choices": [
+        "The target system must have an encrypted filesystem",
+        "The adversary must have prior knowledge of user credentials",
+        "The adversary must have already gained access to the target system",
+        "The target system must be running credential input prompt software"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2309",
+      "text": "Which mitigation strategy is targeted specifically at preventing CWE-1263 during the manufacturing phase?",
+      "choices": [
+        "Implementing encryption protocols for data at rest.",
+        "Ensuring proper activation of protection mechanisms.",
+        "Establishing continuous monitoring for network anomalies.",
+        "Implementing multi-factor authentication for system access."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2310",
+      "text": "Which phase is most appropriate for implementing redundant access rules to mitigate CWE-654?",
+      "choices": [
+        "Implementation",
+        "Operation",
+        "Architecture and Design",
+        "Testing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2311",
+      "text": "Which related attack pattern involves using a list of common words to guess passwords under CWE-521?",
+      "choices": [
+        "Rainbow Table Password Cracking",
+        "Brute Force",
+        "Dictionary-based Password Attack",
+        "Kerberoasting"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2312",
+      "text": "Which CWE is directly related to the improper restriction of excessive authentication attempts that supports CAPEC-560 attacks?",
+      "choices": [
+        "CWE-262",
+        "CWE-522",
+        "CWE-307",
+        "CWE-1273"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2313",
+      "text": "Which mitigation strategy would most effectively address the risk posed by CWE-126 in C or C++ applications?",
+      "choices": [
+        "Implementing DEP (Data Execution Prevention)",
+        "Ensuring proper input validation and bounds checking",
+        "Deploying network-based intrusion detection systems",
+        "Encrypting sensitive data before it is stored"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2314",
+      "text": "In the context of CWE-42, what common consequence can result from accepting path input with trailing dots without proper validation?",
+      "choices": [
+        "Privilege Escalation",
+        "Unauthorized Data Modification",
+        "Bypass Protection Mechanism",
+        "Denial of Service"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2315",
+      "text": "Which mitigation strategy specifically addresses the prevention of CAPEC-48 attacks?",
+      "choices": [
+        "Disable all email attachments by default",
+        "Ensure all remote content is sanitized and validated",
+        "Implement stricter firewall rules",
+        "Regularly update antivirus software"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2316",
+      "text": "What is the typical likelihood and severity of an Interface Manipulation attack as described in CAPEC-113?",
+      "choices": [
+        "High likelihood and low severity",
+        "Medium likelihood and medium severity",
+        "Low likelihood and high severity",
+        "High likelihood and high severity"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2317",
+      "text": "Which of the following is the recommended action when encountering an empty synchronized block according to CWE-585?",
+      "choices": [
+        "Remove the synchronized block immediately.",
+        "Determine the original intentions and assess the necessity of the statement.",
+        "Ignore the block as it is harmless.",
+        "Replace the synchronized block with a non-synchronized one."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2318",
+      "text": "How might code injection as described in CWE-94 affect integrity?",
+      "choices": [
+        "It can corrupt memory",
+        "It can execute arbitrary code",
+        "It can redirect traffic",
+        "It can steal session cookies"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2319",
+      "text": "Which of the following is a likely impact of CWE-1104 on a product?",
+      "choices": [
+        "Reduced Performance",
+        "Reduced Maintainability",
+        "Increased Security",
+        "Vulnerability to Buffer Overflow"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2320",
+      "text": "Debugging messages can potentially expose sensitive information that attackers can use. According to CWE-11, in which phase is it advised to avoid releasing debug binaries into production?",
+      "choices": [
+        "Implementation",
+        "Production Planning",
+        "System Configuration",
+        "Post-deployment"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2321",
+      "text": "Which mitigation strategy focuses on ensuring that function names accept the proper number of arguments?",
+      "choices": [
+        "Strategy: Code Obfuscation",
+        "Strategy: Code Review",
+        "Strategy: Input Sanitization",
+        "Strategy: Function Validation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2322",
+      "text": "Which of the following is a recommended mitigation for preventing forced deadlock attacks?",
+      "choices": [
+        "Implementing code generated random delays",
+        "Using non-blocking synchronization algorithms",
+        "Disabling API access during peak hours",
+        "Running database maintenance scripts during off-hours"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2323",
+      "text": "What is a common attack pattern related to CWE-1257 involving memory protections?",
+      "choices": [
+        "Infected Memory (CAPEC-456)",
+        "SQL Injection (CAPEC-66)",
+        "Phishing (CAPEC-98)",
+        "Cross-Site Scripting (CAPEC-63)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2324",
+      "text": "Which mitigation strategy is recommended during the architecture and design phase to handle CWE-524 vulnerabilities?",
+      "choices": [
+        "Use a firewall to control access to cache",
+        "Incorporate monitoring tools to detect cache access",
+        "Protect and encrypt sensitive information stored in the cache",
+        "Regularly clear the cache memory to prevent buildup"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2325",
+      "text": "Which phase includes the recommendation to perform load balancing to handle heavy loads in addressing CWE-410?",
+      "choices": [
+        "Operation",
+        "Architecture",
+        "Implementation",
+        "Design"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2326",
+      "text": "In the context of CWE-315, what is the primary architectural oversight that leads to this weakness?",
+      "choices": [
+        "Missing security testing during the implementation phase",
+        "Missing user input validation checks",
+        "Missing security tactic during the architecture and design phase",
+        "Missing encryption algorithms for data in transit"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2327",
+      "text": "In CWE-81, which of the following is a recommended mitigation strategy during the implementation phase?",
+      "choices": [
+        "Implement multithreading",
+        "Apply rigorous input neutralization techniques",
+        "Encrypting all data on disk",
+        "Utilize machine learning for anomaly detection"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2328",
+      "text": "In the context of CWE-409, under which phase can improper handling of compressed input commonly occur?",
+      "choices": [
+        "Documentation and Testing",
+        "Deployment",
+        "Architecture and Design",
+        "Maintenance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2329",
+      "text": "To mitigate the risk of CAPEC-108, which action should be taken regarding the MSSQL xp_cmdshell directive?",
+      "choices": [
+        "Enable it with proper user authentication",
+        "Enable it with logging abilities",
+        "Disable it completely",
+        "Enable it with access control lists"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2330",
+      "text": "Which potential consequence is associated with CWE-698?",
+      "choices": [
+        "Memory corruption leading to data leaks",
+        "Modification of control flow allowing execution of untrusted code",
+        "Denial of Service (DoS) attacks through resource exhaustion",
+        "Man-in-the-middle attacks intercepting communication"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2331",
+      "text": "What is a prerequisite for a successful ORM injection attack as described in CAPEC-109?",
+      "choices": [
+        "The application utilizes only protected methods provided by the ORM",
+        "Complete separation between the data and control planes",
+        "The application uses an ORM tool to generate a data access layer",
+        "All ORM tools and frameworks are fully updated"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2332",
+      "text": "What is the primary weakness described in CWE-640?",
+      "choices": [
+        "The product uses common weak passwords.",
+        "The password recovery mechanism is not thoroughly filtered and validated.",
+        "The product contains a mechanism for users to recover passwords without knowing the original, but the mechanism itself is weak.",
+        "There is no password recovery mechanism in place."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2333",
+      "text": "In the context of CWE-492, what is a potential consequence of an inner class being accessible at package scope?",
+      "choices": [
+        "Loss of application availability",
+        "Confidentiality breach",
+        "Read application data",
+        "Denial of service"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2334",
+      "text": "What is the primary security concern of using realloc() to resize buffers according to CWE-244?",
+      "choices": [
+        "It can cause buffer overflows",
+        "Deallocation of original buffer might fail",
+        "It can leave sensitive information exposed in memory",
+        "It causes performance degradation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2335",
+      "text": "What strategy is recommended for mitigating CWE-168 during the implementation phase?",
+      "choices": [
+        "Input sanitization",
+        "Process isolation",
+        "Output encoding",
+        "Privilege separation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2336",
+      "text": "What common consequence of CWE-22 impacts system availability?",
+      "choices": [
+        "Read Files or Directories",
+        "Execute Unauthorized Code or Commands",
+        "DoS: Crash, Exit, or Restart",
+        "Modify Files or Directories"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2337",
+      "text": "Which mitigation strategy can help in reducing the success of a brute force attack according to CAPEC-112?",
+      "choices": [
+        "Using a smaller secret space",
+        "Using known patterns to reduce functional size",
+        "Ensuring the secret space does not have known patterns",
+        "Providing means for an attacker to determine success independently"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2338",
+      "text": "Which of the following is a related attack pattern to CWE-181 that involves the use of alternate encoding techniques?",
+      "choices": [
+        "CAPEC-3",
+        "CAPEC-123",
+        "CAPEC-242",
+        "CAPEC-79"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2339",
+      "text": "What type of protection mechanism does CWE-184 describe?",
+      "choices": [
+        "A mechanism relying on complete input lists to neutralize threats",
+        "A mechanism that does not require input validation",
+        "A mechanism that implements encoding to neutralize all inputs",
+        "A mechanism relying on a partially complete list of unacceptable inputs"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2340",
+      "text": "Which mitigation strategy is NOT recommended for preventing CAPEC-22 attacks?",
+      "choices": [
+        "Ensure client process or message authentication",
+        "Perform input validation for all remote content",
+        "Utilize digital signatures",
+        "Store passwords in plaintext"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2341",
+      "text": "Which related CWE can amplify the consequences of CWE-250 due to improper privilege handling?",
+      "choices": [
+        "CWE-200 (Exposure of Sensitive Information)",
+        "CWE-283 (Uncontrolled Search Path Element)",
+        "CWE-271 (Privilege Dropping/Lowering Errors)",
+        "CWE-404 (Improper Resource shutdown or Release)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2342",
+      "text": "Which of the following is a recommended mitigation for preventing the security issues associated with inner classes in Java, as specified in CWE-492?",
+      "choices": [
+        "Making inner classes abstract",
+        "Using sealed classes",
+        "Implementing public inner classes",
+        "Reducing code complexity"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2343",
+      "text": "Which common consequence is associated with CWE-392?",
+      "choices": [
+        "Privilege Escalation",
+        "System Integrity Compromise",
+        "Data Exfiltration",
+        "Denial of Service"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2344",
+      "text": "What is the primary cause of the vulnerability described in CWE-468?",
+      "choices": [
+        "Improper memory allocation",
+        "Incorrect pointer arithmetic",
+        "Using deprecated functions",
+        "Unchecked user input"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2345",
+      "text": "When an adversary targets a device with unpatchable firmware or ROM code as described in CAPEC-682, what is the initial step in their execution flow?",
+      "choices": [
+        "Determine plan of attack",
+        "Obtain remote access to the device",
+        "Determine vulnerable firmware or ROM code",
+        "Access physical entry points"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2346",
+      "text": "Which type of security failure does CWE-943 most directly result in?",
+      "choices": [
+        "Bypassing authentication controls",
+        "Failing to perform input validation",
+        "Neglecting to encrypt sensitive data",
+        "Exposing debug information"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2347",
+      "text": "In the context of CWE-156, what is the primary technical impact of not properly neutralizing whitespace elements?",
+      "choices": [
+        "Data Breach",
+        "Privilege Escalation",
+        "Unexpected State",
+        "Denial of Service"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2348",
+      "text": "In the context of CWE-421, what is the main security risk when the product opens an alternate communication channel to an authorized user?",
+      "choices": [
+        "It restricts unauthorized access to sensitive functions.",
+        "It creates a redundant communication mechanism that improves reliability.",
+        "It bypasses the intended protection mechanism, making it accessible to other actors.",
+        "It enhances secure communication by adding an additional encryption layer."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2349",
+      "text": "What is a common consequence of a product handling a compressed input with a high compression ratio incorrectly?",
+      "choices": [
+        "Unauthorized access to sensitive data",
+        "Data leakage",
+        "DoS: Resource Consumption (CPU)",
+        "Malware execution"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2350",
+      "text": "Which of the following cache types could potentially be targeted by a CAPEC-141: Cache Poisoning attack?",
+      "choices": [
+        "Web browser cache",
+        "CPU cache",
+        "Filesystem buffer cache",
+        "Page cache"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2351",
+      "text": "What mitigation strategy is suggested for addressing the risk posed by CAPEC-504: Task Impersonation?",
+      "choices": [
+        "Regularly update and patch the system software",
+        "Avoid installing the malicious application",
+        "Use multi-factor authentication for all tasks",
+        "Restrict administrative privileges to trusted users"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2352",
+      "text": "In the context of CWE-522, which phase is specifically associated with the mitigation strategy of using appropriate cryptographic mechanisms to protect credentials?",
+      "choices": [
+        "Implementation",
+        "Maintenance",
+        "Architecture and Design",
+        "Testing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2353",
+      "text": "What situation can lead to CWE-590 vulnerability?",
+      "choices": [
+        "Calling free() on a pointer allocated by malloc()",
+        "Calling calloc() on a pointer not allocated by malloc()",
+        "Calling realloc() on a pointer previously allocated by malloc()",
+        "Calling free() on a pointer not allocated by malloc()"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2354",
+      "text": "In the context of CAPEC-654, what kind of permission should raise suspicion due to its necessity for executing the Credential Prompt Impersonation attack?",
+      "choices": [
+        "ACCESS_FINE_LOCATION",
+        "GET_TASKS",
+        "INTERNET",
+        "READ_CONTACTS"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2355",
+      "text": "What related attack pattern is associated with hardware fault injection in the context of CWE-1247?",
+      "choices": [
+        "CAPEC-123",
+        "CAPEC-624",
+        "CAPEC-247",
+        "CAPEC-625"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2356",
+      "text": "In CAPEC-270, what is one primary consequence of modifying Windows registry “run keys”?",
+      "choices": [
+        "Deleting system logs",
+        "Modifying scheduled tasks",
+        "Gain Privileges",
+        "Hiding network traffic"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2357",
+      "text": "In CWE-1229, what is the main risk associated with the product's resource management behavior?",
+      "choices": [
+        "It directly creates a new resource accessible only to authenticated users",
+        "It directly allows unauthorized users to gain access to the system",
+        "It indirectly creates a new, distinct resource that attackers can exploit",
+        "It indirectly deletes resources preventing legitimate use"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2358",
+      "text": "Which attack is NOT directly associated with CWE-328?",
+      "choices": [
+        "Preimage Attack",
+        "2nd Preimage Attack",
+        "Birthday Attack",
+        "Cross-Site Scripting"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2359",
+      "text": "In CWE-224, what is a primary technical impact of recording security-relevant information under an alternate name instead of the canonical name?",
+      "choices": [
+        "Hide Activities",
+        "Gain Unauthorized Access",
+        "Increase System Reliability",
+        "Enhance Data Integrity"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2360",
+      "text": "What is a potential consequence of calling the finalize() method explicitly in Java, as described in CWE-586?",
+      "choices": [
+        "Improved performance",
+        "Security vulnerability",
+        "Unexpected application state",
+        "Enhanced memory management"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2361",
+      "text": "What is the primary consequence of CWE-672 when the expired resource contains sensitive data?",
+      "choices": [
+        "It causes a DoS condition leading to a crash or restart.",
+        "It may allow access to sensitive data associated with a different user.",
+        "It corrupts the application’s executable code.",
+        "It triggers an authentication bypass."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2362",
+      "text": "In what architectural phase can CWE-804 be introduced?",
+      "choices": [
+        "Implementation",
+        "Deployment",
+        "Maintenance",
+        "Test"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2363",
+      "text": "Which of the following mitigations is recommended to prevent the CWE-374 weakness during the implementation phase?",
+      "choices": [
+        "Use encrypted data in transport",
+        "Clone mutable data before passing to an external function",
+        "Log all data transactions",
+        "Use multi-threaded processing"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2364",
+      "text": "Which phase does not contribute to the mitigation strategy for CWE-98?",
+      "choices": [
+        "Architecture and Design",
+        "Operation",
+        "Maintenance",
+        "Implementation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2365",
+      "text": "What is the main objective of an XML Schema Poisoning attack?",
+      "choices": [
+        "Disrupt network traffic",
+        "Obtain sensitive data",
+        "Cause unauthorized schema modifications",
+        "Bypass authentication schemes"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2366",
+      "text": "In the context of CWE-1395, which approach helps to clearly define roles and responsibilities for patch management, especially for third-party components?",
+      "choices": [
+        "Maintaining a Software Bill of Materials (SBOM)",
+        "Clarifying roles and responsibilities within industry standards",
+        "Using components known for their stability",
+        "Adopting new technologies frequently"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2367",
+      "text": "In the context of CWE-204, what is the primary scope of the common consequences associated with this weakness?",
+      "choices": [
+        "Availability",
+        "Integrity",
+        "Confidentiality",
+        "Authenticity"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2368",
+      "text": "What is a suggested mitigation for reducing the predictability in the random number generator as described in CWE-343?",
+      "choices": [
+        "Use a PRNG that re-seeds too frequently to ensure randomness.",
+        "Use a PRNG that periodically re-seeds itself from high-quality entropy sources.",
+        "Increase reliance on software-based PRNGs for higher entropy.",
+        "Replace the PRNG with a deterministic algorithm."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2369",
+      "text": "Which mitigation strategy helps prevent CAPEC-644 attacks by strengthening access control frameworks?",
+      "choices": [
+        "Enforcing two-factor authentication.",
+        "Allowing remote access to all domain services.",
+        "Using shared passwords across systems.",
+        "Disabling access logs for performance purposes."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2370",
+      "text": "What is the primary mode of introduction for CWE-79 (Cross-Site Scripting vulnerability)?",
+      "choices": [
+        "Design",
+        "Architecture",
+        "Implementation",
+        "Testing"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2371",
+      "text": "What is one of the primary reasons attackers exploit NTFS Alternate Data Streams (ADS)?",
+      "choices": [
+        "To gain higher network bandwidth",
+        "To bypass standard file size limitations",
+        "To hide malicious tools and scripts from detection",
+        "To achieve faster read/write operations"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2372",
+      "text": "Which mitigation strategy aims to create an allowlist for valid input?",
+      "choices": [
+        "Use canonicalized data",
+        "Assume all input is malicious",
+        "Test your decoding process against malicious input",
+        "Perform regular security audits"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2373",
+      "text": "Given that CWE-833 describes a situation involving deadlocks, which of the following best explains a potential impact?",
+      "choices": [
+        "Unauthorized data access",
+        "Denial of Service (DoS)",
+        "Privilege escalation",
+        "Code injection"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2374",
+      "text": "Which phase is most associated with the omission that can lead to the weakness described in CWE-223?",
+      "choices": [
+        "Implementation",
+        "Deployment",
+        "Architecture and Design",
+        "Operation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2375",
+      "text": "During execution, what does CWE-1265 perform that unintentionally produces a nested invocation?",
+      "choices": [
+        "Executes trusted code",
+        "Performs async operations",
+        "Calls non-reentrant code",
+        "Uses local data"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2376",
+      "text": "In the context of CWE-56, what is the primary technical impact when the weakness is exploited?",
+      "choices": [
+        "Read Files or Directories",
+        "Denial of Service (DoS)",
+        "Privilege Escalation",
+        "Remote Code Execution"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2377",
+      "text": "Based on CWE-1277, which phase is most likely to fail due to concerns about the product’s speed to market?",
+      "choices": [
+        "Requirements",
+        "Architecture and Design",
+        "Implementation",
+        "All of the Above"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2378",
+      "text": "In the context of CWE-607, what is the primary security concern associated with public or protected static final fields referencing mutable objects?",
+      "choices": [
+        "Integrity violation due to unauthorized modifications",
+        "Confidentiality risk due to data leakage",
+        "Availability issues causing service disruptions",
+        "Authentication bypass due to improper validation"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2379",
+      "text": "Why might an insufficiently trusted component be selected during the Architecture and Design phase?",
+      "choices": [
+        "It is more reliable",
+        "It is more secure",
+        "It requires in-house expertise",
+        "It allows the product to reach the market faster"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2380",
+      "text": "Which of the following mitigations for CWE-1385 specifically deals with Denial of Service (DoS) attacks?",
+      "choices": [
+        "Use a randomized CSRF token to verify requests.",
+        "Leverage rate limiting using the leaky bucket algorithm.",
+        "Use a library that provides restriction of the payload size.",
+        "Use TLS to securely communicate using 'wss' (WebSocket Secure) instead of 'ws'."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2381",
+      "text": "When dealing with CWE-151, which of the following strategies is recommended for mitigating the risk during the implementation phase?",
+      "choices": [
+        "Using cryptographic hashing for comment delimiters",
+        "Performing regular updates and patches",
+        "Utilizing input validation techniques",
+        "Employing machine learning models"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2382",
+      "text": "In which phase of an attack is the malicious content injected into the XPath query according to CAPEC-83?",
+      "choices": [
+        "Reconnaissance",
+        "Exploit",
+        "Deployment",
+        "Post-Exploitation"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2383",
+      "text": "Which strategy is recommended during the implementation phase to mitigate the risk associated with CWE-156?",
+      "choices": [
+        "Algorithm Analysis",
+        "Output Encoding",
+        "Input Validation",
+        "Cryptographic Techniques"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2384",
+      "text": "What type of platforms does CWE-1293 generally affect?",
+      "choices": [
+        "Highly Language-Specific Architectures",
+        "Operating Systems Designed for Enterprise Use",
+        "Not Language-Specific, Not OS-Specific",
+        "Technology-Specific Systems"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2385",
+      "text": "Which of the following consequences is most likely associated with CWE-232?",
+      "choices": [
+        "Data Disclosure",
+        "Performance Degradation",
+        "Unexpected State",
+        "Service Disruption"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2386",
+      "text": "Regarding CWE-495, which of the following is a recommended mitigation strategy during the implementation phase?",
+      "choices": [
+        "Use encryption algorithms to protect the data structure",
+        "Regularly update software dependencies",
+        "Clone the member data and maintain an unmodified version privately",
+        "Use intrusion detection systems"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2387",
+      "text": "Which of the following best describes the weakness categorized as CWE-794?",
+      "choices": [
+        "The product processes data from an upstream component but fails to handle all instances of a special element before it moves downstream.",
+        "The product has a vulnerability due to improper handling of user authentication, leading to unauthorized access.",
+        "The product does not encrypt all critical data before transmission, making it vulnerable to interception.",
+        "The product allows unauthorized users to access administrative functionality due to improper session management."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2388",
+      "text": "When dealing with CWE-579, which programming language is specifically mentioned as relevant?",
+      "choices": [
+        "C++",
+        "Python",
+        "Java",
+        "Rust"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2389",
+      "text": "What is a common consequence associated with the exploitation of CWE-1294?",
+      "choices": [
+        "Modify Configuration Files",
+        "Access Sensitive Data",
+        "Modify Memory",
+        "Steal Cryptographic Keys"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2390",
+      "text": "What is CAPEC-18, and how does it relate to non-script elements?",
+      "choices": [
+        "CAPEC-18 is a form of SQL Injection that targets HTML forms.",
+        "CAPEC-18 is a form of Cross-Site Scripting (XSS) that targets elements not traditionally used to host scripts, such as image tags.",
+        "CAPEC-18 is a form of malware that infects non-script elements of a webpage.",
+        "CAPEC-18 is a form of phishing that relies on non-script elements on a webpage."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2391",
+      "text": "What mitigation measure can help prevent attacks related to CAPEC-15?",
+      "choices": [
+        "Perform denylist validation against potentially malicious inputs.",
+        "Allow all commands to run under a privileged account.",
+        "Use prepared statements like JDBC to convert input types.",
+        "Disable input validation to improve performance."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2392",
+      "text": "What is a critical prerequisite for an adversary executing the attack pattern described in CAPEC-692?",
+      "choices": [
+        "Having access to the VCS repository’s private keys",
+        "Understanding the exact commit strategies of the repository’s contributors",
+        "Identification of a popular open-source repository whose metadata can be spoofed",
+        "Knowing the usernames and passwords of the repository owners"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2393",
+      "text": "What technical impacts can result from an incorrectly implemented conversion mechanism in CWE-1292?",
+      "choices": [
+        "Read Memory; Modify Memory; Execute Unauthorized Code or Commands",
+        "Read Memory; Quality Degradation; Slow Performance",
+        "Modify Memory; Execute Authorized Code or Commands; Gain Privileges",
+        "Modify Memory; Prevent Unauthorized Code or Commands; Gain Identity"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2394",
+      "text": "What is the key prerequisite for successfully executing a CAPEC-27 attack?",
+      "choices": [
+        "Ability to create Symlinks on the target host",
+        "Gaining root access to the target host",
+        "Ability to sniff network packets",
+        "Access to the system's source code"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2395",
+      "text": "Which phase is most critical for preventing weaknesses associated with CWE-270 according to the document?",
+      "choices": [
+        "Implementation",
+        "Architecture and Design",
+        "Operation",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2396",
+      "text": "What is a common consequence if a product allows the usage of multiple resources with the same identifier in CWE-694?",
+      "choices": [
+        "Denial of Service",
+        "Bypass of Access Control mechanism",
+        "Data Corruption",
+        "Information Disclosure"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2397",
+      "text": "In the context of CWE-286, during which phase is this weakness most commonly introduced?",
+      "choices": [
+        "Operation",
+        "Architecture and Design",
+        "Testing",
+        "Maintenance"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2398",
+      "text": "What is a critical step in the execution flow of a buffer overflow attack via parameter expansion?",
+      "choices": [
+        "Finding a zero-day vulnerability in the buffer",
+        "Identifying an injection vector to deliver excessive content",
+        "Encrypting malicious payloads before injection",
+        "Modifying the operating system kernel"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2399",
+      "text": "What is the primary cause of CWE-523 according to the modes of introduction?",
+      "choices": [
+        "Errors in the implementation phase",
+        "Missing security tactic during architecture and design phase",
+        "Incorrect user input validation",
+        "Incomplete testing during system deployment"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2400",
+      "text": "Which CWE is most directly associated with the forced integer overflow described in CAPEC-92?",
+      "choices": [
+        "CWE-120",
+        "CWE-190",
+        "CWE-122",
+        "CWE-196"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2401",
+      "text": "What is a key prerequisite for the CAPEC-80 attack's success?",
+      "choices": [
+        "The target application must use ASCII encoding.",
+        "The target application must accept and process UTF-8 encoded inputs.",
+        "The target application must implement correct UTF-8 decoding.",
+        "The target application must filter all UTF-8 inputs properly."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2402",
+      "text": "Which method is recommended to detect the presence of CWE-570 in a product's code?",
+      "choices": [
+        "Conducting regular software audits",
+        "Using Dynamic Analysis tools",
+        "Using Static Analysis tools",
+        "Performing code obfuscation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2403",
+      "text": "What is a prerequisite for URL Encoding attacks to be possible according to CAPEC-72?",
+      "choices": [
+        "The application must implement multi-factor authentication",
+        "The application must use only the POST method for data submission",
+        "The application must accept and decode URL input and perform insufficient filtering/canonicalization",
+        "The application must validate URLs using regular expressions"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2404",
+      "text": "Which mitigation strategy can be used during the Architecture and Design phase to address CWE-65?",
+      "choices": [
+        "Input Validation",
+        "Secure by Default",
+        "Security by Obscurity",
+        "Separation of Privilege"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2405",
+      "text": "In the context of CAPEC-47, what primary mistake does the target software make that leads to a buffer overflow?",
+      "choices": [
+        "Incorrectly assumes the size of the expanded parameter",
+        "Uses pointers incorrectly in buffer operations",
+        "Allocates insufficient memory for the initial parameter",
+        "Misunderstands the data format of the input"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2406",
+      "text": "Which attack pattern is related to CWE-147?",
+      "choices": [
+        "HTTP Response Splitting",
+        "SQL Injection",
+        "Cross-Site Scripting (XSS)",
+        "HTTP Parameter Pollution (HPP)"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2407",
+      "text": "In the context of CWE-350, which mitigation strategy is suggested during the Architecture and Design phase?",
+      "choices": [
+        "Use IP whitelisting to restrict access.",
+        "Use encrypted DNSSEC protocols for DNS queries.",
+        "Perform proper forward and reverse DNS lookups.",
+        "Use alternative identity verification methods like username/password or certificates."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2408",
+      "text": "Which attack pattern is related to CWE-426?",
+      "choices": [
+        "CAPEC-20: Command Line Execution through SQL Injection",
+        "CAPEC-38: Leveraging/Manipulating Configuration File Search Paths",
+        "CAPEC-87: Data Injection through Corrupted Memory",
+        "CAPEC-107: Malicious Code Execution via Email Attachments"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2409",
+      "text": "What is one significant mitigation strategy to prevent an Adversary in the Browser (AiTB) attack?",
+      "choices": [
+        "Regularly updating encryption protocols used in communication",
+        "Using strong, out-of-band mutual authentication for communication channels",
+        "Employing hardware-based encryption for data storage",
+        "Mandating periodic password changes"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2410",
+      "text": "Which of the following is NOT a prerequisite for executing a XSS Through HTTP Headers attack?",
+      "choices": [
+        "Target software must be a client that allows scripting communication from remote hosts.",
+        "Exploiting a client side vulnerability to inject malicious scripts into the browser's executable process.",
+        "Target server must have improper or no input validation for HTTP headers.",
+        "Browser must support client-side scripting such as JavaScript."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2411",
+      "text": "What is one of the primary goals of DNS cache poisoning (CAPEC-142)?",
+      "choices": [
+        "To redirect legitimate traffic to a malicious server",
+        "To increase the efficiency of DNS lookups",
+        "To prevent unauthorized access to DNS records",
+        "To overload DNS servers with legitimate queries"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2412",
+      "text": "In the context of CWE-636, which aspect does this weakness directly impact?",
+      "choices": [
+        "Availability",
+        "Integrity",
+        "Access Control",
+        "Confidentiality"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2413",
+      "text": "Which of the following prerequisites must be met for an attacker to exploit the vulnerabilities described in CAPEC-1?",
+      "choices": [
+        "The application must have weak encryption for sensitive data.",
+        "The application must interact with an unprotected database.",
+        "The application’s ACLs must be improperly specified.",
+        "The application must have outdated software components."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2414",
+      "text": "What is the primary technical impact of CWE-1394, where the product uses a default cryptographic key for critical functionality?",
+      "choices": [
+        "Data Exfiltration",
+        "Denial of Service (DoS)",
+        "Privilege Escalation",
+        "Data Corruption"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2415",
+      "text": "Which of the following is a recommended mitigation technique for CWE-73 during the implementation phase?",
+      "choices": [
+        "Running the application as an administrator to ensure all files are accessible.",
+        "Using path canonicalization functions to eliminate symbolic links and \"..\" sequences.",
+        "Debugging the application in production to catch path-related issues.",
+        "Configuring firewalls to block all external traffic."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2416",
+      "text": "Which mitigation strategy best helps prevent the attack pattern described in CAPEC-549: Local Execution of Code?",
+      "choices": [
+        "Implementing a multi-factor authentication protocol",
+        "Employing robust cybersecurity training for all employees",
+        "Using intrusion detection systems",
+        "Regularly changing all the passwords to the system"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2417",
+      "text": "Which phase involves identifying entry points that are susceptible to the Postfix, Null Terminate, and Backslash attack?",
+      "choices": [
+        "Explore",
+        "Exploit",
+        "Probe",
+        "Experiment"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2418",
+      "text": "What is the primary cause of CWE-336?",
+      "choices": [
+        "Use of a low-entropy source for PRNG",
+        "same seed for PRNG each time the product initializes",
+        "PRNG not using cryptographic entropy",
+        "Man-in-the-Middle attack on PRNG"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2419",
+      "text": "Which of the following best describes a mitigation for the weakness identified in CWE-293?",
+      "choices": [
+        "Implementing additional firewalls",
+        "Using a stronger encryption algorithm",
+        "Employing methods like username/password or certificates for authorization",
+        "Regularly updating software patches"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2420",
+      "text": "Which phase is recommended for using antivirus software to mitigate CWE-509?",
+      "choices": [
+        "Implementation",
+        "StatusVerification",
+        "Operation",
+        "Installation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2421",
+      "text": "According to the example instances provided in CAPEC-24, what is one possible consequence of leveraging a buffer overflow to make a filter fail in a web application?",
+      "choices": [
+        "Executing unauthorized commands",
+        "Destroying log files",
+        "Bypassing authentication mechanisms",
+        "Accessing confidential files"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2422",
+      "text": "One of the prerequisites for a successful Flash File Overlay attack (CAPEC-181) is:",
+      "choices": [
+        "The system must have outdated antivirus software",
+        "The user must install a malicious browser extension",
+        "The victim must be tricked into visiting the attacker's decoy site",
+        "Two-factor authentication must be disabled"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2423",
+      "text": "Which related attack pattern is associated with CWE-347 due to improper validation?",
+      "choices": [
+        "SQL Injection",
+        "Padding Oracle Crypto Attack",
+        "Session Fixation",
+        "Clickjacking"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2424",
+      "text": "What are the potential technical impacts of the CWE-1242 weakness according to the document?",
+      "choices": [
+        "Modify Memory and Gain Privileges",
+        "Browse File System and Send Unauthorized Emails",
+        "Write Unauthorized Data to Disk and Download Malware",
+        "Read Memory and Execute Unauthorized Code or Commands"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2425",
+      "text": "What is CWE-1233 primarily associated with in terms of impact?",
+      "choices": [
+        "Technical Impact: Data Exposure",
+        "Technical Impact: Information Disclosure",
+        "Technical Impact: Modify Memory",
+        "Technical Impact: Execution Flow Attacks"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2426",
+      "text": "According to CAPEC-72, what can be a potential impact of a successful URL Encoding attack?",
+      "choices": [
+        "Confidentiality breach by reading data on the server",
+        "Destruction of physical server hardware",
+        "Disruption of network services outside the application scope",
+        "Modification or deletion of server configuration files"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2427",
+      "text": "Which CWE is NOT directly related to CAPEC-546?",
+      "choices": [
+        "CWE-1266: Improper Scrubbing of Sensitive Data from Decommissioned Device",
+        "CWE-284: Improper Access Control",
+        "CWE-1272: Sensitive Information Uncleared Before Debug/Power State Transition",
+        "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2428",
+      "text": "In the context of CAPEC-114, what is the primary tactic an attacker employs to abuse an authentication mechanism?",
+      "choices": [
+        "Brute-forcing common passwords",
+        "Utilizing inherent weaknesses in the authentication mechanism",
+        "Intercepting communication data using man-in-the-middle attacks",
+        "Exploiting buffer overflow vulnerabilities"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2429",
+      "text": "Which of the following languages is listed under Applicable Platforms for CWE-170?",
+      "choices": [
+        "Java",
+        "C#",
+        "Python",
+        "C++"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2430",
+      "text": "Which precondition must be met for a successful HTTP Response Splitting attack based on CAPEC-34?",
+      "choices": [
+        "The server must be running on Apache software.",
+        "HTTP headers must be non-modifiable.",
+        "An adversary must have admin access to the server.",
+        "There must be differences in the way HTTP agents interpret HTTP requests and headers."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2431",
+      "text": "What is a common technical impact of a vulnerability classified under CWE-130 as per the provided document?",
+      "choices": [
+        "Denial of Service (DoS)",
+        "Escalation of Privileges",
+        "Read Memory",
+        "Unauthorized File Access"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2432",
+      "text": "In CAPEC-16, which threat does a dictionary-based password attack primarily leverage?",
+      "choices": [
+        "Selecting passwords that are commonly used",
+        "Exploring weak passwords via exhaustive search",
+        "Using precomputed hash dictionaries for quick lookup",
+        "Testing all possible alphanumeric combinations in bulk"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2433",
+      "text": "Which programming languages are mentioned as potentially vulnerable to CWE-1335?",
+      "choices": [
+        "Python, Ruby, and Go.",
+        "C, C++, and JavaScript.",
+        "Scala, Swift, and Objective-C.",
+        "Rust, Kotlin, and TypeScript."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2434",
+      "text": "Which related attack pattern is most directly associated with CWE-36?",
+      "choices": [
+        "Buffer Overflow SQL Injection",
+        "Cross-Site Scripting (XSS)",
+        "Clickjacking",
+        "Absolute Path Traversal"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2435",
+      "text": "What is the primary technical impact described for CWE-1193?",
+      "choices": [
+        "The inability to access firmware updates authorized by the manufacturer.",
+        "Allowing untrusted components to control transactions on the HW bus.",
+        "An increase in the processing load of memory access controls.",
+        "Installation of malicious software through driver vulnerabilities."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2436",
+      "text": "Which of the following phases are recommended for ensuring that the Manufacturing Complete marker gets updated at the Manufacturing Complete stage according to CWE-1269?",
+      "choices": [
+        "Implementation",
+        "Integration",
+        "Manufacturing",
+        "All of the above"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2437",
+      "text": "When dealing with CWE-1061, which strategy is most effective in mitigating the risk of external components exposing unintended functionality or dependencies?",
+      "choices": [
+        "Utilizing cryptographic algorithms to secure data at rest",
+        "Implementing strict access control policies to restrict code access",
+        "Encapsulating data structures and methods to limit exposure",
+        "Regularly updating and patching the system to ensure latest security measures"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2438",
+      "text": "In the context of CWE-756, what is the primary consequence of not using custom error pages?",
+      "choices": [
+        "It allows attackers to inject malicious scripts into the website.",
+        "It can lead to unauthorized administrative access.",
+        "It can result in the leakage of application data to attackers.",
+        "It enables attackers to bypass user authentication mechanisms."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2439",
+      "text": "Regarding CWE-268, which phase is responsible for causing this weakness due to the implementation of an architectural security tactic?",
+      "choices": [
+        "Architecture and Design",
+        "Implementation",
+        "Operation",
+        "All of the above"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2440",
+      "text": "What is a common consequence of CWE-546 in terms of technical impact?",
+      "choices": [
+        "Functional Degradation",
+        "Security Vulnerabilities",
+        "Performance Issues",
+        "Quality Degradation"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2441",
+      "text": "Which aspect of a system is primarily at risk when facing a weakness classified as CWE-535?",
+      "choices": [
+        "Integrity",
+        "Availability",
+        "Confidentiality",
+        "Authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2442",
+      "text": "In the context of CWE-150, what is the primary security impact mentioned?",
+      "choices": [
+        "Confidentiality",
+        "Availability",
+        "Integrity",
+        "Authenticity"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2443",
+      "text": "What is the primary consequence of CWE-807 for a system?",
+      "choices": [
+        "Breach of confidentiality",
+        "Denial of service",
+        "BYPASS of protection mechanisms",
+        "Sensitive data exposure"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2444",
+      "text": "According to CAPEC-499, what is a potential impact on the confidentiality of data intercepted through this method?",
+      "choices": [
+        "Data deletion",
+        "Unauthorised data access",
+        "Data encryption",
+        "Unauthorised data exfiltration"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2445",
+      "text": "Which of the following impacts is most directly a consequence of CWE-1267?",
+      "choices": [
+        "DoS: Resource Consumption",
+        "Modify Memory",
+        "Gain Privileges or Assume Identity",
+        "Bypass Protection Mechanism"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2446",
+      "text": "In the context of CWE-1317, which mitigation phase involves ensuring the design includes provisions for access control checks?",
+      "choices": [
+        "Deployment phase",
+        "Testing phase",
+        "Implementation phase",
+        "Architecture and Design phase"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2447",
+      "text": "Which mitigation strategy is suggested for handling CWE-448 in the Architecture and Design phase?",
+      "choices": [
+        "Implement more rigorous input validation.",
+        "Remove the obsolete feature from the UI.",
+        "Improve logging and monitoring.",
+        "Upgrade the underlying technology stack."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2448",
+      "text": "Which mitigation strategy is NOT suggested for preventing forced integer overflow according to CAPEC-92?",
+      "choices": [
+        "Using a language or compiler with automatic bounds checking",
+        "Abstracting away risky APIs",
+        "Always encrypting integer values before use",
+        "Manual or automated code review"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2449",
+      "text": "The product does not sufficiently monitor or control transmitted network traffic volume. Which of the following is a potential consequence of this weakness as described in CWE-406?",
+      "choices": [
+        "Information Disclosure",
+        "Cross-Site Scripting",
+        "DoS: Amplification",
+        "Privilege Escalation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2450",
+      "text": "What is one of the architectural mitigation strategies for CWE-1385?",
+      "choices": [
+        "Enable CORS-like access restrictions by verifying the 'Origin' header during the WebSocket handshake.",
+        "Use a randomized CSRF token to verify requests.",
+        "Require user authentication prior to the WebSocket connection being established.",
+        "Use TLS to securely communicate using 'wss' (WebSocket Secure) instead of 'ws'."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2451",
+      "text": "In the context of CWE-306, what is one of the common consequences of providing functionality without authentication?",
+      "choices": [
+        "Denial of Service (DoS) attacks.",
+        "Data integrity issues.",
+        "Gain Privileges or Assume Identity.",
+        "Phishing attacks."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2452",
+      "text": "What is a potential consequence of CWE-377 related to insecure temporary files?",
+      "choices": [
+        "Denial of Service (DoS)",
+        "Unauthorized Data Manipulation",
+        "Privilege Escalation",
+        "Buffer Overflow"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2453",
+      "text": "In the execution flow of an attack pattern described in CAPEC-18, which of the following is a required action in the \"Experiment\" phase?",
+      "choices": [
+        "Survey the application for user-controllable inputs.",
+        "Probe identified potential entry points for XSS vulnerability.",
+        "Ensure the victim views the stored content.",
+        "Perform input validation checks."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2454",
+      "text": "What is the main consequence of the CWE-164 weakness according to its description?",
+      "choices": [
+        "It leads to data exfiltration.",
+        "It causes denial of service (DoS).",
+        "It compromises the integrity of the system, leading to unexpected states.",
+        "It results in privilege escalation."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2455",
+      "text": "Which of the following is a recommended mitigation strategy for addressing the weakness described in CWE-1327?",
+      "choices": [
+        "Using stronger encryption algorithms",
+        "Regular code audits and reviews",
+        "Assign IP addresses that are not 0.0.0.0",
+        "Implementing dual-factor authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2456",
+      "text": "What is a potential risk associated with uninitialized string variables according to CWE-457?",
+      "choices": [
+        "Inconsistent formatting of strings",
+        "Memory leaks",
+        "Oversized buffer allocation",
+        "Unexpected modification of control flow"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2457",
+      "text": "What is the primary technical impact of CWE-828 on the affected product?",
+      "choices": [
+        "Information exposure",
+        "Denial of Service (DoS): Crash, Exit, or Restart",
+        "Privilege escalation",
+        "Data integrity compromise"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2458",
+      "text": "Which of the following is a prerequisite for a CAPEC-35 attack?",
+      "choices": [
+        "Attacker must have network access",
+        "Attacker must have physical access",
+        "Attacker must have the ability to modify non-executable files consumed by the target software",
+        "Attacker must possess privileged account credentials"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2459",
+      "text": "What is a recommended mitigation strategy for managing cryptographic keys during the architecture and design phase?",
+      "choices": [
+        "Utilizing deprecated algorithms",
+        "Exposing keys publicly",
+        "Using uniform wrappers",
+        "Protecting and managing keys correctly"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2460",
+      "text": "Which related attack pattern is directly associated with CWE-1222?",
+      "choices": [
+        "CAPEC-15: Flooding",
+        "CAPEC-100: Input Data Handling",
+        "CAPEC-79: Failure to Control Generation of Code",
+        "CAPEC-679: Exploitation of Improperly Configured or Implemented Memory Protections"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2461",
+      "text": "What is a potential architectural mitigation technique for preventing CWE-301 reflection attacks?",
+      "choices": [
+        "Use simple passwords for authentication",
+        "Combine multiple weak keys for the initiator and responder",
+        "Use unique keys for initiator and responder",
+        "Disable logging and monitoring"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2462",
+      "text": "During which phases is it recommended to implement mitigations for CWE-459?",
+      "choices": [
+        "Requirement Analysis and Implementation",
+        "Testing and Deployment",
+        "Architecture and Design; Implementation",
+        "Planning and Maintenance"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2463",
+      "text": "Which of the following is NOT a phase to consider in mitigating CWE-1255?",
+      "choices": [
+        "Implementation",
+        "Integration",
+        "Testing",
+        "Architecture and Design"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2464",
+      "text": "Which attack pattern is associated with using slashes and URL encoding to bypass validation logic, related to CWE-172?",
+      "choices": [
+        "CAPEC-72",
+        "CAPEC-64",
+        "CAPEC-120",
+        "CAPEC-3"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2465",
+      "text": "What is the primary consequence of a successful CWE-502 attack in terms of integrity?",
+      "choices": [
+        "Unauthorized Reading of Sensitive Data",
+        "Modification of Application Data",
+        "Unintended Access to Network Resources",
+        "Creation of Unexpected Privileges"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2466",
+      "text": "What is a common consequence of CWE-1310?",
+      "choices": [
+        "Decrease in system performance",
+        "Reduction in maintainability",
+        "Increase in power consumption",
+        "Data integrity issues"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2467",
+      "text": "Which of the following is not a recommended mitigation strategy against the attack described in CAPEC-692?",
+      "choices": [
+        "Performing precursory metadata checks before downloading software",
+        "Only downloading open-source software from trusted package managers",
+        "Ensuring integrity values have not changed after downloading the software",
+        "Ignoring the \"Verified\" status of commits/tags in VCS repositories"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2468",
+      "text": "Which mitigation strategy is recommended to counter the specific attack described in CAPEC-461?",
+      "choices": [
+        "Use of a simple hash function such as MD5",
+        "Employ stronger encryption like RSA-Instead of hashing",
+        "Implement a secure message authentication code (MAC) such as HMAC-SHA1",
+        "Include client-side security like two-factor authentication"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2469",
+      "text": "Which potential consequence is NOT a result of CWE-415?",
+      "choices": [
+        "Modify Memory",
+        "Execute Unauthorized Code or Commands",
+        "Denial of Service (DoS)",
+        "Bypass Authentication"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2470",
+      "text": "Which related attack pattern involves forcing the use of corrupted files?",
+      "choices": [
+        "CAPEC-552",
+        "CAPEC-263",
+        "CAPEC-175",
+        "CAPEC-640"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2471",
+      "text": "What phase-specific mitigation can help prevent CWE-784?",
+      "choices": [
+        "Regularly updating the cookie's encryption algorithm",
+        "Performing thorough client-side validation of cookies",
+        "Protecting critical cookies from replay attacks",
+        "Using session-specific timeouts for all cookies"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2472",
+      "text": "Which of the following CWE weaknesses is directly related to CAPEC-22?",
+      "choices": [
+        "Authentication Bypass by Spoofing",
+        "Buffer Overflow",
+        "SQL Injection",
+        "Cross-Site Scripting (XSS)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2473",
+      "text": "Which class of hardware is specifically mentioned as potentially affected by CWE-1256?",
+      "choices": [
+        "Memory Hardware",
+        "Display Hardware",
+        "Network Hardware",
+        "Storage Hardware"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2474",
+      "text": "According to CWE-1256, which phase can introduce weaknesses by assuming no consequences to unbounded power and clock management?",
+      "choices": [
+        "Architecture and Design",
+        "Implementation",
+        "Testing",
+        "Maintenance"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2475",
+      "text": "What phase is primarily associated with the mitigation strategy for CWE-54?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "Deployment",
+        "Maintenance"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2476",
+      "text": "CWE-205 can lead to which type of impact on the system?",
+      "choices": [
+        "Denial of Service",
+        "Unauthorized Execution of Code",
+        "Read Application Data",
+        "Elevation of Privileges"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2477",
+      "text": "Which of the following languages is mentioned as being possibly affected by CWE-478?",
+      "choices": [
+        "C#",
+        "Swift",
+        "Ruby",
+        "Julia"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2478",
+      "text": "Which aspect of CWE-757 can lead to weaknesses in protocol security?",
+      "choices": [
+        "It allows actors to always select the strongest available algorithm.",
+        "It supports interaction between multiple actors without enforcing the strongest algorithm.",
+        "It relies on pre-shared keys for initial authentication.",
+        "It uses static IP addresses for actor identification."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2479",
+      "text": "What is the primary risk associated with storing passwords in a recoverable format according to CWE-257?",
+      "choices": [
+        "They can be easily changed by administrators.",
+        "Malicious insiders can impersonate users.",
+        "The passwords become too complex to manage.",
+        "The passwords can be encrypted again using stronger methods."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2480",
+      "text": "2. During which phase is it recommended to configure ACLs to mitigate CWE-650?",
+      "choices": [
+        "Design",
+        "Implementation",
+        "System Configuration",
+        "Operation"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2481",
+      "text": "Which potential mitigation technique is recommended during the implementation phase to prevent CWE-776?",
+      "choices": [
+        "Limit the number of recursive calls in the program",
+        "Use an XML parser that prohibits DTDs",
+        "Use input validation to filter out dangerous characters",
+        "Scan for recursive entity declarations before parsing XML files"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2482",
+      "text": "What is a common consequence of CWE-302 impacting scope and technical impact?",
+      "choices": [
+        "Data corruption; Loss of integrity",
+        "Denial of Service; Resource exhaustion",
+        "Access Control; Bypass Protection Mechanism",
+        "Unauthorized disclosure; Loss of confidentiality"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2483",
+      "text": "In the context of CWE-77, improper neutralization of special elements in commands can lead to what types of consequences?",
+      "choices": [
+        "Execute Unauthorized Code or Commands",
+        "Privacy Breach",
+        "Network Denial of Service",
+        "Information Theft"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2484",
+      "text": "CWE-1223 addresses a specific type of vulnerability in hardware design. What primary issue does CWE-1223 identify?",
+      "choices": [
+        "A breach in encryption methodology",
+        "A race condition",
+        "Buffer overflow",
+        "Weak default credentials"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2485",
+      "text": "Which prerequisite must an adversary meet before they can successfully execute a CAPEC-186: Malicious Software Update attack?",
+      "choices": [
+        "They must have physical access to the target system.",
+        "They must have advanced cyber capabilities.",
+        "They must have the ability to disrupt network traffic.",
+        "They must possess zero-day vulnerabilities for the target system."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2486",
+      "text": "In the context of CAPEC-477, what is a key mitigation strategy for preventing signature spoofing by mixing signed and unsigned content?",
+      "choices": [
+        "Ensure the application doesn't process unsigned data as if it's signed.",
+        "Use a more complex data structure mixing signed and unsigned content.",
+        "Encrypt all data transmissions between sender and recipient.",
+        "Enable continuous monitoring of data streams."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2487",
+      "text": "During which implementation phase should developers explicitly initialize critical resources to mitigate CWE-909?",
+      "choices": [
+        "Testing and Debugging",
+        "Design and Architecture",
+        "Implementation",
+        "Deployment"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2488",
+      "text": "What is the primary weakness introduced by CWE-923?",
+      "choices": [
+        "The product allows direct access to privileged endpoints without authentication.",
+        "The product uses deprecated security protocols.",
+        "The product does not correctly verify the communication endpoint for privileged operations.",
+        "The product fails to encrypt data in transit."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2489",
+      "text": "Which related attack pattern is associated with exploiting CWE-1263?",
+      "choices": [
+        "CAPEC-101: Password Brute Forcing",
+        "CAPEC-200: SQL Injection",
+        "CAPEC-301: Cross-Site Scripting (XSS)",
+        "CAPEC-401: Physically Hacking Hardware"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q2490",
+      "text": "What is a key prerequisite for the adversary to employ CAPEC-549: Local Execution of Code?",
+      "choices": [
+        "Knowledge of the system’s encryption mechanisms",
+        "Ability to exploit social engineering tactics",
+        "Knowledge of the target system's vulnerabilities",
+        "Access to administrator-level credentials"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2491",
+      "text": "What is the main goal of the CAPEC-331 attack pattern?",
+      "choices": [
+        "To exploit open ports on the target machine for data exfiltration",
+        "To create a denial-of-service condition on the network",
+        "To gather information for building a signature base of operating system responses",
+        "To inject malicious code into the target system"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2492",
+      "text": "What is a common consequence of an ASP.NET application not using the model validation framework correctly?",
+      "choices": [
+        "Denial of Service attacks",
+        "Information Disclosure vulnerabilities",
+        "Unexpected State leading to cross-site scripting and SQL injection vulnerabilities",
+        "Privilege Escalation vulnerabilities"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2493",
+      "text": "What is a potential consequence of CWE-1321 that affects availability?",
+      "choices": [
+        "Disclosure of sensitive data",
+        "Denial of Service due to application crash",
+        "Execution of unauthorized commands",
+        "Unauthorized access to restricted functionalities"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2494",
+      "text": "In the context of CAPEC-637, what is a potential follow-up action an adversary might perform after collecting clipboard data?",
+      "choices": [
+        "Modifying system configurations",
+        "Social engineering attacks",
+        "Using the sensitive information in follow-up attacks",
+        "Establishing persistence on the system"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2495",
+      "text": "Which mitigation phase is most relevant for addressing CWE-1272?",
+      "choices": [
+        "Implementation",
+        "Testing",
+        "Deployment",
+        "Maintenance"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2496",
+      "text": "Which of the following is a recommended mitigation strategy for addressing CWE-444 during the Implementation phase?",
+      "choices": [
+        "Use TLS instead of SSL",
+        "Perform a comprehensive security audit",
+        "Terminate the client session after each request",
+        "Implement rate-limiting"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2497",
+      "text": "Which Windows-specific characteristic makes CWE-31 more prevalent for its operating system, according to the document?",
+      "choices": [
+        "Prevalence of path traversal vulnerabilities in Windows",
+        "Windows uses a different directory structure compared to Unix-based systems",
+        "Windows has a higher frequency of external input usage",
+        "Windows' handling of directory traversal isn't clearly neutralized"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2498",
+      "text": "What is the primary method an adversary uses to execute CAPEC-662 (Adversary in the Browser) attack?",
+      "choices": [
+        "Exploiting software bugs in the browser directly",
+        "Installing a Trojan on the user's machine",
+        "Send phishing emails with malicious links",
+        "Bypassing strict security policies without privileges"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q2499",
+      "text": "The CWE-283 weakness primarily involves what type of failure in a product?",
+      "choices": [
+        "Failure to encrypt data during transmission",
+        "Failure to sanitize user input",
+        "Failure to verify the ownership of a critical resource",
+        "Failure to implement proper logging mechanisms"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q2500",
+      "text": "In the context of CWE-441, which feature should a proxy core retain?",
+      "choices": [
+        "History of all transactions",
+        "Data integrity of requests and responses",
+        "Identity of the initiator of the transaction",
+        "Original request content"
+      ],
+      "answer": 2
+    }
+  ]
+}

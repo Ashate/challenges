@@ -1,0 +1,708 @@
+{
+  "id": "SECEVAL-NETWORKSEC",
+  "name": "SecEval: NetworkSecurity",
+  "description": "Security evaluation questions on NetworkSecurity from SecEval benchmark.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "seceval",
+    "networksecurity"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "In a wireless local network, if the network is not secured using WPA2-Enterprise, what is a likely consequence an on-path attacker may achieve?",
+      "choices": [
+        "The attacker could potentially learn the encryption keys from the handshake and decrypt messages.",
+        "The attacker may be unable to access the network due to the presence of network firewalls.",
+        "The attacker could exploit the network to gain unlimited internet access without being detected.",
+        "The attacker might cause a denial of service by flooding the network with fake authentication requests."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "text": "Alice's computer is trying to communicate with Bob's computer within the same local area network (LAN). Alice's computer knows Bob's IP address but not his MAC address. Which of the following steps will Alice's computer and Bob's computer undertake according to the ARP protocol?",
+      "choices": [
+        "Alice's computer sends a broadcast message to the LAN asking for the MAC address of Bob's IP, and Bob's computer responds with its MAC address.",
+        "Alice's computer sends a direct message to Bob's IP address asking for the MAC address, and Bob's computer responds with its MAC address.",
+        "Bob's computer sends a broadcast message with its MAC address to the LAN, and Alice's computer captures this information.",
+        "Alice's computer queries a central directory server to find the MAC address associated with Bob's IP address."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q3",
+      "text": "A company still uses a legacy network protocol designed decades ago when the assumption was that all network participants could be trusted. As a security analyst, which of the following would you advise as reasons to update their network protocol? (Select all that apply)",
+      "choices": [
+        "The increase in network traffic has made the old protocols inefficient in handling modern bandwidth requirements.",
+        "The original assumption of trust is no longer valid as today's Internet includes malicious devices.",
+        "New regulations require all companies to use the latest encryption standards, which the old protocol does not support.",
+        "Legacy protocols are often open-source, making them more vulnerable to attackers who can study the source code."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q4",
+      "text": "A cybersecurity analyst is evaluating the effectiveness of implementing network intrusion prevention systems to mitigate the risk of adversaries using data encoding for command and control activities. Which of the following statements accurately reflects the potential impact of this mitigation technique?",
+      "choices": [
+        "Network intrusion prevention systems may utilize signatures to identify traffic for specific malware, but adversaries can change C2 signatures over time to avoid detection.",
+        "The implementation of network intrusion prevention systems will completely eliminate the risk posed by data encoding in command and control activities.",
+        "Using network intrusion prevention systems is unnecessary if the organization employs application whitelisting as it will block any encoded traffic by default.",
+        "Network intrusion prevention systems will increase the risk of false positives, making it more difficult to detect legitimate traffic than encoded C2 traffic."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q5",
+      "text": "In the context of network switches, a common vulnerability arises when ARP mapping tables overflow during spoofing attacks, causing the switch to behave like a hub and broadcast traffic that could be intercepted by an eavesdropper. Which of the following design changes would not prevent this vulnerability?",
+      "choices": [
+        "Limiting the number of ARP entries that can be recorded for each switch interface.",
+        "Increasing the size of the ARP table to accommodate more entries.",
+        "Enabling automatic switch shutdown when a spoofing attack is detected.",
+        "Designing the switch to broadcast all traffic as a default behavior in case of table overflow."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q6",
+      "text": "In a networked environment, what detection method can a security administrator employ to identify unauthorized changes indicative of a Pre-OS Boot compromise?",
+      "choices": [
+        "Monitoring for irregularities in API calls related to Pre-OS Boot mechanisms.",
+        "Performing regular port scans to detect open ports that may indicate a Pre-OS Boot compromise.",
+        "Checking the network's edge devices for firmware updates as a sign of Pre-OS Boot threats.",
+        "Analyzing CPU usage patterns for anomalies that could signal a Pre-OS Boot attack."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q7",
+      "text": "An organization has identified a potential vulnerability to forced authentication attacks via SMB and WebDAV protocols. As a security consultant, you are tasked with recommending mitigation strategies. Which combination of strategies would provide effective protection while minimizing impact on legitimate network use?",
+      "choices": [
+        "Block all SMB and WebDAV traffic both within and exiting the network and require two-factor authentication for all users.",
+        "Filter or block WebDAV protocol traffic from exiting the network and use strong passwords to increase the difficulty of cracking obtained credential hashes.",
+        "Restrict SMB and WebDAV traffic to allowlisted external systems only and implement strict account lockout policies after two failed authentication attempts.",
+        "Eliminate the use of SMB and WebDAV protocols entirely and transition to a proprietary protocol for internal and external resource sharing."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q8",
+      "text": "An organization is reviewing its cybersecurity detection methods to identify any unauthorized hardware devices that may have been connected to its network. Which of the following data sources and components would be LEAST effective for detecting the presence of such devices?",
+      "choices": [
+        "Monitoring newly constructed drives or related events associated with connecting hardware to systems.",
+        "Scanning for malware signatures in files stored on the network to find traces of unauthorized hardware.",
+        "Utilizing configuration management databases to identify computer systems or network devices that should not be on the network.",
+        "Observing network traffic flow to monitor for traffic originating from unknown hardware devices."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q9",
+      "text": "If a cybersecurity analyst is setting up a detection mechanism for firmware corruption on company devices, which of the following approaches would be the least effective and why?",
+      "choices": [
+        "Monitoring changes to the firmware for unexpected modifications, which does not account for legitimate updates.",
+        "Logging attempts to read/write to BIOS and comparing against known patching behavior, but this may generate false positives if legitimate software behaves similarly.",
+        "Checking for the presence of known malware bootloaders, which may not detect novel or unknown malware strategies.",
+        "Inspecting network traffic for signs of firmware tampering, which may not detect local attacks that do not involve network communication."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q10",
+      "text": "A company is reviewing its cybersecurity strategy to better defend against adversaries using data obfuscation techniques for command and control operations. They are considering the implementation of network intrusion prevention systems. Which obfuscation technique would likely be the least mitigated by network intrusion prevention systems that use network signatures?",
+      "choices": [
+        "Junk Data",
+        "Steganography",
+        "Protocol Impersonation",
+        "Embedding C2 responses in the source code of a fake webpage."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q11",
+      "text": "As a security consultant, you are tasked with strengthening an organization's defenses against account enumeration attacks. Which of the following mitigation strategies would be least effective in preventing adversaries from discovering valid user accounts, and why?",
+      "choices": [
+        "Disabling the enumeration of administrator accounts through Group Policy settings, as it does not address the use of other built-in commands by adversaries.",
+        "Monitoring command execution history for cloud API calls used for account discovery, as it may be circumvented by direct file system access.",
+        "Restricting access to file resources that contain local accounts and group information, as it may be bypassed by adversaries with high privileges.",
+        "Implementing a policy to monitor and filter outbound traffic to prevent data exfiltration of account lists, as this does not directly prevent account enumeration."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q12",
+      "text": "A network security analyst is tasked with enhancing the organization's defenses against adversaries who might communicate using application layer protocols to avoid detection. Which of the following measures would be most effective in mitigating such activities?",
+      "choices": [
+        "Implementing strict egress and ingress filtering rules on the firewall to control traffic based on source and destination IP addresses.",
+        "Deploying network intrusion prevention systems that use network signatures to identify traffic for specific adversary malware.",
+        "Enforcing a policy that requires the use of VPNs for all internal and external communications.",
+        "Increasing the complexity of network topology to confuse potential adversaries and complicate their attack paths."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q13",
+      "text": "As a security analyst, you are tasked with setting up monitoring to detect potential adversaries using WMI for remote command execution. Which data source and component should you focus on to detect this activity?",
+      "choices": [
+        "Data Source: Command, Data Component: Command Execution",
+        "Data Source: Network Traffic, Data Component: Encrypted Traffic Analysis",
+        "Data Source: File Monitoring, Data Component: File Creation",
+        "Data Source: Email Gateways, Data Component: Inbound Email Analysis"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q14",
+      "text": "If an adversary has wiped configuration files on network devices using Network Device CLI commands, why would upgrading network intrusion detection systems (NIDS) alone not be sufficient to prevent such incidents in the future?",
+      "choices": [
+        "Because NIDS are primarily focused on monitoring network traffic and may not detect command execution or unauthorized changes to device configurations.",
+        "Because NIDS are outdated technology and have been replaced by next-generation firewalls in modern network security infrastructures.",
+        "Because NIDS typically prevent physical access to network devices, not the execution of CLI commands by authorized users.",
+        "Because NIDS are designed to prevent data backups from being accessed or destroyed, which is not relevant to wiping configuration files."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q15",
+      "text": "A penetration tester is analyzing the security posture of an organization that has recently experienced a data breach. The breach was due to an adversary deploying network sniffing to capture user credentials and other sensitive information. Considering the techniques used by the adversary, which of the following mitigation strategies would be MOST effective in preventing such an incident in the future?",
+      "choices": [
+        "Regularly updating antivirus signatures on all endpoints.",
+        "Implementing network segmentation to prevent broadcast and multicast sniffing.",
+        "Increasing the complexity of user passwords.",
+        "Restricting physical access to server rooms and network hardware."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q16",
+      "text": "As a security analyst, you are reviewing logs to detect potential adversarial System Service Discovery attempts within your network. Which of the following would be the least effective method of detection and why?",
+      "choices": [
+        "Monitoring for the execution of `sc query` and `net start` commands.",
+        "Looking for the invocation of Windows Management Instrumentation and PowerShell scripts.",
+        "Observing for unusual spikes in outbound network traffic to unknown external IP addresses.",
+        "Analyzing API calls such as `EnumServicesStatusExA` and `QueryServiceStatusEx`."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q17",
+      "text": "In a DHCP handshake, why must the 'Client Discover' and 'Client Request' messages be broadcast instead of being sent directly to one server?",
+      "choices": [
+        "Broadcasting ensures that the client can receive multiple offers and select the best configuration based on the server's load.",
+        "Broadcasting is necessary because the client does not know the IP address of the DHCP server when it joins the network.",
+        "Broadcasting allows the client to establish a connection with multiple servers for redundancy and load balancing.",
+        "Broadcasting is used to prevent other devices on the network from intercepting and tampering with the configuration details."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q18",
+      "text": "A cybersecurity analyst is reviewing network traffic logs and notices multiple instances of data packets being transferred at regular intervals, all of the same size below the usual threshold that usually triggers alerts. The analyst suspects this could be a data exfiltration technique employed by an adversary. Which of the following best describes the adversary's likely strategy and a potential method to detect this activity?",
+      "choices": [
+        "The adversary is exfiltrating data in fixed size chunks to avoid triggering alerts, and the analyst should monitor for newly constructed network connections that send fixed size data packets at regular intervals.",
+        "The adversary is using a standard file transfer method without alteration to evade detection, and the analyst should focus on the file metadata for anomalies.",
+        "The adversary is likely encrypting the data to bypass size-based detection, and the analyst should examine SSL/TLS handshake inconsistencies to detect the exfiltration.",
+        "The adversary is employing a fast flux DNS technique to rapidly change IP addresses associated with data transfers, and the analyst should look for anomalies in DNS traffic patterns."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q19",
+      "text": "Which of the following actions would be least effective for maintaining the security of a company's mobile devices within a secure device management framework? (Choose all that apply.)",
+      "choices": [
+        "Allowing employees to access company data over unsecured public Wi-Fi networks.",
+        "Implementing multi-factor authentication for device access.",
+        "Regularly updating the company's mobile applications and operating systems.",
+        "Creating a comprehensive user training program focused on recognizing phishing attempts."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q20",
+      "text": "What privacy benefit does MAC address randomization provide for mobile devices in a wireless network environment?",
+      "choices": [
+        "It prevents the device from connecting to unsecured Wi-Fi networks.",
+        "It helps in reducing the risk of intercepting Wi-Fi traffic by unauthorized users.",
+        "It prevents passive observers from persistently tracking the device by its Wi-Fi traffic.",
+        "It ensures that the Wi-Fi network remains hidden from unauthorized users."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q21",
+      "text": "In an effort to improve detection of adversarial activities, a cybersecurity team is considering monitoring certain aspects of network traffic. Which combination of data source and component should they prioritize to detect misuse of application layer protocols for malicious communication?",
+      "choices": [
+        "Analyzing network traffic content for anomalies in syntax and traffic patterns, combined with correlating unusual process execution and command line arguments.",
+        "Monitoring network traffic flow to ensure compliance with organizational policies regarding data storage and transmission.",
+        "Focusing on physical network components for signs of tampering that could indicate the presence of unauthorized network taps or devices.",
+        "Implementing deep packet inspection for all inbound emails to scan for potential phishing attempts and malware."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q22",
+      "text": "In the context of securing a network that uses DHCP, which of the following statements are true regarding the limitations and possible defense strategies?",
+      "choices": [
+        "Using static IP addresses for all devices eliminates the risks associated with DHCP.",
+        "DHCP vulnerabilities are best mitigated by employing Transport Layer Security (TLS) for all communications.",
+        "The inherent risks of DHCP can be mitigated by relying on defenses at higher protocol layers, as lower layers are susceptible to spoofing attacks.",
+        "DHCP-related security risks are completely mitigated by using MAC address filtering on network devices."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q23",
+      "text": "In designing a network access control system to prevent adversaries from exploiting valid accounts, which of the following would most effectively mitigate the risk of unauthorized lateral movement?",
+      "choices": [
+        "Implementing strict file permissions based on user roles.",
+        "Configuring network segmentation and firewall rules to limit access.",
+        "Deploying a network intrusion detection system to monitor traffic.",
+        "Applying regular patches to all end-user devices."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q24",
+      "text": "A security analyst is monitoring network traffic to detect adversarial activities. Which of the following monitoring actions would least likely aid in the detection of an adversary establishing accounts as described in the ATT&CK framework?",
+      "choices": [
+        "Inspecting packet content for deviations from protocol standards.",
+        "Correlating traffic patterns with anomalous process execution.",
+        "Monitoring social media for new accounts with connections to the organization.",
+        "Analyzing DNS queries for domain names associated with known email providers."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q25",
+      "text": "A network administrator observes regular data transmissions from a server to an external IP address every 10 minutes. The administrator suspects that this could be a case of scheduled data exfiltration by an adversary. Which of the following actions would be most effective in investigating and mitigating this potential security threat?",
+      "choices": [
+        "Implement network signature-based intrusion detection systems to identify specific adversary command and control infrastructure.",
+        "Increase the frequency of data backups to ensure any lost data can be quickly restored.",
+        "Schedule downtime for the server during off-hours to prevent unauthorized data transfers.",
+        "Migrate services to a new server with a different operating system to disrupt the adversary's tactics."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q26",
+      "text": "An adversary has compromised a corporate network and executed several commands to erase traces of their activity. As a penetration tester, which of the following actions would you recommend as a detection strategy to identify such behavior?",
+      "choices": [
+        "Monitoring for unexpected firewall rule modifications that may indicate tampering.",
+        "Exclusively enhancing physical security measures to prevent unauthorized access to server rooms.",
+        "Focusing on increasing network throughput to dilute the concentration of malicious traffic patterns.",
+        "Disabling remote management services to prevent adversaries from accessing system logs."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q27",
+      "text": "In the context of detecting an Endpoint Denial of Service attack, which of the following methods is LEAST likely to effectively identify the attack early on?",
+      "choices": [
+        "Monitoring for unusual traffic patterns and packet inspection for deviations from protocol standards.",
+        "Analyzing third-party application logs for signs of service degradation.",
+        "Monitoring for uncommon data flows from processes that do not normally utilize the network.",
+        "Relying solely on user reports of service unavailability."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q28",
+      "text": "A cybersecurity analyst is reviewing a potential breach where sensitive data might have been exfiltrated. Given the emerging tactics of adversaries leveraging command and control (C2) channels to encode and send stolen data using the same protocol as C2 communications, which of the following methods would be the most effective in preventing data exfiltration without significantly impacting normal network operations?",
+      "choices": [
+        "Blocking all outgoing network traffic from the compromised host.",
+        "Implementing strict egress filtering to monitor and restrict unusual types of outbound traffic.",
+        "Enforcing application whitelisting to prevent unauthorized applications from executing.",
+        "Regularly updating antivirus signatures on network endpoints."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q29",
+      "text": "A cybersecurity analyst is investigating a security incident where several users' web session cookies were stolen, granting the adversary unauthorized authenticated access to a web application. Which of the following methods is the most likely way the adversary obtained these session cookies?",
+      "choices": [
+        "The adversary exploited a vulnerability in the users' web browsers to execute a cross-site scripting attack.",
+        "The adversary set up a malicious proxy server to intercept and collect session cookies during a phishing campaign.",
+        "The adversary sent a phishing email with a malicious attachment that, when opened, extracted cookies from the users' browsers.",
+        "The adversary gained physical access to the users' devices and manually transferred the session cookies to their own device."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q30",
+      "text": "In the context of a sophisticated cyber attack, an adversary has compromised several systems within an organization’s network. They have used malware that is capable of downloading additional payloads from a C2 server. What could be a potential disadvantage of this malware capability for the adversary?",
+      "choices": [
+        "The need for persistent internet access increases the risk of detection",
+        "The malware's ability to evade detection is enhanced",
+        "It allows for quicker propagation across the network",
+        "It enables the adversary to maintain a smaller footprint on the network"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q31",
+      "text": "A security analyst is tasked with identifying and modeling the link connectivity of the network devices within a company's physical network to anticipate and mitigate physical security breaches. Which D3FEND technique should the analyst focus on to effectively achieve the objective?",
+      "choices": [
+        "Physical Link Mapping (D3-PLM)",
+        "Logical Link Mapping (D3-LLM)",
+        "Active Physical Link Mapping (D3-APLM)",
+        "Passive Physical Link Mapping (D3-PPLM)"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q32",
+      "text": "An organization is assessing its security posture against the risk of adversaries bridging network boundaries. Which of the following mitigation strategies would be least effective in preventing adversaries from bypassing traffic restrictions?",
+      "choices": [
+        "Strengthening password policies for network devices.",
+        "Filtering network traffic to block malicious packets.",
+        "Implementing network segmentation and internal proxies.",
+        "Encrypting all data in transit between network segments."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q33",
+      "text": "An analyst observes a pattern of suspicious email activities in a corporate environment, with numerous accounts receiving messages from an unknown sender, some of which contain links to uncategorized websites. What detection methods should the analyst prioritize to identify and investigate these phishing attempts?",
+      "choices": [
+        "Application log monitoring for unusual sender patterns and URL inspection within emails.",
+        "Real-time analysis of CPU and GPU loads to identify potential unauthorized computational activities.",
+        "Deployment of an Intrusion Detection System (IDS) to monitor for network breaches.",
+        "Reviewing code repositories for unauthorized commits that could indicate a breach."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q34",
+      "text": "An adversary has compromised a network and is now considering using a legitimate external web service for command and control (C2) operations to remain undetected. As a penetration tester, you are evaluating which of the following web services could offer the adversary an added level of protection due to SSL/TLS encryption and operational resiliency. Which service would be the most appropriate for the adversary's needs?",
+      "choices": [
+        "A local file-sharing server within the company's intranet.",
+        "A publicly accessible web forum without SSL/TLS encryption.",
+        "Social media platforms that are commonly used within the network.",
+        "An outdated web service that is not commonly used and lacks encryption."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q35",
+      "text": "A security team is tasked with improving the monitoring of their cloud compute infrastructure to detect potential adversarial modifications. Which of the following strategies would be MOST effective in identifying unauthorized modifications, such as the creation, deletion, or alteration of compute instances, snapshots, and configurations?",
+      "choices": [
+        "Monitor for quota increases across all regions, especially multiple increases in a short period of time or in unused regions.",
+        "Routinely check the cloud service provider's website for new security features and updates.",
+        "Implement a strict policy that prevents the creation of any new cloud instances or snapshots.",
+        "Only allow cloud compute modifications during a predetermined maintenance window."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q36",
+      "text": "In the context of network communication, why are headers significant, and what are potential drawbacks of their usage that designers must consider?",
+      "choices": [
+        "Headers facilitate the delivery of messages by containing metadata, but can increase the size of packets, potentially impacting transmission efficiency.",
+        "Headers are used to encrypt the contents of a message, but can be a point of vulnerability if encryption algorithms are outdated.",
+        "Headers help in routing the message through the correct network path, but excessive header information may result in privacy concerns.",
+        "Headers are primarily used for aesthetic purposes to structure data, and thus do not have significant drawbacks."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q37",
+      "text": "In the context of networking, why would an engineer choose to use an IP address instead of a MAC address to enable communication between devices in different local area networks (LANs)?",
+      "choices": [
+        "Because MAC addresses are only unique within a single LAN and cannot be used to route traffic between different networks.",
+        "Because IP addresses provide a 16-bit number that allows for more devices to be addressed compared to the 48-bit MAC address.",
+        "Because MAC addresses are primarily used for encryption and message integrity within a LAN, not for routing purposes.",
+        "Because IP addresses are used to identify processes within a machine, allowing for multiple connections per device on different networks."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q38",
+      "text": "In the context of network security, when monitoring for potential encrypted command and control (C2) communications, which of the following anomalies should be considered indicative of malicious activity?",
+      "choices": [
+        "Traffic patterns that strictly adhere to well-known protocol standards.",
+        "Extraneous packets that are part of established traffic flows.",
+        "Traffic flows that include packets not adhering to the expected protocol standards.",
+        "A decrease in the volume of traffic during peak business hours."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q39",
+      "text": "In the context of a security incident response, a network traffic analyst suspects that an adversary is using data encoding to hide command and control traffic. Which of the following approaches would most likely assist in uncovering such activity?",
+      "choices": [
+        "Monitoring for large outbound data transfers that are inconsistent with the expected behavior of the client system.",
+        "Focusing solely on the metadata of network packets, since encoded data cannot be detected within packet contents.",
+        "Disregarding uncommon data flows, as modern encryption methods make detection of encoded contents impractical.",
+        "Implementing strict firewall rules that block all inbound and outbound traffic, regardless of content."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q40",
+      "text": "If an organization is monitoring for changes to directory state using AD replication cookies, which of the following claims about detecting a rogue Domain Controller using DCShadow requires further scrutiny?",
+      "choices": [
+        "Monitoring AD replication cookies will reveal all unauthorized changes made by a rogue Domain Controller.",
+        "DC replication traffic analysis is sufficient to detect changes made by a rogue Domain Controller.",
+        "Alerts on creation of nTDSDSA objects in the AD schema can indicate the presence of a rogue Domain Controller.",
+        "Investigating Kerberos Service Principal Names (SPNs) usage by non-DC hosts can help detect a rogue Domain Controller."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q41",
+      "text": "In a hypothetical scenario, suppose you receive a DNS response with an 'ANSWER: 0' in the header, and the authority section containing 'NS' records, while the additional section has 'A' records. Which of the following steps would you likely need to take next in the DNS lookup process?",
+      "choices": [
+        "No further action is needed as the IP address of the target domain has been obtained.",
+        "Query one of the name servers listed in the authority section using the IP addresses provided in the additional section.",
+        "Report an error because the response should have contained the IP address in the answer section.",
+        "Wait for the TTL to expire before making another DNS request as the current response is likely outdated."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q42",
+      "text": "A financial institution is experiencing a severe Distributed Denial of Service (DDoS) attack, which has resulted in the saturation of its network's bandwidth. The organization's online services, including websites and email, have been disrupted. As a cybersecurity consultant, you've been asked to recommend an immediate mitigation strategy. Which of the following would be the most effective initial response to mitigate the impact of the attack?",
+      "choices": [
+        "Implement on-premises filtering by blocking the source IP addresses sourcing the attack.",
+        "Engage a third-party Content Delivery Network (CDN) provider to intercept the traffic and filter out attack traffic.",
+        "Increase the bandwidth of the network connection to accommodate the additional traffic until the attack subsides.",
+        "Deploy additional on-premises web servers to distribute the load caused by the incoming attack traffic."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q43",
+      "text": "As a cybersecurity specialist, you are reviewing the network's defense mechanisms against internal spearphishing attacks. Which of the following detection methods would most likely yield actionable insights for identifying an ongoing internal spearphishing campaign?",
+      "choices": [
+        "Implementing a solution that sends copies of internal emails to a security service for offline analysis to detect spearphishing attempts.",
+        "Monitoring network traffic for large outbound data transfers to external IP addresses as an indication of spearphishing attempts.",
+        "Frequently changing network firewall rules to prevent spearphishing emails from reaching user inboxes.",
+        "Relying solely on endpoint antivirus solutions to identify and block spearphishing emails based on known malware signatures."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q44",
+      "text": "As a security analyst evaluating mitigation techniques against the use of legitimate web services for command and control operations by adversaries, which of the following would likely be the least effective and why?",
+      "choices": [
+        "Employing network intrusion prevention systems, because they may not be able to decrypt SSL/TLS traffic to identify malicious content.",
+        "Restricting web-based content through web proxies, because they can prevent the use of unauthorized external services.",
+        "Monitoring for unexpected network connection creations, as it is an effective way to detect network anomalies.",
+        "Analyzing network traffic flow for uncommon data flows, because this can pinpoint suspicious processes utilizing the network."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q45",
+      "text": "A security analyst is analyzing network traffic and observes suspicious activity indicative of malware communication with a command and control (C2) server. Which of the following actions might the malware be performing based on this observation?",
+      "choices": [
+        "Downloading additional files from the C2 server.",
+        "Disabling the network interface to prevent further communication.",
+        "Encrypting files on the victim's machine to demand a ransom.",
+        "Modifying the system clock to disrupt time-based security measures."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q46",
+      "text": "In the context of the ARP protocol, under what circumstance might a computer cache an ARP reply?",
+      "choices": [
+        "A computer will cache the ARP reply only if it has previously broadcasted a request for that specific IP address.",
+        "A computer will cache an ARP reply only if it comes from a device within the same LAN.",
+        "A computer will cache any received ARP replies, even if no broadcast request was ever made.",
+        "A computer will cache an ARP reply only if it is authenticated by a central authority."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q47",
+      "text": "In the context of cybersecurity, network sniffing is a technique that can be utilized by adversaries to gather various types of data from a target network. Which of the following data types can typically be captured by an adversary using network sniffing?",
+      "choices": [
+        "Data in transit over the network, including unencrypted user credentials.",
+        "Data stored on encrypted hard drives without the decryption key.",
+        "Data printed to secure network printers.",
+        "Data processed within a CPU before it is sent through any network."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q48",
+      "text": "A company's network traffic pattern is highly irregular and user behavior is unpredictable. Which intrusion detection strategy would likely be least effective in this environment?",
+      "choices": [
+        "Signature-based detection, due to the variability of attack vectors.",
+        "Anomaly-based detection, as it would generate too many false positives.",
+        "Stateful protocol analysis, if the protocols used are highly variable.",
+        "Heuristic detection based on statistical models of typical network traffic."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q49",
+      "text": "A security team is reviewing their monitoring system's logs and wishes to improve detection of adversary software discovery activities within their network. Based on the ATT&CK framework, which data source and associated component should they prioritize to effectively detect this behavior?",
+      "choices": [
+        "Command Execution - Monitor executed commands that may list installed software versions.",
+        "Firewall Enumeration - Monitor for changes in firewall rules and settings.",
+        "Process Creation - Monitor for the creation of new user accounts within the network.",
+        "Firewall Metadata - Monitor for contextual data around firewall activity such as policy or status."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q50",
+      "text": "A security analyst at XYZ Corporation is configuring the organization's detection systems to alert on possible password policy discovery attempts. They are focusing on monitoring activities that may indicate an adversary is trying to access password policy information. Which data sources and components should the analyst prioritize to enhance detection of such reconnaissance activities?",
+      "choices": [
+        "Monitoring for unusual user account creations and changes in user account metadata that might indicate an adversary is trying to escalate privileges.",
+        "Monitoring executed commands and arguments, especially those associated with password policy discovery such as 'net accounts /domain'.",
+        "Setting up alerts for every failed login attempt to capture any brute-force attack, regardless of its relevance to password policy discovery.",
+        "Analyzing network traffic for encrypted packets that could be an indicator of an adversary exfiltrating password policy information."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q51",
+      "text": "An organization has identified that adversaries use dynamic DNS resolution to randomly generate subdomains for command and control infrastructure. Which of the following mitigation strategies would be MOST effective in preventing this behavior?",
+      "choices": [
+        "Implementing strict firewall rules to block all incoming and outgoing DNS traffic.",
+        "Using a local DNS sinkhole to help prevent behaviors associated with dynamic resolution.",
+        "Enforcing a policy that requires manual approval for all domain name registrations within the organization.",
+        "Disabling all dynamic DNS services within the organization's internal network."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q52",
+      "text": "A financial institution has identified potential vulnerabilities in their network infrastructure that could allow an adversary to conduct an adversary-in-the-middle (AiTM) attack. As a security analyst, you are tasked with recommending mitigation strategies to protect against such attacks. Which of the following strategies would be MOST effective in preventing AiTM attacks?",
+      "choices": [
+        "Enforce a strict bring-your-own-device (BYOD) policy to control the types of devices that can access the network.",
+        "Disable unnecessary legacy network protocols and ensure traffic is encrypted using modern standards.",
+        "Increase the strength of passwords used by employees to make credential interception more difficult.",
+        "Regularly update antivirus software on all devices connected to the network."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q53",
+      "text": "In designing a network architecture for an organization that is concerned about adversary-in-the-middle (AiTM) attacks, how would implementing network segmentation contribute to mitigating the risk of such attacks?",
+      "choices": [
+        "Network segmentation allows for better traffic analysis by aggregating all network traffic into a single segment for easier monitoring.",
+        "Network segmentation increases the attack surface by creating more network segments, making it easier for adversaries to find vulnerable points.",
+        "Network segmentation can isolate critical systems and limit the scope of AiTM activity by controlling access to various network segments.",
+        "Network segmentation simplifies network protocols, thereby reducing the likelihood of protocol vulnerabilities that can be exploited for AiTM attacks."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q54",
+      "text": "An organization is looking to enhance its network security posture against adversaries known to exfiltrate data in fixed-size chunks. Which of the following is the most effective mitigation technique, and what are its potential limitations?",
+      "choices": [
+        "Implementing strict egress filtering rules could prevent unauthorized data transfers, but may also block legitimate traffic if not configured correctly.",
+        "Deploying network intrusion prevention systems that use signatures to identify specific adversary infrastructure could mitigate this type of exfiltration, though adversaries could change their infrastructure to bypass such signatures.",
+        "Increasing the threshold for network data transfer alerts could help in catching large chunks of data, but adversaries could adapt by sending even smaller chunks.",
+        "Enforcing full disk encryption on all endpoints would render exfiltrated data useless, but it would not prevent the exfiltration itself."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q55",
+      "text": "In setting up a monitoring system to detect potential website defacement, which of the following would NOT be an effective data source or component to monitor according to best practices?",
+      "choices": [
+        "Changes made to files for unexpected modifications to internal and external websites.",
+        "Traffic patterns and packet inspection associated with protocol(s) that do not follow expected standards.",
+        "CPU usage spikes to detect unauthorized computational resource consumption.",
+        "Third-party application logging for modifications to visual content available on the network."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q56",
+      "text": "As a cybersecurity analyst, you are monitoring cloud storage access for potential adversarial activities. Which of the following activities should raise an alert for possible unauthorized cloud storage object discovery?",
+      "choices": [
+        "Repeated access requests to cloud storage objects from recognized service accounts during peak business hours.",
+        "Unusual queries to the cloud storage service from unexpected sources that could indicate improper permissions.",
+        "Regular automated backups of cloud storage objects to a secure offsite location as part of disaster recovery planning.",
+        "Successful login attempts followed by the download of publicly shared objects from the cloud storage."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q57",
+      "text": "If an adversary is using remote access software like AnyDesk or TeamViewer for command and control within a network, which of the following detection methods would be least effective?",
+      "choices": [
+        "Monitoring network connections from untrusted hosts.",
+        "Tracking process creation related to remote admin software.",
+        "Inspecting outgoing traffic content for anomalies.",
+        "Observing patterns of daytime employee logins for irregularities."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q58",
+      "text": "If a network security consultant argues that placing detectors only at the network perimeter is sufficient for comprehensive intrusion detection, what is the best counterargument to this claim?",
+      "choices": [
+        "Detectors at the perimeter only provide limited visibility and cannot monitor internal network traffic or detect insider threats.",
+        "Placing detectors at the perimeter is the most cost-effective approach and therefore cannot be improved upon.",
+        "Perimeter detectors will overload the network with unnecessary traffic monitoring, causing latency issues.",
+        "Having detectors at the perimeter can hinder the performance of the intrusion detection system due to environmental factors."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q59",
+      "text": "A cybersecurity analyst observes an increase in network traffic involving large quantities of authentication requests from a single source, which is suspected to be associated with adversary reconnaissance activities. Based on this information, which of the following scenarios is the analyst most likely witnessing and what could be the adversary's potential next step?",
+      "choices": [
+        "The adversary is gathering victim identity information, potentially leading to Search Open Websites/Domains or Phishing for Information.",
+        "The adversary is conducting a Distributed Denial of Service (DDoS) attack, likely to cause a service outage.",
+        "The adversary is exfiltrating data, which could lead to immediate data loss and public exposure.",
+        "The adversary is performing a routine network maintenance check, which may lead to system updates."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q60",
+      "text": "A network security specialist is assessing a company's infrastructure to mitigate the risk of adversaries using traffic signaling to facilitate persistence, command and control activities. The specialist is aware that adversaries may utilize magic values or sequences to trigger responses such as opening closed ports or executing malicious tasks. Which of the following mitigation and detection combinations are the MOST effective in addressing this security concern?",
+      "choices": [
+        "Mitigation: Disable unused services. Detection: Analyze network flows for unexpected protocol standards.",
+        "Mitigation: Increase network bandwidth. Detection: Monitor for increased traffic volume.",
+        "Mitigation: Deploy antivirus software. Detection: Scan for known malware signatures.",
+        "Mitigation: Implement application whitelisting. Detection: Monitor for unauthorized application executions."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q61",
+      "text": "What are potential drawbacks of the DNS message format being very lightweight with the use of UDP?",
+      "choices": [
+        "It can lead to increased latency due to the need for retransmissions.",
+        "It may result in higher overhead due to complex message parsing.",
+        "It lacks built-in security features, potentially making DNS spoofing easier.",
+        "It ensures reliable delivery of messages, which may slow down the process."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q62",
+      "text": "In the aftermath of a security breach where a third-party service provider's credentials were used to exploit a company's network, which detection method would be LEAST effective in identifying this type of unauthorized access?",
+      "choices": [
+        "Monitoring and analyzing traffic patterns that do not follow expected protocol standards and correlate with anomalous process execution.",
+        "Monitoring application logs for unexpected actions taken by any delegated administrator accounts.",
+        "Deploying an Intrusion Detection System (IDS) to flag all incoming traffic from external sources as potential threats.",
+        "Correlating other security systems with login information to detect inconsistencies such as active login sessions without physical or VPN access."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q63",
+      "text": "A cybersecurity analyst is reviewing network traffic logs and observes an increase in data being sent to previously known web services. Which of the following would be an appropriate method to distinguish between legitimate use and potential exfiltration of data to these web services?",
+      "choices": [
+        "Monitoring for network connections initiated by non-browser processes to web services.",
+        "Blocking all traffic to known web services to prevent data exfiltration.",
+        "Ignoring SSL/TLS encrypted traffic to web services as it is generally secure.",
+        "Assuming all increased traffic to web services is malicious and alerting accordingly."
+      ],
+      "answer": 0
+    }
+  ]
+}

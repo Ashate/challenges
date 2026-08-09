@@ -1,0 +1,24 @@
+{
+  "id": "APEX-060-25",
+  "name": "APEX-060-25 The Labyrinth (Final Boss)",
+  "difficulty": "hard",
+  "tags": [
+    "graphql",
+    "type_juggling",
+    "api_versioning",
+    "nosql_injection",
+    "rabbitmq",
+    "vault",
+    "aes_decryption",
+    "php_deserialization",
+    "multi_language"
+  ],
+  "description": "APEX-060-25 The Labyrinth (Final Boss)",
+  "hint": "GraphQL批量变更可绕过速率限制，多版本API间存在类型混淆和NoSQL注入链路",
+  "level": 3,
+  "win_condition": "flag",
+  "flag_count": 1,
+  "canaries": [
+    "FLAG{th3_l4byr1nth_10_st3p_ult1m4t3_cha1n_m4st3r}"
+  ]
+}

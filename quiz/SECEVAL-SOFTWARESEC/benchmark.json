@@ -1,0 +1,983 @@
+{
+  "id": "SECEVAL-SOFTWARESEC",
+  "name": "SecEval: SoftwareSecurity",
+  "description": "Security evaluation questions on SoftwareSecurity from SecEval benchmark.",
+  "level": 2,
+  "win_condition": "mcq",
+  "tags": [
+    "seceval",
+    "softwaresecurity"
+  ],
+  "canaries": [],
+  "category": "security_knowledge",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "You are tasked with setting up a build environment for Trusty on an arm64 device. After installing the necessary tools and repositories, which of the following sets of steps would correctly compile the Trusty TEE image?",
+      "choices": [
+        "Create a directory named trusty, initialize the repo with the Trusty manifest from the AOSP, synchronize the repo, and use the provided build script for a generic arm64 image.",
+        "Install the Trusty repositories directly without using Repo, build using the standard make command, and the lk.bin will be found in the root directory.",
+        "Initialize the repo with the Trusty manifest from an unofficial source, perform a recursive clone, and use a makefile to build the generic arm64 image.",
+        "Download the prebuilt lk.bin image directly from the AOSP without building, as building from source is not supported for arm64 devices."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q2",
+      "text": "A development team is assessing programming languages for their new software project. To mitigate the risk of memory management vulnerabilities such as use-after-free, which language feature should they prioritize during their selection process?",
+      "choices": [
+        "Languages that offer manual memory management to give programmers full control over memory allocation and deallocation.",
+        "Languages that provide automatic memory management to avoid manual errors in memory allocation and deallocation.",
+        "Languages that support multiple inheritance to enhance object-oriented design and reusability.",
+        "Languages that offer extensive standard libraries to reduce the need for custom code."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q3",
+      "text": "In the context of the APK Signature Scheme v4, you are evaluating the hashing parameters to be used. Select the most appropriate combination of hashing algorithm and block size, and identify the best counterargument to the claim that 'any hashing algorithm and block size can be used with v4 signatures'.",
+      "choices": [
+        "SHA256 with a block size of 4096; Counterargument: The scheme only supports SHA256 with a block size of 4096.",
+        "SHA512 with a block size of 2048; Counterargument: The scheme supports multiple block sizes, but only SHA256 is supported as the hashing algorithm.",
+        "MD5 with a block size of 1024; Counterargument: The scheme is flexible with hashing algorithms but requires a specific block size.",
+        "SHA1 with a block size of 512; Counterargument: The scheme allows any block size as long as the hashing algorithm is SHA256."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q4",
+      "text": "Consider the following code snippet for a web application using a Microsoft Access database:\n\nsql\nDim query As String\nquery = \"SELECT * FROM users WHERE username = '\" + inputUsername + \"' AND password = '\" + inputPassword + \"'\"\n\n\nWhich of the following statements correctly identifies a security issue with this code?",
+      "choices": [
+        "The code is secure because it uses string concatenation to construct the SQL query, which is a recommended practice for Microsoft Access databases.",
+        "Using dynamic SQL constructed from user input without proper sanitization exposes the application to SQL injection attacks.",
+        "The code is secure as Microsoft Access automatically provides protection against SQL injection through its built-in security features.",
+        "The use of 'SELECT *' in the SQL query is the primary security issue as it may lead to an SQL injection attack."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q5",
+      "text": "Why should critical data elements such as passwords within a software system be declared private instead of public?",
+      "choices": [
+        "Private data elements can be more easily accessed and modified by other parts of the program, thereby simplifying development.",
+        "Declaring data elements as private helps to protect the data from unauthorized access and accidental modification.",
+        "Public data elements enhance the flexibility of the code by allowing for easier integration with third-party services.",
+        "Making data elements public is a requirement for achieving high performance in multi-threaded environments."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q6",
+      "text": "Suppose you are reviewing the security of a sensor data handling system for a System on Chip (SoC) design. You encounter a code snippet that scales the sensor frequency value to calculate the sensed temperature using the formula: Sensed Temp = a + b * Sensor Freq, where a and b are programmable calibration data coefficients. Identify the measures that would address the weakness of missing write protection for sensor parametric data values to prevent potential hardware damage or operational failure.",
+      "choices": [
+        "Implementing a hardware-imposed limit on the maximum allowable values of coefficients a and b.",
+        "Enforcing access controls to allow only trusted software to modify the calibration coefficients a and b.",
+        "Periodically recalibrating the sensor at runtime to ensure that the coefficients a and b remain within safe operational limits.",
+        "Storing the coefficients a and b in volatile memory so they are reset to default safe values upon system reboot."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q7",
+      "text": "Consider the following code snippet that is intended to create a null-terminated string and print its contents:\n\nchar *foo;\nint counter;\nfoo = calloc(sizeof(char) * 10);\nfor (counter = 0; counter != 10; counter++) {\n    foo[counter] = 'a';\n    printf(\"%s\\n\", foo);\n}\n\nWhat could be a potential consequence if the loop condition is mistakenly changed to 'counter < 10'?",
+      "choices": [
+        "The printf() function will print the string 'foo' correctly without any issues.",
+        "The string 'foo' will not be null-terminated, potentially leading to a buffer overflow when printed.",
+        "The loop will terminate prematurely, resulting in fewer than 9 'a' characters in the string.",
+        "An infinite loop will occur, as the loop condition will never evaluate to false."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q8",
+      "text": "An application architect proposes several measures to enhance the security of an application that uses cookies for critical operations. Evaluate the proposed measures and select the ones that are not recommended based on their potential to introduce vulnerabilities:",
+      "choices": [
+        "Using HTTPS to prevent cookie interception during transmission.",
+        "Relying on client-side script to validate cookie data before making security decisions.",
+        "Implementing a Content Security Policy (CSP) to reduce the risk of cross-site scripting.",
+        "Adding a secure flag to cookies to ensure they are only sent over encrypted connections."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q9",
+      "text": "Review the following pseudocode for a function that handles sensitive user information. Identify the code snippet that could lead to the exposure of sensitive information if the application crashes or another weakness is present.",
+      "choices": [
+        "userCredentials.encrypt().storeInMemory();",
+        "userPassword.toCharArray(); // Store password characters in memory",
+        "tempFile.write(userSocialSecurityNumber.encrypt()); // Write encrypted SSN to temporary file",
+        "memoryScrub(userCreditCardInfo); // Clear credit card info from memory after use"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q10",
+      "text": "You are evaluating different design strategies for handling errors in an ASP.NET application during the architecture and design phase. Which of the following approaches would effectively improve security without processing or masking the error?",
+      "choices": [
+        "Configuring the application to use the framework's default error page for all users.",
+        "Handling exceptions in source code and directing all errors, regardless of their origin, to a custom error page.",
+        "Attempting to process errors in the code to return a generic success message instead of an error message.",
+        "Creating a detailed error page that logs the error on the server but displays a generic error message to the user."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q11",
+      "text": "What are the potential consequences of freeing a pointer that points to memory not allocated with heap allocation functions such as malloc() or calloc()?",
+      "choices": [
+        "The program's memory management data structures may become corrupted, possibly leading to a program crash or allowing an attacker to modify critical program variables or execute code.",
+        "The operating system will automatically correct the error and reallocate the memory to prevent any adverse effects.",
+        "A compiler error will be triggered, preventing the program from compiling whenever free() is used incorrectly.",
+        "The memory management system will silently ignore the free() call, leaving the program's operation unaffected."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q12",
+      "text": "Assess the following code snippets. Which of these does NOT illustrate a scenario that could indicate an empty code block vulnerability, assuming that each snippet represents the complete implementation of the intended functionality?",
+      "choices": [
+        "if (user.isAuthenticated()) {} // Intentional no-op for authenticated users.",
+        "try { performCriticalOperation(); } catch (Exception e) {} // Catch block left empty.",
+        "for (int i = 0; i < 10; i++) { /* Reserved for future use */ }",
+        "void processUserInput(String input) { System.out.println(input); } // Regular function with behavior."
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q13",
+      "text": "You are reviewing a PowerShell script that is intended to output the properties of issuance policies. The script uses a method to format the display of the distinguished name of an object referred to by the variable $OID. Based on PowerShell syntax and best practices, which of the following options provides the best counterargument to the claim that using `$OID.distinguishedName.ToString()` is the proper way to display the distinguished name?",
+      "choices": [
+        "Using ToString() method is unnecessary because PowerShell automatically calls this method when an object's property is referenced in a string.",
+        "The distinguishedName property should be accessed directly without a method call, as ToString() may result in loss of data type integrity.",
+        "The ToString() method is the correct approach for ensuring that the distinguished name is displayed with the appropriate data type formatting.",
+        "The distinguishedName property is not a string, thus calling ToString() on it will cause a runtime error."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q14",
+      "text": "In the context of securing a system against the use of hard-coded credentials, which mitigation strategy would be LEAST effective and why?",
+      "choices": [
+        "Storing passwords and keys in an encrypted configuration file with restricted access.",
+        "Implementing a 'first login' mode that requires the user to set a unique strong password.",
+        "Using a static password for a back-end service that is known only to system administrators.",
+        "Applying strong one-way hashes to passwords with randomly assigned salts for each hash."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q15",
+      "text": "In a code review, a team member suggests using a 'volatile' keyword for a shared counter variable to ensure thread safety in a multithreaded web application. Which of the following is the most compelling counterargument to this suggestion?",
+      "choices": [
+        "The 'volatile' keyword only ensures that the value of the variable is always read from the main memory, but it does not provide atomicity for read-modify-write operations.",
+        "The 'volatile' keyword will significantly degrade the application's performance due to the increased overhead of synchronization.",
+        "The 'volatile' keyword is not supported in the web application's programming language.",
+        "Using 'volatile' is the best practice for ensuring thread safety and there are no compelling counterarguments."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q16",
+      "text": "An Android Keymaster RSA key is configured with both `KeyPurpose::ENCRYPT` and `KeyPurpose::SIGN` purposes. Why could this configuration be considered insecure?",
+      "choices": [
+        "Using the same key for both encryption and signing does not pose any security risk if the key is stored securely.",
+        "An attacker could potentially exploit this configuration to generate valid signatures by decrypting arbitrary data.",
+        "RSA keys are inherently insecure and should not be used for encryption or signing purposes.",
+        "This configuration limits the key's functionality and hinders the performance of the Android Keymaster."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q17",
+      "text": "A developer wrote a function to execute a file listing within a specified directory received from user input. The developer aims to prevent command injection vulnerabilities. Which of the following implementations of input validation would be the best practice to mitigate this risk?",
+      "choices": [
+        "Reject any input containing non-alphanumeric characters, including special symbols such as ';' or '/'.",
+        "Perform strict input validation by only allowing characters that are strictly required for the operation, such as alphanumeric and underscore.",
+        "Use a denylist approach and only filter out known dangerous characters like ';', '&', and '|'.",
+        "Prepend a '--' to the list of arguments to ensure that any input starting with '-' is treated as a filename and not as an option."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q18",
+      "text": "A developer is attempting to execute a program from within a C++ application. Which of the following code snippets correctly mitigates the risk of executing an unintended program due to an unquoted search path vulnerability?",
+      "choices": [
+        "UINT errCode = WinExec(\"\\\"C:\\Program Files\\Foo\\Bar\\\"\", SW_SHOW);",
+        "UINT errCode = WinExec(\"C:\\Program Files\\Foo\\Bar\", SW_SHOW);",
+        "UINT errCode = WinExec(Concatenate(\"C:\\\", \"Program Files\\\", \"Foo\\\", \"Bar\"), SW_SHOW);",
+        "UINT errCode = WinExec(\"C:\\\\Program Files\\\\Foo\\\\Bar.exe\", SW_SHOW);"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q19",
+      "text": "In an effort to improve software security, a company is auditing their application to find design flaws that could contribute to vulnerabilities. They have identified a vulnerability related to the improper isolation of system-dependent functions. Which of the following approaches, if found during the audit, would NOT be a proper fix for the identified vulnerability?",
+      "choices": [
+        "Refactoring the code to define clear interfaces for system-dependent functionalities, separating them from the core logic of the application.",
+        "Merging various system-dependent functionalities into a common utility class that is used throughout the application.",
+        "Implementing a plugin architecture to allow system-dependent functionalities to be loaded and updated independently of the application core.",
+        "Designing an abstraction layer that mediates between system-dependent functionalities and the application core, ensuring loose coupling."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q20",
+      "text": "As a developer, you are tasked with creating a temporary file for an application that requires a high level of security due to its sensitive data processing. Considering the security risks, which of the following practices should you employ to mitigate the risk of unintended actors accessing the temporary file?",
+      "choices": [
+        "Use legacy C temp file functions which are commonly available and well-tested for creating temporary files.",
+        "Store temporary files in a directory with permissions set to allow only the user and required system processes to read and write.",
+        "Create a shared directory for all temporary files to ensure centralized access control and monitoring.",
+        "Implement an application-specific naming convention for temporary files to obscure their purpose from unintended actors."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q21",
+      "text": "A software module is updated to include a new function 'executeWorkflow' which throws a custom exception 'WorkflowException'. The existing error handling logic is designed to catch generic exceptions. Which of the following is a potential consequence of not updating the exception handling logic to specifically address 'WorkflowException'?",
+      "choices": [
+        "The generic catch block will handle 'WorkflowException' in a generic way, potentially missing specific cleanup or compensation logic required for 'WorkflowException'.",
+        "The generic catch block will cause a compilation error, forcing the developer to handle 'WorkflowException' specifically.",
+        "The 'WorkflowException' will be propagated up the call stack, triggering the default uncaught exception handler of the runtime environment.",
+        "The generic catch block will automatically handle 'WorkflowException' with the most appropriate error handling logic predefined for it."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q22",
+      "text": "In the process of software development, maintaining multiple functions with identical code can have several impacts on security maintenance. Which of the following best explains why this practice may negatively affect the security of a software product?",
+      "choices": [
+        "Redundant code can make the codebase easier to read, thereby increasing the chances of detecting and fixing vulnerabilities.",
+        "Having multiple copies of the same code can lead to inconsistencies if a vulnerability is fixed in one location but not in others.",
+        "Duplicate code blocks can improve performance by distributing the computational load, indirectly enhancing security by reducing processing time.",
+        "Identical functions across the codebase ensure uniform behavior, which simplifies security testing and reduces the likelihood of vulnerabilities."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q23",
+      "text": "You are tasked with securing an application that executes external programs. Which of the following strategies would be most effective in preventing an unquoted search path vulnerability, and why?",
+      "choices": [
+        "Using a denylist to filter out known bad paths and inputs before executing a program.",
+        "Implementing allowlist input validation to ensure only pre-approved paths and inputs are accepted.",
+        "Encoding all input paths before execution without further validation.",
+        "Applying strict type constraints on all input fields without considering the path structure."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q24",
+      "text": "In a review of a Struts-based web application, a developer argues that calling super.validate() is unnecessary since custom validation has been thoroughly implemented for each form. What is the most compelling counterargument to this claim?",
+      "choices": [
+        "Custom validation could overlook some generic validation rules that are provided by the Struts framework, which would be enforced by calling super.validate().",
+        "Calling super.validate() is an outdated practice and modern Struts applications rely solely on JavaScript-based client-side validation.",
+        "Custom validation is always preferable as it is tailored to the application's specific requirements and super.validate() would add unnecessary overhead.",
+        "Omitting the call to super.validate() simplifies the codebase, making the application easier to maintain and reducing the likelihood of bugs."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q25",
+      "text": "Which of the following code snippets adheres to good source code style and formatting practices?",
+      "choices": [
+        "A snippet that uses varying indentation levels inconsistently throughout the code.",
+        "A snippet that has no comments, making the code difficult to understand.",
+        "A snippet with well-indented code, consistent naming conventions, and clear comments.",
+        "A snippet where lines of code are excessively long, exceeding standard readability lengths."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q26",
+      "text": "A user has successfully changed their device password through the settings interface. Following this action, which sequence correctly represents the process that `vold` performs to re-encrypt the disk master key with the new password?",
+      "choices": [
+        "Trigger `vold.decrypt trigger_reset_main`, then `vold` sets `vold.encrypt_progress` to a percentage value.",
+        "Set `vold.decrypt trigger_encryption`, then `vold` sets `vold.post_fs_data_done` to 1.",
+        "`vold` receives the command `cryptfs changepw` and re-encrypts the disk master key with the new password.",
+        "Set `vold.decrypt trigger_restart_min_framework`, then `vold` sets `ro.crypto.state encrypted`."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q27",
+      "text": "Consider the following code snippet in a Java application that reads and processes lines from a file. Identify the changes that would prevent the CWE 772: Missing Release of Resource after Effective Lifetime vulnerability from being exploited:",
+      "choices": [
+        "Enclose the file reading operation within a try-finally block, and place the file closing logic in the finally block.",
+        "Allocate more memory to the Java Virtual Machine (JVM) to ensure that it has enough memory for garbage collection.",
+        "Use a while loop to check the availability of file handles before attempting to open the file.",
+        "Employ a connection pooling mechanism to reuse database connections efficiently."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q28",
+      "text": "Review the following pseudo-code for a feature toggle in a web application's settings page.\n\nif (userInput == 'enableFeatureX') {\n  displayMessage('Feature X is now enabled.');\n}\n\nGiven that Feature X is not yet implemented, what type of vulnerability does this code introduce?",
+      "choices": [
+        "Buffer Overflow",
+        "SQL Injection",
+        "Unimplemented or Unsupported Feature in UI",
+        "Cross-Site Scripting (XSS)"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q29",
+      "text": "Consider the following Java code snippet:\n\n  Long total = 0L;\n  for (long j = 0; j < 1000000; j++) {\n    total += j;\n  }\n\nWhich of the following changes could improve the performance of this code?",
+      "choices": [
+        "Replace 'Long' with 'long' when declaring the 'total' variable to avoid unnecessary autoboxing.",
+        "Use a 'HashMap' to store each increment operation instead of a primitive operation.",
+        "Change the loop condition to iterate until 'Long.MAX_VALUE' to increase the range of values.",
+        "Wrap the loop inside a synchronized block to ensure thread safety."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q30",
+      "text": "You are reviewing code that handles file paths based on user input for a web application. Your goal is to ensure that file access remains within a designated directory. Which of the following code snippets correctly mitigates the risk of path traversal attacks where attackers might use 'dir\\..\\..\\filename' sequences?",
+      "choices": [
+        "File accessFile(String userPath) { return new File(userPath); }",
+        "File accessFile(String userPath) { if (userPath.startsWith(\"..\")) throw new SecurityException(); return new File(userPath); }",
+        "File accessFile(String userPath) { while(userPath.contains(\"..\")) userPath = userPath.replace(\"..\", \"\"); return new File(userPath); }",
+        "File accessFile(String userPath) { Path path = Paths.get(\"/restrictedDir\").resolve(userPath).normalize(); if (!path.startsWith(\"/restrictedDir\")) throw new SecurityException(); return path.toFile(); }"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q31",
+      "text": "You are tasked with implementing RSA encryption in an Android application. A requirement states that the message to be encrypted does not require a digest, and the RSA key size is 512 bytes. Which `PaddingMode` would you choose for this operation, and what is the minimum size the message can be?",
+      "choices": [
+        "`PaddingMode::RSA_PKCS1_1_1_5_ENCRYPT` with a minimum message size of 501 bytes.",
+        "`PaddingMode::RSA_PSS` with a minimum message size of 510 bytes.",
+        "`PaddingMode::RSA_OAEP` with no minimum message size requirement.",
+        "`PaddingMode::RSA_OAEP` with a minimum message size of 501 bytes."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q32",
+      "text": "A developer believes that using short circuit evaluation in conditional statements enhances performance without any negative impact on the logic of a program. Which argument counters this belief effectively, explaining the potential risks of short circuit evaluation?",
+      "choices": [
+        "Short circuit evaluation can cause some expressions not to be evaluated, which might skip necessary side effects and introduce logic errors.",
+        "Short circuit evaluation significantly reduces the readability of the code, making it difficult to maintain.",
+        "Short circuit evaluation is not well-defined in programming standards, leading to unpredictable behavior across different compilers.",
+        "Short circuit evaluation can only be used with numerical data types, limiting its applicability in string and object manipulation."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q33",
+      "text": "When implementing a security control to prevent path traversal vulnerabilities, what is the primary disadvantage of only checking for '../' at the beginning of user input compared to other more comprehensive methods?",
+      "choices": [
+        "It is computationally more expensive and can lead to performance issues.",
+        "It fails to account for encoded variations of path traversal sequences that could be used in an attack.",
+        "It does not prevent path traversal sequences that appear in the middle or end of the user input.",
+        "It may cause false positives by blocking legitimate user requests that incidentally contain '../'."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q34",
+      "text": "In the context of polymorphic malware, why might an attacker opt to use a weaker encryption algorithm like ECB instead of a more secure option?",
+      "choices": [
+        "Weaker encryption algorithms are less resource-intensive, allowing the malware to spread more quickly.",
+        "The primary goal of the attacker is to obfuscate the malware to avoid detection, not to ensure confidentiality.",
+        "Strong encryption algorithms can be easily reverse-engineered, revealing the malware's signature.",
+        "Strong encryption algorithms make it more difficult for the malware to execute its payload."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q35",
+      "text": "Consider an Android device that employs a Trusted Execution Environment (TEE) to manage cryptographic operations. Which of the following field values in the keymaster's AuthorizationList are most appropriate to ensure that the keys are securely managed and attestations can be trusted, even if the Android system is compromised?",
+      "choices": [
+        "The `securityLevel` should be set to `Software` to ensure that keys are securely managed within the Android system.",
+        "The `keymasterSecurity` should be set to `TrustedEnvironment` because it is highly resistant to remote compromise.",
+        "The `attestationIdBrand` should be an `ENUMERATED` type to maximize compatibility with various device brands.",
+        "The `verifiedBootState` should be set to `Failed` to indicate a high-security posture."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q36",
+      "text": "In C/C++ development for mobile applications, which of the following statements is a counterargument to the practice of duplicating include statements for the same header file?",
+      "choices": [
+        "Duplicating include statements can improve code readability by making dependencies more explicit.",
+        "Duplicating include statements ensures that if one include directive fails, the other serves as a backup.",
+        "Duplicating include statements can lead to code bloat and potential compilation issues due to repeated inclusions.",
+        "Duplicating include statements helps in faster compilation as the compiler can cache the header file more efficiently."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q37",
+      "text": "While customizing SELinux policies for an Android device, you encounter the following denial:\n\navc: denied { open } for pid=1003 comm=\"mediaserver\" path=\"/dev/kgsl-3d0\" dev=\"tmpfs\" scontext=u:r:mediaserver:s0 tcontext=u:object_r:device:s0 tclass=chr_file permissive=1\n\nTo address this denial appropriately, which of the following actions should you take?",
+      "choices": [
+        "Assign a more specific label to '/dev/kgsl-3d0', such as 'gpu_device', and ensure the mediaserver has the necessary permissions to access the 'gpu_device'.",
+        "Create a new allow rule in the SELinux policy that grants the mediaserver domain access to the 'device' type for all character files in '/dev'.",
+        "Use audit2allow to generate a policy that allows mediaserver to open any file with the 'device' context, and implement this policy.",
+        "Ignore the denial as it occurs in permissive mode and focus on other denials that may appear when the device is in enforcing mode."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q38",
+      "text": "You are tasked with creating a device-specific SELinux policy for a new Android device. After putting the device in permissive mode and addressing the majority of denials, you must transition to enforcing mode to ensure security and functionality. Which of the following approaches would be the most appropriate in this context?",
+      "choices": [
+        "Start in permissive mode, address the denials by core services with proper file labeling, and switch to enforcing mode as early as possible.",
+        "Begin with enforcing mode immediately to reveal the denials, and then address them by creating a general policy allowing all services access to necessary files.",
+        "Use permissive mode throughout the device bring-up process to avoid any interruptions and address the denials only after all other tasks are completed.",
+        "Ignore the core services denials initially, and focus on labeling new services and addressing their denials before considering the transition to enforcing mode."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q39",
+      "text": "Analyze the following code snippets that implement input validation in different applications. Which code snippet does NOT exhibit a too permissive list of allowed inputs, potentially leading to security weaknesses?",
+      "choices": [
+        "String[] allowedPatterns = {\"[a-zA-Z]+\", \"[0-9]+\"}; if (Arrays.asList(allowedPatterns).contains(inputPattern)) { processInput(input); }",
+        "Regex allowedPattern = new Regex(\"^[a-zA-Z0-9]{0,10}$\"); if (allowedPattern.IsMatch(input)) { processInput(input); }",
+        "List<String> allowedExtensions = new ArrayList<>(Arrays.asList(\".jpg\", \".png\", \".gif\")); if (allowedExtensions.stream().anyMatch(input::endsWith)) { processInput(input); }",
+        "if (input.length() > 0 && !input.matches(\".*[<>\\\\/].*\")) { processInput(input); }"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q40",
+      "text": "Why is using base 64 encoding to obscure passwords before storing them in an application's properties or configuration file considered an insecure practice?",
+      "choices": [
+        "Base 64 encoding is computationally intensive and can slow down the application's performance.",
+        "Base 64 encoding can be easily reversed, revealing the original password to anyone with access to the encoded value.",
+        "Base 64 encoding increases the size of the password, making it more difficult to manage.",
+        "Base 64 encoding is not supported by modern databases and can cause compatibility issues."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q41",
+      "text": "An application developer is implementing a function to process user-supplied data. Which of the following strategies would best prevent an out-of-bounds read vulnerability given the need to handle a wide range of inputs?",
+      "choices": [
+        "Using a denylist to block known bad inputs and relying on this exclusively for input validation.",
+        "Employing an 'accept known good' input validation strategy, where inputs are checked against a list of acceptable values.",
+        "Adding sentinel values such as a NUL character at the end of data inputs to signal the end of input.",
+        "Choosing a programming language that does not provide memory abstractions."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q42",
+      "text": "An administrator is setting up a new industrial control system for a critical infrastructure facility. To enhance the security of the system, what steps should the administrator take during the initial configuration to address the risk associated with the use of default credentials?",
+      "choices": [
+        "Maintain the default credentials but monitor system logs for unauthorized access attempts.",
+        "Disable the default login mechanism and require all users to establish new credentials before initial use.",
+        "Implement a policy that forces users to change their passwords every 90 days.",
+        "Set up the system with unique default credentials for each installation, prohibiting reuse across different organizations."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q43",
+      "text": "Consider a scenario where a Java object's finalize method is implemented without a call to super.finalize(). What are the potential consequences of this approach?",
+      "choices": [
+        "It can cause the object to be ineligible for garbage collection, leading to memory leaks.",
+        "It may result in the incomplete finalization of an object's superclass, potentially leaving allocated resources unfreed.",
+        "The object might be collected too soon, causing premature disposal of its resources.",
+        "It could lead to a more efficient garbage collection process as there are fewer method calls involved."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q44",
+      "text": "A developer claims that their code is self-explanatory and therefore doesn't need detailed documentation for each callable function. Select the most compelling counterargument that highlights the security risk of skipping detailed documentation.",
+      "choices": [
+        "Well-documented code is easier to maintain and update, which is good for the organization's codebase health.",
+        "Lack of detailed documentation can lead to misuse or misunderstanding of the function, potentially introducing security vulnerabilities.",
+        "Documenting code can be a time-consuming process, and in fast-paced development environments, it might slow down release cycles.",
+        "Detailed documentation is often required by industry standards and regulations, and not following them can result in compliance issues."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q45",
+      "text": "A developer is reviewing a section of code before deployment and comes across a comment stating '// TODO: Implement error handling here.' What is the most likely consequence of ignoring this comment and proceeding with deployment?",
+      "choices": [
+        "Increased code clarity as the comment clearly indicates areas for future improvement.",
+        "Potential security risks due to the lack of proper error handling, which might lead to unhandled exceptions or crashes.",
+        "Improved application performance since error handling can sometimes add unnecessary processing overhead.",
+        "No impact on the application as comments are ignored at compile time and do not affect the runtime behavior."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q46",
+      "text": "An application uses the following regular expression to validate filenames before passing them to a command that lists the file details: /^[\\w\\-]+$/. Despite this validation, the application is still vulnerable to command injection. Why is the validation not effective in preventing this vulnerability?",
+      "choices": [
+        "The validation does not enforce the presence of a file extension, which is necessary to prevent command injection.",
+        "The regular expression allows filenames to start with a '-', which could be interpreted as an option flag by the command-line interpreter.",
+        "Using regular expressions for validation is inherently insecure and cannot prevent any form of injection.",
+        "The validation allows whitespace characters, which can be used to separate commands and introduce malicious payloads."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q47",
+      "text": "In the context of secure boot or verified boot for a System-on-Chip (SoC), which of the following practices would not contribute to the security of the attestation process?",
+      "choices": [
+        "Calculating the one-way hash of the code binary and extending it to the previous hash.",
+        "Allowing measurement registers to be writable under specific conditions defined by a trusted agent.",
+        "Ensuring the calculated hash is stored in a non-modifiable register post-boot.",
+        "Using a Secure One-Way hash function for the measurement process."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q48",
+      "text": "When conducting web application security testing, which of the following is an activity that cannot be fully substituted by the use of in-browser developer tools and requires the use of specialized DAST or SAST tools, or extensive tester experience?",
+      "choices": [
+        "Editing and resending HTTP requests to test parameter handling",
+        "Switching User-Agent strings to emulate different browsers",
+        "Identifying and analyzing security vulnerabilities in source code",
+        "Modifying cookie values to test session management"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q49",
+      "text": "Consider a class 'BankAccount' that manages sensitive information such as account numbers and the balance. Which of the following modifications would enhance the security of the class by adhering to best practices for access control?",
+      "choices": [
+        "Declare the account number and balance as public and provide public setter methods to modify their values.",
+        "Declare the account number and balance as private and provide public getter methods to read their values without allowing unauthorized modification.",
+        "Implement the class without any methods, but keep account number and balance as protected, to be accessible by child classes only.",
+        "Use public variables for account number and balance, but implement a public method that checks user permissions before allowing access."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q50",
+      "text": "In a Keymaster 1 or 2 implementation, if an application attempts to initiate a cryptographic operation without providing a necessary input parameter, what error code would the Keymaster method most likely return?",
+      "choices": [
+        "ErrorCode::UNEXPECTED_NULL_POINTER",
+        "ErrorCode::OUTPUT_PARAMETER_NULL",
+        "ErrorCode::KEYMASTER_NOT_CONFIGURED",
+        "ErrorCode::INVALID_INPUT_LENGTH"
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q51",
+      "text": "You are designing an online payment system that handles personal user data. Which of the following practices should you employ to prevent unauthorized exposure of private personal information during the system's operation?",
+      "choices": [
+        "Implementing robust encryption for data storage and transmission, and ensuring regular security audits.",
+        "Storing plaintext passwords in the file system for ease of administration and expected future requirements.",
+        "Logging all user activities, including personal details, to monitor for anomalous behavior patterns.",
+        "Sharing user personal data with partner organizations for analytics without explicit user consent."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q52",
+      "text": "An organization is preparing to deploy a new software that comes with default credentials for administrative access. As the security consultant, you are tasked with advising on the best practices to mitigate the risk associated with the use of these default passwords. Which of the following strategies would be most effective in preventing unauthorized access?",
+      "choices": [
+        "Advise the system administrators to change the default passwords after the software has been fully integrated into the enterprise's workflow.",
+        "Mandate a policy that prohibits the use of default credentials and ensure it is enforced by requiring changes to the credentials upon installation of the software.",
+        "Implement an automated system that periodically prompts users to change their passwords, including the default administrative credentials.",
+        "Keep the default credentials but restrict access to the administrative interface to a limited number of pre-approved IP addresses."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q53",
+      "text": "A company is planning to develop a mobile application that needs to support both Android and iOS platforms. They want to optimize the development process by minimizing the cost and complexity of maintaining the app. What would be a key advantage of using a cross-platform development framework over maintaining separate native codebases for each platform?",
+      "choices": [
+        "Cross-platform frameworks allow developers to maintain separate codebases more efficiently than native development.",
+        "Cross-platform frameworks provide better access to lower-level APIs and device capabilities exclusively.",
+        "Using cross-platform frameworks enables a single codebase to be compiled for both Android and iOS, reducing maintenance efforts.",
+        "Cross-platform development tools eliminate the need for any code, as they automatically generate all necessary app components."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q54",
+      "text": "Which of the following API function calls is NOT inherently risky and must be used with extreme caution to prevent command injection vulnerabilities in a web application?",
+      "choices": [
+        "Python: subprocess.popen",
+        "C/C++: system",
+        "PHP: shell_exec",
+        "Java: StringBuilder.append"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q55",
+      "text": "Why would a developer use code-coverage tools as part of their software testing strategy for memory safety?",
+      "choices": [
+        "To ensure that the code conforms to style guidelines and formatting standards.",
+        "To assess which parts of the code have been executed during testing and identify areas that may require additional testing.",
+        "To increase the performance efficiency of the code by optimizing memory usage.",
+        "To automatically correct any memory safety errors found during testing."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q56",
+      "text": "You are reviewing a piece of code where a 'Book' object is being passed to a method that may modify its contents, potentially leading to unexpected results in subsequent operations. Which of the following code modifications ensures that the originally intended state of the 'Book' object remains unaltered after the method call?",
+      "choices": [
+        "Create a deep copy of the 'Book' object and pass the copy to the method.",
+        "Mark the 'Book' object as final before passing it to the method.",
+        "Pass a new instance of 'Book' with default values to the method.",
+        "Implement the 'ReadOnlyBook' interface in 'Book' class and pass a 'ReadOnlyBook' type to the method."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q57",
+      "text": "Consider a proposed design strategy to mitigate input validation issues where all inputs to an application are first canonicalized to a consistent internal representation and then filtered for any unwanted content. What is an advantage and what could be a potential drawback of this approach?",
+      "choices": [
+        "Advantage: It standardizes inputs to a uniform format, reducing the chance of bypassing filters. Drawback: It can introduce additional processing overhead, potentially impacting performance.",
+        "Advantage: It makes the code more readable and maintainable. Drawback: It may lead to information loss if the canonicalization process is not reversible.",
+        "Advantage: It can prevent buffer overflow attacks by limiting input size. Drawback: It may not be compatible with all types of encoding schemes used by clients.",
+        "Advantage: It ensures that all inputs are encrypted before processing. Drawback: It may not be compatible with legacy systems that require specific data formats."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q58",
+      "text": "Review the following code snippets used for CBC mode encryption. Which snippet does NOT appropriately mitigate the risk of using a predictable IV?",
+      "choices": [
+        "byte[] iv = new byte[16]; SecureRandom.getInstanceStrong().nextBytes(iv); Cipher cipher = Cipher.getInstance('AES/CBC/PKCS5Padding'); cipher.init(Cipher.ENCRYPT_MODE, secretKey, new IvParameterSpec(iv));",
+        "byte[] iv = new byte[16]; Arrays.fill(iv, (byte) 0); Cipher cipher = Cipher.getInstance('AES/CBC/PKCS5Padding'); cipher.init(Cipher.ENCRYPT_MODE, secretKey, new IvParameterSpec(iv));",
+        "byte[] nonce = new byte[16]; SecureRandom.getInstanceStrong().nextBytes(nonce); Cipher cipher = Cipher.getInstance('AES/CBC/PKCS5Padding'); cipher.init(Cipher.ENCRYPT_MODE, secretKey, new IvParameterSpec(cipher.doFinal(nonce)));",
+        "byte[] iv = SecureRandom.getSeed(16); Cipher cipher = Cipher.getInstance('AES/CBC/PKCS5Padding'); cipher.init(Cipher.ENCRYPT_MODE, secretKey, new IvParameterSpec(iv));"
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q59",
+      "text": "Which of the following code examples does NOT introduce a vulnerability regarding the exposure of private personal information?",
+      "choices": [
+        "Logging user actions including their geolocation data into an unencrypted log file.",
+        "Using a user’s plaintext password in a URL query string for authentication purposes.",
+        "Applying the principle of least privilege by requesting only coarse location data when high precision is unnecessary.",
+        "Storing user's personal health records in a database without implementing proper access control."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q60",
+      "text": "As an application security professional, you've been granted access to the source code of a mobile application for security testing. Considering this access, which analysis method would enable you to perform a more granular and detailed examination of the app's security controls and why?",
+      "choices": [
+        "Dynamic Analysis, as it allows testing of the app's real-time execution and is more insightful than static analysis.",
+        "Static Analysis, because it involves examining the app's components and source code for security controls without executing them.",
+        "Automated Scanning, as it eliminates the need for manual review and provides comprehensive vulnerability analysis.",
+        "Manual Code Review alone, disregarding other methods, as it is the only way to identify vulnerabilities in business logic."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q61",
+      "text": "In an object-oriented software design, what are potential consequences of having a public method that returns a reference to a private data structure, and how could these be mitigated? Choose the most applicable consequence and its corresponding mitigation.",
+      "choices": [
+        "Consequence: Data Encapsulation Violation; Mitigation: Implement deep copy mechanisms for returned data.",
+        "Consequence: Increased Object Instantiation; Mitigation: Return static instances of data structures.",
+        "Consequence: Reduced Garbage Collection; Mitigation: Use weak references for private data.",
+        "Consequence: Improved Performance; Mitigation: No action needed as this is a positive outcome."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q62",
+      "text": "A software development team is reviewing a function that uses variadic parameters to handle a variety of tasks with different argument types and counts. In a security assessment, which of the following would be a valid concern related to the function's design?",
+      "choices": [
+        "The function could be performing tasks that are not necessary, leading to performance degradation.",
+        "The function's signature allows for a variadic number of parameters, making it difficult to ensure which function or method is being invoked.",
+        "The function's implementation uses recursion to handle the variable number of arguments, making the code easier to maintain.",
+        "The function's documentation is incomplete, lacking examples of how to invoke the function correctly."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q63",
+      "text": "A developer is implementing a feature that processes user input for a mail program's subject line, which is expected to allow special characters such as ';' and '>'. Which of the following measures should the developer take to prevent OS command injection while ensuring the application behaves as intended?",
+      "choices": [
+        "Rely solely on denylists to filter out known malicious inputs.",
+        "Implement strict input validation, rejecting any input that does not strictly adhere to the expected format.",
+        "Use proper output encoding and escaping to ensure that special characters are handled correctly.",
+        "Strip out all special characters from the subject line to avoid any possibility of command injection."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q64",
+      "text": "Which of the following code snippets demonstrates a practice that would introduce the weakness where a system inappropriately treats untrusted data as trusted, potentially leading to security vulnerabilities?",
+      "choices": [
+        "User input is sanitized using a whitelist approach, where only known good patterns are accepted, and all other inputs are rejected.",
+        "Data retrieved from a third-party API is directly embedded into the system's database without any validation or sanitization.",
+        "All user inputs undergo strict type checking and length validation before being used in the system.",
+        "The system uses parameterized queries to prevent SQL injection when inserting user input into the database."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q65",
+      "text": "When conducting program analysis of a mobile application, what is a primary challenge of using symbolic execution, and which complementary technique is often combined to mitigate this specific issue?",
+      "choices": [
+        "Handling infinite execution trees; mitigated by concolic execution.",
+        "Decompiling obfuscated binaries; mitigated by static analysis.",
+        "Automating UI interaction testing; mitigated by dynamic execution.",
+        "Interpreting network traffic; mitigated by emulator-based dynamic analysis."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q66",
+      "text": "Consider the following code snippet that attempts to mitigate the vulnerability of misinterpreting input: \n\njavascript\nfunction validateInput(input) {\n  // Intended to prevent misinterpretation of input\n  if (/^[0-9]+$/g.test(input)) {\n    return true;\n  }\n  return false;\n}\n \n\nWhich alternative implementation would NOT be effective in preventing the misinterpretation of numeric input?",
+      "choices": [
+        "Using a strict regular expression that also validates the length of the input.",
+        "Implementing a whitelist of acceptable characters and checking the input against it.",
+        "Casting the input to an integer type without additional validation.",
+        "Employing a parsing function that throws an exception for any non-numeric characters."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q67",
+      "text": "A software development team is assessing different programming languages for a new project that involves managing a significant amount of system resources. Which of the following language features or strategies would be most effective in mitigating the risk of CWE 772: Missing Release of Resource after Effective Lifetime?",
+      "choices": [
+        "Choosing a language that performs automatic garbage collection to manage memory for objects that have been deallocated.",
+        "Selecting a language that requires manual memory management and careful tracking of resource allocation and deallocation.",
+        "Opting for a language that provides detailed error messages and logging features to track resource usage.",
+        "Using a language that supports setting resource limits at runtime through system calls such as setrlimit() and getrlimit()."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q68",
+      "text": "Analyze the following Java code snippet from a web application that logs failed input parsing attempts: \n\nString val = request.getParameter(\"val\");\ntry { int value = Integer.parseInt(val); }\ncatch (NumberFormatException e) { log.info(\"Failed to parse val = \" + val); }\n\nWhich vulnerability does this code snippet most likely introduce?",
+      "choices": [
+        "SQL Injection due to concatenation of unsanitized input in a query.",
+        "Improper output neutralization for logs, allowing log forging through untrusted input.",
+        "Cross-site scripting (XSS) because of unescaped user input being rendered in the web interface.",
+        "Buffer overflow due to insufficient bounds checking on the input value."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q69",
+      "text": "Consider a scenario where a system's performance starts to degrade, and upon inspection, it's found that two services are not responding. The logs indicate that each service is waiting on a resource the other holds. What might be the reason for the system's performance issues?",
+      "choices": [
+        "The system is experiencing a deadlock due to the cyclic dependency of resource allocation between services.",
+        "Service A has entered an infinite loop, consuming all CPU resources and blocking Service B.",
+        "Service B has exhausted the system memory, causing Service A to wait indefinitely for memory to be freed.",
+        "A third-party API used by both services is down, causing both services to wait for a response."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q70",
+      "text": "When creating a Software Identification Tag (SWID) for an application, which of the following is NOT considered one of the predefined elements required to be included in the first block of a valid SWID tag?",
+      "choices": [
+        "The software's version number",
+        "The software's patch status",
+        "The tag creator's entity name",
+        "The software's media type"
+      ],
+      "answer": 3
+    },
+    {
+      "id": "q71",
+      "text": "Consider a software design where you are tasked to implement a class hierarchy for a graphics library. The base class is 'Shape', which will be extended by 'Circle', 'Rectangle', and 'Triangle'. You need to ensure that the 'Shape' class adheres to proper object-oriented design principles and does not introduce potential vulnerabilities. Which of the following modifications to the 'Shape' class would be most appropriate?",
+      "choices": [
+        "The 'Shape' class defines an instance method that casts itself to 'Circle' to calculate the area.",
+        "The 'Shape' class declares an abstract method 'calculateArea' to be overridden by child classes.",
+        "The 'Shape' class keeps a static reference to a 'Triangle' object to use its 'calculatePerimeter' method.",
+        "The 'Shape' class initializes a 'Rectangle' object in its constructor to delegate the 'draw' operation."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q72",
+      "text": "During a security audit of a proprietary communication protocol, you discover several instances where the protocol permits negotiation of cryptographic algorithms between the server and the client. Which of the following scenarios would NOT indicate a vulnerability related to the 'Selection of Less-Secure Algorithm During Negotiation'?",
+      "choices": [
+        "The protocol defaults to the strongest mutual algorithm but allows a client to request a weaker algorithm, which the server may accept based on a predefined security policy.",
+        "The server and client start with high-strength algorithms, but an attacker can interfere in the negotiation phase, causing both to fall back to a less secure algorithm without detection.",
+        "The protocol is hardcoded to use a single, well-vetted encryption algorithm, which does not allow for any negotiation or alteration by either party.",
+        "During negotiation, the server offers a list of algorithms ranked by strength, but due to a flaw, it accepts a client's request for a weaker algorithm that is lower on the list."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q73",
+      "text": "You are tasked with configuring a Keymaster implementation on a device that has just booted up. Based on the Keymaster version being utilized on the device, which function should you invoke to provide the KM_TAG_OS_VERSION and KM_TAG_OS_PATCHLEVEL to Keymaster, and what is the expected behavior if the values provided do not match those provided by the bootloader?",
+      "choices": [
+        "Invoke the 'configure' function; if the values do not match the bootloader's, the method returns `KM_ERROR_INVALID_ARGUMENT`.",
+        "Invoke the 'addRngEntropy' function; if the values do not match, the method will still accept the values.",
+        "Invoke the 'getHardwareFeatures' function; if there is a mismatch with the bootloader, the function defaults to secure hardware values.",
+        "Invoke the 'generateKey' function; the method ignores OS version and patch level as it is only concerned with generating keys."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q74",
+      "text": "In designing a secure video conferencing application, what feature would BEST mitigate the risk of an adversary using malware or scripts to capture video recordings without the user's knowledge?",
+      "choices": [
+        "Implementing an API that allows video recording only when the application is in focus and with visible on-screen indicators.",
+        "Enabling the application to run with the highest privileges to prevent unauthorized access to video recording features.",
+        "Allowing unrestricted access to the camera's API to ensure compatibility with a wide range of peripheral devices.",
+        "Scheduling periodic system scans to remove any malware or scripts that may interact with the camera."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q75",
+      "text": "An engineer is developing a new component that will be deployed on an application server. The component needs to handle resources such as database connections and file streams. Which of the following approaches to resource management should the engineer consider to ensure proper runtime resource management, and what are the potential drawbacks of not following the best practice?",
+      "choices": [
+        "Utilize the application server's API for resource management to leverage built-in optimizations and avoid conflicts with the server's resource handling mechanisms.",
+        "Directly employ low-level functions/methods for resource management to have granular control over the resources and their lifecycle.",
+        "Rely on the garbage collection provided by the programming language runtime to automatically manage all resources.",
+        "Outsource resource management to a third-party library to reduce development effort and focus on business logic."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q76",
+      "text": "Which of the following practices is least likely to be included in a robust security assurance process during the software development lifecycle?",
+      "choices": [
+        "Conducting regular code reviews to identify security vulnerabilities.",
+        "Implementing strong encryption algorithms to protect data.",
+        "Deferring all security considerations to the post-deployment phase.",
+        "Integrating automated security testing tools within the development pipeline."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q77",
+      "text": "In designing a secure system that frequently passes objects to various methods, what are the primary considerations when choosing between cloning mutable objects versus using immutable objects as arguments?",
+      "choices": [
+        "Cloning preserves original object state but may incur performance overhead, while immutable objects ensure security without performance impact but may limit functionality.",
+        "Cloning creates unnecessary redundancy in the codebase, while immutable objects can be altered without affecting the original object state.",
+        "Cloning can lead to security vulnerabilities if not implemented correctly, while immutable objects prevent any form of object state modification.",
+        "Cloning requires additional storage space, while immutable objects require complex refactoring of existing code to support immutability."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q78",
+      "text": "In a team discussion about mobile application security, one developer argues that using 'dlfcn.h' for dynamic loading of shared libraries is always a security risk and should be avoided. As a security expert, how would you counter this argument?",
+      "choices": [
+        "Dynamic loading is inherently secure and poses no risk, so 'dlfcn.h' can be used without concern for security.",
+        "Although dynamic loading can introduce security risks, using 'dlfcn.h' with best practices such as absolute paths and immediate symbol resolution mitigates these risks.",
+        "Dynamic loading of shared libraries is not supported on mobile platforms, so the use of 'dlfcn.h' is irrelevant.",
+        "Using 'dlfcn.h' is only secure when loading libraries that have been statically linked at compile-time."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q79",
+      "text": "Consider a system that uses security identifiers for access control to sensitive data, such as encryption keys stored in registers. The system's transaction scheme includes a special register called 'KEY_ACCESS_POLICY', which dictates which agents are allowed to access the encryption key registers based on their security identifiers. In this register, each bit corresponds to a security identifier, and if a bit is set to '1', the respective agent is allowed access; if set to '0', access is disallowed. Given that an agent with Security Identifier '3' is allowed to access the encryption keys, and that the default KEY_ACCESS_POLICY is set to '0x00000008', what would be the correct implementation and usage of the security identifier in a transaction initiated by this agent?",
+      "choices": [
+        "The agent sends the transaction with Security Identifier '0x00000008', which matches the allowed identifier in the KEY_ACCESS_POLICY register.",
+        "The agent sends the transaction with Security Identifier '3', which is the position of the bit set in the KEY_ACCESS_POLICY register.",
+        "The agent sends the transaction with any arbitrary Security Identifier as the KEY_ACCESS_POLICY register will perform a bitwise AND operation to grant access.",
+        "The agent sends the transaction without any Security Identifier, relying on the KEY_ACCESS_POLICY register's default value to grant access."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q80",
+      "text": "You are tasked with assessing the security design of a smart thermostat. The smart thermostat is designed to provide users with real-time climate control and energy usage data. However, you notice that the smart thermostat lacks a key feature. Which of the following aspects would make the thermostat vulnerable to security risks?",
+      "choices": [
+        "The smart thermostat allows users to remotely control the temperature via an Internet-connected mobile app.",
+        "The smart thermostat does not have the ability to update or patch its firmware.",
+        "The design of the smart thermostat includes a hard-coded admin password that is the same for all devices.",
+        "The device is capable of automatically adjusting the temperature based on weather forecasts retrieved online."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q81",
+      "text": "Consider a software application where several modules need to process user information. Which of the following design approaches is the most secure and adheres to best practices to mitigate the risk of excessive reliance on global variables?",
+      "choices": [
+        "Creating a singleton UserContext class that holds the user information as static members and is accessible from any point in the application.",
+        "Passing user information as arguments to functions and methods that require it, thereby avoiding the use of global state.",
+        "Storing user information in a global dictionary object that is updated and accessed by various functions throughout the application.",
+        "Utilizing a global User object that is updated in the main module and imported as needed in other parts of the application."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q82",
+      "text": "Consider the following scenario: You are tasked with reviewing the security of an authentication system. You encounter a function that compares a user-inputted password to a stored value to verify user identity. Which of the following code modifications would best address the security concern of storing passwords in a recoverable format?",
+      "choices": [
+        "Replace the use of a compression algorithm with a strong, non-reversible encryption method for password storage.",
+        "Store the password in plaintext in a separate database with restricted access to limit exposure.",
+        "Implement a password recovery mechanism that allows users to reset their passwords rather than retrieve them.",
+        "Apply a reversible encryption algorithm to the password before storage to obfuscate it."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q83",
+      "text": "A mobile application developer intends to utilize dynamic linking to load a shared library at runtime. The developer is working on a security-focused application and wants to ensure that the usage of dynamic linking does not introduce any potential vulnerabilities. Which of the following code snippets correctly demonstrates a secure method of using the 'dlfcn.h' header for dynamic linking in a mobile application?",
+      "choices": [
+        "void *handle = dlopen(\"libexample.so\", RTLD_NOW | RTLD_GLOBAL);",
+        "void *handle = dlopen(\"libexample.so\", RTLD_LAZY);",
+        "void *handle = dlopen(\"/absolute/path/libexample.so\", RTLD_NOW);",
+        "void *handle = dlopen(\"libexample.so\", RTLD_LAZY | DL_DONT_LINK);"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q84",
+      "text": "When reviewing a peer's code, you notice several functions with deep nesting levels. Your peer argues that flat structures can be more confusing and less expressive in certain contexts. Which of the following points could be a valid counterargument supporting the use of deep nesting in some scenarios?",
+      "choices": [
+        "Deep nesting can make the code more readable by clearly separating logical blocks that depend on different conditions.",
+        "Flat structures prevent the use of control structures such as loops and conditional statements, which are essential for any non-trivial program.",
+        "Excessive use of deep nesting is always detrimental, and all logic should be expressed in a linear fashion without any nesting for maximum clarity.",
+        "Deep nesting is a poor practice because it invariably leads to code that is difficult to test and debug."
+      ],
+      "answer": 0
+    },
+    {
+      "id": "q85",
+      "text": "In the context of a balanced security testing framework, what is the most appropriate phase in the Software Development Life Cycle (SDLC) to primarily focus on manual source code review and static source code analysis?",
+      "choices": [
+        "After deployment, to ensure that the production code is reviewed for any residual vulnerabilities.",
+        "During the early stages of development, to identify and fix vulnerabilities before they propagate through later stages.",
+        "Immediately before penetration testing, to prepare the application for external attack simulations.",
+        "Only during the maintenance phase, as part of the regular updates and patches process."
+      ],
+      "answer": 1
+    },
+    {
+      "id": "q86",
+      "text": "Review the following code snippets and choose the one that illustrates a function with an insufficient behavioral summary, as described in the vulnerability context.",
+      "choices": [
+        "function calculateInterest(principal, rate) {\n  /* Calculates interest over a period of one year. */\n  return principal * rate;\n}",
+        "function authenticateUser(username, password) {\n  /* Takes a username and password, returns true if authentication succeeds. */\n  // Authentication logic...\n}",
+        "function processData(data) {\n  // Process the data.\n  // ...additional processing code...\n  return processedData;\n}",
+        "function sendEmail(recipient, subject, body) {\n  /* Sends an email to the specified recipient with the given subject and body. */\n  // Email sending logic...\n}"
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q87",
+      "text": "What could be a potential consequence of utilizing the same invokable control element in multiple architectural layers of a software product?",
+      "choices": [
+        "Increased code maintainability due to the reuse of control elements.",
+        "Improved performance because of reduced overhead from duplicated controls.",
+        "Higher risk of security breaches if the control element is compromised.",
+        "Simplified testing procedures due to a decrease in the number of unique control elements."
+      ],
+      "answer": 2
+    },
+    {
+      "id": "q88",
+      "text": "Which of the following system behaviors would NOT contribute to an observable behavioral discrepancy that could facilitate an attack?",
+      "choices": [
+        "The system emits varying levels of heat depending on the computational effort required to process requests.",
+        "The system utilizes a constant-time algorithm to compare user input to stored secrets.",
+        "The system's LED lights blink in patterns correlating to data processing activities.",
+        "The system returns a 'user not found' message only when the username does not exist in the database."
+      ],
+      "answer": 1
+    }
+  ]
+}

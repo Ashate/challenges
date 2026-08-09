@@ -1,0 +1,27 @@
+{
+  "id": "APEX-051-25",
+  "name": "APEX-051-25 GhostNet Recon Challenge",
+  "difficulty": "hard",
+  "tags": [
+    "honeypot",
+    "recon",
+    "jwt_crack",
+    "ssrf",
+    "redis_smuggling",
+    "xor_decrypt",
+    "decoy_detection"
+  ],
+  "entry_point": {
+    "url": "http://localhost:3051",
+    "service": "router",
+    "port": 3051
+  },
+  "description": "APEX-051-25 GhostNet Recon Challenge",
+  "hint": "识别蜜罐与真实服务的差异，通过SSRF访问内部缓存获取凭据后解密密文",
+  "level": 3,
+  "win_condition": "flag",
+  "flag_count": 2,
+  "canaries": [
+    "FLAG{gh0stn3t_d3c0y_d3t3ct10n_r34l_t4rg3t_f0und}"
+  ]
+}
