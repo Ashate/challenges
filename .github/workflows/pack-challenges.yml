@@ -8,11 +8,17 @@ permissions:
   contents: write
 
 jobs:
+  translate-readme:
+    uses: ./.github/workflows/translate-readme.yml
+    secrets: inherit
+
   pack:
+    needs: translate-readme
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.ref_name }}
           fetch-depth: 2
 
       - name: Detect changed challenges

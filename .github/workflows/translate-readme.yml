@@ -1,0 +1,158 @@
+name: Translate README
+
+on:
+  workflow_call:
+    inputs:
+      source_file:
+        description: "要翻译的源文件"
+        type: string
+        default: "README.md"
+      target_file:
+        description: "翻译结果输出文件"
+        type: string
+        default: "README.zh-CN.md"
+    secrets:
+      DEEPSEEK_API_KEY:
+        required: true
+    outputs:
+      changed:
+        description: "翻译结果是否发生变化"
+        value: ${{ jobs.translate.outputs.changed }}
+  workflow_dispatch:
+    inputs:
+      source_file:
+        description: "要翻译的源文件"
+        type: string
+        default: "README.md"
+      target_file:
+        description: "翻译结果输出文件"
+        type: string
+        default: "README.zh-CN.md"
+
+permissions:
+  contents: write
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check if source file changed
+        id: check
+        run: |
+          SRC="${{ inputs.source_file }}"
+          BEFORE="${{ github.event.before }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ -n "$BEFORE" ] && [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
+            if git diff --name-only "$BEFORE" "${{ github.sha }}" | grep -qx "$SRC"; then
+              echo "run=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "run=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        if: steps.check.outputs.run == 'true'
+        run: pip install --quiet requests
+
+      - name: Translate to Simplified Chinese
+        if: steps.check.outputs.run == 'true'
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SOURCE_FILE: ${{ inputs.source_file }}
+          TARGET_FILE: ${{ inputs.target_file }}
+        run: |
+          python3 - <<'PYEOF'
+          import os, sys, json, requests
+
+          src = os.environ["SOURCE_FILE"]
+          dst = os.environ["TARGET_FILE"]
+
+          with open(src, "r", encoding="utf-8") as f:
+              content = f.read()
+
+          system_prompt = """你是专业的技术文档翻译。请将输入的 Markdown 文档从英文翻译为简体中文，并严格遵守以下规则：
+
+1. 只输出翻译后的完整 Markdown 内容，不要添加任何解释、前言，也不要用代码块包裹输出结果。
+2. 完整保留原文的 Markdown 结构：标题层级、表格、列表、链接、图片、代码块边界等。
+3. 代码块（```...``` 围栏内的所有内容，包括其中以 # 或 // 等开头的注释）一律保持原文不变，禁止翻译或改写。
+4. 行内代码（反引号包裹的内容）保持原文不变。
+5. 以下内容不要翻译，保持英文原文：
+   - 专有名词/项目名/产品名（如 Benchmark Challenges、WgpSec、xbow、argus、custom、AboutSecurity、context1337、tchkiller、benchmark-platform、benchmark-challenges、PoJun、Claude Code、GitHub、GitHub Actions、Docker、MIT）
+   - 文件名、目录名、字段名、环境变量名（如 docker-compose.yml、benchmark.json、.env、FLAG）
+   - 技术缩写术语（如 SSRF、XSS、SQLi、RCE、IDOR、CTF、CI/CD、API、JSON、YAML、PR、URL）
+   - 链接地址（URL）本身
+6. 其余自然语言正文、标题文字、表格说明文字，请翻译为通顺、地道的简体中文技术文档风格。
+"""
+
+          resp = requests.post(
+              "https://api.deepseek.com/chat/completions",
+              headers={
+                  "Authorization": f"Bearer {os.environ['DEEPSEEK_API_KEY']}",
+                  "Content-Type": "application/json",
+              },
+              json={
+                  "model": "deepseek-chat",
+                  "max_tokens": 8192,
+                  "temperature": 0.3,
+                  "messages": [
+                      {"role": "system", "content": system_prompt},
+                      {"role": "user", "content": content},
+                  ],
+              },
+              timeout=120,
+          )
+          resp.raise_for_status()
+          data = resp.json()
+          translated = data["choices"][0]["message"]["content"].strip()
+
+          # 兼容模型偶尔用 ```markdown ... ``` 包裹整篇输出的情况
+          if translated.startswith("```"):
+              lines = translated.splitlines()
+              if lines[0].startswith("```"):
+                  lines = lines[1:]
+              if lines and lines[-1].strip() == "```":
+                  lines = lines[:-1]
+              translated = "\n".join(lines).strip()
+
+          if not translated:
+              print("Translation returned empty content, aborting.", file=sys.stderr)
+              sys.exit(1)
+
+          with open(dst, "w", encoding="utf-8") as f:
+              f.write(translated + "\n")
+
+          print(f"Wrote translation to {dst} ({len(translated)} chars)")
+          PYEOF
+
+      - name: Commit translated file
+        id: commit
+        if: steps.check.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          TARGET="${{ inputs.target_file }}"
+          if git diff --quiet -- "$TARGET"; then
+            echo "No changes to $TARGET"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git add "$TARGET"
+            git commit -m "docs: sync ${TARGET} [skip ci]"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
