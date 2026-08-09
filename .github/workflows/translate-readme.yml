@@ -15,12 +15,11 @@ on:
         description: "忽略变更检测，重新翻译所有题目的 README"
         type: boolean
         default: false
-  push:
-    branches:
-      - main
-    paths:
-      - "**/README.md"
-      - "**/README.en.md"
+
+# 注意：这里不再单独监听 push 事件。
+# 该 workflow 只通过 workflow_call（被 pack-challenges.yml 调用）
+# 或手动 workflow_dispatch 触发，避免和 pack-challenges.yml 的 push
+# 触发器重复响应同一次提交，也避免翻译提交本身再触发一轮无意义的运行。
 
 permissions:
   contents: write
@@ -249,7 +248,7 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             COUNT="${#TARGETS[@]}"
-            git commit -m "docs: sync ${COUNT} challenge README translation(s) [skip ci]"
+            git commit -m "docs: sync ${COUNT} challenge README translation(s)"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
