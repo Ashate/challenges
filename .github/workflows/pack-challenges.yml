@@ -3,6 +3,7 @@ name: Pack & Publish Challenges
 on:
   push:
     branches: [main, feat/argus-integration]
+  workflow_dispatch:
 
 permissions:
   contents: write
