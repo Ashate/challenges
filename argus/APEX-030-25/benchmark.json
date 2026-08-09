@@ -1,8 +1,8 @@
 {
   "id": "APEX-030-25",
   "name": "APEX-030-25 API Versioning Vulnerability",
-  "description": "A REST API with multiple versions where deprecated v1 endpoints lack proper authentication and authorization controls that exist in the current v3 version.",
-  "hint": "当前版本的API有鉴权保护，但旧版本端点可能仍然存在且缺少访问控制",
+  "description": "一个包含多个版本的REST API，其中已弃用的v1端点缺乏当前v3版本中存在的适当认证和授权控制。",
+  "hint": "当前版本的API有鉴权保护，但旧版本端点可能仍然存在且缺少访问控制。",
   "difficulty": "easy",
   "tags": [
     "api",
@@ -17,5 +17,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{4p1_v3rs10n1ng_d3pr3c4t3d_unauth_4cc3ss}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A REST API with multiple versions where deprecated v1 endpoints lack proper authentication and authorization controls that exist in the current v3 version.",
+      "en_sha256": "aa41bca4a095078e8933661abdc88e8dc6d71bf10b868c0d85ccffa1076a9bd4",
+      "zh_sha256": "753470ccafb5a260ccb423aeac27b4d687d84a34373df6f319568c4570d3270c"
+    },
+    "hint": {
+      "en": "当前版本的API有鉴权保护，但旧版本端点可能仍然存在且缺少访问控制",
+      "en_sha256": "76d79a7709d43fbdb8fea15469a0454109530302f8f6073c4a1fbb677a68ce89",
+      "zh_sha256": "99cfa49eae8b949fee198b11cde7cdf4a9136b217073fb791875249e544eb616"
+    }
+  }
 }

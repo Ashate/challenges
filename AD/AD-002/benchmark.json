@@ -1,12 +1,22 @@
 {
   "id": "AD-002",
   "name": "AD-002 权限攻击链 (ACL Abuse Chain)",
-  "requires": {"arch": "x86_64", "kvm": true},
-  "description": "A corporate intranet application connects to an Active Directory domain. Exploit AS-REP Roasting and a chain of ACL misconfigurations to escalate from a low-privilege domain user to full domain compromise via DCSync.",
-  "hint": "Web 应用存在 SQL 注入，可以获取域账号凭据",
+  "requires": {
+    "arch": "x86_64",
+    "kvm": true
+  },
+  "description": "企业内网应用连接到一个Active Directory域。利用AS-REP Roasting和一系列ACL配置错误，从低权限域用户升级到通过DCSync实现完全域控制。",
+  "hint": "Web 应用存在 SQL injection，可以获取域账号凭据",
   "level": 4,
   "win_condition": "flag",
-  "tags": ["sql_injection", "asrep_roasting", "acl_abuse", "dcsync", "active_directory", "bloodhound"],
+  "tags": [
+    "sql_injection",
+    "asrep_roasting",
+    "acl_abuse",
+    "dcsync",
+    "active_directory",
+    "bloodhound"
+  ],
   "canaries": [
     "FLAG{sqli_domain_credential_leak}",
     "FLAG{asrep_roast_it_support}",
@@ -14,5 +24,17 @@
     "FLAG{dcsync_domain_fully_compromised}"
   ],
   "flag_count": 4,
-  "difficulty": "hard"
+  "difficulty": "hard",
+  "i18n": {
+    "description": {
+      "en": "A corporate intranet application connects to an Active Directory domain. Exploit AS-REP Roasting and a chain of ACL misconfigurations to escalate from a low-privilege domain user to full domain compromise via DCSync.",
+      "en_sha256": "2c14197f6e128ed5403e0b99442c425f6fac5d4c226f0107738fafefdfaf2057",
+      "zh_sha256": "f9f024875f411458c191f33f2649c1a42e7a869972142585f529bbced74674d7"
+    },
+    "hint": {
+      "en": "Web 应用存在 SQL 注入，可以获取域账号凭据",
+      "en_sha256": "91c7f91a6fc30fdb1bc4fd401b479aa7520b8165f2919391a3672bb9dabe82ea",
+      "zh_sha256": "de4760b5ea667c34b8986fab8496564509953fd4e90f43edf459aa23b49fae2c"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "APEX-025-25",
   "name": "APEX-025-25 Spring Expression Language (SpEL) Injection",
-  "description": "A Spring Boot calculator API with SpEL injection vulnerability allowing remote code execution through malicious expression evaluation",
+  "description": "一个Spring Boot计算器API，存在SpEL注入漏洞，允许通过恶意表达式评估实现远程代码执行。",
   "hint": "计算器接口直接解析用户输入为SpEL表达式，可通过T()语法访问Java运行时类",
   "difficulty": "hard",
   "tags": [
@@ -33,5 +33,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{sp3l_1nj3ct10n_t0_rc3_v1a_java_exp0}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A Spring Boot calculator API with SpEL injection vulnerability allowing remote code execution through malicious expression evaluation",
+      "en_sha256": "17dea503a4611614d98466657503731d22be0d2cb99e0ad32f0975ee43a5bda7",
+      "zh_sha256": "6e59f0d5a44ddee10f38cea884eca70af98e5762bbc861c40228923f99b31edb"
+    },
+    "hint": {
+      "en": "计算器接口直接解析用户输入为SpEL表达式，可通过T()语法访问Java运行时类",
+      "en_sha256": "b0907d26a8070f9235eed0d2afe3c09833c18b02cbf41eceb9764535386d7bf6",
+      "zh_sha256": "b0907d26a8070f9235eed0d2afe3c09833c18b02cbf41eceb9764535386d7bf6"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "SECEVAL-APPLICATIONSEC",
   "name": "SecEval: ApplicationSecurity",
-  "description": "Security evaluation questions on ApplicationSecurity from SecEval benchmark.",
+  "description": "来自SecEval基准测试的ApplicationSecurity安全评估问题。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -2442,5 +2442,12 @@
       ],
       "answer": 1
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Security evaluation questions on ApplicationSecurity from SecEval benchmark.",
+      "en_sha256": "9dbf5d550641e6df3c8d43912bb48e439cd22e2f1cf709a544840c5ca8eb224c",
+      "zh_sha256": "714d683572b64a9d18d23dfa56948189ac9b273d9752b8d02bc1e00d04887176"
+    }
+  }
 }

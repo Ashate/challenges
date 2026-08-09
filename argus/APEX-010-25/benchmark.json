@@ -1,6 +1,6 @@
 {
   "name": "APEX-010-25 Multi-Step Chain: SSRF to Cloud Secrets",
-  "description": "A PDF generation service with SSRF that chains to cloud metadata, credential extraction, and secrets manager access",
+  "description": "一个PDF生成服务，存在SSRF漏洞，可链式利用访问云元数据、提取凭证并访问secrets manager。",
   "hint": "PDF服务未封禁169.254地址段，通过SSRF访问云元数据获取凭证后再请求Secrets Manager",
   "difficulty": "hard",
   "tags": [
@@ -18,5 +18,17 @@
   ],
   "id": "APEX-010-25",
   "level": 3,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A PDF generation service with SSRF that chains to cloud metadata, credential extraction, and secrets manager access",
+      "en_sha256": "e6fc25ffe7534a98eb84cd66d31dd27c7c2cfc90422a4aa9751a9aa3a6f5e9c5",
+      "zh_sha256": "c755d7d4f440296edf00a496bc7a9012823a937df5ae9fbe958f11ae07bd0711"
+    },
+    "hint": {
+      "en": "PDF服务未封禁169.254地址段，通过SSRF访问云元数据获取凭证后再请求Secrets Manager",
+      "en_sha256": "ff730f58e6e01b26180b5284535227527f6513104ad80797e2ea875cf689ab54",
+      "zh_sha256": "ff730f58e6e01b26180b5284535227527f6513104ad80797e2ea875cf689ab54"
+    }
+  }
 }

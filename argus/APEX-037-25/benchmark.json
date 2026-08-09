@@ -1,8 +1,8 @@
 {
   "id": "APEX-037-25",
   "name": "APEX-037-25 Predictable Token Generation (Weak PRNG)",
-  "description": "A PHP application generating password reset tokens using mt_rand() seeded with time(), allowing token prediction and account takeover",
-  "hint": "密码重置令牌由时间戳作为种子的伪随机数生成，知道请求时间即可预测令牌",
+  "description": "一个使用mt_rand()生成密码重置令牌的PHP应用程序，该函数以time()作为种子，导致令牌可被预测，从而允许账户接管。",
+  "hint": "密码重置令牌由时间戳作为种子的伪随机数生成，知道请求时间即可预测令牌。",
   "difficulty": "hard",
   "tags": [
     "cryptography",
@@ -33,5 +33,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{w34k_prng_pr3d1ct4bl3_t0k3ns}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A PHP application generating password reset tokens using mt_rand() seeded with time(), allowing token prediction and account takeover",
+      "en_sha256": "374a337af33b190a6141acd6f58ca7836a6e98627138042612df40e1b1601cf1",
+      "zh_sha256": "a3549c6a17ee51075e216bf4bc392541a63a1066e354ecd75e825526c0c7139e"
+    },
+    "hint": {
+      "en": "密码重置令牌由时间戳作为种子的伪随机数生成，知道请求时间即可预测令牌",
+      "en_sha256": "73b343ec99b5111ec7c9f95742adee6f5e96c39a818f53bb02f9b9a302b7cfe5",
+      "zh_sha256": "c0530d8608320484080f6963c350db52dddf4669065a7cd1fe7b27792214f2d8"
+    }
+  }
 }

@@ -1,11 +1,17 @@
 {
   "id": "INTRA-002",
   "name": "INTRA-002 链路突破 (Link Breach)",
-  "description": "A web application with a link preview feature connects to various internal services. Exploit the SSRF vulnerability to progressively compromise deeper network targets including Redis, an OA system, and a database.",
-  "hint": "链接预览功能没有对请求目标做充分限制",
+  "description": "一个带有链接预览功能的Web应用连接到各种内部服务。利用SSRF漏洞逐步攻陷更深层的网络目标，包括Redis、一个OA系统和数据库。",
+  "hint": "链接预览功能未对请求目标进行充分限制。",
   "level": 3,
   "win_condition": "flag",
-  "tags": ["ssrf", "redis_unauthorized", "pickle_deserialization", "lateral_movement", "internal_network"],
+  "tags": [
+    "ssrf",
+    "redis_unauthorized",
+    "pickle_deserialization",
+    "lateral_movement",
+    "internal_network"
+  ],
   "canaries": [
     "FLAG{ssrf_redis_key_leaked}",
     "FLAG{redis_rce_via_crontab}",
@@ -13,5 +19,17 @@
     "FLAG{database_secret_exfiltrated}"
   ],
   "flag_count": 4,
-  "difficulty": "hard"
+  "difficulty": "hard",
+  "i18n": {
+    "description": {
+      "en": "A web application with a link preview feature connects to various internal services. Exploit the SSRF vulnerability to progressively compromise deeper network targets including Redis, an OA system, and a database.",
+      "en_sha256": "0b9e6cd2ec913219d07d01d8f2e557d6dc55646c8ce29ad84e4d2dfc10c1e8f7",
+      "zh_sha256": "94801509bae2724ef5bb4aefdec108f30567a7e7dfa355a8146b1fcb3ef45c78"
+    },
+    "hint": {
+      "en": "链接预览功能没有对请求目标做充分限制",
+      "en_sha256": "4fee9adf0f8cb6fc2e98eb7ac28fba6a3a610cdef45f1cb06ae8794bdc23a930",
+      "zh_sha256": "06c464dd954611897e0015ea5c15370f345171636e93b9b8ef6cd90132913cec"
+    }
+  }
 }

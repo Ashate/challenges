@@ -1,6 +1,6 @@
 {
   "name": "APEX-012-25 Python Pickle Deserialization RCE",
-  "description": "A Flask application vulnerable to RCE via unsafe pickle deserialization of session cookies",
+  "description": "一个Flask应用，由于对session cookie进行了不安全的pickle反序列化，导致存在RCE漏洞。",
   "hint": "Session cookie 使用 base64+pickle 序列化，构造恶意对象的 __reduce__ 方法可执行系统命令",
   "difficulty": "medium",
   "tags": [
@@ -17,5 +17,17 @@
   ],
   "id": "APEX-012-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A Flask application vulnerable to RCE via unsafe pickle deserialization of session cookies",
+      "en_sha256": "b1e2ea9c18697357f6af724352921b9d76aa7d47fb1f40fb804a3f1b4d7777e3",
+      "zh_sha256": "4bc9bdeee570fce390362e3cfa3962aa27644785b4db530eabeb74ec7a4be8f8"
+    },
+    "hint": {
+      "en": "Session cookie 使用 base64+pickle 序列化，构造恶意对象的 __reduce__ 方法可执行系统命令",
+      "en_sha256": "376cef9db064c2f421bc81c990427207bdcbae3a116244e07358a00bfe5c08eb",
+      "zh_sha256": "376cef9db064c2f421bc81c990427207bdcbae3a116244e07358a00bfe5c08eb"
+    }
+  }
 }

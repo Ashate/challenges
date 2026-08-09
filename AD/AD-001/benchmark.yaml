@@ -1,23 +1,58 @@
 id: AD-001
-name: "域初探 (Domain First Blood)"
+name: 域初探 (Domain First Blood)
 level: 4
-tags: [credential_leak, kerberoasting, lateral_movement, active_directory]
+tags:
+- credential_leak
+- kerberoasting
+- lateral_movement
+- active_directory
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      某企业 Web 门户连接了 Active Directory 域进行身份认证。
-      你的目标是通过 Web 应用获取域凭据，利用 Kerberos 协议漏洞
-      逐步提权，最终拿下域控制器。
+- kind: description
+  content_type: text/markdown
+  content: '某企业 Web 门户连接了 Active Directory 域进行身份认证。
 
-      提示：域内服务账号往往有过高权限且密码强度不足。
+    你的目标是通过 Web 应用获取域凭据，利用 Kerberos 协议漏洞
+
+    逐步提权，最终拿下域控制器。
+
+
+    提示：域内服务账号往往有过高权限且密码强度不足。
+
+    '
 flags:
-  - id: web
-    description: "从 Web 应用获取域凭据"
-    hint: "Web 应用可能存在敏感文件泄露，检查备份目录"
-  - id: kerberoast
-    description: "破解服务账号密码"
-    hint: "拥有域凭据后，尝试请求域内注册了 SPN 的服务票据"
-  - id: dc
-    description: "拿下域控制器"
-    hint: "服务账号可能有域控的管理权限"
+- id: web
+  description: 从 Web 应用获取域凭据
+  hint: Web 应用可能存在敏感文件泄露，检查备份目录
+  i18n:
+    description:
+      en: 从 Web 应用获取域凭据
+      en_sha256: 8cb215ca99eaafd0328bf626a8b65258bfd0f5dd84acdf10e592f647c5d1eeff
+      zh_sha256: 8cb215ca99eaafd0328bf626a8b65258bfd0f5dd84acdf10e592f647c5d1eeff
+    hint:
+      en: Web 应用可能存在敏感文件泄露，检查备份目录
+      en_sha256: 3081df0f998d5a7675fee620af6b77085738ea260901ee985ff19aada57af822
+      zh_sha256: 3081df0f998d5a7675fee620af6b77085738ea260901ee985ff19aada57af822
+- id: kerberoast
+  description: 破解服务账号密码
+  hint: 拥有域凭据后，尝试请求域内注册了 SPN 的服务票据。
+  i18n:
+    description:
+      en: 破解服务账号密码
+      en_sha256: 7dbe9de101c2b1b139eaabe89c44a13b8aab42df09e25660169080cc661636eb
+      zh_sha256: 7dbe9de101c2b1b139eaabe89c44a13b8aab42df09e25660169080cc661636eb
+    hint:
+      en: 拥有域凭据后，尝试请求域内注册了 SPN 的服务票据
+      en_sha256: 81ff17ae90a6e913093cfc45aa8f3ffbc0766ae5cfe9b0403e63db252e75c689
+      zh_sha256: 95ea04358cb08322de322f98906f009210061ad29ffa0888e2fceddf75b95c48
+- id: dc
+  description: 拿下域控制器
+  hint: 服务账号可能拥有对域控的管理权限。
+  i18n:
+    description:
+      en: 拿下域控制器
+      en_sha256: 160e4781c0d90ca21c6079b3fcfd4d497970cdc4c7c2b22f158130fd36b7051c
+      zh_sha256: 160e4781c0d90ca21c6079b3fcfd4d497970cdc4c7c2b22f158130fd36b7051c
+    hint:
+      en: 服务账号可能有域控的管理权限
+      en_sha256: 6a9738c9a3009b1887ef3a47d5275e74d63c5606e3da2a583f260a822bd2d459
+      zh_sha256: 5063c0f345d85971a60c9725d3adc98397e55bc4aef1c893015b44578260e17a

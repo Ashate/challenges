@@ -11,12 +11,24 @@
     "firmware",
     "cross_protocol"
   ],
-  "description": "APEX-045-25 IoT Command Center Breach",
-  "hint": "MQTT匿名订阅可获取设备凭据，固件更新接口的URL参数存在命令注入",
+  "description": "APEX-045-25 IoT 命令中心入侵",
+  "hint": "MQTT anonymous subscription can obtain device credentials, and the URL parameter of the firmware update interface has command injection.",
   "level": 2,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{10t_mqtt_unauth_f1rmwar3_1nj3ct10n_pwn3d}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-045-25 IoT Command Center Breach",
+      "en_sha256": "1f820275811c82809aafb3263ad5cc52bce70c5346f28c1810d5637c1badcd30",
+      "zh_sha256": "ac635a1bba909961407f9498a6567908fe776d5423e59c86e12237f786feff72"
+    },
+    "hint": {
+      "en": "MQTT匿名订阅可获取设备凭据，固件更新接口的URL参数存在命令注入",
+      "en_sha256": "087d4580adda363eee865d32985f8f76b152d4165ebb93f70e40321ea8ca47ba",
+      "zh_sha256": "b4255a1c4de913ba6ed021230d8be8df7e81f7ff51a2a8a01ca1c9f70647e4eb"
+    }
+  }
 }

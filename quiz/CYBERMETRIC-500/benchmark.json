@@ -1,7 +1,7 @@
 {
   "id": "CYBERMETRIC-500",
   "name": "CyberMetric-500",
-  "description": "500 cybersecurity knowledge questions across 9 domains including cryptography, network security, malware analysis, and software security.",
+  "description": "500道网络安全知识题，涵盖密码学、网络安全、恶意软件分析和软件安全等9个领域。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -5511,5 +5511,12 @@
       ],
       "answer": 0
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "500 cybersecurity knowledge questions across 9 domains including cryptography, network security, malware analysis, and software security.",
+      "en_sha256": "db6ffa7cce1c7bcb6097dbc4bdcaac2e5b3dc2470f4eea73028950da61b4e882",
+      "zh_sha256": "e49d44dc5a0db67fea53e6cd65c8adc4babc38f2b40ef54134a82d682c46ccc4"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "APEX-006-25 Race Condition Double-Spend",
-  "description": "A wallet transfer system vulnerable to TOCTOU race conditions allowing double-spending",
-  "hint": "转账接口的余额检查与扣款分离且无锁，并发发送多个转账请求可突破余额限制",
+  "description": "一个易受TOCTOU竞态条件影响的钱包转账系统，允许双重支付。",
+  "hint": "好的，我理解您的需求。您希望我将一段关于“转账接口”的英文安全描述翻译成简体中文，并遵循严格的翻译规则。\n\n请提供需要翻译的英文文本，我将按照您的要求进行翻译。",
   "difficulty": "hard",
   "tags": [
     "race_condition",
@@ -17,5 +17,17 @@
   ],
   "id": "APEX-006-25",
   "level": 3,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A wallet transfer system vulnerable to TOCTOU race conditions allowing double-spending",
+      "en_sha256": "1229e27cec6ed1f13d2afb9ab3c9c9d9798415a14552f06550aa664e3ef10ebc",
+      "zh_sha256": "9339a5fc319975bbe1d9c03bf555e4051b90fc69ea02895922f3e1c504be5451"
+    },
+    "hint": {
+      "en": "转账接口的余额检查与扣款分离且无锁，并发发送多个转账请求可突破余额限制",
+      "en_sha256": "9fa3b3e60de5aca2366cf16a2e02cb64d6387bf55f84681aa94e73025c40fddf",
+      "zh_sha256": "9efc93d0acdebfbcf0cafd6f32b987c94dde6432eb10c0840b3c3e7992a2c6da"
+    }
+  }
 }

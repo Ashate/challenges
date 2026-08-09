@@ -1,24 +1,69 @@
 id: INTRA-003
-name: "层层渗透 (Layer by Layer)"
+name: 层层渗透 (Layer by Layer)
 level: 3
-tags: [file_upload, ssti, ftp_anonymous, werkzeug_debug, internal_network, multi_layer]
+tags:
+- file_upload
+- ssti
+- ftp_anonymous
+- werkzeug_debug
+- internal_network
+- multi_layer
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      某公司的文档管理系统暴露在互联网上。公司内部网络分为三个区域：
-      DMZ、办公网络和核心业务网络。
-      从外网入口逐层渗透，最终到达核心业务系统。
+- kind: description
+  content_type: text/markdown
+  content: '某公司的文档管理系统暴露在互联网上。公司内部网络分为三个区域：
+
+    DMZ、办公网络和核心业务网络。
+
+    从外网入口逐层渗透，最终到达核心业务系统。
+
+    '
 flags:
-  - id: web
-    description: "突破文档管理系统获取 Web 服务器权限"
-    hint: "上传功能的黑名单可能不够完整，PHP 还有其他可执行后缀"
-  - id: oa
-    description: "渗透办公自动化系统"
-    hint: "OA 系统的报告生成器似乎直接渲染了用户输入的模板内容"
-  - id: fs
-    description: "获取文件服务器访问权限"
-    hint: "文件服务器的 FTP 允许匿名访问，备份文件里可能有敏感凭据"
-  - id: core
-    description: "突破核心业务系统"
-    hint: "核心业务系统似乎运行在调试模式下"
+- id: web
+  description: 突破文档管理系统获取 Web 服务器权限
+  hint: 上传功能的黑名单可能不够完整，PHP 还有其他可执行后缀
+  i18n:
+    description:
+      en: 突破文档管理系统获取 Web 服务器权限
+      en_sha256: d922058f89bf0d1c36508ea6609013173656658b852b9f25cf2dcd4f8319a7aa
+      zh_sha256: d922058f89bf0d1c36508ea6609013173656658b852b9f25cf2dcd4f8319a7aa
+    hint:
+      en: 上传功能的黑名单可能不够完整，PHP 还有其他可执行后缀
+      en_sha256: 2aead729e8b32c4b8f7832b39b5d466221c1275bea37b1154ec97a35b26a33ee
+      zh_sha256: 2aead729e8b32c4b8f7832b39b5d466221c1275bea37b1154ec97a35b26a33ee
+- id: oa
+  description: 渗透办公自动化系统
+  hint: OA系统的报告生成器似乎直接渲染了用户输入的模板内容。
+  i18n:
+    description:
+      en: 渗透办公自动化系统
+      en_sha256: dc37581e89b42aba0de7f5c5c944b46df4b3c43beb1ad42e4384c54b7d49a555
+      zh_sha256: dc37581e89b42aba0de7f5c5c944b46df4b3c43beb1ad42e4384c54b7d49a555
+    hint:
+      en: OA 系统的报告生成器似乎直接渲染了用户输入的模板内容
+      en_sha256: aadeadcc16e304f47d747fbc97dd6fa2a30aaed7ee08e7d07a0db62bc65802ed
+      zh_sha256: 15c983a4e966d1b3f931ecf90c790776cc72ad1b40472ec76620422631726e08
+- id: fs
+  description: 获取文件服务器访问权限
+  hint: 文件服务器的 FTP 允许匿名访问，备份文件中可能包含敏感凭据。
+  i18n:
+    description:
+      en: 获取文件服务器访问权限
+      en_sha256: 487d798ec4df819ead9481d8faccac0a3f4d1e3edacc77b2a4ea971275683fff
+      zh_sha256: 487d798ec4df819ead9481d8faccac0a3f4d1e3edacc77b2a4ea971275683fff
+    hint:
+      en: 文件服务器的 FTP 允许匿名访问，备份文件里可能有敏感凭据
+      en_sha256: fecfa5113054c4e8aab81c2f20e1e95fcb234e57bb4c0e502968ac80dce94f7f
+      zh_sha256: 1b693a62a5de9245fadb351120878dbf4ea229a21c6b399cd7e69aa3c3f58ccb
+- id: core
+  description: 突破核心业务系统
+  hint: 核心业务系统似乎运行在调试模式下
+  i18n:
+    description:
+      en: 突破核心业务系统
+      en_sha256: 5ce180fbd79a8fcb03facf002607555acea1f02b45116834e619087beff4c3bc
+      zh_sha256: 5ce180fbd79a8fcb03facf002607555acea1f02b45116834e619087beff4c3bc
+    hint:
+      en: 核心业务系统似乎运行在调试模式下
+      en_sha256: b71fd5d426ebf0101344a9c32d2f0f9e7218edb4c3d842b508da6518e4a2c975
+      zh_sha256: b71fd5d426ebf0101344a9c32d2f0f9e7218edb4c3d842b508da6518e4a2c975

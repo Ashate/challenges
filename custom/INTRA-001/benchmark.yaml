@@ -1,22 +1,56 @@
 id: INTRA-001
-name: "防火墙之后 (Behind the Firewall)"
+name: 防火墙之后 (Behind the Firewall)
 level: 2
-tags: [command_injection, ssh_pivot, internal_network, lateral_movement]
+tags:
+- command_injection
+- ssh_pivot
+- internal_network
+- lateral_movement
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      某公司将网络诊断工具暴露在互联网上。你的目标是突破外围防线，
-      逐步深入内部网络，最终访问隐藏在内网中的运维管理面板。
+- kind: description
+  content_type: text/markdown
+  content: '某公司将网络诊断工具暴露在互联网上。你的目标是突破外围防线，
 
-      网络拓扑提示：存在多个网络隔离区域，你需要找到跨区域的路径。
+    逐步深入内部网络，最终访问隐藏在内网中的运维管理面板。
+
+
+    网络拓扑提示：存在多个网络隔离区域，你需要找到跨区域的路径。
+
+    '
 flags:
-  - id: web
-    description: "突破 Web 应用的防线"
-    hint: "网络诊断工具的输入似乎直接拼接到了系统命令中"
-  - id: bastion
-    description: "穿越跳板到达堡垒机"
-    hint: "Web 应用的配置目录里可能有其他服务的连接信息"
-  - id: ops
-    description: "访问内网运维面板"
-    hint: "从跳板机上探测内网网段，可能有 HTTP 服务在运行"
+- id: web
+  description: 突破 Web 应用的防线
+  hint: 网络诊断工具的输入似乎直接拼接到了系统命令中
+  i18n:
+    description:
+      en: 突破 Web 应用的防线
+      en_sha256: 2652f9d5469d6e224106e5dbcee13c2e2eaccecb306102948172aa61143771e5
+      zh_sha256: 2652f9d5469d6e224106e5dbcee13c2e2eaccecb306102948172aa61143771e5
+    hint:
+      en: 网络诊断工具的输入似乎直接拼接到了系统命令中
+      en_sha256: 486c7666cca0adca2789f47702f7f393580d67a4db32281d58be5140cd3b3ed1
+      zh_sha256: 486c7666cca0adca2789f47702f7f393580d67a4db32281d58be5140cd3b3ed1
+- id: bastion
+  description: 穿越跳板到达堡垒机
+  hint: Web 应用的配置目录里可能有其他服务的连接信息
+  i18n:
+    description:
+      en: 穿越跳板到达堡垒机
+      en_sha256: 37c0b6d8113f3f93e61bab15145bc5bf4d0b099cac53b1e5272b613ae4769d7b
+      zh_sha256: 37c0b6d8113f3f93e61bab15145bc5bf4d0b099cac53b1e5272b613ae4769d7b
+    hint:
+      en: Web 应用的配置目录里可能有其他服务的连接信息
+      en_sha256: 2c1cabcc02a94d343631531d85147ba94a802a393cf4c0048244b432b6c3d5fd
+      zh_sha256: 2c1cabcc02a94d343631531d85147ba94a802a393cf4c0048244b432b6c3d5fd
+- id: ops
+  description: 访问内网运维面板
+  hint: 从跳板机上探测内网网段，可能有 HTTP 服务在运行。
+  i18n:
+    description:
+      en: 访问内网运维面板
+      en_sha256: 51f62f9a041ea457312b68ff1fbdfc8fa0df4397013087492a338da0a8621375
+      zh_sha256: 51f62f9a041ea457312b68ff1fbdfc8fa0df4397013087492a338da0a8621375
+    hint:
+      en: 从跳板机上探测内网网段，可能有 HTTP 服务在运行
+      en_sha256: d8363ad6b5c49234ace05742c52eabab97da895a4f6269f1d9084bed07f56aaf
+      zh_sha256: 31637d4d82ec97650735fca6dd4f8f760a19bedf8f102fbe8b730e28c5ca455a

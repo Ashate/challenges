@@ -1,8 +1,8 @@
 {
   "id": "APEX-032-25",
   "name": "APEX-032-25 ORM Injection via Sequelize Operators",
-  "description": "A Node.js API using Sequelize ORM with operator injection vulnerabilities. User input is passed directly to Sequelize queries, allowing attackers to use operators like $ne, $like, $or to bypass authentication and access unauthorized data.",
-  "hint": "登录接口将请求体直接传入ORM查询，尝试用对象类型替代字符串绕过密码验证",
+  "description": "一个使用Sequelize ORM的Node.js API，存在操作符注入漏洞。用户输入直接传递给Sequelize查询，使攻击者能够利用$ne、$like、$or等操作符绕过身份验证并访问未授权数据。",
+  "hint": "登录接口将请求体直接传入ORM查询，尝试用对象类型替代字符串绕过密码验证。",
   "difficulty": "medium",
   "tags": [
     "orm",
@@ -37,5 +37,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{sequelize_operator_injection_orm_bypass_2025}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A Node.js API using Sequelize ORM with operator injection vulnerabilities. User input is passed directly to Sequelize queries, allowing attackers to use operators like $ne, $like, $or to bypass authentication and access unauthorized data.",
+      "en_sha256": "b049a01073d0488aff316042996fe7d9f5180c84d1c0b5117975945ac75905a4",
+      "zh_sha256": "f535c8243600ae38ca0a68c6bc9e6453e72fcd5ce5c7738bc2c7f1562fc841b0"
+    },
+    "hint": {
+      "en": "登录接口将请求体直接传入ORM查询，尝试用对象类型替代字符串绕过密码验证",
+      "en_sha256": "9c537dd92ab1784681bad39a5364d9b47bb9a8b7cde48a2e588fde59cf253797",
+      "zh_sha256": "702e69b235fe898ea7260d473a0a80f9e3f6b5643ee9d154a8e9f7b849859ea7"
+    }
+  }
 }

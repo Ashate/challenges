@@ -1,6 +1,6 @@
 {
   "name": "APEX-011-25 Second-Order SQL Injection",
-  "description": "A registration system where malicious usernames are safely stored but later executed in admin queries",
+  "description": "一个注册系统，其中恶意用户名被安全存储，但随后在管理员查询中被执行",
   "hint": "注册时用户名被安全存储，但管理员查看活动日志时未做参数化查询，关注二次触发点",
   "difficulty": "hard",
   "tags": [
@@ -22,5 +22,17 @@
   ],
   "id": "APEX-011-25",
   "level": 3,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A registration system where malicious usernames are safely stored but later executed in admin queries",
+      "en_sha256": "8cf4733220f5e2ff9ca8e1adec3ca960b882fb5c1f2a8de4ca4348eccbccfc38",
+      "zh_sha256": "840cfe05b7d60588ba67eeed02abc8bbb2e2a5d7b5403a09c72ca8b629634512"
+    },
+    "hint": {
+      "en": "注册时用户名被安全存储，但管理员查看活动日志时未做参数化查询，关注二次触发点",
+      "en_sha256": "1125976e1e6793e3e7f0770dc0047c3d7566b388a9ee0b55e21e7ecebedac26d",
+      "zh_sha256": "1125976e1e6793e3e7f0770dc0047c3d7566b388a9ee0b55e21e7ecebedac26d"
+    }
+  }
 }

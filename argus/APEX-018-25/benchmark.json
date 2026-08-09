@@ -1,7 +1,7 @@
 {
   "name": "APEX-018-25 LDAP Injection Authentication Bypass",
-  "description": "A corporate login portal using LDAP authentication vulnerable to LDAP filter injection",
-  "hint": "登录接口将用户输入直接拼接进 LDAP 过滤器，尝试注入通配符或闭合括号绕过密码校验",
+  "description": "一个使用LDAP认证的企业登录门户，存在LDAP filter注入漏洞",
+  "hint": "登录接口将用户输入直接拼接进 LDAP 过滤器，尝试注入通配符或闭合括号绕过密码校验。",
   "difficulty": "medium",
   "tags": [
     "ldap",
@@ -18,5 +18,17 @@
   ],
   "id": "APEX-018-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A corporate login portal using LDAP authentication vulnerable to LDAP filter injection",
+      "en_sha256": "3265f95e91973a3b8dbfc3d81bef95975916d11c7bcdfea36db9a95edb2d7c10",
+      "zh_sha256": "40989f2aa00bbaa99bca939d77a242c5d89db7fd8008897c37af34e8a2ee7464"
+    },
+    "hint": {
+      "en": "登录接口将用户输入直接拼接进 LDAP 过滤器，尝试注入通配符或闭合括号绕过密码校验",
+      "en_sha256": "e434fb4a6ed3b922075096c97f41a8660e4551363f68b76e0390cb5ee0497655",
+      "zh_sha256": "5cd980fd312511853de883651343ecdfc90356e55986e203378ea7abd35ceef9"
+    }
+  }
 }

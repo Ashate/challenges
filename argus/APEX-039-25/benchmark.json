@@ -1,8 +1,8 @@
 {
   "id": "APEX-039-25",
   "name": "APEX-039-25 CRLF Injection for Response Splitting",
-  "description": "An Express application reflects user input in HTTP response headers without CRLF sanitization. Attackers can inject arbitrary headers or split the response to inject XSS payloads, stealing the admin's session cookie containing the flag.",
-  "hint": "重定向和Cookie设置端点未过滤换行符，可注入额外响应头实现响应拆分攻击",
+  "description": "一个Express应用在HTTP响应头中直接反射用户输入，未进行CRLF清理。攻击者可以注入任意头部或拆分响应以注入XSS payload，从而窃取包含flag的admin会话cookie。",
+  "hint": "重定向和Cookie设置端点未过滤换行符，可注入额外响应头实现响应拆分攻击。",
   "difficulty": "medium",
   "tags": [
     "crlf",
@@ -23,5 +23,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{crlf_1nj3ct10n_r3sp0ns3_spl1tt1ng_x55}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "An Express application reflects user input in HTTP response headers without CRLF sanitization. Attackers can inject arbitrary headers or split the response to inject XSS payloads, stealing the admin's session cookie containing the flag.",
+      "en_sha256": "4c9086e5eaa7d7eaf567d4d53604cb2c005228a877446a9e03ab4d2fecb7e51d",
+      "zh_sha256": "86e69d7142516e7302fff62f73e8aa4dfd19ddbf88761b03253283feadacc671"
+    },
+    "hint": {
+      "en": "重定向和Cookie设置端点未过滤换行符，可注入额外响应头实现响应拆分攻击",
+      "en_sha256": "ac746b9e4fb93906fc3f51d0729b771b1ae08c3c232640485061a146c1e22a26",
+      "zh_sha256": "0db5f67b31ab3e41f352890b0d807ae9010585050566b63c1c17faae2ca2c512"
+    }
+  }
 }

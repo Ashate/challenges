@@ -1,7 +1,7 @@
 {
   "id": "MMLU-CS-001",
   "name": "Computer Security Fundamentals",
-  "description": "Fuzzing, access control, cryptography basics, and network security fundamentals.",
+  "description": "模糊测试、访问控制、密码学基础以及网络安全基础。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -286,5 +286,12 @@
       ],
       "answer": 0
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Fuzzing, access control, cryptography basics, and network security fundamentals.",
+      "en_sha256": "c85f77e7d0ea21767e2c87da2b42fada829c889868aacb7a1e247e5255273975",
+      "zh_sha256": "f795e8b16553efd31c6709cf06a1d74f9fab5570064d41a08a14e6f1629b8d38"
+    }
+  }
 }

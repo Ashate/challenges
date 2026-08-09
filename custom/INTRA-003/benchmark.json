@@ -1,11 +1,18 @@
 {
   "id": "INTRA-003",
   "name": "INTRA-003 层层渗透 (Layer by Layer)",
-  "description": "A document management system is the entry point to a multi-layered corporate network. Exploit vulnerabilities at each layer to pivot deeper: from the DMZ through the office network to the core business systems.",
+  "description": "文档管理系统是进入多层企业网络的入口。利用每一层的漏洞进行横向渗透：从DMZ穿过办公网络，直达核心业务系统。",
   "hint": "文件上传功能的后缀过滤可能存在遗漏",
   "level": 3,
   "win_condition": "flag",
-  "tags": ["file_upload", "ssti", "ftp_anonymous", "werkzeug_debug", "internal_network", "multi_layer"],
+  "tags": [
+    "file_upload",
+    "ssti",
+    "ftp_anonymous",
+    "werkzeug_debug",
+    "internal_network",
+    "multi_layer"
+  ],
   "canaries": [
     "FLAG{php_upload_bypass_pht}",
     "FLAG{jinja2_ssti_rce_success}",
@@ -13,5 +20,17 @@
     "FLAG{werkzeug_debug_console_rce}"
   ],
   "flag_count": 4,
-  "difficulty": "hard"
+  "difficulty": "hard",
+  "i18n": {
+    "description": {
+      "en": "A document management system is the entry point to a multi-layered corporate network. Exploit vulnerabilities at each layer to pivot deeper: from the DMZ through the office network to the core business systems.",
+      "en_sha256": "3e4fe4c17ea6a11054e6fdbf3282ca6a39f9e1bdfacad4bcdec66990b1259a12",
+      "zh_sha256": "870998f03b75de361eceb40d9305bc9b4f642bf5ac8d9b110c60189adfa60156"
+    },
+    "hint": {
+      "en": "文件上传功能的后缀过滤可能存在遗漏",
+      "en_sha256": "716dbca27a78b20019bf6ef0c574da448bf20a0dd290e97929c6f1e21b380447",
+      "zh_sha256": "716dbca27a78b20019bf6ef0c574da448bf20a0dd290e97929c6f1e21b380447"
+    }
+  }
 }

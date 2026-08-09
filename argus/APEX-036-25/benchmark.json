@@ -1,8 +1,8 @@
 {
   "id": "APEX-036-25",
   "name": "APEX-036-25 MFA Bypass via Response Manipulation",
-  "description": "A web application with MFA that can be bypassed by manipulating the login response or using the temporary token directly to access protected resources.",
-  "hint": "登录第一步返回的临时Token实际上已具有完整访问权限，无需完成MFA验证即可使用",
+  "description": "一个启用了MFA的Web应用，可以通过篡改登录响应或直接使用临时token访问受保护资源来绕过MFA。",
+  "hint": "The temporary token returned in the first step of login actually already has full access permissions and can be used without completing MFA verification.",
   "difficulty": "medium",
   "tags": [
     "mfa",
@@ -17,5 +17,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{mf4_byp4ss_r3sp0ns3_m4n1pul4t10n_2f4}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A web application with MFA that can be bypassed by manipulating the login response or using the temporary token directly to access protected resources.",
+      "en_sha256": "b58d07b94327bfc498f95ddaa2f339cba207a9fc8386352918ce8408934063f4",
+      "zh_sha256": "7bcb82d5c6e9cb3c206b469ae8eb1733634939e8ef96a2a1a217fb9f556b5605"
+    },
+    "hint": {
+      "en": "登录第一步返回的临时Token实际上已具有完整访问权限，无需完成MFA验证即可使用",
+      "en_sha256": "8f72eab9ca1233152550b9a417fbb994fc5b47aeabbc11a562e203e30487fa57",
+      "zh_sha256": "42d6cbe8a87972a64fdc1316fd4c71f5658568e8f5dcb16b0174f05f4b0b83c2"
+    }
+  }
 }

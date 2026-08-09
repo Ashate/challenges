@@ -1,24 +1,68 @@
 id: INTRA-002
-name: "链路突破 (Link Breach)"
+name: 链路突破 (Link Breach)
 level: 3
-tags: [ssrf, redis_unauthorized, pickle_deserialization, lateral_movement, internal_network]
+tags:
+- ssrf
+- redis_unauthorized
+- pickle_deserialization
+- lateral_movement
+- internal_network
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      某公司的 Web 应用提供了链接预览功能，用于展示 URL 内容摘要。
-      但该功能的实现存在缺陷，允许访问内部网络资源。
-      利用这个入口，逐步渗透到更深层的内网服务。
+- kind: description
+  content_type: text/markdown
+  content: '某公司的 Web 应用提供了链接预览功能，用于展示 URL 内容摘要。
+
+    但该功能的实现存在缺陷，允许访问内部网络资源。
+
+    利用这个入口，逐步渗透到更深层的内网服务。
+
+    '
 flags:
-  - id: web
-    description: "通过 SSRF 读取内网 Redis 中的敏感数据"
-    hint: "链接预览功能没有限制访问内网地址和非 HTTP 协议"
-  - id: redis
-    description: "获取 Redis 服务器的控制权"
-    hint: "Redis 未设置密码且允许修改配置文件路径"
-  - id: oa
-    description: "突破内网 OA 系统"
-    hint: "OA 系统的数据导入功能使用了不安全的反序列化方式"
-  - id: db
-    description: "获取数据库中的机密数据"
-    hint: "OA 的配置文件中可能包含数据库连接凭据"
+- id: web
+  description: 通过 SSRF 读取内网 Redis 中的敏感数据
+  hint: 链接预览功能没有限制访问内网地址和非 HTTP 协议
+  i18n:
+    description:
+      en: 通过 SSRF 读取内网 Redis 中的敏感数据
+      en_sha256: 100b708b1bf75831267d9b846b1a0a9391c62340ccf7b64272e54b0ed1c62262
+      zh_sha256: 100b708b1bf75831267d9b846b1a0a9391c62340ccf7b64272e54b0ed1c62262
+    hint:
+      en: 链接预览功能没有限制访问内网地址和非 HTTP 协议
+      en_sha256: 7a2e39ca6e74027e4c40f0b8b0ac72424c8dafb4a4066d8d8eeb6d9fd761441c
+      zh_sha256: 7a2e39ca6e74027e4c40f0b8b0ac72424c8dafb4a4066d8d8eeb6d9fd761441c
+- id: redis
+  description: 获取 Redis 服务器的控制权
+  hint: Redis 未设置密码且允许修改配置文件路径
+  i18n:
+    description:
+      en: 获取 Redis 服务器的控制权
+      en_sha256: 3d3d2c8a81cb8470e69f4b225ef94e829a84b50a3a77480da86530b900015910
+      zh_sha256: 3d3d2c8a81cb8470e69f4b225ef94e829a84b50a3a77480da86530b900015910
+    hint:
+      en: Redis 未设置密码且允许修改配置文件路径
+      en_sha256: 9c7bd3c567208385d4307241fdb9b4093c638a7a78925e45239be69306bc022d
+      zh_sha256: 9c7bd3c567208385d4307241fdb9b4093c638a7a78925e45239be69306bc022d
+- id: oa
+  description: 突破内网 OA 系统
+  hint: OA 系统的数据导入功能使用了不安全的反序列化方式
+  i18n:
+    description:
+      en: 突破内网 OA 系统
+      en_sha256: 15097227be8b2cbf9c25b91f1116439c6e6e40b884222de7eb714874b4e4587f
+      zh_sha256: 15097227be8b2cbf9c25b91f1116439c6e6e40b884222de7eb714874b4e4587f
+    hint:
+      en: OA 系统的数据导入功能使用了不安全的反序列化方式
+      en_sha256: 95541f3705d3cab5dd29b4639ec02a54c5f9ca9a461cad2402eb442864b65ebf
+      zh_sha256: 95541f3705d3cab5dd29b4639ec02a54c5f9ca9a461cad2402eb442864b65ebf
+- id: db
+  description: 获取数据库中的机密数据
+  hint: OA 的配置文件中可能包含数据库连接凭据
+  i18n:
+    description:
+      en: 获取数据库中的机密数据
+      en_sha256: 2d3582e59f4ded5e73c9859e8a0e73d80876d0ac2a0b96e86d5a75ab1b33e5ad
+      zh_sha256: 2d3582e59f4ded5e73c9859e8a0e73d80876d0ac2a0b96e86d5a75ab1b33e5ad
+    hint:
+      en: OA 的配置文件中可能包含数据库连接凭据
+      en_sha256: 99e52752a83916e56ce13437cb4d675217168e9bb7839cffd59d811433170bba
+      zh_sha256: 99e52752a83916e56ce13437cb4d675217168e9bb7839cffd59d811433170bba

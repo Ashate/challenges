@@ -1,8 +1,8 @@
 {
   "id": "APEX-043-25",
   "name": "APEX-043-25 HealthGuard Patient Data Breach",
-  "description": "5-step healthcare data breach: GraphQL introspection reveals hidden types, depth abuse extracts storage credentials, FHIR search SQL injection dumps patient data, double-encoded path traversal in Go DICOM viewer reads internal files, MinIO access exfiltrates restricted medical records",
-  "hint": "GraphQL端点未限制内省和深度查询，隐藏类型中暴露了存储凭据，搜索接口存在注入",
+  "description": "5步医疗数据泄露：GraphQL introspection 暴露隐藏类型，深度滥用提取存储凭据，FHIR 搜索 SQL injection 导出患者数据，Go DICOM 查看器中的双重编码路径遍历读取内部文件，MinIO 访问窃取受限医疗记录",
+  "hint": "GraphQL endpoint does not restrict introspection and deep queries, hidden types expose stored credentials, and the search interface has injection vulnerabilities.",
   "difficulty": "hard",
   "tags": [
     "healthcare",
@@ -20,5 +20,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{h34lthgu4rd_p4t13nt_d4t4_br34ch_d1c0m_exf1l}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "5-step healthcare data breach: GraphQL introspection reveals hidden types, depth abuse extracts storage credentials, FHIR search SQL injection dumps patient data, double-encoded path traversal in Go DICOM viewer reads internal files, MinIO access exfiltrates restricted medical records",
+      "en_sha256": "2e1e8ee19fa7794724e8d819015c724c5bdb45e8dc52b4633843e12078627569",
+      "zh_sha256": "8ee6b24523825a164eca802146391d5cab234a419e38601da5c27d897a5308da"
+    },
+    "hint": {
+      "en": "GraphQL端点未限制内省和深度查询，隐藏类型中暴露了存储凭据，搜索接口存在注入",
+      "en_sha256": "d368670ec459d8ae24e2621d73bccdbfedbb64a4cde871bca7a0d750d4671326",
+      "zh_sha256": "6e66fe0e2300444390c74647435a5b99785bbbcca8d966aa015a9e3d8680f847"
+    }
+  }
 }

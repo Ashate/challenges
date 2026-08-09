@@ -16,12 +16,24 @@
     "service": "webapp",
     "port": 3055
   },
-  "description": "APEX-055-25 CloudBreak K8s Compromise",
-  "hint": "URL预览接口无过滤，可逐步访问云元数据、etcd和密钥管理等内部服务",
+  "description": "APEX-055-25 CloudBreak K8s 入侵",
+  "hint": "URL preview interface has no filtering, allowing step-by-step access to internal services such as cloud metadata, etcd, and key management.",
   "level": 3,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{k8s_3tcd_m3tadat4_t3rr4f0rm_cl0ud_0wn3d}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-055-25 CloudBreak K8s Compromise",
+      "en_sha256": "8f15ed43c0f60bf4ab11f27319558133c2acdfe7ea55c73592a341ab8f209ca6",
+      "zh_sha256": "8c057c8197148592aacc886bfb68a93872971adeeaa2ab3a1c345dbc190b2d7d"
+    },
+    "hint": {
+      "en": "URL预览接口无过滤，可逐步访问云元数据、etcd和密钥管理等内部服务",
+      "en_sha256": "6b108f67bcd33b13d8fa02f6383148b81b54d99373a47dbc60c4251a36a53ba3",
+      "zh_sha256": "ebe9c2aef994145b4d5abd2d2f44dff4d9d675374f97efa1519a27ebe952f469"
+    }
+  }
 }

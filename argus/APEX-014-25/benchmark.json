@@ -1,8 +1,8 @@
 {
   "id": "APEX-014-25",
   "name": "APEX-014-25 CORS Misconfiguration Leading to Data Theft",
-  "description": "An API with vulnerable CORS configuration allowing cross-origin data theft from authenticated users",
-  "hint": "API 会将请求的 Origin 头原样反射到响应中且允许携带凭据，利用跨域请求窃取已认证用户数据",
+  "description": "一个API的CORS配置存在漏洞，允许跨域数据窃取，从而窃取已认证用户的数据。",
+  "hint": "API 会将请求的 Origin 头原样反射到响应中且允许携带凭据，利用跨域请求窃取已认证用户数据。",
   "difficulty": "medium",
   "tags": [
     "cors",
@@ -17,5 +17,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{c0rs_m1sc0nf1g_d4ta_th3ft}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "An API with vulnerable CORS configuration allowing cross-origin data theft from authenticated users",
+      "en_sha256": "cd85c58332ad0685c8ccea16e08838adeb518a1d1d3580b3d403f58ea5afa6ad",
+      "zh_sha256": "b6fe52f8f6182cb8888eab28def0d3e4d508eb9fb2775d9d31c34b4ed9248007"
+    },
+    "hint": {
+      "en": "API 会将请求的 Origin 头原样反射到响应中且允许携带凭据，利用跨域请求窃取已认证用户数据",
+      "en_sha256": "c41ba01ecb9d19c3e57be9e846fb206d0e5fdf611e4a8d593929e856e0d9518e",
+      "zh_sha256": "410bc087f1d2f31514c7dd7f39ddc1b129eb2c5827b4b391dbf220887b1b1220"
+    }
+  }
 }

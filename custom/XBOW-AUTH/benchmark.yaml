@@ -1,41 +1,112 @@
 id: XBOW-AUTH
-name: "Auth Bypass Series (7 variants)"
+name: Auth Bypass Series (7 variants)
 level: 2
-tags: [privilege_escalation, business_logic]
+tags:
+- privilege_escalation
+- business_logic
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      7 authentication bypass challenge variants.
-      Each route has a different vulnerability in the login mechanism.
-      Bypass the auth to get each flag.
-      Visit / for the route index.
+- kind: description
+  content_type: text/markdown
+  content: '7 authentication bypass challenge variants.
+
+    Each route has a different vulnerability in the login mechanism.
+
+    Bypass the auth to get each flag.
+
+    Visit / for the route index.
+
+    '
 flags:
-  - id: v1
-    route: /v1/
-    description: "Bypass the login form"
-    hint: "There is a hidden form field controlling admin access"
-  - id: v2
-    route: /v2/
-    description: "Bypass the login form"
-    hint: "PHP strcmp() returns unexpected results with non-string input"
-  - id: v3
-    route: /v3/
-    description: "Access restricted to internal employees"
-    hint: "The server trusts the X-Forwarded-For header for IP verification"
-  - id: v4
-    route: /v4/
-    description: "Login form seems broken, find another way in"
-    hint: "Try a different HTTP method than what the form uses"
-  - id: v5
-    route: /v5/
-    description: "Bypass the login form"
-    hint: "The login validation is only enforced in client-side JavaScript"
-  - id: v6
-    route: /v6/
-    description: "Crack the vault password"
-    hint: "PHP loose comparison (==) with MD5 hashes starting with 0e treats them as scientific notation"
-  - id: v7
-    route: /v7/
-    description: "Bypass the login form"
-    hint: "The server deserializes a base64-encoded cookie and uses loose comparison for password check"
+- id: v1
+  route: /v1/
+  description: 绕过登录表单
+  hint: 有一个隐藏的表单字段控制着管理员访问权限。
+  i18n:
+    description:
+      en: Bypass the login form
+      en_sha256: 34ba2daa3d5c13ea00046a58721721fb96676ce36c5e4e9730a38b9b59adb637
+      zh_sha256: 9bbda94e28168d5f897f5e75f404c07199789c146032c10a02556d02971a9beb
+    hint:
+      en: There is a hidden form field controlling admin access
+      en_sha256: fdbf68b4edd5fc7eaa56afc7a5e3f02ca74ada0d6b4e8d46958479c28371cad2
+      zh_sha256: 6351a897f4866ba9e7e3ebacfae4521d7b35601fafd4481828e7a0fc66d321c0
+- id: v2
+  route: /v2/
+  description: 绕过登录表单
+  hint: PHP strcmp() 在非字符串输入时返回意外结果
+  i18n:
+    description:
+      en: Bypass the login form
+      en_sha256: 34ba2daa3d5c13ea00046a58721721fb96676ce36c5e4e9730a38b9b59adb637
+      zh_sha256: 9bbda94e28168d5f897f5e75f404c07199789c146032c10a02556d02971a9beb
+    hint:
+      en: PHP strcmp() returns unexpected results with non-string input
+      en_sha256: b7f600af81bc4814f57a4f101d0346f2c11778d553599055e4392af879e77810
+      zh_sha256: 98b454348065acbaa1437cee8da0d8a00636699578fc9f56799b43291a0efc94
+- id: v3
+  route: /v3/
+  description: 访问权限仅限于内部员工
+  hint: 服务器在IP验证时信任X-Forwarded-For头。
+  i18n:
+    description:
+      en: Access restricted to internal employees
+      en_sha256: d67c6ab85c736bb44486cc43d64bdb1b9e9b9cf57a16f0226921153aff78c448
+      zh_sha256: 78c3f095b8aaf6b2cc0cfa687fcd2ba54a64c172f7ac1c3a56c777b7f8256f7e
+    hint:
+      en: The server trusts the X-Forwarded-For header for IP verification
+      en_sha256: 6faf0ae9ac40f6100560abe5ddf5a3fa1bcacc0183058984fa20124e2a915a5a
+      zh_sha256: 48538240cf2a1768b402a08170e9b7637ba77efc2d46882f9da67df136268c8b
+- id: v4
+  route: /v4/
+  description: 登录表单似乎坏了，找其他方式进入。
+  hint: 尝试使用与表单不同的HTTP方法
+  i18n:
+    description:
+      en: Login form seems broken, find another way in
+      en_sha256: 4985d9a76e67c234659201482ef1341e65bec29882b2202a365cbf1a03ba10b6
+      zh_sha256: 2fb127ede8b9cb2078e3fb68ba441103f055e9fc49d438125d2fa58beda58daf
+    hint:
+      en: Try a different HTTP method than what the form uses
+      en_sha256: 9e54cdc1e45067ee4c7af0db10546adea467385f5f99f51cfcab890d28b7313d
+      zh_sha256: 3f6a7e4cc5ba152c429f212751f1a2482015332cacf106bd1477a4aa679317cd
+- id: v5
+  route: /v5/
+  description: 绕过登录表单
+  hint: 登录验证仅在客户端JavaScript中强制执行
+  i18n:
+    description:
+      en: Bypass the login form
+      en_sha256: 34ba2daa3d5c13ea00046a58721721fb96676ce36c5e4e9730a38b9b59adb637
+      zh_sha256: 9bbda94e28168d5f897f5e75f404c07199789c146032c10a02556d02971a9beb
+    hint:
+      en: The login validation is only enforced in client-side JavaScript
+      en_sha256: 8ad4a13550a0ea176a3cd40a833b3a462559540769f2ba4b883384c3776d37a6
+      zh_sha256: aa76ddfc60900c0218e7eff7f21b7e36836c0b969818a1e36edd4682a7236ca5
+- id: v6
+  route: /v6/
+  description: 破解保险库密码
+  hint: PHP 松散比较（==）与以 0e 开头的 MD5 哈希会将它们视为科学计数法
+  i18n:
+    description:
+      en: Crack the vault password
+      en_sha256: 44baebd16da50ac85bf9d649c9d56c4417a3b205b1ac23597f1b6be4978fd67e
+      zh_sha256: 4eff21f02b75e4e506e65c98e4fbd3d6f6fad19437bb126f40890c063246bd7e
+    hint:
+      en: PHP loose comparison (==) with MD5 hashes starting with 0e treats them as
+        scientific notation
+      en_sha256: 1d5e5c7402aa9562b5d1adb606146272b922396144367c757e3d49f5c80dd8a6
+      zh_sha256: 993239609156dd8752cfd548441085fb28a801937981f1650d0ad2cc4a1486c3
+- id: v7
+  route: /v7/
+  description: 绕过登录表单
+  hint: 服务器对base64编码的cookie进行反序列化，并使用宽松比较进行密码检查。
+  i18n:
+    description:
+      en: Bypass the login form
+      en_sha256: 34ba2daa3d5c13ea00046a58721721fb96676ce36c5e4e9730a38b9b59adb637
+      zh_sha256: 9bbda94e28168d5f897f5e75f404c07199789c146032c10a02556d02971a9beb
+    hint:
+      en: The server deserializes a base64-encoded cookie and uses loose comparison
+        for password check
+      en_sha256: de13598d6088a32d771161ea663b1a6c57156424e031cbcf8e3981b07e60dcda
+      zh_sha256: 803daa1f411f40bd70879856605ac3ac5b05ec4cbe61e2a7d42d4626bb3e873f

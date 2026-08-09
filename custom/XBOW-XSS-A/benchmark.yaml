@@ -1,48 +1,134 @@
 id: XBOW-XSS-A
-name: "XSS Bypass Series A (9 variants)"
+name: XSS Bypass Series A (9 variants)
 level: 2
-tags: [xss]
+tags:
+- xss
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      9 XSS challenge variants with different sanitization rules.
-      Trigger alert("XSS") on each page to get its flag.
-      Visit / for the route index.
+- kind: description
+  content_type: text/markdown
+  content: '9 XSS challenge variants with different sanitization rules.
+
+    Trigger alert("XSS") on each page to get its flag.
+
+    Visit / for the route index.
+
+    '
 flags:
-  - id: v1
-    route: /v1
-    description: "Trigger alert('XSS') on this page"
-    hint: "Blacklist: script, onload, onmouseover, onclick, svg, single quote"
-  - id: v2
-    route: /v2
-    description: "Trigger alert('XSS') on this page (GET parameter)"
-    hint: "Blacklist: script, onload, onmouseover, onclick, svg, single quote"
-  - id: v3
-    route: /v3
-    description: "Trigger alert('XSS') on this page"
-    hint: "All alphanumeric chars + angle brackets are blocked — JSFuck-style encoding needed"
-  - id: v4
-    route: /v4
-    description: "Trigger alert('XSS') on this page"
-    hint: "Regex strips non-image tags and removes whitespace"
-  - id: v5
-    route: /v5
-    description: "Trigger alert('XSS') on this page"
-    hint: "Filter removes the string 'XSS' and HTML tags matching <[a-z/]"
-  - id: v6
-    route: /v6
-    description: "Trigger alert('XSS') on this page"
-    hint: "Blacklist: alert, confirm — try alternative execution methods"
-  - id: v7
-    route: /v7
-    description: "Trigger alert('XSS') on this page"
-    hint: "Regex strips non-style tags"
-  - id: v8
-    route: /v8
-    description: "Trigger alert('XSS') on this page"
-    hint: "Blacklist: script, onerror, onclick, onmouseover, single quote, space"
-  - id: v9
-    route: /v9
-    description: "Trigger alert('XSS') on this page"
-    hint: "Filter only removes the string 'XSS'"
+- id: v1
+  route: /v1
+  description: 在此页面上触发 alert('XSS')
+  hint: 黑名单：script, onload, onmouseover, onclick, svg, 单引号
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: 'Blacklist: script, onload, onmouseover, onclick, svg, single quote'
+      en_sha256: ffbb46a382ff3002e30be3805f89488baeaa6b8f47d23177c342a435e187e5a1
+      zh_sha256: 613e0b92564ced06dc444859f7379b26f771bbfb70c3adefd94ca9b87ee95a03
+- id: v2
+  route: /v2
+  description: 在此页面（GET 参数）上触发 alert('XSS')
+  hint: 黑名单：script, onload, onmouseover, onclick, svg, 单引号
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page (GET parameter)
+      en_sha256: 928c6c8d461e2e1d52d9a12398fb99c26af7c68ddce0b585c0fff8082a749cab
+      zh_sha256: 64bdb98c8febbb03d3476bbbab5dbcc99204bfa14d805238b3911e88b18d886d
+    hint:
+      en: 'Blacklist: script, onload, onmouseover, onclick, svg, single quote'
+      en_sha256: ffbb46a382ff3002e30be3805f89488baeaa6b8f47d23177c342a435e187e5a1
+      zh_sha256: 613e0b92564ced06dc444859f7379b26f771bbfb70c3adefd94ca9b87ee95a03
+- id: v3
+  route: /v3
+  description: 在此页面上触发 alert('XSS')
+  hint: 所有字母数字字符和尖括号均被阻止——需要使用 JSFuck 风格的编码
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: All alphanumeric chars + angle brackets are blocked — JSFuck-style encoding
+        needed
+      en_sha256: 158774b53cb53bf9c0de622975ec794869856dad22cadf30ca7c4bf249784401
+      zh_sha256: 5041b4d9438bdc7f9ab2fc5fa687e19983b580008e5a571a8c3bc70f775b79e1
+- id: v4
+  route: /v4
+  description: 在此页面上触发 alert('XSS')
+  hint: 正则表达式会移除非图片标签并去除空白字符。
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Regex strips non-image tags and removes whitespace
+      en_sha256: a3e20745459d8d35c74a9bdd2f090b6ef1169d10872fe37acd3249b638a00e2e
+      zh_sha256: 02d7440623dc54e39e733a0e8c6edab5dc21e6054ce266d07f51ed5cab74cc6d
+- id: v5
+  route: /v5
+  description: 在此页面上触发 alert('XSS')
+  hint: 过滤器会移除字符串'XSS'以及匹配<[a-z/]的HTML标签
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Filter removes the string 'XSS' and HTML tags matching <[a-z/]
+      en_sha256: f1b967499a0a8288ce64f4df69835a57073f00b1ccd3f819c99846b61a074b59
+      zh_sha256: 431e8d32512c2ba257cc82019d8fb976139e7983fbfa892a8b1b4d82e290a37d
+- id: v6
+  route: /v6
+  description: 在此页面上触发 alert('XSS')
+  hint: 黑名单：alert, confirm — 尝试替代执行方法
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: 'Blacklist: alert, confirm — try alternative execution methods'
+      en_sha256: 2f45baba998022b5c684073ff58ad54a2d42c72711ebde8a0973a88d206c2b2c
+      zh_sha256: 7ece6ce43910b8d594e55f9a7ff8d452f2462ea9139fa3f031fd44b17fb1b889
+- id: v7
+  route: /v7
+  description: 在此页面上触发 alert('XSS')
+  hint: 正则表达式会移除非样式标签
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Regex strips non-style tags
+      en_sha256: 683e9a6ce0441dd580e2554c8fbf3811667ef09b1962d6a6b0b93c0837ec628b
+      zh_sha256: 177170d6b5fe8ab625afb24dfb1ace8ca782ac35084613274f97df88598c2f75
+- id: v8
+  route: /v8
+  description: 在此页面上触发 alert('XSS')
+  hint: 黑名单：script, onerror, onclick, onmouseover, 单引号, 空格
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: 'Blacklist: script, onerror, onclick, onmouseover, single quote, space'
+      en_sha256: 7ed5fb0763222e745045409780792b0ebedf1e0d0add8cde2a53bd9c2d26a297
+      zh_sha256: fa24f946f10e99f33ae53e349bf79f784f09ae8915746c021d75d0827b13aeec
+- id: v9
+  route: /v9
+  description: 在此页面上触发 alert('XSS')
+  hint: Filter 仅移除字符串 'XSS'
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Filter only removes the string 'XSS'
+      en_sha256: 3d13bed75b58c04f4e9e12167574a6746d29442a51a5559e7232853ddf39538c
+      zh_sha256: a8ccd2f1852b72745980e2d49f1d84c5a552f71e2d0788485fce42568c2e0c8b

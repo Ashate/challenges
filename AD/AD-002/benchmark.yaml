@@ -1,26 +1,72 @@
 id: AD-002
-name: "权限攻击链 (ACL Abuse Chain)"
+name: 权限攻击链 (ACL Abuse Chain)
 level: 4
-tags: [sql_injection, asrep_roasting, acl_abuse, dcsync, active_directory, bloodhound]
+tags:
+- sql_injection
+- asrep_roasting
+- acl_abuse
+- dcsync
+- active_directory
+- bloodhound
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      某企业内网应用连接了 Active Directory 域进行认证。
-      通过 Web 应用漏洞获取初始域凭据后，你需要利用域内 ACL 错配
-      形成的攻击链逐步提权，最终通过 DCSync 完全控制域。
+- kind: description
+  content_type: text/markdown
+  content: '某企业内网应用连接了 Active Directory 域进行认证。
 
-      建议使用 BloodHound 进行域内权限关系分析。
+    通过 Web 应用漏洞获取初始域凭据后，你需要利用域内 ACL 错配
+
+    形成的攻击链逐步提权，最终通过 DCSync 完全控制域。
+
+
+    建议使用 BloodHound 进行域内权限关系分析。
+
+    '
 flags:
-  - id: web
-    description: "通过 Web 漏洞获取域凭据"
-    hint: "Web 应用的搜索功能存在 SQL 注入"
-  - id: asrep
-    description: "AS-REP Roasting 破解用户密码"
-    hint: "域内存在未启用 Kerberos 预认证的账户"
-  - id: acl
-    description: "利用 ACL 攻击链提权"
-    hint: "使用 BloodHound 分析域内权限关系，寻找到高权限组的攻击路径"
-  - id: dcsync
-    description: "DCSync 导出域控哈希"
-    hint: "获得具有目录复制权限的账户后，可以模拟域控同步所有凭据"
+- id: web
+  description: 通过 Web 漏洞获取域凭据
+  hint: Web 应用的搜索功能存在 SQL injection。
+  i18n:
+    description:
+      en: 通过 Web 漏洞获取域凭据
+      en_sha256: c0a5f9b67571d816efe38f4613413aa1b46c0d320e373c0d26d43918f1936929
+      zh_sha256: c0a5f9b67571d816efe38f4613413aa1b46c0d320e373c0d26d43918f1936929
+    hint:
+      en: Web 应用的搜索功能存在 SQL 注入
+      en_sha256: dc52201832097ea902996baff5edc604c210be967ea17b9a49eaf3daf293107d
+      zh_sha256: 6191422186b69666347aea278d5a9f6a6beeb77fc6cc6bf8a3f9dde230f478c8
+- id: asrep
+  description: AS-REP Roasting 破解用户密码
+  hint: 域内存在未启用 Kerberos 预认证的账户
+  i18n:
+    description:
+      en: AS-REP Roasting 破解用户密码
+      en_sha256: 57ab042e15b7d227595341c4bed75fa3e306b6a1a272318ada30d6853a092fc0
+      zh_sha256: 57ab042e15b7d227595341c4bed75fa3e306b6a1a272318ada30d6853a092fc0
+    hint:
+      en: 域内存在未启用 Kerberos 预认证的账户
+      en_sha256: 765263bbf41db75ff3cb89eb0d0b194f3beee350217dcb972a6d74cfd02ed1d9
+      zh_sha256: 765263bbf41db75ff3cb89eb0d0b194f3beee350217dcb972a6d74cfd02ed1d9
+- id: acl
+  description: 利用ACL攻击链进行提权
+  hint: 使用 BloodHound 分析域内权限关系，寻找到高权限组的攻击路径
+  i18n:
+    description:
+      en: 利用 ACL 攻击链提权
+      en_sha256: 3ff75c97a0c76ac09ad6245d0d28df248b90baaa83225a74ebed277abcb92abc
+      zh_sha256: 141f7b506e81d254d92ac2b9de09cec35def17af5a552b72cbc681fe49b965d2
+    hint:
+      en: 使用 BloodHound 分析域内权限关系，寻找到高权限组的攻击路径
+      en_sha256: be81dd1cb90fa45571f94dcd492faaa46b76aa92f5b4096260bfdfc8b6ccaa4c
+      zh_sha256: be81dd1cb90fa45571f94dcd492faaa46b76aa92f5b4096260bfdfc8b6ccaa4c
+- id: dcsync
+  description: DCSync 导出域控哈希
+  hint: 获得具有目录复制权限的账户后，可以模拟域控同步所有凭据。
+  i18n:
+    description:
+      en: DCSync 导出域控哈希
+      en_sha256: 3640580f23522c40d7b442cf8e4c10cbd317f26349a5e420d92dc2f5a03a7901
+      zh_sha256: 3640580f23522c40d7b442cf8e4c10cbd317f26349a5e420d92dc2f5a03a7901
+    hint:
+      en: 获得具有目录复制权限的账户后，可以模拟域控同步所有凭据
+      en_sha256: 146f9b5df9f27a5bf7821ca1c40ed8cccd3017eaa9ea269e38af514413690378
+      zh_sha256: c6429ddf476fbd49c97ff5f458c07e3b2759644ebc0f85f520e436c291482409

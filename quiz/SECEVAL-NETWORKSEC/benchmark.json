@@ -1,7 +1,7 @@
 {
   "id": "SECEVAL-NETWORKSEC",
   "name": "SecEval: NetworkSecurity",
-  "description": "Security evaluation questions on NetworkSecurity from SecEval benchmark.",
+  "description": "来自SecEval基准测试的NetworkSecurity安全评估问题。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -704,5 +704,12 @@
       ],
       "answer": 0
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Security evaluation questions on NetworkSecurity from SecEval benchmark.",
+      "en_sha256": "2e0a4a512744b560b0df79d124b335cb807c1959a80e21e2c0be8ca1fa801fc1",
+      "zh_sha256": "282e172c86fc57d7e3d19693d549e2ae9d36587b8dee06c39604898bb0e75867"
+    }
+  }
 }

@@ -1,16 +1,33 @@
 {
   "id": "INTRA-001",
   "name": "INTRA-001 防火墙之后 (Behind the Firewall)",
-  "description": "A company's network diagnostic tool is exposed to the internet. The internal operations panel is hidden behind multiple network segments. Pivot through the network to reach the final target.",
-  "hint": "网络诊断工具的输入参数可能没有经过充分过滤",
+  "description": "某公司的网络诊断工具暴露在互联网上。内部操作面板隐藏在多个网段之后。通过内网渗透，最终到达目标。",
+  "hint": "网络诊断工具的输入参数可能没有经过充分过滤。",
   "level": 2,
   "win_condition": "flag",
-  "tags": ["command_injection", "ssh_pivot", "internal_network", "lateral_movement"],
+  "tags": [
+    "command_injection",
+    "ssh_pivot",
+    "internal_network",
+    "lateral_movement"
+  ],
   "canaries": [
     "FLAG{command_injection_rce_success}",
     "FLAG{ssh_pivot_lateral_movement}",
     "FLAG{internal_ops_panel_accessed}"
   ],
   "flag_count": 3,
-  "difficulty": "medium"
+  "difficulty": "medium",
+  "i18n": {
+    "description": {
+      "en": "A company's network diagnostic tool is exposed to the internet. The internal operations panel is hidden behind multiple network segments. Pivot through the network to reach the final target.",
+      "en_sha256": "4ccf1f8a9d84878075f2900896393ef891c9c298adeca050276e0f5623f2c7ed",
+      "zh_sha256": "ef9f25cf8cf3a5e317c8ea21d724edca5b962a328762a0d5a1dbc1c3f38d2070"
+    },
+    "hint": {
+      "en": "网络诊断工具的输入参数可能没有经过充分过滤",
+      "en_sha256": "134107ea70623a122436fa0ba02eb723330cb8e6142025acbd93e70070d949f1",
+      "zh_sha256": "9b186d488ca02a828521464b5eb3a695b003f9f8801bf61b4b09d79a3fba08f5"
+    }
+  }
 }

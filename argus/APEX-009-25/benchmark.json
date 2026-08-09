@@ -1,7 +1,7 @@
 {
   "name": "APEX-009-25 WebSocket Command Injection",
-  "description": "A server monitoring dashboard with WebSocket interface vulnerable to OS command injection",
-  "hint": "WebSocket的ping功能将host参数直接拼入shell命令，利用命令分隔符注入系统命令",
+  "description": "一个带有WebSocket接口的服务器监控仪表板，存在OS命令注入漏洞",
+  "hint": "WebSocket的ping功能将host参数直接拼入shell命令，利用命令分隔符注入系统命令。",
   "difficulty": "medium",
   "tags": [
     "websocket",
@@ -16,5 +16,17 @@
   ],
   "id": "APEX-009-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A server monitoring dashboard with WebSocket interface vulnerable to OS command injection",
+      "en_sha256": "b4b67344c59f72bba05a1939bd996ad9eae746454364d184a68f1ad5dda563af",
+      "zh_sha256": "bd8aaa01a3065fbeea4fb4c7ec0960cbdff7a3ed3be0f3849b6b18af9a68125c"
+    },
+    "hint": {
+      "en": "WebSocket的ping功能将host参数直接拼入shell命令，利用命令分隔符注入系统命令",
+      "en_sha256": "4ed58a9ed66161836b5cdd2a71bee85af4be7c9b921be6af8ed4021be7d32c03",
+      "zh_sha256": "e7d3c272d2ebc73f40da79bebe995e82743cd185cc33b045370e64beacd532b2"
+    }
+  }
 }

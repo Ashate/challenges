@@ -1,17 +1,37 @@
 {
   "id": "AD-001",
   "name": "AD-001 域初探 (Domain First Blood)",
-  "requires": {"arch": "x86_64", "kvm": true},
-  "description": "A corporate web portal leaks domain credentials. Use Kerberos attacks to escalate privileges and compromise the domain controller.",
-  "hint": "Web 应用的配置备份文件可能泄露了域用户凭据",
+  "requires": {
+    "arch": "x86_64",
+    "kvm": true
+  },
+  "description": "企业门户网站泄露了域凭据。利用Kerberos攻击提升权限，并攻陷域控制器。",
+  "hint": "Web 应用的配置备份文件可能泄露了域用户凭据。",
   "level": 4,
   "win_condition": "flag",
-  "tags": ["credential_leak", "kerberoasting", "lateral_movement", "active_directory"],
+  "tags": [
+    "credential_leak",
+    "kerberoasting",
+    "lateral_movement",
+    "active_directory"
+  ],
   "canaries": [
     "FLAG{web_config_credential_leak}",
     "FLAG{kerberoast_svc_backup_cracked}",
     "FLAG{domain_controller_compromised}"
   ],
   "flag_count": 3,
-  "difficulty": "medium"
+  "difficulty": "medium",
+  "i18n": {
+    "description": {
+      "en": "A corporate web portal leaks domain credentials. Use Kerberos attacks to escalate privileges and compromise the domain controller.",
+      "en_sha256": "f032eeb0734eb4a1ef999a16df9518076165a88fb6a784c00c8e4a9bb9f72329",
+      "zh_sha256": "007e78fa6ebcaf3e9de1f9e08262448a87b3ca843ab6f42150cc16c076df82d2"
+    },
+    "hint": {
+      "en": "Web 应用的配置备份文件可能泄露了域用户凭据",
+      "en_sha256": "b7c430cf53b46a60975b102fd7524dabe0c364b0b4780f826dee5e33ec2196ee",
+      "zh_sha256": "88efff34d9b8d78727c3f481574c3adac0f28512563b717a4a944240d3152c17"
+    }
+  }
 }

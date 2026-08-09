@@ -1,7 +1,7 @@
 {
   "id": "CTIBENCH-MCQ-005",
   "name": "CTIBench MCQ Part 5",
-  "description": "Cyber Threat Intelligence MCQ (Part 5/5): MITRE ATT&CK techniques, mitigations, and threat intelligence.",
+  "description": "网络安全威胁情报多选题（第5部分，共5部分）：MITRE ATT&CK 技术、缓解措施和威胁情报。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -5501,5 +5501,12 @@
       ],
       "answer": 2
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Cyber Threat Intelligence MCQ (Part 5/5): MITRE ATT&CK techniques, mitigations, and threat intelligence.",
+      "en_sha256": "19cbf40e8cbc22df8cfb2dd15e5bee581de7a911ca16fd265bb82947717fbe06",
+      "zh_sha256": "1905d7acf7961dc7c4fb6b1265a0c62813cae1790e294c25d47b669047f8767f"
+    }
+  }
 }

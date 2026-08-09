@@ -1,7 +1,7 @@
 {
   "id": "SECEVAL-SYSTEMSEC",
   "name": "SecEval: SystemSecurity",
-  "description": "Security evaluation questions on SystemSecurity from SecEval benchmark.",
+  "description": "来自SecEval基准测试的SystemSecurity安全评估问题。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -4323,5 +4323,12 @@
       ],
       "answer": 3
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Security evaluation questions on SystemSecurity from SecEval benchmark.",
+      "en_sha256": "5dcfd684f49f093719a30652ba3cad4950c19a97d5dde61fdbe7861107518973",
+      "zh_sha256": "06f3ee49335e94cac189a95e71dde464eaa7f4e2d613b36256339e8a00210d1d"
+    }
+  }
 }

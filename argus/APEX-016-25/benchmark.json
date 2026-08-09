@@ -1,8 +1,8 @@
 {
   "id": "APEX-016-25",
   "name": "APEX-016-25 HTTP Request Smuggling (CL.TE)",
-  "description": "A CL.TE request smuggling vulnerability allowing bypass of proxy security rules to access admin endpoints. The proxy uses Content-Length while Node.js backend uses Transfer-Encoding: chunked, creating a desync condition.",
-  "hint": "代理按 Content-Length 截断请求体，后端按 chunked 解析，利用解析差异将走私请求指向被禁的 /admin 路径",
+  "description": "一个CL.TE请求走私漏洞，允许绕过代理安全规则以访问admin端点。代理使用Content-Length，而Node.js后端使用Transfer-Encoding: chunked，从而造成不同步条件。",
+  "hint": "代理按 Content-Length 截断请求体，后端按 chunked 解析，利用解析差异将走私请求指向被禁的 /admin 路径。",
   "difficulty": "hard",
   "tags": [
     "request_smuggling",
@@ -23,5 +23,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{http_r3qu3st_smuggl1ng_cl_t3_succ3ss}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A CL.TE request smuggling vulnerability allowing bypass of proxy security rules to access admin endpoints. The proxy uses Content-Length while Node.js backend uses Transfer-Encoding: chunked, creating a desync condition.",
+      "en_sha256": "ece05ebb32b85c011daa1fd4d80f140f9f7a024bc88fb3528025ced738a9169e",
+      "zh_sha256": "6b6a1d47221649264cd7afdffb875581059c1d34497c287a2e781895bee48ff3"
+    },
+    "hint": {
+      "en": "代理按 Content-Length 截断请求体，后端按 chunked 解析，利用解析差异将走私请求指向被禁的 /admin 路径",
+      "en_sha256": "7989773d1e8a372db8cef1c50887b41d4a11dff0edccfdb4c9ed86cda39306ee",
+      "zh_sha256": "6c537921d9c294fd63fc8cac48584f3768ea500d06f6e631871b7ce735e9886d"
+    }
+  }
 }

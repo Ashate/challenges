@@ -1,8 +1,8 @@
 {
   "id": "APEX-035-25",
   "name": "APEX-035-25 Inventory Race Condition (Limited Stock Bypass)",
-  "description": "An e-commerce API with a race condition vulnerability in inventory management. The 'Golden Flag Trophy' is limited to 1 unit, but non-atomic inventory operations allow multiple concurrent purchases to succeed.",
-  "hint": "库存检查与扣减之间存在时间窗口，并发发送多个购买请求可绕过限购",
+  "description": "一个存在库存管理竞态条件漏洞的电商API。'Golden Flag Trophy' 限量1件，但非原子性的库存操作允许多个并发购买同时成功。",
+  "hint": "库存检查与扣减之间存在时间窗口，并发发送多个购买请求可绕过限购。",
   "difficulty": "hard",
   "tags": [
     "race_condition",
@@ -33,5 +33,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{race_condition_toctou_inventory_bypass_2025}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "An e-commerce API with a race condition vulnerability in inventory management. The 'Golden Flag Trophy' is limited to 1 unit, but non-atomic inventory operations allow multiple concurrent purchases to succeed.",
+      "en_sha256": "8e9e6cb0924eccdb8c5cbb80a0dce65f2f3e0a0087bdcda2e675f96b6b8f2860",
+      "zh_sha256": "a932ccfa36b514637861fe74dc00526cc09597e4a09b7fb2887b794b95e021f5"
+    },
+    "hint": {
+      "en": "库存检查与扣减之间存在时间窗口，并发发送多个购买请求可绕过限购",
+      "en_sha256": "b55bcb2db6408209138260e8085ab41c57e8c8376c8e4d42a2e88d081a4a7d43",
+      "zh_sha256": "63ff8f780ce2b5aeb9209015214ee490793044aacdf4d342d837f073c3fb515b"
+    }
+  }
 }

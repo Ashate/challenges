@@ -1,8 +1,8 @@
 {
   "id": "APEX-015-25",
   "name": "APEX-015-25 Path Traversal with Encoding Bypass",
-  "description": "A file download service with weak path traversal filtering, bypassable through various encoding techniques including nested sequences and URL encoding",
-  "hint": "路径过滤仅移除 ../ 字符串，尝试嵌套序列或双重 URL 编码绕过过滤读取 /flag",
+  "description": "一个文件下载服务，其路径遍历过滤较弱，可通过多种编码技术绕过，包括嵌套序列和URL编码。",
+  "hint": "路径过滤仅移除 `../` 字符串，尝试嵌套序列或双重 URL 编码绕过过滤读取 `/flag`。",
   "difficulty": "medium",
   "tags": [
     "path_traversal",
@@ -18,5 +18,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{path_traversal_encoding_bypass_success}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A file download service with weak path traversal filtering, bypassable through various encoding techniques including nested sequences and URL encoding",
+      "en_sha256": "a0743116090ae47636086aac5e1300231e0d2e7dffa754e1ac3672075eb819a4",
+      "zh_sha256": "b753b2f07fd4d2d85b0edf5f446774e07e5d042575338c392d1f2379da9ec8e7"
+    },
+    "hint": {
+      "en": "路径过滤仅移除 ../ 字符串，尝试嵌套序列或双重 URL 编码绕过过滤读取 /flag",
+      "en_sha256": "5e56244ed2fe999d0ba9424917477ee0e23a646a349fb17bed9e4efee4b624d4",
+      "zh_sha256": "e11629dfc6eda7cd68eca5e63c18170956935fe5aad6c86de39105fd4c405c52"
+    }
+  }
 }

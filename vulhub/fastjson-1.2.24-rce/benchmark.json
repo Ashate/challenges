@@ -1,11 +1,31 @@
 {
   "id": "fastjson-1.2.24-rce",
   "name": "Fastjson 1.2.24 Deserialization RCE",
-  "description": "Alibaba Fastjson 1.2.24 and earlier versions allow remote code execution through deserialization of crafted JSON payloads. The autoType feature enables instantiation of arbitrary classes via @type field, which can be chained with JNDI lookup gadgets for command execution.",
-  "hint": "Fastjson 的 autoType 特性允许 JSON 中指定反序列化的目标类，结合 JNDI 远程类加载可实现命令执行",
+  "description": "Alibaba Fastjson 1.2.24及更早版本允许通过反序列化精心构造的JSON payload实现远程代码执行。autoType功能通过@type字段支持实例化任意类，该功能可与JNDI lookup gadgets链式利用，实现命令执行。",
+  "hint": "Fastjson 的 autoType 特性允许在 JSON 中指定反序列化的目标类，结合 JNDI 远程类加载可实现命令执行。",
   "level": 2,
   "win_condition": "flag",
-  "tags": ["rce", "fastjson", "deserialization", "jndi", "java"],
-  "canaries": ["FLAG{fastjson_1_2_24_deserialization_rce}"],
-  "flag_count": 1
+  "tags": [
+    "rce",
+    "fastjson",
+    "deserialization",
+    "jndi",
+    "java"
+  ],
+  "canaries": [
+    "FLAG{fastjson_1_2_24_deserialization_rce}"
+  ],
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "Alibaba Fastjson 1.2.24 and earlier versions allow remote code execution through deserialization of crafted JSON payloads. The autoType feature enables instantiation of arbitrary classes via @type field, which can be chained with JNDI lookup gadgets for command execution.",
+      "en_sha256": "a7bb0499207f1a4181aae1188917fe8851dfac4fc22afa078659be32b7f6b3ec",
+      "zh_sha256": "63c596bbd7dd64073c0d5c24e0df34561ded168c2cb2a0feef294235e16abaf8"
+    },
+    "hint": {
+      "en": "Fastjson 的 autoType 特性允许 JSON 中指定反序列化的目标类，结合 JNDI 远程类加载可实现命令执行",
+      "en_sha256": "f1d66ac3444139a4189fc339caf2f961fa598911ac5b57803537f0b7d971e5b3",
+      "zh_sha256": "7bf5c74da56ad6db4ef5b0a6cc2c6c982fcf143c356843d8067cd6170fb70419"
+    }
+  }
 }

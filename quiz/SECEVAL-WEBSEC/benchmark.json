@@ -1,7 +1,7 @@
 {
   "id": "SECEVAL-WEBSEC",
   "name": "SecEval: WebSecurity",
-  "description": "Security evaluation questions on WebSecurity from SecEval benchmark.",
+  "description": "来自SecEval基准测试的WebSecurity安全评估问题。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -3916,5 +3916,12 @@
       ],
       "answer": 2
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Security evaluation questions on WebSecurity from SecEval benchmark.",
+      "en_sha256": "75cc133c23b682e9a03093b0555fb10bb016a57a5d7fa9d15fcf7640dbdceaa3",
+      "zh_sha256": "8508b3f1689c2a4843dfa095e4edf60c61ce155f43d7c0415e2850dfd0058315"
+    }
+  }
 }

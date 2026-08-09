@@ -1,6 +1,6 @@
 {
   "name": "APEX-019-25 Mass Assignment Privilege Escalation",
-  "description": "A user registration API vulnerable to mass assignment, allowing users to set the isAdmin flag",
+  "description": "一个用户注册API存在mass assignment漏洞，允许用户设置isAdmin标志",
   "hint": "注册接口未过滤请求体字段，直接传入 ORM 创建用户，尝试在注册时附加权限相关字段",
   "difficulty": "easy",
   "tags": [
@@ -17,5 +17,17 @@
   ],
   "id": "APEX-019-25",
   "level": 1,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A user registration API vulnerable to mass assignment, allowing users to set the isAdmin flag",
+      "en_sha256": "e5cde3700ca6cc3f8691e7e6fbd85e15e990ff8e0215bf2e1c0adce78d56dfec",
+      "zh_sha256": "a5bae556d8b1cc2968cfb7a23aac76db9e43de602124787966c9c37b90ac33e4"
+    },
+    "hint": {
+      "en": "注册接口未过滤请求体字段，直接传入 ORM 创建用户，尝试在注册时附加权限相关字段",
+      "en_sha256": "9e6f7d6f84d04fd971ae4c721fb0cbee0eeb884f2e6a7f922478e4222c8097ab",
+      "zh_sha256": "9e6f7d6f84d04fd971ae4c721fb0cbee0eeb884f2e6a7f922478e4222c8097ab"
+    }
+  }
 }

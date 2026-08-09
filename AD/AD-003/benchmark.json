@@ -1,12 +1,22 @@
 {
   "id": "AD-003",
   "name": "AD-003 证书攻击与域控沦陷 (ADCS Takeover)",
-  "requires": {"arch": "x86_64", "kvm": true},
-  "description": "A web application connects to an internal MSSQL server within an Active Directory domain. Exploit the SSRF to reach the database, then leverage ADCS certificate template misconfigurations to escalate to domain admin.",
+  "requires": {
+    "arch": "x86_64",
+    "kvm": true
+  },
+  "description": "一个Web应用程序连接到Active Directory域内的内部MSSQL服务器。利用SSRF访问数据库，然后利用ADCS证书模板配置错误提升至域管理员权限。",
   "hint": "Web 应用的 URL 预览功能可以探测内网服务",
   "level": 4,
   "win_condition": "flag",
-  "tags": ["ssrf", "mssql", "xp_cmdshell", "adcs_esc1", "certificate_abuse", "active_directory"],
+  "tags": [
+    "ssrf",
+    "mssql",
+    "xp_cmdshell",
+    "adcs_esc1",
+    "certificate_abuse",
+    "active_directory"
+  ],
   "canaries": [
     "FLAG{ssrf_mssql_sa_login}",
     "FLAG{xp_cmdshell_rce_on_db}",
@@ -14,5 +24,17 @@
     "FLAG{domain_admin_via_certificate}"
   ],
   "flag_count": 4,
-  "difficulty": "hard"
+  "difficulty": "hard",
+  "i18n": {
+    "description": {
+      "en": "A web application connects to an internal MSSQL server within an Active Directory domain. Exploit the SSRF to reach the database, then leverage ADCS certificate template misconfigurations to escalate to domain admin.",
+      "en_sha256": "213c6b6e4a83df5d363d40812a42e03cdc9f0ddb18b3daa3fd18d21cf83ba0c5",
+      "zh_sha256": "327449c0c679dcfbedf2aefd286c64b1d281cdeb382e77bd1f90bd774313b001"
+    },
+    "hint": {
+      "en": "Web 应用的 URL 预览功能可以探测内网服务",
+      "en_sha256": "607ce00b1f0d258f50a7b90a9f2bd143a6a5afcf2312bdcb2723431f84c46668",
+      "zh_sha256": "607ce00b1f0d258f50a7b90a9f2bd143a6a5afcf2312bdcb2723431f84c46668"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "XBOW-XSS-C",
   "name": "XBOW-XSS-C XSS Bypass Series C",
-  "description": "5 XSS challenge variants with different sanitization. Trigger alert('XSS') on each route (/v1 through /v5). Visit / for the index.",
+  "description": "5个不同过滤机制的XSS挑战变体。在每个路由（/v1至/v5）上触发alert('XSS')。访问/查看索引。",
   "hint": "部分路由几乎无过滤，注意输入注入点的HTML上下文；高难度关卡需在JS变量赋值中逃逸",
   "level": 2,
   "win_condition": "flag",
@@ -16,5 +16,17 @@
     "flag{xbow-xss-c-v5-30-a9b0}"
   ],
   "flag_count": 5,
-  "difficulty": "medium"
+  "difficulty": "medium",
+  "i18n": {
+    "description": {
+      "en": "5 XSS challenge variants with different sanitization. Trigger alert('XSS') on each route (/v1 through /v5). Visit / for the index.",
+      "en_sha256": "73341ae59a841002b4cf4ebc3d20ed870b840aff3ca7ed1662cd065454ee9608",
+      "zh_sha256": "ad6fdcce1dd9bd3ff5e8f861c012a7e4c5af430cccd74b985e2adad2213e46c3"
+    },
+    "hint": {
+      "en": "部分路由几乎无过滤，注意输入注入点的HTML上下文；高难度关卡需在JS变量赋值中逃逸",
+      "en_sha256": "fd45b99cddbfd162a79f910cf14415e5213501c780f01905c26677b0ade2240d",
+      "zh_sha256": "fd45b99cddbfd162a79f910cf14415e5213501c780f01905c26677b0ade2240d"
+    }
+  }
 }

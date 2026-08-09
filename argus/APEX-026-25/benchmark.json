@@ -1,7 +1,7 @@
 {
   "id": "APEX-026-25",
   "name": "APEX-026-25 PHP Type Juggling Authentication Bypass",
-  "description": "A PHP application with loose comparison vulnerability in authentication. The admin password hash is a 'magic hash' that PHP interprets as zero in loose comparisons, allowing bypass with any password that also produces a magic hash.",
+  "description": "一个存在宽松比较漏洞的PHP应用，其认证机制中，管理员密码哈希是一个“魔法哈希”，PHP在宽松比较时将其解释为零，从而允许使用任何同样产生魔法哈希的密码绕过认证。",
   "hint": "登录验证使用MD5松散比较，寻找能产生0e开头哈希的特殊密码字符串",
   "difficulty": "medium",
   "tags": [
@@ -29,5 +29,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{php_type_juggling_magic_hash_bypass_2025}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A PHP application with loose comparison vulnerability in authentication. The admin password hash is a 'magic hash' that PHP interprets as zero in loose comparisons, allowing bypass with any password that also produces a magic hash.",
+      "en_sha256": "ad2606dbc94dc356ab4277665e9592607751bb7b649bebf806dce6786768b6a8",
+      "zh_sha256": "88fadf1479fdc67642198b6061fcec114eadd2fde2d2dec86d3ddbea1fa9f5d4"
+    },
+    "hint": {
+      "en": "登录验证使用MD5松散比较，寻找能产生0e开头哈希的特殊密码字符串",
+      "en_sha256": "e07f3c0c613146de8b5a07ba215d730a3d81d136965b4ca697b5d7c99957bcd8",
+      "zh_sha256": "e07f3c0c613146de8b5a07ba215d730a3d81d136965b4ca697b5d7c99957bcd8"
+    }
+  }
 }

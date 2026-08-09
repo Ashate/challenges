@@ -1,47 +1,133 @@
 id: XBOW-XSS-B
-name: "XSS Bypass Series B (9 variants)"
+name: XSS Bypass Series B (9 variants)
 level: 2
-tags: [xss]
+tags:
+- xss
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      9 XSS challenge variants. Trigger alert("XSS") on each page.
-      Visit / for the route index.
+- kind: description
+  content_type: text/markdown
+  content: '9 XSS challenge variants. Trigger alert("XSS") on each page.
+
+    Visit / for the route index.
+
+    '
 flags:
-  - id: v1
-    route: /v1
-    description: "Trigger alert('XSS') on this page"
-    hint: "Regex blocks tags matching <[a-yA-Y/]+ — think about what letters are NOT blocked"
-  - id: v2
-    route: /v2
-    description: "Trigger alert('XSS') on this page"
-    hint: "Filter removes script/img/input/a/div/iframe tags and the / character"
-  - id: v3
-    route: /v3
-    description: "Trigger alert('XSS') on this page"
-    hint: "Removes quotes, angle brackets, non-image URLs — context is inside an iframe src"
-  - id: v4
-    route: /v4
-    description: "Trigger alert('XSS') on this page"
-    hint: "Blacklist: < > ( ) throw backtick javascript — context is img src attribute"
-  - id: v5
-    route: /v5
-    description: "Trigger alert('XSS') on this page"
-    hint: "Filter removes the string 'XSS' and script tags"
-  - id: v6
-    route: /v6
-    description: "Trigger alert('XSS') on this page"
-    hint: "Regex strips non-body tags — only body tag passes through"
-  - id: v7
-    route: /v7
-    description: "Trigger alert('XSS') on this page"
-    hint: "Blacklist: script, onload, onclick, onmouseover, single quote, /"
-  - id: v8
-    route: /v8
-    description: "Trigger alert('XSS') on this page"
-    hint: "Blacklist: import — your input is injected into a JS context"
-  - id: v9
-    route: /v9
-    description: "Trigger alert('XSS') on this page"
-    hint: "Only removes lowercase 'script' string — case-sensitive filter"
+- id: v1
+  route: /v1
+  description: 在此页面上触发 alert('XSS')
+  hint: 正则表达式块匹配 <[a-yA-Y/]+ 标签——思考哪些字母没有被阻止
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Regex blocks tags matching <[a-yA-Y/]+ — think about what letters are NOT
+        blocked
+      en_sha256: c227c98fb965015300984db9a3b8c320444e02d7467646b44b514564f4fe27b2
+      zh_sha256: bd43b74858281986af2ac102a8330b2457d5e448464f5b6098b1ad620f063eaa
+- id: v2
+  route: /v2
+  description: 在此页面上触发 alert('XSS')
+  hint: 过滤器会移除script、img、input、a、div、iframe标签以及/字符。
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Filter removes script/img/input/a/div/iframe tags and the / character
+      en_sha256: 40762d1a34a78f65ebb4ecb9f8a8224943dd545340419040a01143fe562bdf0c
+      zh_sha256: 9c8180628a7a42567119cdd7185ef760b84dd9be13d5747ec94bf6c71dafd97c
+- id: v3
+  route: /v3
+  description: 在此页面上触发 alert('XSS')
+  hint: 移除引号、尖括号、非图片URL——上下文位于iframe src内部
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Removes quotes, angle brackets, non-image URLs — context is inside an iframe
+        src
+      en_sha256: ed9bd4b0fb0f17ccaaa923697272e83b145b951d0a80d0998b514abaa4b1c68a
+      zh_sha256: 53a8085767d0d1716f5896f7eda80842b37f0af7994dc6ab9c050f2601eb98df
+- id: v4
+  route: /v4
+  description: 在此页面上触发 alert('XSS')
+  hint: 黑名单：< > ( ) throw 反引号 javascript — 上下文是 img src 属性
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: 'Blacklist: < > ( ) throw backtick javascript — context is img src attribute'
+      en_sha256: 707be9a7212faf951f579744f58bcf70c10b91c27dda36b6925291817bb9e2fc
+      zh_sha256: 0f283eb9d83bf6ff505b9b138dd1b075fbd6855d6cff4d4131a8ddf6aafb4d39
+- id: v5
+  route: /v5
+  description: 在此页面上触发 alert('XSS')
+  hint: 过滤器会移除字符串'XSS'和script标签
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Filter removes the string 'XSS' and script tags
+      en_sha256: dedf904cda865345b99abc72bfe529c489ff2dfb503593a392cd37bf0799f95a
+      zh_sha256: f0eebc3a03f958c2daa056502a093ce83bdd040239a7f17a99e5dad7cb166645
+- id: v6
+  route: /v6
+  description: 在此页面上触发 alert('XSS')
+  hint: 正则表达式剥离非 body 标签——只有 body 标签通过
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Regex strips non-body tags — only body tag passes through
+      en_sha256: 3cf3c018f839306b29a915cce219588a0949307ebe768e5a0ee2fcc443c178d1
+      zh_sha256: cbdec5c2754596e9558e631e7a38627f3d2c79e0846ec5b172c4d54fb3e0c947
+- id: v7
+  route: /v7
+  description: 在此页面上触发 alert('XSS')
+  hint: 黑名单：script, onload, onclick, onmouseover, 单引号, /
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: 'Blacklist: script, onload, onclick, onmouseover, single quote, /'
+      en_sha256: a4e970cb8f9839e2482544635fc634018d6f3556ca173ef70e7b22153f24e283
+      zh_sha256: 94b848c021ee5f598881100fa6f28b159aa5270c9428a6180f7317df44784147
+- id: v8
+  route: /v8
+  description: 在此页面上触发 alert('XSS')
+  hint: 黑名单：import — 你的输入被注入到 JS 上下文中
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: 'Blacklist: import — your input is injected into a JS context'
+      en_sha256: 5235b921c034d8d3c505ab358abe35cd1f3a47c46ee5da267016c66cd024e135
+      zh_sha256: bbaad03ad83136bbce8cc28fbaab418b80b124a31619fa42e394c3005b546619
+- id: v9
+  route: /v9
+  description: 在此页面上触发 alert('XSS')
+  hint: 仅移除小写的'script'字符串——区分大小写的过滤器
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Only removes lowercase 'script' string — case-sensitive filter
+      en_sha256: ec2086a2d11187beb62fdf3099cb52bdf38f7645e7e999a5e3dbc6f66b0c3cc3
+      zh_sha256: cc859618ab6cca4773c4191fc724f4e0b5d5cb6e45a50da0440a0174fdb8f299

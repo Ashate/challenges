@@ -1,7 +1,7 @@
 {
   "id": "APEX-044-25",
   "name": "APEX-044-25 TradeFi Arbitrage Exploit",
-  "description": "6-step fintech attack: WebSocket price feed tampering (no HMAC), TOCTOU race condition on order balance check, negative quantity business logic flaw, Redis session SSRF escalation to admin, settlement API key leak from config, treasury override for flag",
+  "description": "6步金融科技攻击：WebSocket价格源篡改（无HMAC）、订单余额检查上的TOCTOU竞态条件、负数量业务逻辑缺陷、Redis会话SSRF升级至管理员、结算API密钥从配置中泄露、用于获取flag的国库覆盖",
   "hint": "交易引擎未校验订单数量符号和WebSocket消息完整性，利用业务逻辑缺陷配合SSRF提权",
   "difficulty": "hard",
   "tags": [
@@ -20,5 +20,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{tr4d3f1_fl4sh_l04n_bus1n3ss_l0g1c_expl01t}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "6-step fintech attack: WebSocket price feed tampering (no HMAC), TOCTOU race condition on order balance check, negative quantity business logic flaw, Redis session SSRF escalation to admin, settlement API key leak from config, treasury override for flag",
+      "en_sha256": "c4607f66333113bd9dd4e98efce5177d625a04a9a11ea03e85bc7bb7e9acaa2b",
+      "zh_sha256": "d91df8f338b82473e7eb03a7fe56345f695ae83d6b4c9ee424b5725070cf96ba"
+    },
+    "hint": {
+      "en": "交易引擎未校验订单数量符号和WebSocket消息完整性，利用业务逻辑缺陷配合SSRF提权",
+      "en_sha256": "3b4b154ba1487c6dd68399d20d8aaae017f25eb6a315def40e3e9bda5f770570",
+      "zh_sha256": "3b4b154ba1487c6dd68399d20d8aaae017f25eb6a315def40e3e9bda5f770570"
+    }
+  }
 }

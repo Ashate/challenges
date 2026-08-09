@@ -1,8 +1,8 @@
 {
   "id": "APEX-033-25",
   "name": "APEX-033-25 GraphQL Mutation Authorization Bypass",
-  "description": "A GraphQL API with proper authorization on queries but missing authorization checks on mutations, allowing privilege escalation.",
-  "hint": "查询操作有权限校验但mutation操作缺失鉴权，通过introspection发现可提权的mutation",
+  "description": "一个GraphQL API，在查询（queries）上实施了正确的授权，但在变更（mutations）上缺少授权检查，从而允许权限提升。",
+  "hint": "查询操作有权限校验，但mutation操作缺失鉴权，通过introspection发现可提权的mutation。",
   "difficulty": "medium",
   "tags": [
     "graphql",
@@ -16,5 +16,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{graphql_mutation_authz_bypass_privilege_escalation_7c9e8f2a}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A GraphQL API with proper authorization on queries but missing authorization checks on mutations, allowing privilege escalation.",
+      "en_sha256": "d5d577a1fd85937d8e2898afeb72ee1b67fbf9f4cbb31f97c8a0748b7f19a2cd",
+      "zh_sha256": "9caba8bf0ee6ab19bc88167f5caf83b687c20086d56e0972ca081040df116d3d"
+    },
+    "hint": {
+      "en": "查询操作有权限校验但mutation操作缺失鉴权，通过introspection发现可提权的mutation",
+      "en_sha256": "5855e189f5c1b2921d6a0f05e14edf5331f09dec5d1a48ece0d38b45c73c043e",
+      "zh_sha256": "cd29d7ef7e682a612f4ef419dfe00346ddc564f3e39ad3404e64bbf5b5ed6ad7"
+    }
+  }
 }

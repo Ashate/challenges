@@ -1,8 +1,8 @@
 {
   "id": "APEX-041-25",
   "name": "APEX-041-25 SaaS Admin Takeover — Multi-Tenant Breach",
-  "description": "Multi-step SaaS attack: tenant header spoofing bypasses isolation, BOLA leaks cross-tenant user data, predictable recovery codes enable admin password reset, presigned URL exfiltrates flag from MinIO storage",
-  "hint": "关注租户隔离机制中请求头的信任边界，尝试跨租户访问用户数据并利用可预测的恢复码",
+  "description": "多步SaaS攻击：租户头欺骗绕过隔离，BOLA泄露跨租户用户数据，可预测的恢复码使管理员密码重置成为可能，预签名URL从MinIO存储中窃取flag",
+  "hint": "好的，请提供需要翻译的英文文本。",
   "difficulty": "hard",
   "tags": [
     "multi_tenant",
@@ -18,5 +18,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{s4as_t3nant_1s0lat10n_br34ch_adm1n_t4k30v3r}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Multi-step SaaS attack: tenant header spoofing bypasses isolation, BOLA leaks cross-tenant user data, predictable recovery codes enable admin password reset, presigned URL exfiltrates flag from MinIO storage",
+      "en_sha256": "000aa3de610d86b13f416ed7b5004b8595247b45c37600a229ed3657b73166db",
+      "zh_sha256": "5b41ca555fb8c02acedc4678f086a54839be43057b0d2aa348b759e7fc12fc3d"
+    },
+    "hint": {
+      "en": "关注租户隔离机制中请求头的信任边界，尝试跨租户访问用户数据并利用可预测的恢复码",
+      "en_sha256": "111d10eb9394f8393ee7cfb2b60d82a5f7bdbf981521a408e7d1243ecd619944",
+      "zh_sha256": "69e6d260b6814942fd11f97f1aa559b973d1663d1693bf933f75c4933d1b2687"
+    }
+  }
 }

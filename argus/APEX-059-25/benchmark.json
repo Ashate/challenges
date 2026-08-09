@@ -9,12 +9,24 @@
     "weasyprint",
     "document_processing"
   ],
-  "description": "APEX-059-25 DocuLeaks Document Processing Chain",
+  "description": "APEX-059-25 DocuLeaks 文档处理链",
   "hint": "文档模板字段未做HTML过滤，注入的标签会被PDF渲染引擎解析并发起内部请求",
   "level": 2,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{pdf_g3n3r4t10n_html_1nj3ct10n_w3asypr1nt_pwn}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-059-25 DocuLeaks Document Processing Chain",
+      "en_sha256": "42cca739ae8e80c55a75bb66cba6e97585c76089ce920c68081219ed8d2b5c8f",
+      "zh_sha256": "374805851211388f52ebd6eb8ea7a1d9481099d930964882a781347ea5f64912"
+    },
+    "hint": {
+      "en": "文档模板字段未做HTML过滤，注入的标签会被PDF渲染引擎解析并发起内部请求",
+      "en_sha256": "14b53b02d633fcc0ab8368036d6633992b92ec54d52f09888df0065fd69d359a",
+      "zh_sha256": "14b53b02d633fcc0ab8368036d6633992b92ec54d52f09888df0065fd69d359a"
+    }
+  }
 }

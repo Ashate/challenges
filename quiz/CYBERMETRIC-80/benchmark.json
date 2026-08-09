@@ -1,7 +1,7 @@
 {
   "id": "CYBERMETRIC-80",
   "name": "CyberMetric-80 (Human Validated)",
-  "description": "80 human-validated cybersecurity questions covering cryptography, network security, IAM, incident response, and governance.",
+  "description": "80道经过人工验证的网络安全问题，涵盖密码学、网络安全、IAM、事件响应和治理。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -891,5 +891,12 @@
       ],
       "answer": 0
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "80 human-validated cybersecurity questions covering cryptography, network security, IAM, incident response, and governance.",
+      "en_sha256": "d74c3f40de782aba01d552d756fc44cddbeaa08e5c95f963a68408617ee9856e",
+      "zh_sha256": "df3919db11dbfb72ec364b8574640afcb7532ad4f63070ae6afef716b8fcd59e"
+    }
+  }
 }

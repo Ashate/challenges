@@ -1,27 +1,74 @@
 id: AD-003
-name: "证书攻击与域控沦陷 (ADCS Takeover)"
+name: 证书攻击与域控沦陷 (ADCS Takeover)
 level: 4
-tags: [ssrf, mssql, xp_cmdshell, adcs_esc1, certificate_abuse, active_directory]
+tags:
+- ssrf
+- mssql
+- xp_cmdshell
+- adcs_esc1
+- certificate_abuse
+- active_directory
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      某企业 Web 应用存在 SSRF 漏洞，可以探测到内网的 MSSQL 数据库服务器。
-      数据库服务器是域成员，运行着域服务账号。域内部署了 Active Directory
-      Certificate Services (ADCS)，存在证书模板错误配置。
+- kind: description
+  content_type: text/markdown
+  content: '某企业 Web 应用存在 SSRF 漏洞，可以探测到内网的 MSSQL 数据库服务器。
 
-      你需要从 Web 入口出发，逐步渗透到数据库，再利用 ADCS 漏洞
-      伪造域管理员证书，最终完全控制域。
+    数据库服务器是域成员，运行着域服务账号。域内部署了 Active Directory
+
+    Certificate Services (ADCS)，存在证书模板错误配置。
+
+
+    你需要从 Web 入口出发，逐步渗透到数据库，再利用 ADCS 漏洞
+
+    伪造域管理员证书，最终完全控制域。
+
+    '
 flags:
-  - id: ssrf
-    description: "通过 SSRF 访问内网 MSSQL"
-    hint: "Web 应用的 URL 预览功能没有限制内网地址"
-  - id: mssql
-    description: "获取数据库服务器敏感数据"
-    hint: "MSSQL sa 账号可能使用弱密码，连接后探索数据库中的表"
-  - id: adcs
-    description: "利用 ADCS 证书模板漏洞"
-    hint: "使用域凭据枚举证书模板，注意模板的显示名称"
-  - id: dc
-    description: "以域管身份访问域控"
-    hint: "用伪造的域管证书进行 Kerberos 认证"
+- id: ssrf
+  description: 通过 SSRF 访问内网 MSSQL
+  hint: Web 应用的 URL 预览功能没有限制内网地址
+  i18n:
+    description:
+      en: 通过 SSRF 访问内网 MSSQL
+      en_sha256: d2ee74f15e425af19f3c12fac5c0ff69e0dcf41bd383d3b4f651f8e1f5420f74
+      zh_sha256: d2ee74f15e425af19f3c12fac5c0ff69e0dcf41bd383d3b4f651f8e1f5420f74
+    hint:
+      en: Web 应用的 URL 预览功能没有限制内网地址
+      en_sha256: e1f3988e7d7ab4a85a56a59f3c63b7dc367d59a33180e5d66463114ce0991a30
+      zh_sha256: e1f3988e7d7ab4a85a56a59f3c63b7dc367d59a33180e5d66463114ce0991a30
+- id: mssql
+  description: 获取数据库服务器上的敏感数据。
+  hint: MSSQL sa 账号可能使用弱密码，连接后探索数据库中的表
+  i18n:
+    description:
+      en: 获取数据库服务器敏感数据
+      en_sha256: 8043e2e74853db98b243226ba57e44e1f16250dfba21277ec25e21d72b272738
+      zh_sha256: 21497a0194997058fa250c1c1d08604f052feaa16e14ab26bd6f2a7f0d4737b4
+    hint:
+      en: MSSQL sa 账号可能使用弱密码，连接后探索数据库中的表
+      en_sha256: ec094d965c0ab620cd500c6b97e819c3eb5e7be175c512e9fa246e8ac8c6c87f
+      zh_sha256: ec094d965c0ab620cd500c6b97e819c3eb5e7be175c512e9fa246e8ac8c6c87f
+- id: adcs
+  description: 好的，我理解您的请求。但您提供的文本是“利用 ADCS 证书模板漏洞”，这已经是中文了，且没有提供需要翻译的英文原文。请提供英文原文，我将按照规则翻译成简体中文。
+  hint: 使用域凭据枚举证书模板，注意模板的显示名称。
+  i18n:
+    description:
+      en: 利用 ADCS 证书模板漏洞
+      en_sha256: cdc9a09199703dd4df8301cba6a34103f748a5bea1180b3ec37fef6a2e32df9e
+      zh_sha256: 1c4d88253124729eda4cfa1f9e88956b4ee130ac59b746ffc9ed8663fdff47a4
+    hint:
+      en: 使用域凭据枚举证书模板，注意模板的显示名称
+      en_sha256: d9c6ab98d8b01dbc6defa98fe1a99651c37072a11c4b69b424dc53ae0fb775d3
+      zh_sha256: 9b236585fc1dc4d755e8e2041f7c96ed403848f43bd416d331770fe1be362d80
+- id: dc
+  description: 以域管身份访问域控
+  hint: 用伪造的域管证书进行 Kerberos 认证
+  i18n:
+    description:
+      en: 以域管身份访问域控
+      en_sha256: 068c86e2f323efe9af10beda395bba6e2080dba0586502afeaa7b39854ce7855
+      zh_sha256: 068c86e2f323efe9af10beda395bba6e2080dba0586502afeaa7b39854ce7855
+    hint:
+      en: 用伪造的域管证书进行 Kerberos 认证
+      en_sha256: f02daf6324d925075ddf6941840d66e312c26853e35ee0524b8eb5434b25caca
+      zh_sha256: f02daf6324d925075ddf6941840d66e312c26853e35ee0524b8eb5434b25caca

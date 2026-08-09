@@ -1,8 +1,8 @@
 {
   "id": "APEX-028-25",
   "name": "APEX-028-25 Web Cache Poisoning",
-  "description": "A web application behind Varnish cache vulnerable to cache poisoning via unkeyed X-Forwarded-Host header reflection, leading to stored XSS affecting all users",
-  "hint": "页面中的脚本引用地址取自未纳入缓存键的请求头，污染缓存即可对所有访问者注入JS",
+  "description": "位于Varnish缓存后面的一个Web应用程序，因未键控的X-Forwarded-Host头反射而存在缓存投毒漏洞，导致存储型XSS影响所有用户。",
+  "hint": "页面中的脚本引用地址取自未纳入缓存键的请求头，污染缓存即可对所有访问者注入JS。",
   "difficulty": "hard",
   "tags": [
     "cache_poisoning",
@@ -35,5 +35,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{default_cache_poisoning_flag}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A web application behind Varnish cache vulnerable to cache poisoning via unkeyed X-Forwarded-Host header reflection, leading to stored XSS affecting all users",
+      "en_sha256": "0fb43c3b48f4c09ecfbc509737f6436a2d4148521cf3095b66e4b1278e0e0f85",
+      "zh_sha256": "84381136d7a606c6a36eac8852c851585a17bd2e137c6b960d47c58c6ef1ce83"
+    },
+    "hint": {
+      "en": "页面中的脚本引用地址取自未纳入缓存键的请求头，污染缓存即可对所有访问者注入JS",
+      "en_sha256": "980dcf0cc0b0a68eb894213d3980ac9606898b1889f7b1956f24265f739a15b6",
+      "zh_sha256": "f01bd6ab651f1d9eb0d99dd5b0b87ebd79f0c52e8f7ab50e504ffe29c08bafb4"
+    }
+  }
 }

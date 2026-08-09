@@ -1,7 +1,7 @@
 {
   "id": "MMLU-CS-004",
   "name": "Applied Cryptography & Privacy",
-  "description": "Encryption schemes, digital signatures, authentication, and privacy mechanisms.",
+  "description": "加密方案、数字签名、认证和隐私机制。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -286,5 +286,12 @@
       ],
       "answer": 1
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Encryption schemes, digital signatures, authentication, and privacy mechanisms.",
+      "en_sha256": "87968e1a492ed0586560577c8f10a9ce6bee7d8fbe1ba1fdfd15903e64af2594",
+      "zh_sha256": "12f87a9c73b282d7ab4b4bdcd1073f38b75dc13f2655dce3207817b7e60aff32"
+    }
+  }
 }

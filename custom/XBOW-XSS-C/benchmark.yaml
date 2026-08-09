@@ -1,31 +1,81 @@
 id: XBOW-XSS-C
-name: "XSS Bypass Series C (5 variants)"
+name: XSS Bypass Series C (5 variants)
 level: 2
-tags: [xss]
+tags:
+- xss
 content:
-  - kind: description
-    content_type: text/markdown
-    content: |
-      5 XSS challenge variants. Trigger alert("XSS") on each page.
-      Visit / for the route index.
+- kind: description
+  content_type: text/markdown
+  content: '5 XSS challenge variants. Trigger alert("XSS") on each page.
+
+    Visit / for the route index.
+
+    '
 flags:
-  - id: v1
-    route: /v1
-    description: "Trigger alert('XSS') on this page"
-    hint: "No filter, but input is inside an HTML attribute value — escape the attribute first"
-  - id: v2
-    route: /v2
-    description: "Trigger alert('XSS') on this page"
-    hint: "Script tags with content are removed, but empty/self-closing variants may survive"
-  - id: v3
-    route: /v3
-    description: "Trigger alert('XSS') on this page"
-    hint: "No filter at all — straightforward injection"
-  - id: v4
-    route: /v4
-    description: "Trigger alert('XSS') on this page"
-    hint: "Only the word 'alert' is blacklisted"
-  - id: v5
-    route: /v5
-    description: "Trigger alert('XSS') on this page"
-    hint: "Blocks <>' uppercase and [] — input is in JS context with quote escaping"
+- id: v1
+  route: /v1
+  description: 在此页面上触发 alert('XSS')
+  hint: 没有过滤器，但输入位于HTML属性值内部——先转义该属性
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: No filter, but input is inside an HTML attribute value — escape the attribute
+        first
+      en_sha256: 752e8fee1578ac8be5c4721bba8807eba177add85efdc0b87ac8fd6ec1d78b41
+      zh_sha256: c3913b4c821d71f0164b500d18872891ad30d16003040c03c9b3a6c65577ec7b
+- id: v2
+  route: /v2
+  description: 在此页面上触发 alert('XSS')
+  hint: 包含内容的script标签会被移除，但空/自闭合变体可能存活。
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Script tags with content are removed, but empty/self-closing variants may
+        survive
+      en_sha256: b1b6c9b092654c772c423975c8a1815b097545c61d9c24c0fcb90dda419a841a
+      zh_sha256: 9f68071d702f9829c7695208439eebee197036413fd3e5f306839c935e12c48e
+- id: v3
+  route: /v3
+  description: 在此页面上触发 alert('XSS')
+  hint: 完全没有过滤——直接进行注入
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: No filter at all — straightforward injection
+      en_sha256: 7bbf51262a371fdff0466bbc6e1b6b6411b46a6bb3dc41553cb0d67c025e32a5
+      zh_sha256: 3df29aa44d94f63ce1284d0499fbd4a0c214ec8373195bd71b0855f575bf7d01
+- id: v4
+  route: /v4
+  description: 在此页面上触发 alert('XSS')
+  hint: 只有单词 'alert' 被列入黑名单
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Only the word 'alert' is blacklisted
+      en_sha256: 7f150ab8cc2c42118a79291fe9a33df65fa22b4e881cfb6396a156fe997bb172
+      zh_sha256: 5d205fd9108d1afa167e8a8feceb3203551b38f4b4a3459d03d6c93a6f5c3db2
+- id: v5
+  route: /v5
+  description: 在此页面上触发 alert('XSS')
+  hint: 在JS上下文中，输入被引号转义，`<>'` 大写和 `[]` 被阻止。
+  i18n:
+    description:
+      en: Trigger alert('XSS') on this page
+      en_sha256: 25adac23a5e70379d6e49049a2c393e6c5a51c2fe77e3a7dca24d7c0ffe59c84
+      zh_sha256: aa9280e4106518d316ae56fb302c69388dba9b5b534995903537dd66fb770cc6
+    hint:
+      en: Blocks <>' uppercase and [] — input is in JS context with quote escaping
+      en_sha256: 875fbaf05f7664c40a6bad40fd92e11ce30b410e20a378f9fb9e73513a28a469
+      zh_sha256: e76aa6c04325907f3a634ae729a9c0577b24b664c5075d2c815138d74dd0b843

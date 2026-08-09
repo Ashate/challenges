@@ -1,7 +1,7 @@
 {
   "name": "APEX-017-25 Session Fixation to Account Takeover",
-  "description": "A Sinatra application vulnerable to session fixation allowing attackers to hijack admin sessions",
-  "hint": "应用接受 URL 参数中的 session_id 且登录后不重新生成会话标识，可预设会话 ID 劫持认证",
+  "description": "一个存在会话固定漏洞的Sinatra应用，允许攻击者劫持管理员会话",
+  "hint": "应用接受 URL 参数中的 session_id 且登录后不重新生成会话标识，可预设会话 ID 劫持认证。",
   "difficulty": "medium",
   "tags": [
     "session",
@@ -17,5 +17,17 @@
   ],
   "id": "APEX-017-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A Sinatra application vulnerable to session fixation allowing attackers to hijack admin sessions",
+      "en_sha256": "2a1afe31d0ec0ef01f4f66c0100d273382bdb0bcbe822f64579d3aa3b537fd46",
+      "zh_sha256": "2b5a6e60caeebeed12ce3b6e52daa68666775f9d0e13a7a3314dd1eae14dc128"
+    },
+    "hint": {
+      "en": "应用接受 URL 参数中的 session_id 且登录后不重新生成会话标识，可预设会话 ID 劫持认证",
+      "en_sha256": "c5d5ba2d236cd112eb91c14abf7453b5a04157df70ce0f4f1e2c1714eff25ef5",
+      "zh_sha256": "45013e58714366c27c4b71ff40c2ba4d7c4f8cd88fa7fa671847a5e474a58697"
+    }
+  }
 }

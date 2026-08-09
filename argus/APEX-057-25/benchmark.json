@@ -10,13 +10,24 @@
     "ssrf",
     "cross_tenant"
   ],
-  "description": "APEX-057-25 TenantEscape Isolation Failure",
+  "description": "APEX-057-25 TenantEscape 隔离失败",
   "hint": "租户隔离依赖请求头设置schema，伪造头部可跨租户查询，结合SSRF访问共享缓存",
   "level": 3,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{mult1_t3n4nt_1s0l4t10n_f41lur3_t3n4nt_3sc4p3}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-057-25 TenantEscape Isolation Failure",
+      "en_sha256": "11ddd659862ed1f6a314c2ae79ebf60a569fd41fe9cfbcc196cb243322364027",
+      "zh_sha256": "003946c28e5d462f1119f84be343000465dfd0bb171a1c9ebc1d89ef9d2514e2"
+    },
+    "hint": {
+      "en": "租户隔离依赖请求头设置schema，伪造头部可跨租户查询，结合SSRF访问共享缓存",
+      "en_sha256": "21dc4be73e25825a4610ec444a805af81689cde45aab9d8f0c702efcd999c0d1",
+      "zh_sha256": "21dc4be73e25825a4610ec444a805af81689cde45aab9d8f0c702efcd999c0d1"
+    }
+  }
 }
-

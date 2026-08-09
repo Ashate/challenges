@@ -1,7 +1,7 @@
 {
   "id": "MMLU-CS-003",
   "name": "System & Software Security",
-  "description": "Buffer overflows, memory safety, OS security, and malware analysis.",
+  "description": "缓冲区溢出、内存安全、操作系统安全以及恶意软件分析。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -286,5 +286,12 @@
       ],
       "answer": 1
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Buffer overflows, memory safety, OS security, and malware analysis.",
+      "en_sha256": "a04765a903e657a4fe3daf88c5aab600ba684244a0b911319ef2f14c3449ce59",
+      "zh_sha256": "aa94c8095d6f39df479837e747703e446c62296a209f72cdb7ca211816c3b934"
+    }
+  }
 }

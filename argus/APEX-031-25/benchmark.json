@@ -1,7 +1,7 @@
 {
   "id": "APEX-031-25",
   "name": "APEX-031-25 ImageMagick RCE via File Upload (ImageTragick)",
-  "description": "An image processing service using vulnerable ImageMagick version that allows remote code execution through specially crafted SVG or MVG files exploiting the delegate system",
+  "description": "一个使用存在漏洞的ImageMagick版本的图像处理服务，该版本允许通过特制的SVG或MVG文件利用委托系统实现远程代码执行。",
   "hint": "上传功能允许SVG/MVG格式，ImageMagick的delegate机制会解析文件内容中的外部引用",
   "difficulty": "medium",
   "tags": [
@@ -34,5 +34,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{1m4g3_tr4g1ck_cv3_2016_3714_rc3}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "An image processing service using vulnerable ImageMagick version that allows remote code execution through specially crafted SVG or MVG files exploiting the delegate system",
+      "en_sha256": "f08bc9a1f8792ea7f8ca6f0c8e72b3c13883e8e8890c7eca1b779402c0498d06",
+      "zh_sha256": "0a1cf7f95196a856fd08c34db673d60b0af5284b6fac75cdeceacb4dff7965af"
+    },
+    "hint": {
+      "en": "上传功能允许SVG/MVG格式，ImageMagick的delegate机制会解析文件内容中的外部引用",
+      "en_sha256": "26bb98c07d27446b93ab7eab5a2b4a7b71b197b9a8eb6f1bc61665183aa884af",
+      "zh_sha256": "26bb98c07d27446b93ab7eab5a2b4a7b71b197b9a8eb6f1bc61665183aa884af"
+    }
+  }
 }

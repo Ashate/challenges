@@ -1,6 +1,6 @@
 {
   "name": "APEX-004-25 MongoDB NoSQL Operator Injection",
-  "description": "A login endpoint vulnerable to MongoDB operator injection allowing authentication bypass",
+  "description": "一个登录端点存在MongoDB操作符注入漏洞，可导致认证绕过。",
   "hint": "登录接口未校验密码字段类型，尝试传入MongoDB查询操作符替代字符串密码",
   "difficulty": "medium",
   "tags": [
@@ -17,5 +17,17 @@
   ],
   "id": "APEX-004-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A login endpoint vulnerable to MongoDB operator injection allowing authentication bypass",
+      "en_sha256": "5d66fc3b6f326cf4db36e0d1546b3e4f7ad10212fd59a0e49c4fb199c3651346",
+      "zh_sha256": "60ee77d9e1ff6bd6e484f462798ed53c07a2d036f974c01127cf0f8192489573"
+    },
+    "hint": {
+      "en": "登录接口未校验密码字段类型，尝试传入MongoDB查询操作符替代字符串密码",
+      "en_sha256": "5aaf8a8cb7f7fd83295a7dc4f99220bdf67520203a61ccbc46a047552b1a4509",
+      "zh_sha256": "5aaf8a8cb7f7fd83295a7dc4f99220bdf67520203a61ccbc46a047552b1a4509"
+    }
+  }
 }

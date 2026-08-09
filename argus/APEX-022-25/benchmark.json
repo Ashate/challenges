@@ -1,6 +1,6 @@
 {
   "name": "APEX-022-25 XML External Entity (XXE) via File Upload",
-  "description": "A document processing service vulnerable to XXE through SVG, DOCX, and XLSX file uploads",
+  "description": "一个文档处理服务，通过SVG、DOCX和XLSX文件上传存在XXE漏洞。",
   "hint": "文件上传的XML解析器未禁用外部实体，尝试在文档内嵌入DTD声明读取系统文件",
   "difficulty": "medium",
   "tags": [
@@ -36,5 +36,17 @@
   },
   "id": "APEX-022-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A document processing service vulnerable to XXE through SVG, DOCX, and XLSX file uploads",
+      "en_sha256": "6c759aba8f7f42c7304a9e0c158cee6aa742a6d54f0f8d3df709109b12308b81",
+      "zh_sha256": "eab5ef52bc4373b9bfdc44b3f5374e1bbd75b6067d2a693292ec0d3b2dfb7625"
+    },
+    "hint": {
+      "en": "文件上传的XML解析器未禁用外部实体，尝试在文档内嵌入DTD声明读取系统文件",
+      "en_sha256": "570840721809c2e462767325ebfd196bbbe3507651dbf222e7f1c2efca44fc0e",
+      "zh_sha256": "570840721809c2e462767325ebfd196bbbe3507651dbf222e7f1c2efca44fc0e"
+    }
+  }
 }

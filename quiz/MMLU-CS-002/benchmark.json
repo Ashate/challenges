@@ -1,7 +1,7 @@
 {
   "id": "MMLU-CS-002",
   "name": "Network & Web Security",
-  "description": "TLS, DNS, web vulnerabilities, firewalls, and protocol security.",
+  "description": "TLS、DNS、web漏洞、防火墙和协议安全。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -286,5 +286,12 @@
       ],
       "answer": 2
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "TLS, DNS, web vulnerabilities, firewalls, and protocol security.",
+      "en_sha256": "cac20b91d6c7854c106d81848229a109f320fcd8db58f5212de52394794d07a9",
+      "zh_sha256": "412336f148922149c0007e2e7d167f31a0d680fd64573a6eaaf91e273094cefd"
+    }
+  }
 }

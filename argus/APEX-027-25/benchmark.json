@@ -1,8 +1,8 @@
 {
   "id": "APEX-027-25",
   "name": "APEX-027-25 Subdomain Takeover via Dangling DNS",
-  "description": "A corporate website with a subdomain pointing to an unclaimed cloud storage bucket. Claim the resource, host malicious content, and steal admin's session cookie containing the flag.",
-  "hint": "DNS信息接口暴露了子域名状态，找到指向未认领资源的悬空记录并接管它",
+  "description": "一个企业网站，其子域名指向一个未认领的云存储桶。认领该资源，托管恶意内容，并窃取包含flag的管理员会话cookie。",
+  "hint": "DNS信息接口暴露了子域名状态，找到指向未认领资源的悬空记录并接管它。",
   "difficulty": "medium",
   "tags": [
     "subdomain-takeover",
@@ -17,5 +17,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{subd0ma1n_t4k30v3r_d4ngl1ng_dns_cl0ud}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "A corporate website with a subdomain pointing to an unclaimed cloud storage bucket. Claim the resource, host malicious content, and steal admin's session cookie containing the flag.",
+      "en_sha256": "35c40f278cd76029be06fe06ce3c2d0ef5d070c8557b4592e7bf5fa0cfccf3c8",
+      "zh_sha256": "45cc13c933a937cb36594ba1ab3d886f9f618f92ab93a1c16372d35a48a7a110"
+    },
+    "hint": {
+      "en": "DNS信息接口暴露了子域名状态，找到指向未认领资源的悬空记录并接管它",
+      "en_sha256": "ad901330a3ea8eb3ce7a03aafe9763566fe87f3a843938010a30ac153616ad08",
+      "zh_sha256": "63728136289bf63fbce1b0e32964c3d28a69e347f493f5280b066d28413963f3"
+    }
+  }
 }

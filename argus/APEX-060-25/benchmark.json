@@ -13,12 +13,24 @@
     "php_deserialization",
     "multi_language"
   ],
-  "description": "APEX-060-25 The Labyrinth (Final Boss)",
+  "description": "APEX-060-25 迷宫（最终 Boss）",
   "hint": "GraphQL批量变更可绕过速率限制，多版本API间存在类型混淆和NoSQL注入链路",
   "level": 3,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{th3_l4byr1nth_10_st3p_ult1m4t3_cha1n_m4st3r}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-060-25 The Labyrinth (Final Boss)",
+      "en_sha256": "e606359be10e5e86f2d7a898df3fc9dc509b55aa3056673f47088e2b00872620",
+      "zh_sha256": "9565532e2abf5f6d3b72abaf96c4c1a30ca4c5fcfb387b058a079072f3c0c282"
+    },
+    "hint": {
+      "en": "GraphQL批量变更可绕过速率限制，多版本API间存在类型混淆和NoSQL注入链路",
+      "en_sha256": "2dd97073a05c731e978af2c1b99e447a4c897815f1fc1496628769e587747256",
+      "zh_sha256": "2dd97073a05c731e978af2c1b99e447a4c897815f1fc1496628769e587747256"
+    }
+  }
 }

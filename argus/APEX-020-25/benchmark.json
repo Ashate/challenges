@@ -1,6 +1,6 @@
 {
   "name": "APEX-020-25 Server-Side Template Injection (Jinja2/Python)",
-  "description": "A Flask application vulnerable to SSTI via render_template_string with user input",
+  "description": "一个Flask应用，通过render_template_string使用用户输入，存在SSTI漏洞。",
   "hint": "用户输入被直接拼接进 Jinja2 模板字符串渲染，利用模板表达式遍历 Python 类链实现命令执行",
   "difficulty": "medium",
   "tags": [
@@ -17,5 +17,17 @@
   ],
   "id": "APEX-020-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "A Flask application vulnerable to SSTI via render_template_string with user input",
+      "en_sha256": "5976e2a817bebcf369c8479503407dc9be7f225ffd275dc09f1e0a5fa85997b1",
+      "zh_sha256": "6f3b8e893fc59c28543efc9aec3d3efeaf82393818d63b7d7ba031ad8acad58f"
+    },
+    "hint": {
+      "en": "用户输入被直接拼接进 Jinja2 模板字符串渲染，利用模板表达式遍历 Python 类链实现命令执行",
+      "en_sha256": "16855dd4561c4bf95fd6d3531c6959e2229d627ba201ad7a333d6e2827d20d32",
+      "zh_sha256": "16855dd4561c4bf95fd6d3531c6959e2229d627ba201ad7a333d6e2827d20d32"
+    }
+  }
 }

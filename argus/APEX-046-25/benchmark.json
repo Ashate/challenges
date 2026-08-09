@@ -12,11 +12,23 @@
     "federation"
   ],
   "description": "APEX-046-25 FederAuth SAML Bypass",
-  "hint": "SAML响应验签与属性提取作用于不同Assertion节点，可构造XML签名包装攻击",
+  "hint": "SAML response signature verification and attribute extraction operate on different Assertion nodes, enabling the construction of an XML signature wrapping attack.",
   "level": 3,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{saml_xml_s1gnatur3_wr4pp1ng_f3d3r4t10n_0wn3d}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-046-25 FederAuth SAML Bypass",
+      "en_sha256": "c739897a7ef4d0b2a556ae483209fd1ab4ffe70a5cd6e4ccbb79018cc00a3d73",
+      "zh_sha256": "c739897a7ef4d0b2a556ae483209fd1ab4ffe70a5cd6e4ccbb79018cc00a3d73"
+    },
+    "hint": {
+      "en": "SAML响应验签与属性提取作用于不同Assertion节点，可构造XML签名包装攻击",
+      "en_sha256": "e5e6ac98a836580a9f60cae31675ed03a86c9d60efed2b4c5cdfb3b8787d4905",
+      "zh_sha256": "46291b33b8ddef41e25d11f4435cffaa54c27802b628a3eb1300e7eab8bf1382"
+    }
+  }
 }

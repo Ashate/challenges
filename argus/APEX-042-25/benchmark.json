@@ -1,8 +1,8 @@
 {
   "id": "APEX-042-25",
   "name": "APEX-042-25 CI/CD Pipeline Poisoning — DevOps Supply Chain Attack",
-  "description": "6-step CI/CD supply chain attack: mine git history for Jenkins credentials, SSRF from developer portal to internal Jenkins, Script Console RCE extracts registry credentials, container image inspection reveals Vault token, Vault API returns production flag",
-  "hint": "开发者门户存在SSRF可达内部CI服务，从Git历史和容器镜像中寻找泄露的凭据逐步横向移动",
+  "description": "6步CI/CD供应链攻击：挖掘git历史获取Jenkins凭据，从开发者门户SSRF到内部Jenkins，Script Console RCE提取注册表凭据，容器镜像检查揭示Vault token，Vault API返回生产环境flag",
+  "hint": "开发者门户存在SSRF可达内部CI服务，从Git历史和容器镜像中寻找泄露的凭据逐步横向移动。",
   "difficulty": "hard",
   "tags": [
     "cicd",
@@ -19,5 +19,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{c1cd_p1p3l1n3_p01s0n_supp1y_ch41n_pwn3d}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "6-step CI/CD supply chain attack: mine git history for Jenkins credentials, SSRF from developer portal to internal Jenkins, Script Console RCE extracts registry credentials, container image inspection reveals Vault token, Vault API returns production flag",
+      "en_sha256": "8f5da8a051cf3f1ae40725556d02c974c137c56f4d18b0b850192b086822d3c4",
+      "zh_sha256": "0c228c0e9c882653a5d2160fdc0e62b17366f298b8e08c4e3776ff5aaf1732ba"
+    },
+    "hint": {
+      "en": "开发者门户存在SSRF可达内部CI服务，从Git历史和容器镜像中寻找泄露的凭据逐步横向移动",
+      "en_sha256": "82b9dfbc1f70f4b52f2793bb110275bfb086d3fb59c834c1f599edc325cbabcb",
+      "zh_sha256": "646020eeddfc454d2f66534b7fbc4da36f27a65d1946c6fe112ef232589f72d6"
+    }
+  }
 }

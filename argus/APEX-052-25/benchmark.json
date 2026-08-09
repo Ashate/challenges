@@ -14,12 +14,24 @@
     "service": "marketplace",
     "port": 3052
   },
-  "description": "APEX-052-25 PluginVault Supply Chain Attack",
-  "hint": "插件安装时的manifest深度合并存在原型污染，可解锁沙箱模块限制实现逃逸",
+  "description": "APEX-052-25 PluginVault 供应链攻击",
+  "hint": "好的，我已经理解了任务要求。请提供需要翻译的英文文本。",
   "level": 2,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{supply_cha1n_plug1n_sandb0x_3scap3_pwn3d}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-052-25 PluginVault Supply Chain Attack",
+      "en_sha256": "2685064eed349546930bf22c4be3d7688c47df5cf0f285fb6b06f8d3381ba79b",
+      "zh_sha256": "e10a6ea43aecda9b817cbe57182abc6febc6d160fe6c3716c65dcc65744f1b35"
+    },
+    "hint": {
+      "en": "插件安装时的manifest深度合并存在原型污染，可解锁沙箱模块限制实现逃逸",
+      "en_sha256": "660c4d2236453aed10a3804439e35aa1a805a675a80ab2fa8ea39a2cc220ae1f",
+      "zh_sha256": "ac595c3e38fb92e25643090f48a4f1a1b63d9a6b603de5751fb126f383282204"
+    }
+  }
 }

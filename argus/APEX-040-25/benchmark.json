@@ -1,8 +1,8 @@
 {
   "id": "APEX-040-25",
   "name": "APEX-040-25 Full Chain Challenge - The Gauntlet",
-  "description": "Multi-step attack chain requiring 7 chained vulnerabilities: git exposure, IP bypass, SQLi, user auth, IDOR, password reset, and SSRF to internal services",
-  "hint": "从信息泄露入手逐步链式利用，每一步的结果为下一步提供凭据或访问路径",
+  "description": "需要利用7个链式漏洞的多步骤攻击链：git泄露、IP绕过、SQLi、用户认证、IDOR、密码重置，以及SSRF到内部服务。",
+  "hint": "从信息泄露入手逐步链式利用，每一步的结果为下一步提供凭据或访问路径。",
   "difficulty": "hard",
   "tags": [
     "chain",
@@ -19,5 +19,17 @@
   "flag_count": 1,
   "canaries": [
     "FLAG{gauntlet_complete_7_step_chain_mastered_h4ck3r_l33t}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Multi-step attack chain requiring 7 chained vulnerabilities: git exposure, IP bypass, SQLi, user auth, IDOR, password reset, and SSRF to internal services",
+      "en_sha256": "a04b9a25708b3d9a7d7895ee152a8906cd1c76269b07ea90e29c63808ab208b6",
+      "zh_sha256": "e4370cf7b3d0d7a725c19f77562d00a9aad9311ad2652f58b187c6ae7b4c0c04"
+    },
+    "hint": {
+      "en": "从信息泄露入手逐步链式利用，每一步的结果为下一步提供凭据或访问路径",
+      "en_sha256": "2e16a4fd1196f2872367f64d02b9b24173ab9ae3dadc81cf1aa5bea50b55eeb6",
+      "zh_sha256": "228fe240629ac63a6858f3bf2939c24a6d9e31e1e9495a0a98e771c1349e100c"
+    }
+  }
 }

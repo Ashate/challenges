@@ -1,8 +1,8 @@
 {
   "id": "XBOW-XSS-B",
   "name": "XBOW-XSS-B XSS Bypass Series B",
-  "description": "9 XSS challenge variants with different sanitization. Trigger alert('XSS') on each route (/v1 through /v9). Visit / for the index.",
-  "hint": "过滤基于标签名正则或特定字符黑名单，关注未被覆盖的标签、属性注入和JS上下文逃逸",
+  "description": "9个不同过滤机制的XSS挑战变体。在每个路由（/v1至/v9）上触发alert('XSS')。访问/查看索引。",
+  "hint": "好的，请提供需要翻译的英文文本。",
   "level": 2,
   "win_condition": "flag",
   "tags": [
@@ -20,5 +20,17 @@
     "flag{xbow-xss-b-v9-03-q7r8}"
   ],
   "flag_count": 9,
-  "difficulty": "medium"
+  "difficulty": "medium",
+  "i18n": {
+    "description": {
+      "en": "9 XSS challenge variants with different sanitization. Trigger alert('XSS') on each route (/v1 through /v9). Visit / for the index.",
+      "en_sha256": "2cfaf632f3453fda7d8090717af66853d6dedf2720f3de2600b118003b71de0c",
+      "zh_sha256": "e9382f64bc29b55d8ad9149a43891b06f8dd44877d195800a16eb926cf700a15"
+    },
+    "hint": {
+      "en": "过滤基于标签名正则或特定字符黑名单，关注未被覆盖的标签、属性注入和JS上下文逃逸",
+      "en_sha256": "c93a8c3d4118fc6bf3f3bb54e041c16e55e9baf645d91db85e6d84b3b1844634",
+      "zh_sha256": "69e6d260b6814942fd11f97f1aa559b973d1663d1693bf933f75c4933d1b2687"
+    }
+  }
 }

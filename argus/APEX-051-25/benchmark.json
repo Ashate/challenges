@@ -16,12 +16,24 @@
     "service": "router",
     "port": 3051
   },
-  "description": "APEX-051-25 GhostNet Recon Challenge",
+  "description": "APEX-051-25 GhostNet 侦察挑战",
   "hint": "识别蜜罐与真实服务的差异，通过SSRF访问内部缓存获取凭据后解密密文",
   "level": 3,
   "win_condition": "flag",
   "flag_count": 2,
   "canaries": [
     "FLAG{gh0stn3t_d3c0y_d3t3ct10n_r34l_t4rg3t_f0und}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-051-25 GhostNet Recon Challenge",
+      "en_sha256": "7f47b4a0f811243312f3eac5673765e46cf3d3843987442e946e3d1ec89f1b89",
+      "zh_sha256": "af7f0229ec6bca33defe6f04d4256e8082813d8b2556a4a4895a4aa64f1577fe"
+    },
+    "hint": {
+      "en": "识别蜜罐与真实服务的差异，通过SSRF访问内部缓存获取凭据后解密密文",
+      "en_sha256": "c60ef051e4589e54790a83bf0ef250dc90ecee159b9eff86e083a8ffbe798134",
+      "zh_sha256": "c60ef051e4589e54790a83bf0ef250dc90ecee159b9eff86e083a8ffbe798134"
+    }
+  }
 }

@@ -12,12 +12,24 @@
     "certificate_theft",
     "microservices"
   ],
-  "description": "APEX-047-25 Service Mesh Sidecar Hijack",
-  "hint": "Consul服务注册无需认证，可篡改服务发现路由并从KV存储窃取mTLS证书",
+  "description": "APEX-047-25 服务网格 Sidecar 劫持",
+  "hint": "Consul 服务注册无需认证，可篡改服务发现路由并从 KV 存储窃取 mTLS 证书",
   "level": 3,
   "win_condition": "flag",
   "flag_count": 1,
   "canaries": [
     "FLAG{s3rv1c3_m3sh_s1d3car_h1jack_cons0l_p01s0n}"
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "APEX-047-25 Service Mesh Sidecar Hijack",
+      "en_sha256": "1bec3b6aa0f9bf3c4dbfaa33e57122cf0f429da46d07b2b8dc4809de676d7a63",
+      "zh_sha256": "7cefdb223e16cc41235b63e5ed6c6bc3b4a2d656d9cd207472e6cfd964abc988"
+    },
+    "hint": {
+      "en": "Consul服务注册无需认证，可篡改服务发现路由并从KV存储窃取mTLS证书",
+      "en_sha256": "c5a38dd7e4024a598ccf5cac140d632f79ae7757173e1cbf676d233c43ebdf59",
+      "zh_sha256": "53ba31b611fe1aaccdda85b455bb8a5dc6dacd7428d393661dfa8358f49bb427"
+    }
+  }
 }

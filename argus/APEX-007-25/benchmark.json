@@ -1,6 +1,6 @@
 {
   "name": "APEX-007-25 Node.js Prototype Pollution to RCE",
-  "description": "An Express application with a recursive merge function vulnerable to prototype pollution, leading to RCE through spawn gadget",
+  "description": "一个使用递归合并函数的Express应用，存在原型污染漏洞，可通过spawn gadget实现RCE。",
   "hint": "设置接口的递归合并未过滤__proto__键，污染原型链后可影响child_process的spawn行为",
   "difficulty": "medium",
   "tags": [
@@ -16,5 +16,17 @@
   ],
   "id": "APEX-007-25",
   "level": 2,
-  "flag_count": 1
+  "flag_count": 1,
+  "i18n": {
+    "description": {
+      "en": "An Express application with a recursive merge function vulnerable to prototype pollution, leading to RCE through spawn gadget",
+      "en_sha256": "909f00c913cbf5064a3726b890329b0a9ba9e1a5743297601d37fca96227ee1f",
+      "zh_sha256": "132b752051d9f9aacce7a3882281daaa7947cb80b1f6547da28ecfa52264aeb8"
+    },
+    "hint": {
+      "en": "设置接口的递归合并未过滤__proto__键，污染原型链后可影响child_process的spawn行为",
+      "en_sha256": "e7e8fb9010cb9c8550804e317355642dd8987c274c8f151c2bab1d9eb94ccb3a",
+      "zh_sha256": "e7e8fb9010cb9c8550804e317355642dd8987c274c8f151c2bab1d9eb94ccb3a"
+    }
+  }
 }

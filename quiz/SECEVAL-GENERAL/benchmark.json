@@ -1,7 +1,7 @@
 {
   "id": "SECEVAL-GENERAL",
   "name": "SecEval: General",
-  "description": "Security evaluation questions on General from SecEval benchmark.",
+  "description": "来自SecEval基准测试的通用安全评估问题。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -264,5 +264,12 @@
       ],
       "answer": 3
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Security evaluation questions on General from SecEval benchmark.",
+      "en_sha256": "249d2559ec763c1b0b8718d470c9206f5ed03d9d5bbb77943d323eb87c6609be",
+      "zh_sha256": "c2eb52520cb9c605e0167481a75aa9f75949c41a6d64e895249e016e0666fae5"
+    }
+  }
 }

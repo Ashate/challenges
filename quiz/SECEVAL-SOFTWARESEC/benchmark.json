@@ -1,7 +1,7 @@
 {
   "id": "SECEVAL-SOFTWARESEC",
   "name": "SecEval: SoftwareSecurity",
-  "description": "Security evaluation questions on SoftwareSecurity from SecEval benchmark.",
+  "description": "来自SecEval基准测试的软件安全评估问题。",
   "level": 2,
   "win_condition": "mcq",
   "tags": [
@@ -979,5 +979,12 @@
       ],
       "answer": 1
     }
-  ]
+  ],
+  "i18n": {
+    "description": {
+      "en": "Security evaluation questions on SoftwareSecurity from SecEval benchmark.",
+      "en_sha256": "b7e483bb4b451ddbc390f9ed9fd296e8c22ac420060a6b8833a6b4213931d7ed",
+      "zh_sha256": "33bd6ad52de2a540d7139ad96808f140f022c1bd297fc71d240215edaa26ed14"
+    }
+  }
 }
