@@ -2,7 +2,7 @@
 
 # Benchmark Challenges
 
-[benchmark-platform](https://github.com/wgpsec/benchmark-platform) 的靶场题目数据仓库。
+[benchmark-platform](https://github.com/wgpsec/benchmark-platform) 的靶场题目数据仓库。在原项目基础上增加了题目自动翻译功能，支持中英双语。
 
 ## 目录结构
 
