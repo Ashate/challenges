@@ -20,14 +20,23 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name }}
-          fetch-depth: 2
+          fetch-depth: 0
+
+      - name: Sync to latest commit on the branch
+        run: |
+          # translate-readme job 可能在本次 run 中间又 push 了一个新的翻译提交，
+          # 这里显式 fetch + reset 到远端最新，避免用到 checkout 那一刻的旧快照，
+          # 也避免下面的 diff 只覆盖到触发本次 run 的原始 commit、漏掉翻译提交。
+          git fetch origin "${{ github.ref_name }}"
+          git reset --hard "origin/${{ github.ref_name }}"
+          echo "after=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Detect changed challenges
         id: detect
         run: |
           BEFORE="${{ github.event.before }}"
           if [ "$BEFORE" != "0000000000000000000000000000000000000000" ] && git cat-file -e "$BEFORE" 2>/dev/null; then
-            CHANGED=$(git diff --name-only "$BEFORE" "${{ github.sha }}" | grep -E '^(xbow|custom|argus|AD|vulhub|quiz)/' | cut -d'/' -f1,2 | sort -u || true)
+            CHANGED=$(git diff --name-only "$BEFORE" "$after" | grep -E '^(xbow|custom|argus|AD|vulhub|quiz)/' | cut -d'/' -f1,2 | sort -u || true)
           else
             CHANGED=$(git ls-tree -r --name-only HEAD | grep -E '^(xbow|custom|argus|AD|vulhub|quiz)/' | cut -d'/' -f1,2 | sort -u || true)
           fi
